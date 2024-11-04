@@ -42,24 +42,24 @@ namespace Library_Management_System
             string username = tbUsername.Text;
             string password = tbPassword.Text;
 
+            conn.Open();
+            string query = "SELECT role from tbl_user WHERE username = @username AND password = @password";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
+
+            string role = (string)cmd.ExecuteScalar();
+
             try
-            {
-                conn.Open();
-                string query = "SELECT role from tbl_user where username = @username and password = @password";
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
-
-                string role = (string)cmd.ExecuteScalar();
-
+            {            
                 if(role != null)
                 {
                     if(role == "admin")
                     {
                         AdminForm adminForm = new AdminForm();
                         adminForm.Show();
-                        adminForm.Hide();
+                        this.Hide();
                     }
                     else
                     {

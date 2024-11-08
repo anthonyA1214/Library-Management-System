@@ -28,7 +28,7 @@ namespace Library_Management_System
             this.Close();
         }
 
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
+        SqlConnection conn = new SqlConnection("Data Source=NHETTEFELICES04\\SQLEXPRESS;Initial Catalog=\"Library Management System\";Integrated Security=True;");
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace Library_Management_System
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
 
-            string role = (string)cmd.ExecuteScalar();
+            string role = (cmd.ExecuteScalar() as string)?.Trim();
 
             try
             {            

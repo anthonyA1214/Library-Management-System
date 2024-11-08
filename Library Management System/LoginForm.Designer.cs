@@ -92,7 +92,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnLogin.Location = new System.Drawing.Point(50, 377);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(200, 40);
+            this.btnLogin.Size = new System.Drawing.Size(200, 45);
             this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -225,7 +225,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.user1;
+            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.user;
             this.pictureBox1.Location = new System.Drawing.Point(49, 187);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
@@ -250,10 +250,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(934, 561);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";

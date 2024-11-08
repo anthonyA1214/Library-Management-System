@@ -28,7 +28,7 @@ namespace Library_Management_System
             this.Close();
         }
 
-        SqlConnection conn = new SqlConnection("Data Source=NHETTEFELICES04\\SQLEXPRESS;Initial Catalog=\"Library Management System\";Integrated Security=True;");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -89,7 +89,7 @@ namespace Library_Management_System
             if(tbUsername.Text == "Username")
             {
                 tbUsername.Text = "";
-                tbUsername.ForeColor = Color.White;
+                tbUsername.ForeColor = Color.Gainsboro;
             }
         }
 
@@ -115,7 +115,7 @@ namespace Library_Management_System
             if (tbPassword.Text == "Password")
             {
                 tbPassword.Text = "";
-                tbPassword.ForeColor = Color.Silver;
+                tbPassword.ForeColor = Color.Gainsboro;
             }
         }
 

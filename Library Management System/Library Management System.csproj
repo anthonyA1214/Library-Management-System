@@ -46,17 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditBook.Designer.cs">
+      <DependentUpon>AddEditBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditMember.Designer.cs">
+      <DependentUpon>AddEditMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditStaff.Designer.cs">
+      <DependentUpon>AddEditStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CirculationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CirculationReport.Designer.cs">
+      <DependentUpon>CirculationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentLoansOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrentLoansOverview.Designer.cs">
+      <DependentUpon>CurrentLoansOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueBook.Designer.cs">
+      <DependentUpon>IssueBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberActivityReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberActivityReport.Designer.cs">
+      <DependentUpon>MemberActivityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OverdueItemsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OverdueItemsReport.Designer.cs">
+      <DependentUpon>OverdueItemsReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,22 +119,85 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnBook.Designer.cs">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchBook.Designer.cs">
+      <DependentUpon>SearchBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchMember.Designer.cs">
+      <DependentUpon>SearchMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchStaff.Designer.cs">
+      <DependentUpon>SearchStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEditBook.resx">
+      <DependentUpon>AddEditBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditMember.resx">
+      <DependentUpon>AddEditMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditStaff.resx">
+      <DependentUpon>AddEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CirculationReport.resx">
+      <DependentUpon>CirculationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrentLoansOverview.resx">
+      <DependentUpon>CurrentLoansOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueBook.resx">
+      <DependentUpon>IssueBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberActivityReport.resx">
+      <DependentUpon>MemberActivityReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverdueItemsReport.resx">
+      <DependentUpon>OverdueItemsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnBook.resx">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchBook.resx">
+      <DependentUpon>SearchBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchMember.resx">
+      <DependentUpon>SearchMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchStaff.resx">
+      <DependentUpon>SearchStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

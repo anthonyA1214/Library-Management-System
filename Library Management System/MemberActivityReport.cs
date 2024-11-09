@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class AddEditBook : Form
+    public partial class MemberActivityReport : Form
     {
-        public AddEditBook()
+        public MemberActivityReport()
         {
             InitializeComponent();
-        }
-        
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

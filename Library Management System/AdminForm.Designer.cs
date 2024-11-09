@@ -191,6 +191,25 @@
             this.btnReports.UseVisualStyleBackColor = true;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
+            // btnReports
+            // 
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReports.Image = global::Library_Management_System.Properties.Resources.report;
+            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.Location = new System.Drawing.Point(0, 795);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReports.Size = new System.Drawing.Size(233, 45);
+            this.btnReports.TabIndex = 10;
+            this.btnReports.Text = "       Reports";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            // 
             // pnlBorrowReturnSubMenu
             // 
             this.pnlBorrowReturnSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
@@ -253,6 +272,25 @@
             this.btnIssueBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIssueBook.UseVisualStyleBackColor = true;
             this.btnIssueBook.Click += new System.EventHandler(this.btnIssueBook_Click);
+            // 
+            // btnBorrowReturn
+            // 
+            this.btnBorrowReturn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBorrowReturn.FlatAppearance.BorderSize = 0;
+            this.btnBorrowReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrowReturn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrowReturn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBorrowReturn.Image = global::Library_Management_System.Properties.Resources.borrow;
+            this.btnBorrowReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrowReturn.Location = new System.Drawing.Point(0, 625);
+            this.btnBorrowReturn.Name = "btnBorrowReturn";
+            this.btnBorrowReturn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBorrowReturn.Size = new System.Drawing.Size(233, 45);
+            this.btnBorrowReturn.TabIndex = 8;
+            this.btnBorrowReturn.Text = "       Borrow/Return";
+            this.btnBorrowReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrowReturn.UseVisualStyleBackColor = true;
+            this.btnBorrowReturn.Click += new System.EventHandler(this.btnBorrowReturn_Click);
             // 
             // btnBorrowReturn
             // 
@@ -337,6 +375,25 @@
             this.btnManageMembers.UseVisualStyleBackColor = true;
             this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
             // 
+            // btnManageMembers
+            // 
+            this.btnManageMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageMembers.FlatAppearance.BorderSize = 0;
+            this.btnManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageMembers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnManageMembers.Image = global::Library_Management_System.Properties.Resources.profile;
+            this.btnManageMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageMembers.Location = new System.Drawing.Point(0, 495);
+            this.btnManageMembers.Name = "btnManageMembers";
+            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnManageMembers.Size = new System.Drawing.Size(233, 45);
+            this.btnManageMembers.TabIndex = 6;
+            this.btnManageMembers.Text = "       Manage Members";
+            this.btnManageMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageMembers.UseVisualStyleBackColor = true;
+            this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
+            // 
             // pnlManageStaffsSubMenu
             // 
             this.pnlManageStaffsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
@@ -381,6 +438,25 @@
             this.btnAddEditStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddEditStaff.UseVisualStyleBackColor = true;
             this.btnAddEditStaff.Click += new System.EventHandler(this.btnAddEditStaff_Click);
+            // 
+            // btnManageStaffs
+            // 
+            this.btnManageStaffs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageStaffs.FlatAppearance.BorderSize = 0;
+            this.btnManageStaffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageStaffs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStaffs.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnManageStaffs.Image = global::Library_Management_System.Properties.Resources.team;
+            this.btnManageStaffs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageStaffs.Location = new System.Drawing.Point(0, 365);
+            this.btnManageStaffs.Name = "btnManageStaffs";
+            this.btnManageStaffs.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnManageStaffs.Size = new System.Drawing.Size(233, 45);
+            this.btnManageStaffs.TabIndex = 4;
+            this.btnManageStaffs.Text = "       Manage Staffs";
+            this.btnManageStaffs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageStaffs.UseVisualStyleBackColor = true;
+            this.btnManageStaffs.Click += new System.EventHandler(this.btnManageStaffs_Click);
             // 
             // btnManageStaffs
             // 
@@ -462,7 +538,6 @@
             this.btnAddEditBook.Text = "       Add/Edit Book";
             this.btnAddEditBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddEditBook.UseVisualStyleBackColor = true;
-            this.btnAddEditBook.Click += new System.EventHandler(this.btnAddEditBook_Click);
             // 
             // btnManageBooks
             // 
@@ -501,6 +576,15 @@
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.pictureBox1);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(233, 150);
+            this.pnlLogo.TabIndex = 0;
             // 
             // pnlLogo
             // 

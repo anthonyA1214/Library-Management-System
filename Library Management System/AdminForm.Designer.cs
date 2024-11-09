@@ -36,7 +36,7 @@
             this.btnCirculationReports = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.pnlBorrowReturnSubMenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCurrentLoansOverview = new System.Windows.Forms.Button();
             this.btnReturnBook = new System.Windows.Forms.Button();
             this.btnIssueBook = new System.Windows.Forms.Button();
             this.btnBorrowReturn = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlSideMenu.SuspendLayout();
             this.pnlReportsSubMenu.SuspendLayout();
             this.pnlBorrowReturnSubMenu.SuspendLayout();
@@ -107,6 +107,7 @@
             this.btnLogout.Text = "       Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pnlReportsSubMenu
             // 
@@ -132,9 +133,10 @@
             this.btnOverdueItemsReports.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnOverdueItemsReports.Size = new System.Drawing.Size(233, 40);
             this.btnOverdueItemsReports.TabIndex = 5;
-            this.btnOverdueItemsReports.Text = "       Overdue Items Reports";
+            this.btnOverdueItemsReports.Text = "       Overdue Items Report";
             this.btnOverdueItemsReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOverdueItemsReports.UseVisualStyleBackColor = true;
+            this.btnOverdueItemsReports.Click += new System.EventHandler(this.btnOverdueItemsReports_Click);
             // 
             // btnMemberActivityReports
             // 
@@ -148,9 +150,10 @@
             this.btnMemberActivityReports.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnMemberActivityReports.Size = new System.Drawing.Size(233, 40);
             this.btnMemberActivityReports.TabIndex = 4;
-            this.btnMemberActivityReports.Text = "       Member Activity Reports";
+            this.btnMemberActivityReports.Text = "       Member Activity Report";
             this.btnMemberActivityReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMemberActivityReports.UseVisualStyleBackColor = true;
+            this.btnMemberActivityReports.Click += new System.EventHandler(this.btnMemberActivityReports_Click);
             // 
             // btnCirculationReports
             // 
@@ -164,9 +167,29 @@
             this.btnCirculationReports.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnCirculationReports.Size = new System.Drawing.Size(233, 40);
             this.btnCirculationReports.TabIndex = 3;
-            this.btnCirculationReports.Text = "       Circulation Reports";
+            this.btnCirculationReports.Text = "       Circulation Report";
             this.btnCirculationReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCirculationReports.UseVisualStyleBackColor = true;
+            this.btnCirculationReports.Click += new System.EventHandler(this.btnCirculationReports_Click);
+            // 
+            // btnReports
+            // 
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReports.Image = global::Library_Management_System.Properties.Resources.report;
+            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.Location = new System.Drawing.Point(0, 795);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReports.Size = new System.Drawing.Size(233, 45);
+            this.btnReports.TabIndex = 10;
+            this.btnReports.Text = "       Reports";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnReports
             // 
@@ -190,7 +213,7 @@
             // pnlBorrowReturnSubMenu
             // 
             this.pnlBorrowReturnSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
-            this.pnlBorrowReturnSubMenu.Controls.Add(this.button1);
+            this.pnlBorrowReturnSubMenu.Controls.Add(this.btnCurrentLoansOverview);
             this.pnlBorrowReturnSubMenu.Controls.Add(this.btnReturnBook);
             this.pnlBorrowReturnSubMenu.Controls.Add(this.btnIssueBook);
             this.pnlBorrowReturnSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -199,21 +222,22 @@
             this.pnlBorrowReturnSubMenu.Size = new System.Drawing.Size(233, 125);
             this.pnlBorrowReturnSubMenu.TabIndex = 9;
             // 
-            // button1
+            // btnCurrentLoansOverview
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(0, 80);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(233, 40);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "       Current Loans Overview";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCurrentLoansOverview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCurrentLoansOverview.FlatAppearance.BorderSize = 0;
+            this.btnCurrentLoansOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCurrentLoansOverview.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCurrentLoansOverview.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCurrentLoansOverview.Location = new System.Drawing.Point(0, 80);
+            this.btnCurrentLoansOverview.Name = "btnCurrentLoansOverview";
+            this.btnCurrentLoansOverview.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCurrentLoansOverview.Size = new System.Drawing.Size(233, 40);
+            this.btnCurrentLoansOverview.TabIndex = 5;
+            this.btnCurrentLoansOverview.Text = "       Current Loans Overview";
+            this.btnCurrentLoansOverview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCurrentLoansOverview.UseVisualStyleBackColor = true;
+            this.btnCurrentLoansOverview.Click += new System.EventHandler(this.btnCurrentLoansOverview_Click);
             // 
             // btnReturnBook
             // 
@@ -230,6 +254,7 @@
             this.btnReturnBook.Text = "       Return Book";
             this.btnReturnBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReturnBook.UseVisualStyleBackColor = true;
+            this.btnReturnBook.Click += new System.EventHandler(this.btnReturnBook_Click);
             // 
             // btnIssueBook
             // 
@@ -246,6 +271,26 @@
             this.btnIssueBook.Text = "       Issue Book";
             this.btnIssueBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIssueBook.UseVisualStyleBackColor = true;
+            this.btnIssueBook.Click += new System.EventHandler(this.btnIssueBook_Click);
+            // 
+            // btnBorrowReturn
+            // 
+            this.btnBorrowReturn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBorrowReturn.FlatAppearance.BorderSize = 0;
+            this.btnBorrowReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrowReturn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrowReturn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBorrowReturn.Image = global::Library_Management_System.Properties.Resources.borrow;
+            this.btnBorrowReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrowReturn.Location = new System.Drawing.Point(0, 625);
+            this.btnBorrowReturn.Name = "btnBorrowReturn";
+            this.btnBorrowReturn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBorrowReturn.Size = new System.Drawing.Size(233, 45);
+            this.btnBorrowReturn.TabIndex = 8;
+            this.btnBorrowReturn.Text = "       Borrow/Return";
+            this.btnBorrowReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrowReturn.UseVisualStyleBackColor = true;
+            this.btnBorrowReturn.Click += new System.EventHandler(this.btnBorrowReturn_Click);
             // 
             // btnBorrowReturn
             // 
@@ -292,6 +337,7 @@
             this.btnSearchMember.Text = "       Search Member";
             this.btnSearchMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearchMember.UseVisualStyleBackColor = true;
+            this.btnSearchMember.Click += new System.EventHandler(this.btnSearchMember_Click);
             // 
             // btnAddEditMember
             // 
@@ -308,6 +354,26 @@
             this.btnAddEditMember.Text = "       Add/Edit Member";
             this.btnAddEditMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddEditMember.UseVisualStyleBackColor = true;
+            this.btnAddEditMember.Click += new System.EventHandler(this.btnAddEditMember_Click);
+            // 
+            // btnManageMembers
+            // 
+            this.btnManageMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageMembers.FlatAppearance.BorderSize = 0;
+            this.btnManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageMembers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnManageMembers.Image = global::Library_Management_System.Properties.Resources.profile;
+            this.btnManageMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageMembers.Location = new System.Drawing.Point(0, 495);
+            this.btnManageMembers.Name = "btnManageMembers";
+            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnManageMembers.Size = new System.Drawing.Size(233, 45);
+            this.btnManageMembers.TabIndex = 6;
+            this.btnManageMembers.Text = "       Manage Members";
+            this.btnManageMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageMembers.UseVisualStyleBackColor = true;
+            this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
             // 
             // btnManageMembers
             // 
@@ -354,6 +420,7 @@
             this.btnSearchStaff.Text = "       Search Staff";
             this.btnSearchStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearchStaff.UseVisualStyleBackColor = true;
+            this.btnSearchStaff.Click += new System.EventHandler(this.btnSearchStaff_Click);
             // 
             // btnAddEditStaff
             // 
@@ -370,6 +437,26 @@
             this.btnAddEditStaff.Text = "       Add/Edit Staff";
             this.btnAddEditStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddEditStaff.UseVisualStyleBackColor = true;
+            this.btnAddEditStaff.Click += new System.EventHandler(this.btnAddEditStaff_Click);
+            // 
+            // btnManageStaffs
+            // 
+            this.btnManageStaffs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageStaffs.FlatAppearance.BorderSize = 0;
+            this.btnManageStaffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageStaffs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStaffs.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnManageStaffs.Image = global::Library_Management_System.Properties.Resources.team;
+            this.btnManageStaffs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageStaffs.Location = new System.Drawing.Point(0, 365);
+            this.btnManageStaffs.Name = "btnManageStaffs";
+            this.btnManageStaffs.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnManageStaffs.Size = new System.Drawing.Size(233, 45);
+            this.btnManageStaffs.TabIndex = 4;
+            this.btnManageStaffs.Text = "       Manage Staffs";
+            this.btnManageStaffs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageStaffs.UseVisualStyleBackColor = true;
+            this.btnManageStaffs.Click += new System.EventHandler(this.btnManageStaffs_Click);
             // 
             // btnManageStaffs
             // 
@@ -417,6 +504,7 @@
             this.btnInventory.Text = "       Inventory";
             this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // btnSearchBook
             // 
@@ -433,6 +521,7 @@
             this.btnSearchBook.Text = "       Search Book";
             this.btnSearchBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearchBook.UseVisualStyleBackColor = true;
+            this.btnSearchBook.Click += new System.EventHandler(this.btnSearchBook_Click);
             // 
             // btnAddEditBook
             // 
@@ -486,6 +575,16 @@
             this.btnDashboard.Text = "       Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.pictureBox1);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(233, 150);
+            this.pnlLogo.TabIndex = 0;
             // 
             // pnlLogo
             // 
@@ -507,21 +606,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // pnlContainer
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(250, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(684, 561);
-            this.panel1.TabIndex = 1;
+            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(120)))));
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(250, 0);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(684, 561);
+            this.pnlContainer.TabIndex = 1;
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 561);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlSideMenu);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -566,8 +665,8 @@
         private System.Windows.Forms.Button btnMemberActivityReports;
         private System.Windows.Forms.Button btnCirculationReports;
         private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCurrentLoansOverview;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlContainer;
     }
 }

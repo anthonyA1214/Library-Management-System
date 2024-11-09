@@ -64,5 +64,96 @@ namespace Library_Management_System
         {
             showSubMenu(pnlReportsSubMenu);
         }
+
+        private Form activeForm = null;
+
+        private void openForm(Form newForm)
+        {
+            if (activeForm != null) { activeForm.Close(); }
+            activeForm = newForm;           
+            newForm.TopLevel = false;
+            newForm.Dock = DockStyle.Fill;
+            newForm.FormBorderStyle = FormBorderStyle.None;
+            pnlContainer.Controls.Add(newForm);
+            newForm.BringToFront();
+            newForm.Show();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null) { activeForm.Close(); }
+        }
+
+        private void btnAddEditBook_Click(object sender, EventArgs e)
+        {
+            openForm(new AddEditBook());
+        }
+
+        private void btnSearchBook_Click(object sender, EventArgs e)
+        {
+            openForm(new SearchBook());
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            openForm(new Inventory());
+        }
+
+        private void btnAddEditStaff_Click(object sender, EventArgs e)
+        {
+            openForm(new AddEditStaff());
+        }
+
+        private void btnSearchStaff_Click(object sender, EventArgs e)
+        {
+            openForm(new SearchStaff());
+        }
+
+        private void btnAddEditMember_Click(object sender, EventArgs e)
+        {
+            openForm(new AddEditMember());
+        }
+
+        private void btnSearchMember_Click(object sender, EventArgs e)
+        {
+            openForm(new SearchMember());
+        }
+
+        private void btnIssueBook_Click(object sender, EventArgs e)
+        {
+            openForm(new IssueBook());
+        }
+
+        private void btnReturnBook_Click(object sender, EventArgs e)
+        {
+            openForm(new ReturnBook());
+        }
+
+        private void btnCurrentLoansOverview_Click(object sender, EventArgs e)
+        {
+            openForm(new CurrentLoansOverview());
+        }
+
+        private void btnCirculationReports_Click(object sender, EventArgs e)
+        {
+            openForm(new CirculationReport());
+        }
+
+        private void btnMemberActivityReports_Click(object sender, EventArgs e)
+        {
+            openForm(new MemberActivityReport());
+        }
+
+        private void btnOverdueItemsReports_Click(object sender, EventArgs e)
+        {
+            openForm(new OverdueItemsReport());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }

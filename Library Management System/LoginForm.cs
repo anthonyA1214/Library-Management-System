@@ -13,6 +13,8 @@ namespace Library_Management_System
 {
     public partial class LoginForm : Form
     {
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
+
         public LoginForm()
         {
             InitializeComponent();
@@ -27,8 +29,6 @@ namespace Library_Management_System
         {
             this.Close();
         }
-
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -74,9 +74,9 @@ namespace Library_Management_System
                     lblIncorrect.Visible = true;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("An error occurred. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

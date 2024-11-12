@@ -66,6 +66,7 @@
             // 
             // pnlSideMenu
             // 
+            this.pnlSideMenu.AutoScroll = true;
             this.pnlSideMenu.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlSideMenu.Controls.Add(this.btnEnter);
             this.pnlSideMenu.Controls.Add(this.label8);
@@ -93,9 +94,10 @@
             // btnEnter
             // 
             this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnter.Location = new System.Drawing.Point(50, 470);
+            this.btnEnter.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnEnter.Location = new System.Drawing.Point(38, 470);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(100, 40);
+            this.btnEnter.Size = new System.Drawing.Size(125, 40);
             this.btnEnter.TabIndex = 21;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;

@@ -13,7 +13,7 @@ namespace Library_Management_System
 {
     public partial class AddEditBook : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=NHETTEFELICES04\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
         int select, book_id;
 
         public AddEditBook()
@@ -75,7 +75,6 @@ namespace Library_Management_System
             {
                 MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void disableEdit()
@@ -170,7 +169,6 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@publicationyear", publicationyear);
                         cmd.Parameters.AddWithValue("@copiesavailable", copiesavailable);
                         cmd.Parameters.AddWithValue("@totalcopies", totalcopies);
-
                         cmd.ExecuteNonQuery();
                         break;
                     case 2:

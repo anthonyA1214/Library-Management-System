@@ -38,7 +38,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbMembershipType = new System.Windows.Forms.ComboBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.btnEnter = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -106,6 +106,7 @@
             this.dgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBook.Size = new System.Drawing.Size(433, 437);
             this.dgvBook.TabIndex = 0;
+            this.dgvBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellClick);
             // 
             // panel2
             // 
@@ -134,6 +135,7 @@
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnDelete
             // 
@@ -149,6 +151,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -164,6 +167,7 @@
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -179,6 +183,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pbExit
             // 
@@ -189,11 +194,13 @@
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 0;
             this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // pnlSideMenu
             // 
+            this.pnlSideMenu.AutoScroll = true;
             this.pnlSideMenu.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlSideMenu.Controls.Add(this.comboBox1);
+            this.pnlSideMenu.Controls.Add(this.cbMembershipType);
             this.pnlSideMenu.Controls.Add(this.tbEmail);
             this.pnlSideMenu.Controls.Add(this.btnEnter);
             this.pnlSideMenu.Controls.Add(this.label8);
@@ -216,14 +223,18 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(200, 522);
             this.pnlSideMenu.TabIndex = 3;
             // 
-            // comboBox1
+            // cbMembershipType
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 437);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 25);
-            this.comboBox1.TabIndex = 23;
+            this.cbMembershipType.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cbMembershipType.FormattingEnabled = true;
+            this.cbMembershipType.Items.AddRange(new object[] {
+            "Student",
+            "Adult",
+            "Senior"});
+            this.cbMembershipType.Location = new System.Drawing.Point(6, 437);
+            this.cbMembershipType.Name = "cbMembershipType";
+            this.cbMembershipType.Size = new System.Drawing.Size(182, 25);
+            this.cbMembershipType.TabIndex = 23;
             // 
             // tbEmail
             // 
@@ -236,12 +247,14 @@
             // btnEnter
             // 
             this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnter.Location = new System.Drawing.Point(50, 470);
+            this.btnEnter.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnEnter.Location = new System.Drawing.Point(38, 470);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(100, 40);
+            this.btnEnter.Size = new System.Drawing.Size(125, 40);
             this.btnEnter.TabIndex = 21;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // label8
             // 
@@ -373,6 +386,7 @@
             this.pbExit2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit2.TabIndex = 5;
             this.pbExit2.TabStop = false;
+            this.pbExit2.Click += new System.EventHandler(this.pbExit2_Click);
             // 
             // AddEditMember
             // 
@@ -426,6 +440,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbExit2;
         private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbMembershipType;
     }
 }

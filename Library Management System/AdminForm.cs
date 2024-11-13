@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,24 @@ namespace Library_Management_System
 {
     public partial class AdminForm : Form
     {
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
         public AdminForm()
         {
-            InitializeComponent();
-            hideSubMenu();
+            InitializeComponent();            
+        }
+
+        private void hideDashboard()
+        {
+            pnlTitle.Visible = false;
+            tlpCounts1.Visible = false;
+            tlpCounts2.Visible = false;
+        }
+
+        private void showDashboard(object sender, FormClosedEventArgs e)
+        {
+            pnlTitle.Visible = true;
+            tlpCounts1.Visible = true;
+            tlpCounts2.Visible = true;
         }
 
         private void hideSubMenu()
@@ -38,6 +53,31 @@ namespace Library_Management_System
             {
                 SubMenu.Visible = false;
             }
+        }
+
+        private void loadCount()
+        {
+            string query1 = "SELECT COUNT(*) from tbl_book";
+            string query2 = "SELECT COUNT(*) from tbl_staff";
+            string query3 = "SELECT COUNT(*) from tbl_member";
+
+            SqlCommand cmd1 = new SqlCommand(query1, conn);
+            SqlCommand cmd2 = new SqlCommand(query2, conn);
+            SqlCommand cmd3 = new SqlCommand(query3, conn);
+
+            SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+            SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
+
+            DataSet ds = new DataSet();
+
+            da1.Fill(ds, "BookCount");
+            da2.Fill(ds, "StaffCount");
+            da3.Fill(ds, "MemberCount");
+
+            lblCountBook.Text = ds.Tables["BookCount"].Rows[0][0].ToString();
+            lblCountStaff.Text = ds.Tables["StaffCount"].Rows[0][0].ToString();
+            lblCountMember.Text = ds.Tables["MemberCount"].Rows[0][0].ToString();
         }
 
         private void btnManageBooks_Click(object sender, EventArgs e)
@@ -69,7 +109,13 @@ namespace Library_Management_System
 
         private void openForm(Form newForm)
         {
-            if (activeForm != null) { activeForm.Close(); }
+            hideDashboard();
+            if (activeForm != null)
+            {
+                activeForm.FormClosed -= showDashboard;
+                activeForm.Close();
+            }
+
             activeForm = newForm;           
             newForm.TopLevel = false;
             newForm.Dock = DockStyle.Fill;
@@ -77,6 +123,7 @@ namespace Library_Management_System
             pnlContainer.Controls.Add(newForm);
             newForm.BringToFront();
             newForm.Show();
+            newForm.FormClosed += showDashboard;
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -154,6 +201,17 @@ namespace Library_Management_System
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            loadCount();            
+        }
+
+        private void autoLoadCount_Tick(object sender, EventArgs e)
+        {
+            loadCount();
         }
     }
 }

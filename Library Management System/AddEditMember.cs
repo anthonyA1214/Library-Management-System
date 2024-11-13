@@ -134,15 +134,33 @@ namespace Library_Management_System
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            select = 0;
+            select = 0; member_id = 0;
             loadTable();
             clearTexts();
             enableEdit();
             pnlSideMenu.Visible = false;
+          
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            if (select == 1 && tbFirstName.Text == "" && tbLastName.Text == "" && tbAddress.Text == "" && tbContactNumber.Text == "" && tbEmail.Text == "" && cbMembershipType.Text == "")
+            {
+                MessageBox.Show("All fields are required.", "Input error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (select == 2 && tbMemberID.Text == "")
+            {
+                MessageBox.Show("Please select a member to update.", "Selection required.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (select == 3 && tbMemberID.Text == "")
+            {
+                MessageBox.Show("Please select a member to delete.", "Selection required.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int memberid;
             string firstname = tbFirstName.Text;
             string lastname = tbLastName.Text;
             string address = tbAddress.Text;
@@ -150,6 +168,9 @@ namespace Library_Management_System
             string email = tbEmail.Text;
             string membershiptype = cbMembershipType.Text;
             string query;
+
+            if (select == 2 || select == 3) { memberid = int.Parse(tbMemberID.Text); }
+            else { memberid = 0; }
             try
             {
                 conn.Open();
@@ -169,9 +190,10 @@ namespace Library_Management_System
                         cmd.ExecuteNonQuery();
                         break;
                     case 2:
-                        query = "UPDATE tbl_member SET first_name = @firstname, last_name = @lastname, address = @address, contact_number = @contactnumber, email = @email, membership_type = @membershiptype";
+                        query = "UPDATE tbl_member SET first_name = @firstname, last_name = @lastname, address = @address, contact_number = @contactnumber, email = @email, membership_type = @membershiptype WHERE member_id = @memberid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
+                        cmd.Parameters.AddWithValue("@memberid", memberid);
                         cmd.Parameters.AddWithValue("@firstname", firstname);
                         cmd.Parameters.AddWithValue("@lastname", lastname);
                         cmd.Parameters.AddWithValue("@address", address);
@@ -181,9 +203,10 @@ namespace Library_Management_System
                         cmd.ExecuteNonQuery();
                         break;
                     case 3:
-                        query = "DELETE from tbl_member WHERE member_id = "+member_id+"";
+                        query = "DELETE from tbl_member WHERE member_id = @memberid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
+                        cmd.Parameters.AddWithValue("@memberid", memberid);
                         cmd.ExecuteNonQuery();
                         break;
                 }
@@ -196,7 +219,7 @@ namespace Library_Management_System
             {
                 conn.Close();
                 clearTexts();
-                loadTable();
+                loadTable();               
             }
             
         }
@@ -210,6 +233,7 @@ namespace Library_Management_System
         {
             pnlSideMenu.Visible = false;
             select = 0;
+            member_id = 0;
         }
     }
 }

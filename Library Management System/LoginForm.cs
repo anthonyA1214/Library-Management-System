@@ -23,11 +23,12 @@ namespace Library_Management_System
         private void LoginForm_Load(object sender, EventArgs e)
         {
             lblIncorrect.Visible = false;
+            this.AcceptButton = btnLogin;
         }
 
         private void pbExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -43,13 +44,13 @@ namespace Library_Management_System
             string password = tbPassword.Text;
 
             conn.Open();
-            string query = "SELECT role from tbl_user WHERE username = @username AND password = @password";
+            string query = "SELECT role from tbl_staff WHERE username = @username AND password = @password";
             SqlCommand cmd = new SqlCommand(query, conn);
 
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
 
-            string role = (cmd.ExecuteScalar() as string)?.Trim();
+            string role = (cmd.ExecuteScalar() as string)?.Trim().ToLower();
 
             try
             {            

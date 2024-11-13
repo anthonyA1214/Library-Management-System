@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -137,7 +138,7 @@ namespace Library_Management_System
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            select = 0;
+            select = 0; staff_id = 0;
             loadTable();
             clearTexts();
             enableEdit();
@@ -146,6 +147,22 @@ namespace Library_Management_System
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            if (select == 1 && tbUsername.Text == "" && tbPassword.Text == "" && cbRole.Text == "" && tbFirstName.Text == "" && tbLastName.Text == "" && tbEmail.Text == "" && tbContactNumber.Text == "")
+            {
+                MessageBox.Show("All fields are required.", "Input error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (select == 2 && tbStaffID.Text == "")
+            {
+                MessageBox.Show("Please select a staff to update.", "Selection required.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (select == 3 && tbStaffID.Text == "")
+            {
+                MessageBox.Show("Please select a staff to delete.", "Selection required.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int staffid;
             string username = tbUsername.Text;
             string password = tbPassword.Text;
             string role = cbRole.Text;
@@ -154,6 +171,9 @@ namespace Library_Management_System
             string email = tbEmail.Text;
             string contactnumber = tbContactNumber.Text;
             string query;
+
+            if (select == 2 || select == 3) { staffid = int.Parse(tbStaffID.Text); }
+            else { staffid = 0; }
             try
             {
                 conn.Open();
@@ -175,9 +195,10 @@ namespace Library_Management_System
                         cmd.ExecuteNonQuery();
                         break;
                     case 2:
-                        query = "UPDATE tbl_staff SET username = @username, password = @password, role = @role, first_name = @firstname, last_name = @lastname, email = @email, contact_number = @contactnumber WHERE staff_id = "+staff_id+"";
+                        query = "UPDATE tbl_staff SET username = @username, password = @password, role = @role, first_name = @firstname, last_name = @lastname, email = @email, contact_number = @contactnumber WHERE staff_id = @staffid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
+                        cmd.Parameters.AddWithValue("@staffid", staffid);
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@password", password);
                         cmd.Parameters.AddWithValue("@role", role);
@@ -188,9 +209,10 @@ namespace Library_Management_System
                         cmd.ExecuteNonQuery();
                         break;
                     case 3:
-                        query = "DELETE from tbl_staff WHERE staff_id = "+staff_id+"";
+                        query = "DELETE from tbl_staff WHERE staff_id = @staffid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
+                        cmd.Parameters.AddWithValue("@staffid",staffid);
                         cmd.ExecuteNonQuery();
                         break;
                 }

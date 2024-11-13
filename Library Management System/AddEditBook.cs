@@ -134,7 +134,7 @@ namespace Library_Management_System
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            select = 0;
+            select = 0; book_id = 0;
             loadTable();
             clearTexts();
             enableEdit();
@@ -143,6 +143,23 @@ namespace Library_Management_System
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            if (select == 1 && tbTitle.Text == "" && tbAuthor.Text == "" && tbISBN.Text == "" && tbGenre.Text == "" && tbTotalCopies.Text == "")
+            {
+                MessageBox.Show("All fields are required.", "Input error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (select == 2 && tbBookID.Text == "")
+            {
+                MessageBox.Show("Please select a book to update.", "Selection required.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (select == 3 && tbBookID.Text == "")
+            {
+                MessageBox.Show("Please select a book to delete.", "Selection required.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int bookid;
             string title = tbTitle.Text;
             string author = tbAuthor.Text;
             string isbn = tbISBN.Text;
@@ -151,6 +168,10 @@ namespace Library_Management_System
             int totalcopies = int.Parse(tbTotalCopies.Text);
             int copiesavailable = totalcopies;
             string query;
+
+            if (select == 2 || select == 3) { bookid = int.Parse(tbBookID.Text); }
+            else { bookid = 0; }
+
             try
             {
                 conn.Open();
@@ -172,9 +193,10 @@ namespace Library_Management_System
                         cmd.ExecuteNonQuery();
                         break;
                     case 2:
-                        query = "UPDATE tbl_book SET title = @title, author = @author, isbn = @isbn, genre = @genre, publication_year = @publicationyear WHERE book_id = " + book_id + "";
+                        query = "UPDATE tbl_book SET title = @title, author = @author, isbn = @isbn, genre = @genre, publication_year = @publicationyear WHERE book_id = @bookid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
+                        cmd.Parameters.AddWithValue("@bookid", bookid);
                         cmd.Parameters.AddWithValue("@title", title);
                         cmd.Parameters.AddWithValue("@author", author);
                         cmd.Parameters.AddWithValue("@isbn", isbn);
@@ -183,9 +205,10 @@ namespace Library_Management_System
                         cmd.ExecuteNonQuery();
                         break;
                     case 3:
-                        query = "DELETE from tbl_book WHERE book_id = " + book_id + "";
+                        query = "DELETE from tbl_book WHERE book_id = @bookid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
+                        cmd.Parameters.AddWithValue("@bookid", bookid);
                         cmd.ExecuteNonQuery();
                         break;
                 }

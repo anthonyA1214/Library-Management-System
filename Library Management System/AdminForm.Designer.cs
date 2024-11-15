@@ -32,102 +32,103 @@
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.tlpCounts2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tlpCounts1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.lblCountStaff = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.lblCountMember = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.lblCountBook = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.btnManageBooks = new System.Windows.Forms.Button();
             this.pnlManageBooksSubMenu = new System.Windows.Forms.Panel();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnAddEditBook = new System.Windows.Forms.Button();
-            this.btnManageStaffs = new System.Windows.Forms.Button();
             this.pnlManageStaffsSubMenu = new System.Windows.Forms.Panel();
             this.btnSearchStaff = new System.Windows.Forms.Button();
             this.btnAddEditStaff = new System.Windows.Forms.Button();
-            this.btnManageMembers = new System.Windows.Forms.Button();
             this.pnlManageMembersSubMenu = new System.Windows.Forms.Panel();
             this.btnSearchMember = new System.Windows.Forms.Button();
             this.btnAddEditMember = new System.Windows.Forms.Button();
-            this.btnBorrowReturn = new System.Windows.Forms.Button();
             this.pnlBorrowReturnSubMenu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnReturnBook = new System.Windows.Forms.Button();
             this.btnIssueBook = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
             this.pnlReportsSubMenu = new System.Windows.Forms.Panel();
             this.btnOverdueItemsReports = new System.Windows.Forms.Button();
             this.btnMemberActivityReports = new System.Windows.Forms.Button();
             this.btnCirculationReports = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.autoLoadCount = new System.Windows.Forms.Timer(this.components);
+            this.autoLoadDashboard = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnBorrowReturn = new System.Windows.Forms.Button();
+            this.btnManageMembers = new System.Windows.Forms.Button();
+            this.btnManageStaffs = new System.Windows.Forms.Button();
+            this.btnManageBooks = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlContainer.SuspendLayout();
             this.tlpCounts2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tlpCounts1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlTitle.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlManageBooksSubMenu.SuspendLayout();
             this.pnlManageStaffsSubMenu.SuspendLayout();
             this.pnlManageMembersSubMenu.SuspendLayout();
             this.pnlBorrowReturnSubMenu.SuspendLayout();
             this.pnlReportsSubMenu.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -140,7 +141,6 @@
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(250, 0);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Padding = new System.Windows.Forms.Padding(10);
             this.pnlContainer.Size = new System.Drawing.Size(684, 561);
             this.pnlContainer.TabIndex = 1;
             // 
@@ -156,11 +156,11 @@
             this.tlpCounts2.Controls.Add(this.panel8, 2, 0);
             this.tlpCounts2.Controls.Add(this.panel6, 1, 0);
             this.tlpCounts2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpCounts2.Location = new System.Drawing.Point(10, 220);
+            this.tlpCounts2.Location = new System.Drawing.Point(0, 210);
             this.tlpCounts2.Name = "tlpCounts2";
             this.tlpCounts2.RowCount = 1;
             this.tlpCounts2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCounts2.Size = new System.Drawing.Size(664, 90);
+            this.tlpCounts2.Size = new System.Drawing.Size(684, 90);
             this.tlpCounts2.TabIndex = 22;
             // 
             // panel10
@@ -168,23 +168,34 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Controls.Add(this.label10);
+            this.panel10.Controls.Add(this.lblTime);
+            this.panel10.Controls.Add(this.lblDate);
             this.panel10.Controls.Add(this.label11);
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(501, 3);
+            this.panel10.Location = new System.Drawing.Point(516, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(160, 75);
+            this.panel10.Size = new System.Drawing.Size(165, 75);
             this.panel10.TabIndex = 16;
             // 
-            // label10
+            // lblTime
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(81, 23);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 45);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "0";
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(81, 51);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(35, 15);
+            this.lblTime.TabIndex = 9;
+            this.lblTime.Text = "Time";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(81, 27);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(37, 17);
+            this.lblDate.TabIndex = 7;
+            this.lblDate.Text = "Date";
             // 
             // label11
             // 
@@ -206,16 +217,6 @@
             this.panel11.Size = new System.Drawing.Size(75, 75);
             this.panel11.TabIndex = 6;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Library_Management_System.Properties.Resources.schedule;
-            this.pictureBox7.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 8;
-            this.pictureBox7.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -226,7 +227,7 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(160, 75);
+            this.panel3.Size = new System.Drawing.Size(165, 75);
             this.panel3.TabIndex = 11;
             // 
             // label4
@@ -259,16 +260,6 @@
             this.panel5.Size = new System.Drawing.Size(75, 75);
             this.panel5.TabIndex = 6;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Library_Management_System.Properties.Resources.paper_plane;
-            this.pictureBox4.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
             // panel8
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -277,9 +268,9 @@
             this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.label9);
             this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(335, 3);
+            this.panel8.Location = new System.Drawing.Point(345, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(160, 75);
+            this.panel8.Size = new System.Drawing.Size(165, 75);
             this.panel8.TabIndex = 15;
             // 
             // label8
@@ -312,16 +303,6 @@
             this.panel9.Size = new System.Drawing.Size(75, 75);
             this.panel9.TabIndex = 6;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Library_Management_System.Properties.Resources.dislike;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
-            // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -330,9 +311,9 @@
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(169, 3);
+            this.panel6.Location = new System.Drawing.Point(174, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(160, 75);
+            this.panel6.Size = new System.Drawing.Size(165, 75);
             this.panel6.TabIndex = 14;
             // 
             // label6
@@ -365,16 +346,6 @@
             this.panel7.Size = new System.Drawing.Size(75, 75);
             this.panel7.TabIndex = 6;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Library_Management_System.Properties.Resources.like;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
             // tlpCounts1
             // 
             this.tlpCounts1.ColumnCount = 3;
@@ -385,11 +356,11 @@
             this.tlpCounts1.Controls.Add(this.panel4, 2, 0);
             this.tlpCounts1.Controls.Add(this.panel1, 0, 0);
             this.tlpCounts1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpCounts1.Location = new System.Drawing.Point(10, 70);
+            this.tlpCounts1.Location = new System.Drawing.Point(0, 60);
             this.tlpCounts1.Name = "tlpCounts1";
             this.tlpCounts1.RowCount = 1;
             this.tlpCounts1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCounts1.Size = new System.Drawing.Size(664, 150);
+            this.tlpCounts1.Size = new System.Drawing.Size(684, 150);
             this.tlpCounts1.TabIndex = 21;
             // 
             // panel2
@@ -401,9 +372,9 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.lblCountStaff);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(224, 3);
+            this.panel2.Location = new System.Drawing.Point(231, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(215, 130);
+            this.panel2.Size = new System.Drawing.Size(222, 130);
             this.panel2.TabIndex = 13;
             // 
             // label5
@@ -425,7 +396,7 @@
             this.button3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(0, 100);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(215, 30);
+            this.button3.Size = new System.Drawing.Size(222, 30);
             this.button3.TabIndex = 2;
             this.button3.Text = "More Info";
             this.button3.UseVisualStyleBackColor = false;
@@ -440,17 +411,6 @@
             this.lblCountStaff.TabIndex = 1;
             this.lblCountStaff.Text = "0";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::Library_Management_System.Properties.Resources.staffs;
-            this.pictureBox3.Location = new System.Drawing.Point(110, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -460,9 +420,9 @@
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.lblCountMember);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(445, 3);
+            this.panel4.Location = new System.Drawing.Point(459, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(216, 130);
+            this.panel4.Size = new System.Drawing.Size(222, 130);
             this.panel4.TabIndex = 12;
             // 
             // label3
@@ -484,7 +444,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(0, 100);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(216, 30);
+            this.button2.Size = new System.Drawing.Size(222, 30);
             this.button2.TabIndex = 2;
             this.button2.Text = "More Info";
             this.button2.UseVisualStyleBackColor = false;
@@ -499,17 +459,6 @@
             this.lblCountMember.TabIndex = 1;
             this.lblCountMember.Text = "0";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.members;
-            this.pictureBox2.Location = new System.Drawing.Point(110, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -521,7 +470,7 @@
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 130);
+            this.panel1.Size = new System.Drawing.Size(222, 130);
             this.panel1.TabIndex = 10;
             // 
             // label2
@@ -543,7 +492,7 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(0, 100);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(215, 30);
+            this.button4.Size = new System.Drawing.Size(222, 30);
             this.button4.TabIndex = 2;
             this.button4.Text = "More Info";
             this.button4.UseVisualStyleBackColor = false;
@@ -558,32 +507,21 @@
             this.lblCountBook.TabIndex = 1;
             this.lblCountBook.Text = "0";
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.Image = global::Library_Management_System.Properties.Resources.books;
-            this.pictureBox8.Location = new System.Drawing.Point(110, 5);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            // 
             // pnlTitle
             // 
             this.pnlTitle.Controls.Add(this.panel12);
             this.pnlTitle.Controls.Add(this.label12);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(10, 10);
+            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(664, 60);
+            this.pnlTitle.Size = new System.Drawing.Size(684, 60);
             this.pnlTitle.TabIndex = 20;
             // 
             // panel12
             // 
             this.panel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(232, 52);
+            this.panel12.Location = new System.Drawing.Point(242, 52);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(200, 1);
             this.panel12.TabIndex = 18;
@@ -594,7 +532,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(240, 8);
+            this.label12.Location = new System.Drawing.Point(250, 8);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(184, 45);
             this.label12.TabIndex = 17;
@@ -608,55 +546,6 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(233, 150);
             this.pnlLogo.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.digital_library;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDashboard.Image = global::Library_Management_System.Properties.Resources.layout;
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 150);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(233, 45);
-            this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "       Dashboard";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
-            // btnManageBooks
-            // 
-            this.btnManageBooks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageBooks.FlatAppearance.BorderSize = 0;
-            this.btnManageBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageBooks.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageBooks.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnManageBooks.Image = global::Library_Management_System.Properties.Resources.book;
-            this.btnManageBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageBooks.Location = new System.Drawing.Point(0, 195);
-            this.btnManageBooks.Name = "btnManageBooks";
-            this.btnManageBooks.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManageBooks.Size = new System.Drawing.Size(233, 45);
-            this.btnManageBooks.TabIndex = 2;
-            this.btnManageBooks.Text = "       Manage Books";
-            this.btnManageBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageBooks.UseVisualStyleBackColor = true;
-            this.btnManageBooks.Click += new System.EventHandler(this.btnManageBooks_Click);
             // 
             // pnlManageBooksSubMenu
             // 
@@ -703,25 +592,6 @@
             this.btnAddEditBook.UseVisualStyleBackColor = true;
             this.btnAddEditBook.Click += new System.EventHandler(this.btnAddEditBook_Click);
             // 
-            // btnManageStaffs
-            // 
-            this.btnManageStaffs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageStaffs.FlatAppearance.BorderSize = 0;
-            this.btnManageStaffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageStaffs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageStaffs.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnManageStaffs.Image = global::Library_Management_System.Properties.Resources.team;
-            this.btnManageStaffs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageStaffs.Location = new System.Drawing.Point(0, 325);
-            this.btnManageStaffs.Name = "btnManageStaffs";
-            this.btnManageStaffs.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManageStaffs.Size = new System.Drawing.Size(233, 45);
-            this.btnManageStaffs.TabIndex = 4;
-            this.btnManageStaffs.Text = "       Manage Staffs";
-            this.btnManageStaffs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageStaffs.UseVisualStyleBackColor = true;
-            this.btnManageStaffs.Click += new System.EventHandler(this.btnManageStaffs_Click);
-            // 
             // pnlManageStaffsSubMenu
             // 
             this.pnlManageStaffsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
@@ -767,25 +637,6 @@
             this.btnAddEditStaff.UseVisualStyleBackColor = true;
             this.btnAddEditStaff.Click += new System.EventHandler(this.btnAddEditStaff_Click);
             // 
-            // btnManageMembers
-            // 
-            this.btnManageMembers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageMembers.FlatAppearance.BorderSize = 0;
-            this.btnManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageMembers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnManageMembers.Image = global::Library_Management_System.Properties.Resources.profile;
-            this.btnManageMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageMembers.Location = new System.Drawing.Point(0, 455);
-            this.btnManageMembers.Name = "btnManageMembers";
-            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManageMembers.Size = new System.Drawing.Size(233, 45);
-            this.btnManageMembers.TabIndex = 6;
-            this.btnManageMembers.Text = "       Manage Members";
-            this.btnManageMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageMembers.UseVisualStyleBackColor = true;
-            this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
-            // 
             // pnlManageMembersSubMenu
             // 
             this.pnlManageMembersSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
@@ -830,25 +681,6 @@
             this.btnAddEditMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddEditMember.UseVisualStyleBackColor = true;
             this.btnAddEditMember.Click += new System.EventHandler(this.btnAddEditMember_Click);
-            // 
-            // btnBorrowReturn
-            // 
-            this.btnBorrowReturn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBorrowReturn.FlatAppearance.BorderSize = 0;
-            this.btnBorrowReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrowReturn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrowReturn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBorrowReturn.Image = global::Library_Management_System.Properties.Resources.borrow;
-            this.btnBorrowReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorrowReturn.Location = new System.Drawing.Point(0, 585);
-            this.btnBorrowReturn.Name = "btnBorrowReturn";
-            this.btnBorrowReturn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnBorrowReturn.Size = new System.Drawing.Size(233, 45);
-            this.btnBorrowReturn.TabIndex = 8;
-            this.btnBorrowReturn.Text = "       Borrow/Return";
-            this.btnBorrowReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorrowReturn.UseVisualStyleBackColor = true;
-            this.btnBorrowReturn.Click += new System.EventHandler(this.btnBorrowReturn_Click);
             // 
             // pnlBorrowReturnSubMenu
             // 
@@ -913,25 +745,6 @@
             this.btnIssueBook.UseVisualStyleBackColor = true;
             this.btnIssueBook.Click += new System.EventHandler(this.btnIssueBook_Click);
             // 
-            // btnReports
-            // 
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReports.Image = global::Library_Management_System.Properties.Resources.report;
-            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(0, 755);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReports.Size = new System.Drawing.Size(233, 45);
-            this.btnReports.TabIndex = 10;
-            this.btnReports.Text = "       Reports";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = true;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
-            // 
             // pnlReportsSubMenu
             // 
             this.pnlReportsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
@@ -995,25 +808,6 @@
             this.btnCirculationReports.UseVisualStyleBackColor = true;
             this.btnCirculationReports.Click += new System.EventHandler(this.btnCirculationReports_Click);
             // 
-            // btnLogout
-            // 
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLogout.Image = global::Library_Management_System.Properties.Resources.logout;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 925);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(233, 45);
-            this.btnLogout.TabIndex = 12;
-            this.btnLogout.Text = "       Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // pnlSideMenu
             // 
             this.pnlSideMenu.AutoScroll = true;
@@ -1037,11 +831,227 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(250, 561);
             this.pnlSideMenu.TabIndex = 0;
             // 
-            // autoLoadCount
+            // autoLoadDashboard
             // 
-            this.autoLoadCount.Enabled = true;
-            this.autoLoadCount.Interval = 500;
-            this.autoLoadCount.Tick += new System.EventHandler(this.autoLoadCount_Tick);
+            this.autoLoadDashboard.Enabled = true;
+            this.autoLoadDashboard.Tick += new System.EventHandler(this.autoLoadCount_Tick);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Library_Management_System.Properties.Resources.schedule;
+            this.pictureBox7.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 8;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Library_Management_System.Properties.Resources.paper_plane;
+            this.pictureBox4.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Library_Management_System.Properties.Resources.dislike;
+            this.pictureBox6.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 8;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Library_Management_System.Properties.Resources.like;
+            this.pictureBox5.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::Library_Management_System.Properties.Resources.staffs;
+            this.pictureBox3.Location = new System.Drawing.Point(117, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.members;
+            this.pictureBox2.Location = new System.Drawing.Point(116, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox8.Image = global::Library_Management_System.Properties.Resources.books;
+            this.pictureBox8.Location = new System.Drawing.Point(117, 5);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogout.Image = global::Library_Management_System.Properties.Resources.logout;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 925);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(233, 45);
+            this.btnLogout.TabIndex = 12;
+            this.btnLogout.Text = "       Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnReports
+            // 
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReports.Image = global::Library_Management_System.Properties.Resources.report;
+            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.Location = new System.Drawing.Point(0, 755);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReports.Size = new System.Drawing.Size(233, 45);
+            this.btnReports.TabIndex = 10;
+            this.btnReports.Text = "       Reports";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            // 
+            // btnBorrowReturn
+            // 
+            this.btnBorrowReturn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBorrowReturn.FlatAppearance.BorderSize = 0;
+            this.btnBorrowReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrowReturn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrowReturn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBorrowReturn.Image = global::Library_Management_System.Properties.Resources.borrow;
+            this.btnBorrowReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrowReturn.Location = new System.Drawing.Point(0, 585);
+            this.btnBorrowReturn.Name = "btnBorrowReturn";
+            this.btnBorrowReturn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBorrowReturn.Size = new System.Drawing.Size(233, 45);
+            this.btnBorrowReturn.TabIndex = 8;
+            this.btnBorrowReturn.Text = "       Borrow/Return";
+            this.btnBorrowReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrowReturn.UseVisualStyleBackColor = true;
+            this.btnBorrowReturn.Click += new System.EventHandler(this.btnBorrowReturn_Click);
+            // 
+            // btnManageMembers
+            // 
+            this.btnManageMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageMembers.FlatAppearance.BorderSize = 0;
+            this.btnManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageMembers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnManageMembers.Image = global::Library_Management_System.Properties.Resources.profile;
+            this.btnManageMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageMembers.Location = new System.Drawing.Point(0, 455);
+            this.btnManageMembers.Name = "btnManageMembers";
+            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnManageMembers.Size = new System.Drawing.Size(233, 45);
+            this.btnManageMembers.TabIndex = 6;
+            this.btnManageMembers.Text = "       Manage Members";
+            this.btnManageMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageMembers.UseVisualStyleBackColor = true;
+            this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
+            // 
+            // btnManageStaffs
+            // 
+            this.btnManageStaffs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageStaffs.FlatAppearance.BorderSize = 0;
+            this.btnManageStaffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageStaffs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStaffs.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnManageStaffs.Image = global::Library_Management_System.Properties.Resources.team;
+            this.btnManageStaffs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageStaffs.Location = new System.Drawing.Point(0, 325);
+            this.btnManageStaffs.Name = "btnManageStaffs";
+            this.btnManageStaffs.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnManageStaffs.Size = new System.Drawing.Size(233, 45);
+            this.btnManageStaffs.TabIndex = 4;
+            this.btnManageStaffs.Text = "       Manage Staffs";
+            this.btnManageStaffs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageStaffs.UseVisualStyleBackColor = true;
+            this.btnManageStaffs.Click += new System.EventHandler(this.btnManageStaffs_Click);
+            // 
+            // btnManageBooks
+            // 
+            this.btnManageBooks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageBooks.FlatAppearance.BorderSize = 0;
+            this.btnManageBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageBooks.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageBooks.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnManageBooks.Image = global::Library_Management_System.Properties.Resources.book;
+            this.btnManageBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageBooks.Location = new System.Drawing.Point(0, 195);
+            this.btnManageBooks.Name = "btnManageBooks";
+            this.btnManageBooks.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnManageBooks.Size = new System.Drawing.Size(233, 45);
+            this.btnManageBooks.TabIndex = 2;
+            this.btnManageBooks.Text = "       Manage Books";
+            this.btnManageBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageBooks.UseVisualStyleBackColor = true;
+            this.btnManageBooks.Click += new System.EventHandler(this.btnManageBooks_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDashboard.Image = global::Library_Management_System.Properties.Resources.layout;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 150);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(233, 45);
+            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.Text = "       Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.digital_library;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // AdminForm
             // 
@@ -1060,39 +1070,39 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tlpCounts1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlManageBooksSubMenu.ResumeLayout(false);
             this.pnlManageStaffsSubMenu.ResumeLayout(false);
             this.pnlManageMembersSubMenu.ResumeLayout(false);
             this.pnlBorrowReturnSubMenu.ResumeLayout(false);
             this.pnlReportsSubMenu.ResumeLayout(false);
             this.pnlSideMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1157,15 +1167,16 @@
         private System.Windows.Forms.Label lblCountBook;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Timer autoLoadCount;
+        private System.Windows.Forms.Timer autoLoadDashboard;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TableLayoutPanel tlpCounts1;
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.TableLayoutPanel tlpCounts2;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label lblTime;
     }
 }

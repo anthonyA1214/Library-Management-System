@@ -212,6 +212,8 @@ namespace Library_Management_System
         private void autoLoadCount_Tick(object sender, EventArgs e)
         {
             loadCount();
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToShortTimeString();
         }
     }
 }

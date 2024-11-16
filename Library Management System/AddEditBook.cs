@@ -168,15 +168,26 @@ namespace Library_Management_System
             int totalcopies = int.Parse(tbTotalCopies.Text);
             int copiesavailable = totalcopies;
             string query;
-
+            int checkrow;
             if (select == 2 || select == 3) { bookid = int.Parse(tbBookID.Text); }
             else { bookid = 0; }
 
             try
             {
+                if(select == 2)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to update this book?","Confirm Update",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.No) 
+                        return;
+                }
+                if (select == 3)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this book?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.No)
+                        return;
+                }
                 conn.Open();
                 SqlCommand cmd = new SqlCommand();
-
                 switch (select)
                 {
                     case 1:
@@ -190,7 +201,15 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@publicationyear", publicationyear);
                         cmd.Parameters.AddWithValue("@copiesavailable", copiesavailable);
                         cmd.Parameters.AddWithValue("@totalcopies", totalcopies);
-                        cmd.ExecuteNonQuery();
+                        checkrow = cmd.ExecuteNonQuery();
+                        if(checkrow > 0)
+                        {
+                            MessageBox.Show("Book added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add the book.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     case 2:
                         query = "UPDATE tbl_book SET title = @title, author = @author, isbn = @isbn, genre = @genre, publication_year = @publicationyear WHERE book_id = @bookid";
@@ -202,14 +221,30 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@isbn", isbn);
                         cmd.Parameters.AddWithValue("@genre", genre);
                         cmd.Parameters.AddWithValue("@publicationyear", publicationyear);
-                        cmd.ExecuteNonQuery();
+                        checkrow = cmd.ExecuteNonQuery();
+                        if (checkrow > 0)
+                        {
+                            MessageBox.Show("Book updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update the book.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     case 3:
                         query = "DELETE from tbl_book WHERE book_id = @bookid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
                         cmd.Parameters.AddWithValue("@bookid", bookid);
-                        cmd.ExecuteNonQuery();
+                        checkrow = cmd.ExecuteNonQuery();
+                        if (checkrow > 0)
+                        {
+                            MessageBox.Show("Book deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to delete the book.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                 }
             }

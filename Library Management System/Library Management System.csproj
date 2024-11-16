@@ -219,9 +219,6 @@
     <None Include="Resources\reject.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\lock.png" />
   </ItemGroup>
   <ItemGroup>
@@ -280,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

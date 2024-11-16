@@ -215,5 +215,20 @@ namespace Library_Management_System
             lblDate.Text = DateTime.Now.ToShortDateString();
             lblTime.Text = DateTime.Now.ToShortTimeString();
         }
+
+        private void btnBooksMoreInfo_Click(object sender, EventArgs e)
+        {
+            openForm(new Inventory());
+        }
+
+        private void btnStaffsMoreInfo_Click(object sender, EventArgs e)
+        {
+            openForm(new SearchStaff());
+        }
+
+        private void btnMemberMoreInfo_Click(object sender, EventArgs e)
+        {
+            openForm(new SearchMember());
+        }
     }
 }

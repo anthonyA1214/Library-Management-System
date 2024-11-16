@@ -50,7 +50,7 @@ namespace Library_Management_System
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
 
-            string role = (cmd.ExecuteScalar() as string)?.Trim().ToLower();
+            string role = cmd.ExecuteScalar().ToString().Trim().ToLower();
 
             try
             {            

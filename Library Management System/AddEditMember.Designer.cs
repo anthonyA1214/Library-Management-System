@@ -91,9 +91,8 @@
             // 
             this.dgvBook.AllowUserToAddRows = false;
             this.dgvBook.AllowUserToDeleteRows = false;
-            this.dgvBook.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvBook.AllowUserToResizeColumns = false;
+            this.dgvBook.AllowUserToResizeRows = false;
             this.dgvBook.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvBook.ColumnHeadersHeight = 50;
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -416,7 +415,6 @@
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlGrid;
-        private System.Windows.Forms.DataGridView dgvBook;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnDelete;
@@ -441,5 +439,6 @@
         private System.Windows.Forms.PictureBox pbExit2;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.ComboBox cbMembershipType;
+        private System.Windows.Forms.DataGridView dgvBook;
     }
 }

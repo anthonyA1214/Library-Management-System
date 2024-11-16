@@ -51,15 +51,15 @@
             this.tlpCounts1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnStaffsMoreInfo = new System.Windows.Forms.Button();
             this.lblCountStaff = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMemberMoreInfo = new System.Windows.Forms.Button();
             this.lblCountMember = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBooksMoreInfo = new System.Windows.Forms.Button();
             this.lblCountBook = new System.Windows.Forms.Label();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -369,7 +369,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(193)))), ((int)(((byte)(225)))));
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btnStaffsMoreInfo);
             this.panel2.Controls.Add(this.lblCountStaff);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Location = new System.Drawing.Point(231, 3);
@@ -387,19 +387,20 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Staff/s";
             // 
-            // button3
+            // btnStaffsMoreInfo
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(173)))), ((int)(((byte)(201)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 100);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(222, 30);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "More Info";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnStaffsMoreInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(173)))), ((int)(((byte)(201)))));
+            this.btnStaffsMoreInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnStaffsMoreInfo.FlatAppearance.BorderSize = 0;
+            this.btnStaffsMoreInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaffsMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffsMoreInfo.Location = new System.Drawing.Point(0, 100);
+            this.btnStaffsMoreInfo.Name = "btnStaffsMoreInfo";
+            this.btnStaffsMoreInfo.Size = new System.Drawing.Size(222, 30);
+            this.btnStaffsMoreInfo.TabIndex = 2;
+            this.btnStaffsMoreInfo.Text = "More Info";
+            this.btnStaffsMoreInfo.UseVisualStyleBackColor = false;
+            this.btnStaffsMoreInfo.Click += new System.EventHandler(this.btnStaffsMoreInfo_Click);
             // 
             // lblCountStaff
             // 
@@ -417,7 +418,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.btnMemberMoreInfo);
             this.panel4.Controls.Add(this.lblCountMember);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Location = new System.Drawing.Point(459, 3);
@@ -435,19 +436,20 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Member/s";
             // 
-            // button2
+            // btnMemberMoreInfo
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(213)))), ((int)(((byte)(229)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 100);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 30);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "More Info";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnMemberMoreInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(213)))), ((int)(((byte)(229)))));
+            this.btnMemberMoreInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMemberMoreInfo.FlatAppearance.BorderSize = 0;
+            this.btnMemberMoreInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMemberMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMemberMoreInfo.Location = new System.Drawing.Point(0, 100);
+            this.btnMemberMoreInfo.Name = "btnMemberMoreInfo";
+            this.btnMemberMoreInfo.Size = new System.Drawing.Size(222, 30);
+            this.btnMemberMoreInfo.TabIndex = 2;
+            this.btnMemberMoreInfo.Text = "More Info";
+            this.btnMemberMoreInfo.UseVisualStyleBackColor = false;
+            this.btnMemberMoreInfo.Click += new System.EventHandler(this.btnMemberMoreInfo_Click);
             // 
             // lblCountMember
             // 
@@ -465,7 +467,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(187)))));
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnBooksMoreInfo);
             this.panel1.Controls.Add(this.lblCountBook);
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Location = new System.Drawing.Point(3, 3);
@@ -483,19 +485,20 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Book/s";
             // 
-            // button4
+            // btnBooksMoreInfo
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(208)))), ((int)(((byte)(169)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 100);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(222, 30);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "More Info";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnBooksMoreInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(208)))), ((int)(((byte)(169)))));
+            this.btnBooksMoreInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnBooksMoreInfo.FlatAppearance.BorderSize = 0;
+            this.btnBooksMoreInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBooksMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooksMoreInfo.Location = new System.Drawing.Point(0, 100);
+            this.btnBooksMoreInfo.Name = "btnBooksMoreInfo";
+            this.btnBooksMoreInfo.Size = new System.Drawing.Size(222, 30);
+            this.btnBooksMoreInfo.TabIndex = 2;
+            this.btnBooksMoreInfo.Text = "More Info";
+            this.btnBooksMoreInfo.UseVisualStyleBackColor = false;
+            this.btnBooksMoreInfo.Click += new System.EventHandler(this.btnBooksMoreInfo_Click);
             // 
             // lblCountBook
             // 
@@ -1153,17 +1156,17 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnStaffsMoreInfo;
         private System.Windows.Forms.Label lblCountStaff;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMemberMoreInfo;
         private System.Windows.Forms.Label lblCountMember;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBooksMoreInfo;
         private System.Windows.Forms.Label lblCountBook;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label12;

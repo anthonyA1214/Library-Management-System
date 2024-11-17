@@ -48,7 +48,7 @@ namespace Library_Management_System
         {
             try
             {
-                if (select == 2 || select == 3)
+                if (e.RowIndex >= 0 && select == 2 || e.RowIndex >= 0 && select == 3)
                 {
                     if (dgvBook.Rows[e.RowIndex].Cells[e.ColumnIndex] != null)
                     {

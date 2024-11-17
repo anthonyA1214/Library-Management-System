@@ -42,42 +42,9 @@ namespace Library_Management_System
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dgvBook.DataSource = dt;
-            dgvBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvStaff.DataSource = dt;
+            dgvStaff.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             conn.Close();
-        }
-
-        private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (select == 2 || select == 3)
-                {
-                    if (dgvBook.Rows[e.RowIndex].Cells[e.ColumnIndex] != null)
-                    {
-                        staff_id = int.Parse(dgvBook.Rows[e.RowIndex].Cells[0].Value.ToString());
-                    }
-
-                    string query = "SELECT * from tbl_staff WHERE staff_id = "+staff_id+"";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
-
-                    tbStaffID.Text = ds.Tables[0].Rows[0][0].ToString();
-                    tbUsername.Text = ds.Tables[0].Rows[0][1].ToString();
-                    tbPassword.Text = ds.Tables[0].Rows[0][2].ToString();
-                    cbRole.Text = ds.Tables[0].Rows[0][3].ToString();
-                    tbFirstName.Text = ds.Tables[0].Rows[0][4].ToString();
-                    tbLastName.Text = ds.Tables[0].Rows[0][5].ToString();
-                    tbEmail.Text = ds.Tables[0].Rows[0][6].ToString();
-                    tbContactNumber.Text = ds.Tables[0].Rows[0][7].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void disableEdit()
@@ -171,11 +138,25 @@ namespace Library_Management_System
             string email = tbEmail.Text;
             string contactnumber = tbContactNumber.Text;
             string query;
+            int checkrow;
 
             if (select == 2 || select == 3) { staffid = int.Parse(tbStaffID.Text); }
             else { staffid = 0; }
             try
             {
+                if (select == 2)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to update this staff?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.No)
+                        return;
+                }
+                if (select == 3)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this staff?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.No)
+                        return;
+                }
+
                 conn.Open();
                 SqlCommand cmd = new SqlCommand();
 
@@ -192,7 +173,15 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@lastname", lastname);
                         cmd.Parameters.AddWithValue("@email", email);
                         cmd.Parameters.AddWithValue("@contactnumber", contactnumber);
-                        cmd.ExecuteNonQuery();
+                        checkrow = cmd.ExecuteNonQuery();
+                        if (checkrow > 0)
+                        {
+                            MessageBox.Show("Staff added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add the staff.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     case 2:
                         query = "UPDATE tbl_staff SET username = @username, password = @password, role = @role, first_name = @firstname, last_name = @lastname, email = @email, contact_number = @contactnumber WHERE staff_id = @staffid";
@@ -206,14 +195,30 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@lastname", lastname);
                         cmd.Parameters.AddWithValue("@email", email);
                         cmd.Parameters.AddWithValue("@contactnumber", contactnumber);
-                        cmd.ExecuteNonQuery();
+                        checkrow = cmd.ExecuteNonQuery();
+                        if (checkrow > 0)
+                        {
+                            MessageBox.Show("Staff updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update the staff.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     case 3:
                         query = "DELETE from tbl_staff WHERE staff_id = @staffid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
                         cmd.Parameters.AddWithValue("@staffid",staffid);
-                        cmd.ExecuteNonQuery();
+                        checkrow = cmd.ExecuteNonQuery();
+                        if (checkrow > 0)
+                        {
+                            MessageBox.Show("Staff deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to delete the staff.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                 }
             }
@@ -232,6 +237,39 @@ namespace Library_Management_System
         private void pbExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && select == 2 || e.RowIndex >= 0 && select == 3)
+                {
+                    if (dgvStaff.Rows[e.RowIndex].Cells[e.ColumnIndex] != null)
+                    {
+                        staff_id = int.Parse(dgvStaff.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    }
+
+                    string query = "SELECT * from tbl_staff WHERE staff_id = " + staff_id + "";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    tbStaffID.Text = ds.Tables[0].Rows[0][0].ToString();
+                    tbUsername.Text = ds.Tables[0].Rows[0][1].ToString();
+                    tbPassword.Text = ds.Tables[0].Rows[0][2].ToString();
+                    cbRole.Text = ds.Tables[0].Rows[0][3].ToString();
+                    tbFirstName.Text = ds.Tables[0].Rows[0][4].ToString();
+                    tbLastName.Text = ds.Tables[0].Rows[0][5].ToString();
+                    tbEmail.Text = ds.Tables[0].Rows[0][6].ToString();
+                    tbContactNumber.Text = ds.Tables[0].Rows[0][7].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pbExit2_Click(object sender, EventArgs e)

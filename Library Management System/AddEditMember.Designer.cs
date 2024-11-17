@@ -30,7 +30,7 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlGrid = new System.Windows.Forms.Panel();
-            this.dgvBook = new System.Windows.Forms.DataGridView();
+            this.dgvMember = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.pbExit2 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.pnlGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.pnlSideMenu.SuspendLayout();
@@ -79,7 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlGrid.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlGrid.Controls.Add(this.dgvBook);
+            this.pnlGrid.Controls.Add(this.dgvMember);
             this.pnlGrid.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlGrid.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlGrid.Location = new System.Drawing.Point(9, 9);
@@ -87,25 +87,28 @@
             this.pnlGrid.Size = new System.Drawing.Size(450, 454);
             this.pnlGrid.TabIndex = 0;
             // 
-            // dgvBook
+            // dgvMember
             // 
-            this.dgvBook.AllowUserToAddRows = false;
-            this.dgvBook.AllowUserToDeleteRows = false;
-            this.dgvBook.AllowUserToResizeColumns = false;
-            this.dgvBook.AllowUserToResizeRows = false;
-            this.dgvBook.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvBook.ColumnHeadersHeight = 50;
-            this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvBook.Location = new System.Drawing.Point(9, 9);
-            this.dgvBook.Name = "dgvBook";
-            this.dgvBook.ReadOnly = true;
-            this.dgvBook.RowHeadersVisible = false;
-            this.dgvBook.RowHeadersWidth = 40;
-            this.dgvBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBook.Size = new System.Drawing.Size(433, 437);
-            this.dgvBook.TabIndex = 0;
-            this.dgvBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellClick);
+            this.dgvMember.AllowUserToAddRows = false;
+            this.dgvMember.AllowUserToDeleteRows = false;
+            this.dgvMember.AllowUserToResizeColumns = false;
+            this.dgvMember.AllowUserToResizeRows = false;
+            this.dgvMember.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMember.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvMember.ColumnHeadersHeight = 50;
+            this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvMember.Location = new System.Drawing.Point(9, 9);
+            this.dgvMember.Name = "dgvMember";
+            this.dgvMember.ReadOnly = true;
+            this.dgvMember.RowHeadersVisible = false;
+            this.dgvMember.RowHeadersWidth = 40;
+            this.dgvMember.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMember.Size = new System.Drawing.Size(433, 437);
+            this.dgvMember.TabIndex = 0;
+            this.dgvMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellClick);
             // 
             // panel2
             // 
@@ -401,7 +404,7 @@
             this.Load += new System.EventHandler(this.AddEditMember_Load);
             this.panel3.ResumeLayout(false);
             this.pnlGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.pnlSideMenu.ResumeLayout(false);
@@ -439,6 +442,6 @@
         private System.Windows.Forms.PictureBox pbExit2;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.ComboBox cbMembershipType;
-        private System.Windows.Forms.DataGridView dgvBook;
+        private System.Windows.Forms.DataGridView dgvMember;
     }
 }

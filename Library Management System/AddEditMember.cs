@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Library_Management_System
 {
@@ -41,20 +42,20 @@ namespace Library_Management_System
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dgvBook.DataSource = dt;
-            dgvBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMember.DataSource = dt;
+            dgvMember.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             conn.Close();
         }
 
-        private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                if (select == 2 || select == 3)
+                if (e.RowIndex >= 0 && select == 2 || e.RowIndex >= 0 && select == 3)
                 {
-                    if (dgvBook.Rows[e.RowIndex].Cells[e.ColumnIndex] != null)
+                    if (dgvMember.Rows[e.RowIndex].Cells[e.ColumnIndex] != null)
                     {
-                        member_id = int.Parse(dgvBook.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        member_id = int.Parse(dgvMember.Rows[e.RowIndex].Cells[0].Value.ToString());
                     }
 
                     string query = "SELECT * from tbl_member WHERE member_id = " + member_id + "";
@@ -168,11 +169,26 @@ namespace Library_Management_System
             string email = tbEmail.Text;
             string membershiptype = cbMembershipType.Text;
             string query;
+            int checkrow;
 
             if (select == 2 || select == 3) { memberid = int.Parse(tbMemberID.Text); }
+
             else { memberid = 0; }
             try
             {
+                if (select == 2)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to update this member?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.No)
+                        return;
+                }
+                if (select == 3)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this member?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.No)
+                        return;
+                }
+
                 conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 switch (select)
@@ -187,7 +203,15 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@contactnumber", contactnumber);
                         cmd.Parameters.AddWithValue("@email", email);
                         cmd.Parameters.AddWithValue("@membershiptype", membershiptype);
-                        cmd.ExecuteNonQuery();
+                        checkrow = cmd.ExecuteNonQuery();
+                        if (checkrow > 0)
+                        {
+                            MessageBox.Show("Member added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add the member.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     case 2:
                         query = "UPDATE tbl_member SET first_name = @firstname, last_name = @lastname, address = @address, contact_number = @contactnumber, email = @email, membership_type = @membershiptype WHERE member_id = @memberid";
@@ -200,14 +224,30 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@contactnumber", contactnumber);
                         cmd.Parameters.AddWithValue("@email", email);
                         cmd.Parameters.AddWithValue("@membershiptype", membershiptype);
-                        cmd.ExecuteNonQuery();
+                        checkrow = cmd.ExecuteNonQuery();
+                        if (checkrow > 0)
+                        {
+                            MessageBox.Show("Member updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update the member.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     case 3:
                         query = "DELETE from tbl_member WHERE member_id = @memberid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
                         cmd.Parameters.AddWithValue("@memberid", memberid);
-                        cmd.ExecuteNonQuery();
+                        checkrow = cmd.ExecuteNonQuery();
+                        if (checkrow > 0)
+                        {
+                            MessageBox.Show("Member deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to delete the member.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                 }
             }

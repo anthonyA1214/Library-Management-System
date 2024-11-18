@@ -125,12 +125,6 @@
     <Compile Include="ReturnBook.Designer.cs">
       <DependentUpon>ReturnBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchBook.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SearchBook.Designer.cs">
-      <DependentUpon>SearchBook.cs</DependentUpon>
-    </Compile>
     <Compile Include="SearchMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,9 +183,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReturnBook.resx">
       <DependentUpon>ReturnBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SearchBook.resx">
-      <DependentUpon>SearchBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchMember.resx">
       <DependentUpon>SearchMember.cs</DependentUpon>

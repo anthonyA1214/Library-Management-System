@@ -136,11 +136,6 @@ namespace Library_Management_System
             openForm(new AddEditBook());
         }
 
-        private void btnSearchBook_Click(object sender, EventArgs e)
-        {
-            openForm(new SearchBook());
-        }
-
         private void btnInventory_Click(object sender, EventArgs e)
         {
             openForm(new Inventory());

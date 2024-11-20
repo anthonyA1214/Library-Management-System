@@ -36,35 +36,43 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tlpCounts1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnStaffsMoreInfo = new System.Windows.Forms.Button();
             this.lblCountStaff = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnMemberMoreInfo = new System.Windows.Forms.Button();
             this.lblCountMember = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBooksMoreInfo = new System.Windows.Forms.Button();
             this.lblCountBook = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlManageBooksSubMenu = new System.Windows.Forms.Panel();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnAddEditBook = new System.Windows.Forms.Button();
@@ -83,14 +91,6 @@
             this.btnMemberActivityReports = new System.Windows.Forms.Button();
             this.btnCirculationReports = new System.Windows.Forms.Button();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.autoLoadDashboard = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnBorrowReturn = new System.Windows.Forms.Button();
@@ -98,37 +98,37 @@
             this.btnManageStaffs = new System.Windows.Forms.Button();
             this.btnManageBooks = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.autoLoadDashboard = new System.Windows.Forms.Timer(this.components);
             this.pnlContainer.SuspendLayout();
             this.tlpCounts2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tlpCounts1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlTitle.SuspendLayout();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlManageBooksSubMenu.SuspendLayout();
             this.pnlManageStaffsSubMenu.SuspendLayout();
             this.pnlManageMembersSubMenu.SuspendLayout();
             this.pnlBorrowReturnSubMenu.SuspendLayout();
             this.pnlReportsSubMenu.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -158,6 +158,7 @@
             this.tlpCounts2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpCounts2.Location = new System.Drawing.Point(0, 210);
             this.tlpCounts2.Name = "tlpCounts2";
+            this.tlpCounts2.Padding = new System.Windows.Forms.Padding(3);
             this.tlpCounts2.RowCount = 1;
             this.tlpCounts2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpCounts2.Size = new System.Drawing.Size(684, 90);
@@ -172,7 +173,7 @@
             this.panel10.Controls.Add(this.lblDate);
             this.panel10.Controls.Add(this.label11);
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(516, 3);
+            this.panel10.Location = new System.Drawing.Point(513, 6);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(165, 75);
             this.panel10.TabIndex = 16;
@@ -217,6 +218,16 @@
             this.panel11.Size = new System.Drawing.Size(75, 75);
             this.panel11.TabIndex = 6;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Library_Management_System.Properties.Resources.schedule;
+            this.pictureBox7.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 8;
+            this.pictureBox7.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -225,9 +236,9 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(165, 75);
+            this.panel3.Size = new System.Drawing.Size(163, 75);
             this.panel3.TabIndex = 11;
             // 
             // label4
@@ -260,6 +271,16 @@
             this.panel5.Size = new System.Drawing.Size(75, 75);
             this.panel5.TabIndex = 6;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Library_Management_System.Properties.Resources.paper_plane;
+            this.pictureBox4.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel8
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -268,9 +289,9 @@
             this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.label9);
             this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(345, 3);
+            this.panel8.Location = new System.Drawing.Point(344, 6);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(165, 75);
+            this.panel8.Size = new System.Drawing.Size(163, 75);
             this.panel8.TabIndex = 15;
             // 
             // label8
@@ -303,6 +324,16 @@
             this.panel9.Size = new System.Drawing.Size(75, 75);
             this.panel9.TabIndex = 6;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Library_Management_System.Properties.Resources.dislike;
+            this.pictureBox6.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 8;
+            this.pictureBox6.TabStop = false;
+            // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -311,9 +342,9 @@
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(174, 3);
+            this.panel6.Location = new System.Drawing.Point(175, 6);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(165, 75);
+            this.panel6.Size = new System.Drawing.Size(163, 75);
             this.panel6.TabIndex = 14;
             // 
             // label6
@@ -346,6 +377,16 @@
             this.panel7.Size = new System.Drawing.Size(75, 75);
             this.panel7.TabIndex = 6;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Library_Management_System.Properties.Resources.like;
+            this.pictureBox5.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
             // tlpCounts1
             // 
             this.tlpCounts1.ColumnCount = 3;
@@ -358,6 +399,7 @@
             this.tlpCounts1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpCounts1.Location = new System.Drawing.Point(0, 60);
             this.tlpCounts1.Name = "tlpCounts1";
+            this.tlpCounts1.Padding = new System.Windows.Forms.Padding(3);
             this.tlpCounts1.RowCount = 1;
             this.tlpCounts1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpCounts1.Size = new System.Drawing.Size(684, 150);
@@ -372,9 +414,9 @@
             this.panel2.Controls.Add(this.btnStaffsMoreInfo);
             this.panel2.Controls.Add(this.lblCountStaff);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(231, 3);
+            this.panel2.Location = new System.Drawing.Point(232, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 130);
+            this.panel2.Size = new System.Drawing.Size(220, 130);
             this.panel2.TabIndex = 13;
             // 
             // label5
@@ -396,7 +438,7 @@
             this.btnStaffsMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaffsMoreInfo.Location = new System.Drawing.Point(0, 100);
             this.btnStaffsMoreInfo.Name = "btnStaffsMoreInfo";
-            this.btnStaffsMoreInfo.Size = new System.Drawing.Size(222, 30);
+            this.btnStaffsMoreInfo.Size = new System.Drawing.Size(220, 30);
             this.btnStaffsMoreInfo.TabIndex = 2;
             this.btnStaffsMoreInfo.Text = "More Info";
             this.btnStaffsMoreInfo.UseVisualStyleBackColor = false;
@@ -412,6 +454,17 @@
             this.lblCountStaff.TabIndex = 1;
             this.lblCountStaff.Text = "0";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::Library_Management_System.Properties.Resources.staffs;
+            this.pictureBox3.Location = new System.Drawing.Point(115, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -421,9 +474,9 @@
             this.panel4.Controls.Add(this.btnMemberMoreInfo);
             this.panel4.Controls.Add(this.lblCountMember);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(459, 3);
+            this.panel4.Location = new System.Drawing.Point(458, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(222, 130);
+            this.panel4.Size = new System.Drawing.Size(220, 130);
             this.panel4.TabIndex = 12;
             // 
             // label3
@@ -445,7 +498,7 @@
             this.btnMemberMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemberMoreInfo.Location = new System.Drawing.Point(0, 100);
             this.btnMemberMoreInfo.Name = "btnMemberMoreInfo";
-            this.btnMemberMoreInfo.Size = new System.Drawing.Size(222, 30);
+            this.btnMemberMoreInfo.Size = new System.Drawing.Size(220, 30);
             this.btnMemberMoreInfo.TabIndex = 2;
             this.btnMemberMoreInfo.Text = "More Info";
             this.btnMemberMoreInfo.UseVisualStyleBackColor = false;
@@ -461,6 +514,17 @@
             this.lblCountMember.TabIndex = 1;
             this.lblCountMember.Text = "0";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.members;
+            this.pictureBox2.Location = new System.Drawing.Point(114, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -470,9 +534,9 @@
             this.panel1.Controls.Add(this.btnBooksMoreInfo);
             this.panel1.Controls.Add(this.lblCountBook);
             this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 130);
+            this.panel1.Size = new System.Drawing.Size(220, 130);
             this.panel1.TabIndex = 10;
             // 
             // label2
@@ -494,7 +558,7 @@
             this.btnBooksMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooksMoreInfo.Location = new System.Drawing.Point(0, 100);
             this.btnBooksMoreInfo.Name = "btnBooksMoreInfo";
-            this.btnBooksMoreInfo.Size = new System.Drawing.Size(222, 30);
+            this.btnBooksMoreInfo.Size = new System.Drawing.Size(220, 30);
             this.btnBooksMoreInfo.TabIndex = 2;
             this.btnBooksMoreInfo.Text = "More Info";
             this.btnBooksMoreInfo.UseVisualStyleBackColor = false;
@@ -509,6 +573,17 @@
             this.lblCountBook.Size = new System.Drawing.Size(56, 65);
             this.lblCountBook.TabIndex = 1;
             this.lblCountBook.Text = "0";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox8.Image = global::Library_Management_System.Properties.Resources.books;
+            this.pictureBox8.Location = new System.Drawing.Point(115, 5);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
             // 
             // pnlTitle
             // 
@@ -549,6 +624,17 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(233, 150);
             this.pnlLogo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.digital_library;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlManageBooksSubMenu
             // 
@@ -834,84 +920,6 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(250, 561);
             this.pnlSideMenu.TabIndex = 0;
             // 
-            // autoLoadDashboard
-            // 
-            this.autoLoadDashboard.Enabled = true;
-            this.autoLoadDashboard.Tick += new System.EventHandler(this.autoLoadCount_Tick);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Library_Management_System.Properties.Resources.schedule;
-            this.pictureBox7.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 8;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Library_Management_System.Properties.Resources.paper_plane;
-            this.pictureBox4.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Library_Management_System.Properties.Resources.dislike;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Library_Management_System.Properties.Resources.like;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::Library_Management_System.Properties.Resources.staffs;
-            this.pictureBox3.Location = new System.Drawing.Point(117, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.members;
-            this.pictureBox2.Location = new System.Drawing.Point(116, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.Image = global::Library_Management_System.Properties.Resources.books;
-            this.pictureBox8.Location = new System.Drawing.Point(117, 5);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            // 
             // btnLogout
             // 
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -1045,16 +1053,10 @@
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // pictureBox1
+            // autoLoadDashboard
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.digital_library;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.autoLoadDashboard.Enabled = true;
+            this.autoLoadDashboard.Tick += new System.EventHandler(this.autoLoadCount_Tick);
             // 
             // AdminForm
             // 
@@ -1073,39 +1075,39 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tlpCounts1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlManageBooksSubMenu.ResumeLayout(false);
             this.pnlManageStaffsSubMenu.ResumeLayout(false);
             this.pnlManageMembersSubMenu.ResumeLayout(false);
             this.pnlBorrowReturnSubMenu.ResumeLayout(false);
             this.pnlReportsSubMenu.ResumeLayout(false);
             this.pnlSideMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

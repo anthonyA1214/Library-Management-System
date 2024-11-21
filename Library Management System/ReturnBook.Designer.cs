@@ -477,6 +477,7 @@
             this.MinimumSize = new System.Drawing.Size(684, 561);
             this.Name = "ReturnBook";
             this.Text = "ReturnBook";
+            this.Load += new System.EventHandler(this.ReturnBook_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.panel1.ResumeLayout(false);

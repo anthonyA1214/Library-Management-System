@@ -21,6 +21,15 @@ namespace Library_Management_System
             InitializeComponent();
         }
 
+        private void clearTexts()
+        {
+            lblIssueID.Text = string.Empty;
+            lblBookTitle.Text = string.Empty;
+            lblMemberName.Text = string.Empty;
+            lblIssueDate.Text = string.Empty;
+            lblDueDate.Text = string.Empty;
+        }
+
         private void btnFindDetails_Click(object sender, EventArgs e)
         {                   
             string bookid = tbBookID.Text;
@@ -28,31 +37,62 @@ namespace Library_Management_System
             string issueid = tbIssueID.Text;
             string findQuery = "SELECT tbl_issue.issue_id, tbl_book.title, tbl_member.first_name, tbl_member.last_name, tbl_issue.issue_date, tbl_issue.due_date, tbl_book.book_id, tbl_member.member_id from tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE 1=1";
 
-            if (!string.IsNullOrEmpty(tbIssueID.Text))
+            try
             {
-                findQuery += " AND issue_id = @issueid";
+                if (!string.IsNullOrEmpty(tbIssueID.Text))
+                {
+                    findQuery += " AND issue_id = @issueid";
+                }
+
+                else if (!string.IsNullOrEmpty(tbBookID.Text) && !string.IsNullOrEmpty(tbMemberID.Text))
+                {
+                    findQuery += " AND tbl_issue.book_id = @bookid AND tbl_issue.member_id = @memberid";
+                }
+
+                else
+                {
+                    MessageBox.Show("Please provide Issue ID or both Book ID and Member ID.", "Input required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                SqlCommand findCmd = new SqlCommand(findQuery, conn);
+
+                if (!string.IsNullOrEmpty(tbIssueID.Text))
+                {
+                    findCmd.Parameters.AddWithValue("@issueid", issueid);
+                }
+
+                else if (!string.IsNullOrEmpty(tbBookID.Text) && !string.IsNullOrEmpty(tbMemberID.Text))
+                {
+                    findCmd.Parameters.AddWithValue("@bookid", bookid);
+                    findCmd.Parameters.AddWithValue("@memberid", memberid);
+                }
+
+                SqlDataAdapter da = new SqlDataAdapter(findCmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                lblIssueID.Text = ds.Tables[0].Rows[0][0].ToString();
+                lblBookTitle.Text = ds.Tables[0].Rows[0][1].ToString();
+                lblMemberName.Text = ds.Tables[0].Rows[0][2].ToString() + " " + ds.Tables[0].Rows[0][3].ToString();
+                DateTime issueDate = Convert.ToDateTime(ds.Tables[0].Rows[0][4].ToString());
+                DateTime dueDate = Convert.ToDateTime(ds.Tables[0].Rows[0][5].ToString());
+                lblIssueDate.Text = issueDate.ToString("MM/dd/yyyy");
+                lblDueDate.Text = dueDate.ToString("MM/dd/yyyy");
+                if (!string.IsNullOrEmpty(tbIssueID.Text))
+                {
+                    tbBookID.Text = ds.Tables[0].Rows[0][6].ToString();
+                    tbMemberID.Text = ds.Tables[0].Rows[0][7].ToString();
+                }
+                else if (!string.IsNullOrEmpty(tbBookID.Text) && !string.IsNullOrEmpty(tbMemberID.Text))
+                {
+                    tbIssueID.Text = ds.Tables[0].Rows[0][0].ToString();
+                }
             }
-
-            SqlCommand findCmd = new SqlCommand(findQuery, conn);
-
-            if (!string.IsNullOrEmpty(tbIssueID.Text))
+            catch (Exception ex)
             {
-                findCmd.Parameters.AddWithValue("@issueid", issueid);
+                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            SqlDataAdapter da = new SqlDataAdapter(findCmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-
-            lblIssueID.Text = ds.Tables[0].Rows[0][0].ToString();
-            lblBookTitle.Text = ds.Tables[0].Rows[0][1].ToString();
-            lblMemberName.Text = ds.Tables[0].Rows[0][2].ToString() + " " + ds.Tables[0].Rows[0][3].ToString();
-            DateTime issueDate = Convert.ToDateTime(ds.Tables[0].Rows[0][4].ToString());
-            DateTime dueDate = Convert.ToDateTime(ds.Tables[0].Rows[0][5].ToString());
-            lblIssueDate.Text = issueDate.ToString("MM/dd/yyyy");
-            lblDueDate.Text = dueDate.ToString("MM/dd/yyyy");
-            tbBookID.Text = ds.Tables[0].Rows[0][6].ToString();
-            tbMemberID.Text = ds.Tables[0].Rows[0][7].ToString();
         }
 
         private void tbIssueID_Leave(object sender, EventArgs e)
@@ -60,13 +100,15 @@ namespace Library_Management_System
             if (!string.IsNullOrEmpty(tbIssueID.Text))
             {
                 tbBookID.Enabled = false;
-                tbMemberID.Enabled = false;
+                tbMemberID.Enabled = false;            
             }
-
             else
             {
                 tbBookID.Enabled = true;
                 tbMemberID.Enabled = true;
+                clearTexts();
+                tbBookID.Clear();
+                tbMemberID.Clear();
             }
         }
 
@@ -74,13 +116,14 @@ namespace Library_Management_System
         {
             if (!string.IsNullOrEmpty(tbBookID.Text))
             {
-                tbIssueID.Enabled = false;
+                tbIssueID.Enabled = false;                
             }
-
             else
             {
                 tbIssueID.Enabled = true;
-            }
+                clearTexts();
+                tbIssueID.Clear();
+            }              
         }
 
         private void tbMemberID_Leave(object sender, EventArgs e)
@@ -89,10 +132,11 @@ namespace Library_Management_System
             {
                 tbIssueID.Enabled = false;
             }
-
             else
             {
                 tbIssueID.Enabled = true;
+                clearTexts();
+                tbIssueID.Clear();
             }
         }
 
@@ -123,6 +167,11 @@ namespace Library_Management_System
             {
                 conn.Close();
             }
+        }
+
+        private void ReturnBook_Load(object sender, EventArgs e)
+        {
+            clearTexts();
         }
     }
 }

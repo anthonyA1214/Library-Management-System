@@ -130,7 +130,7 @@ namespace Library_Management_System
 
                 if(copiesAvailable <= 0)
                 {
-                    MessageBox.Show("insufficient copies.", "Not enough copies", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Insufficient copies.", "Not enough copies", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 

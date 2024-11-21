@@ -158,6 +158,7 @@
             this.tlpCounts2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpCounts2.Location = new System.Drawing.Point(0, 210);
             this.tlpCounts2.Name = "tlpCounts2";
+            this.tlpCounts2.Padding = new System.Windows.Forms.Padding(3);
             this.tlpCounts2.RowCount = 1;
             this.tlpCounts2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpCounts2.Size = new System.Drawing.Size(684, 90);
@@ -172,7 +173,7 @@
             this.panel10.Controls.Add(this.lblDate);
             this.panel10.Controls.Add(this.label11);
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(516, 3);
+            this.panel10.Location = new System.Drawing.Point(513, 6);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(165, 75);
             this.panel10.TabIndex = 16;
@@ -235,9 +236,9 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(165, 75);
+            this.panel3.Size = new System.Drawing.Size(163, 75);
             this.panel3.TabIndex = 11;
             // 
             // label4
@@ -288,9 +289,9 @@
             this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.label9);
             this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(345, 3);
+            this.panel8.Location = new System.Drawing.Point(344, 6);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(165, 75);
+            this.panel8.Size = new System.Drawing.Size(163, 75);
             this.panel8.TabIndex = 15;
             // 
             // label8
@@ -341,9 +342,9 @@
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(174, 3);
+            this.panel6.Location = new System.Drawing.Point(175, 6);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(165, 75);
+            this.panel6.Size = new System.Drawing.Size(163, 75);
             this.panel6.TabIndex = 14;
             // 
             // label6
@@ -398,6 +399,7 @@
             this.tlpCounts1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpCounts1.Location = new System.Drawing.Point(0, 60);
             this.tlpCounts1.Name = "tlpCounts1";
+            this.tlpCounts1.Padding = new System.Windows.Forms.Padding(3);
             this.tlpCounts1.RowCount = 1;
             this.tlpCounts1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpCounts1.Size = new System.Drawing.Size(684, 150);
@@ -412,9 +414,9 @@
             this.panel2.Controls.Add(this.btnStaffsMoreInfo);
             this.panel2.Controls.Add(this.lblCountStaff);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(231, 3);
+            this.panel2.Location = new System.Drawing.Point(232, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 130);
+            this.panel2.Size = new System.Drawing.Size(220, 130);
             this.panel2.TabIndex = 13;
             // 
             // label5
@@ -436,7 +438,7 @@
             this.btnStaffsMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaffsMoreInfo.Location = new System.Drawing.Point(0, 100);
             this.btnStaffsMoreInfo.Name = "btnStaffsMoreInfo";
-            this.btnStaffsMoreInfo.Size = new System.Drawing.Size(222, 30);
+            this.btnStaffsMoreInfo.Size = new System.Drawing.Size(220, 30);
             this.btnStaffsMoreInfo.TabIndex = 2;
             this.btnStaffsMoreInfo.Text = "More Info";
             this.btnStaffsMoreInfo.UseVisualStyleBackColor = false;
@@ -456,7 +458,7 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Library_Management_System.Properties.Resources.staffs;
-            this.pictureBox3.Location = new System.Drawing.Point(117, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(115, 5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(85, 85);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -472,9 +474,9 @@
             this.panel4.Controls.Add(this.btnMemberMoreInfo);
             this.panel4.Controls.Add(this.lblCountMember);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(459, 3);
+            this.panel4.Location = new System.Drawing.Point(458, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(222, 130);
+            this.panel4.Size = new System.Drawing.Size(220, 130);
             this.panel4.TabIndex = 12;
             // 
             // label3
@@ -496,7 +498,7 @@
             this.btnMemberMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemberMoreInfo.Location = new System.Drawing.Point(0, 100);
             this.btnMemberMoreInfo.Name = "btnMemberMoreInfo";
-            this.btnMemberMoreInfo.Size = new System.Drawing.Size(222, 30);
+            this.btnMemberMoreInfo.Size = new System.Drawing.Size(220, 30);
             this.btnMemberMoreInfo.TabIndex = 2;
             this.btnMemberMoreInfo.Text = "More Info";
             this.btnMemberMoreInfo.UseVisualStyleBackColor = false;
@@ -516,7 +518,7 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.members;
-            this.pictureBox2.Location = new System.Drawing.Point(116, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(114, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 85);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -532,9 +534,9 @@
             this.panel1.Controls.Add(this.btnBooksMoreInfo);
             this.panel1.Controls.Add(this.lblCountBook);
             this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 130);
+            this.panel1.Size = new System.Drawing.Size(220, 130);
             this.panel1.TabIndex = 10;
             // 
             // label2
@@ -556,7 +558,7 @@
             this.btnBooksMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooksMoreInfo.Location = new System.Drawing.Point(0, 100);
             this.btnBooksMoreInfo.Name = "btnBooksMoreInfo";
-            this.btnBooksMoreInfo.Size = new System.Drawing.Size(222, 30);
+            this.btnBooksMoreInfo.Size = new System.Drawing.Size(220, 30);
             this.btnBooksMoreInfo.TabIndex = 2;
             this.btnBooksMoreInfo.Text = "More Info";
             this.btnBooksMoreInfo.UseVisualStyleBackColor = false;
@@ -576,7 +578,7 @@
             // 
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.Image = global::Library_Management_System.Properties.Resources.books;
-            this.pictureBox8.Location = new System.Drawing.Point(117, 5);
+            this.pictureBox8.Location = new System.Drawing.Point(115, 5);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(85, 85);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

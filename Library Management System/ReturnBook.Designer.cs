@@ -88,6 +88,7 @@
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 0;
             this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // panel1
             // 
@@ -276,7 +277,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.panel9);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel7);
@@ -327,6 +328,7 @@
             // btnReturnBook
             // 
             this.btnReturnBook.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReturnBook.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturnBook.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnReturnBook.Location = new System.Drawing.Point(106, 420);
@@ -334,12 +336,13 @@
             this.btnReturnBook.Size = new System.Drawing.Size(188, 40);
             this.btnReturnBook.TabIndex = 24;
             this.btnReturnBook.Text = "Return Book";
-            this.btnReturnBook.UseVisualStyleBackColor = true;
+            this.btnReturnBook.UseVisualStyleBackColor = false;
             this.btnReturnBook.Click += new System.EventHandler(this.btnReturnBook_Click);
             // 
             // btnFindDetails
             // 
             this.btnFindDetails.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFindDetails.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnFindDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnFindDetails.Location = new System.Drawing.Point(106, 374);
@@ -347,13 +350,13 @@
             this.btnFindDetails.Size = new System.Drawing.Size(188, 40);
             this.btnFindDetails.TabIndex = 23;
             this.btnFindDetails.Text = "Find Details";
-            this.btnFindDetails.UseVisualStyleBackColor = true;
+            this.btnFindDetails.UseVisualStyleBackColor = false;
             this.btnFindDetails.Click += new System.EventHandler(this.btnFindDetails_Click);
             // 
             // tbIssueID
             // 
             this.tbIssueID.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbIssueID.BackColor = System.Drawing.Color.Gainsboro;
+            this.tbIssueID.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbIssueID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbIssueID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbIssueID.Location = new System.Drawing.Point(160, 306);
@@ -388,7 +391,7 @@
             // tbMemberID
             // 
             this.tbMemberID.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbMemberID.BackColor = System.Drawing.Color.Gainsboro;
+            this.tbMemberID.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbMemberID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMemberID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMemberID.Location = new System.Drawing.Point(160, 182);
@@ -412,7 +415,7 @@
             // tbBookID
             // 
             this.tbBookID.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbBookID.BackColor = System.Drawing.Color.Gainsboro;
+            this.tbBookID.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbBookID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbBookID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbBookID.Location = new System.Drawing.Point(160, 121);

@@ -518,7 +518,7 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.members;
-            this.pictureBox2.Location = new System.Drawing.Point(114, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(115, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 85);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -14,6 +14,7 @@ namespace Library_Management_System
     public partial class AdminForm : Form
     {
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
+
         public AdminForm()
         {
             InitializeComponent();            
@@ -60,24 +61,34 @@ namespace Library_Management_System
             string query1 = "SELECT COUNT(*) from tbl_book";
             string query2 = "SELECT COUNT(*) from tbl_staff";
             string query3 = "SELECT COUNT(*) from tbl_member";
+            string query4 = "SELECT COUNT(*) from tbl_issue WHERE status = 'Issued'";
+            string query5 = "SELECT COUNT(*) from tbl_issue WHERE status = 'Returned'";
 
             SqlCommand cmd1 = new SqlCommand(query1, conn);
             SqlCommand cmd2 = new SqlCommand(query2, conn);
             SqlCommand cmd3 = new SqlCommand(query3, conn);
+            SqlCommand cmd4 = new SqlCommand(query4, conn);
+            SqlCommand cmd5 = new SqlCommand(query5, conn);
 
             SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
             SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
+            SqlDataAdapter da4 = new SqlDataAdapter(cmd4);
+            SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
 
             DataSet ds = new DataSet();
 
             da1.Fill(ds, "BookCount");
             da2.Fill(ds, "StaffCount");
             da3.Fill(ds, "MemberCount");
+            da4.Fill(ds, "IssuedCount");
+            da5.Fill(ds, "ReturnedCount");
 
             lblCountBook.Text = ds.Tables["BookCount"].Rows[0][0].ToString();
             lblCountStaff.Text = ds.Tables["StaffCount"].Rows[0][0].ToString();
             lblCountMember.Text = ds.Tables["MemberCount"].Rows[0][0].ToString();
+            label4.Text = ds.Tables["IssuedCount"].Rows[0][0].ToString();
+            label6.Text = ds.Tables["ReturnedCount"].Rows[0][0].ToString();
         }
 
         private void btnManageBooks_Click(object sender, EventArgs e)

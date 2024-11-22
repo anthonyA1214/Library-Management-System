@@ -28,44 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbExit = new System.Windows.Forms.PictureBox();
-            this.dgvLowStocks = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlSearch = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbLoanStatus = new System.Windows.Forms.ComboBox();
+            this.tbBookTitleID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnFilter = new System.Windows.Forms.Button();
+            this.tbMemberNameID = new System.Windows.Forms.TextBox();
+            this.cbDateRange = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pnlCustomRange = new System.Windows.Forms.Panel();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvIssue = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLowStocks)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.pnlSearch.SuspendLayout();
+            this.pnlCustomRange.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIssue)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(284, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Issued Book";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(273, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Returned Book";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pbExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -83,58 +79,250 @@
             this.pbExit.TabIndex = 0;
             this.pbExit.TabStop = false;
             // 
-            // dgvLowStocks
+            // panel2
             // 
-            this.dgvLowStocks.AllowUserToAddRows = false;
-            this.dgvLowStocks.AllowUserToDeleteRows = false;
-            this.dgvLowStocks.AllowUserToResizeColumns = false;
-            this.dgvLowStocks.AllowUserToResizeRows = false;
-            this.dgvLowStocks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 36);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(668, 486);
+            this.panel2.TabIndex = 27;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvLowStocks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvLowStocks.ColumnHeadersHeight = 50;
-            this.dgvLowStocks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvLowStocks.Location = new System.Drawing.Point(12, 72);
-            this.dgvLowStocks.Name = "dgvLowStocks";
-            this.dgvLowStocks.ReadOnly = true;
-            this.dgvLowStocks.RowHeadersVisible = false;
-            this.dgvLowStocks.RowHeadersWidth = 40;
-            this.dgvLowStocks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvLowStocks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLowStocks.Size = new System.Drawing.Size(640, 195);
-            this.dgvLowStocks.TabIndex = 25;
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.pnlCustomRange);
+            this.panel3.Controls.Add(this.pnlSearch);
+            this.panel3.Location = new System.Drawing.Point(12, 10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(644, 467);
+            this.panel3.TabIndex = 0;
             // 
-            // dataGridView1
+            // pnlSearch
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeight = 50;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 308);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 40;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(640, 202);
-            this.dataGridView1.TabIndex = 26;
+            this.pnlSearch.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlSearch.Controls.Add(this.label1);
+            this.pnlSearch.Controls.Add(this.cbDateRange);
+            this.pnlSearch.Controls.Add(this.btnClear);
+            this.pnlSearch.Controls.Add(this.label5);
+            this.pnlSearch.Controls.Add(this.btnFilter);
+            this.pnlSearch.Controls.Add(this.label4);
+            this.pnlSearch.Controls.Add(this.cbLoanStatus);
+            this.pnlSearch.Controls.Add(this.tbBookTitleID);
+            this.pnlSearch.Controls.Add(this.label2);
+            this.pnlSearch.Controls.Add(this.tbMemberNameID);
+            this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSearch.Location = new System.Drawing.Point(0, 0);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Size = new System.Drawing.Size(644, 80);
+            this.pnlSearch.TabIndex = 1;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(541, 44);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 30);
+            this.btnClear.TabIndex = 9;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(138, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Book Title or ID:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(272, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Loan Status:";
+            // 
+            // cbLoanStatus
+            // 
+            this.cbLoanStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbLoanStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cbLoanStatus.FormattingEnabled = true;
+            this.cbLoanStatus.Items.AddRange(new object[] {
+            "All",
+            "On Time",
+            "Overdue"});
+            this.cbLoanStatus.Location = new System.Drawing.Point(275, 37);
+            this.cbLoanStatus.Name = "cbLoanStatus";
+            this.cbLoanStatus.Size = new System.Drawing.Size(120, 25);
+            this.cbLoanStatus.TabIndex = 4;
+            // 
+            // tbBookTitleID
+            // 
+            this.tbBookTitleID.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbBookTitleID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBookTitleID.Location = new System.Drawing.Point(141, 37);
+            this.tbBookTitleID.Name = "tbBookTitleID";
+            this.tbBookTitleID.Size = new System.Drawing.Size(120, 25);
+            this.tbBookTitleID.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Member Name or ID:";
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.Location = new System.Drawing.Point(541, 8);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(100, 30);
+            this.btnFilter.TabIndex = 1;
+            this.btnFilter.Text = "Filter";
+            this.btnFilter.UseVisualStyleBackColor = true;
+            // 
+            // tbMemberNameID
+            // 
+            this.tbMemberNameID.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbMemberNameID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMemberNameID.Location = new System.Drawing.Point(7, 37);
+            this.tbMemberNameID.Name = "tbMemberNameID";
+            this.tbMemberNameID.Size = new System.Drawing.Size(120, 25);
+            this.tbMemberNameID.TabIndex = 0;
+            // 
+            // cbDateRange
+            // 
+            this.cbDateRange.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbDateRange.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cbDateRange.FormattingEnabled = true;
+            this.cbDateRange.Items.AddRange(new object[] {
+            "Last 7 Days",
+            "This Month",
+            "This Year",
+            "Custom Range"});
+            this.cbDateRange.Location = new System.Drawing.Point(409, 37);
+            this.cbDateRange.Name = "cbDateRange";
+            this.cbDateRange.Size = new System.Drawing.Size(120, 25);
+            this.cbDateRange.TabIndex = 10;
+            this.cbDateRange.TextChanged += new System.EventHandler(this.cbDateRange_TextChanged);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(43, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(406, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 25);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "CURRENT LOANS OVERVIEW";
+            this.label1.Size = new System.Drawing.Size(108, 17);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Date Range Filter";
+            // 
+            // pnlCustomRange
+            // 
+            this.pnlCustomRange.Controls.Add(this.label6);
+            this.pnlCustomRange.Controls.Add(this.dtpEndDate);
+            this.pnlCustomRange.Controls.Add(this.label3);
+            this.pnlCustomRange.Controls.Add(this.dtpStartDate);
+            this.pnlCustomRange.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCustomRange.Location = new System.Drawing.Point(0, 80);
+            this.pnlCustomRange.Name = "pnlCustomRange";
+            this.pnlCustomRange.Size = new System.Drawing.Size(644, 50);
+            this.pnlCustomRange.TabIndex = 2;
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStartDate.Location = new System.Drawing.Point(199, 13);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(120, 25);
+            this.dtpStartDate.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(124, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Start Date:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(330, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "End Date:";
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEndDate.Location = new System.Drawing.Point(400, 13);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(120, 25);
+            this.dtpEndDate.TabIndex = 13;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Controls.Add(this.dgvIssue);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 130);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(644, 337);
+            this.panel4.TabIndex = 5;
+            // 
+            // dgvIssue
+            // 
+            this.dgvIssue.AllowUserToAddRows = false;
+            this.dgvIssue.AllowUserToDeleteRows = false;
+            this.dgvIssue.AllowUserToResizeColumns = false;
+            this.dgvIssue.AllowUserToResizeRows = false;
+            this.dgvIssue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvIssue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvIssue.ColumnHeadersHeight = 50;
+            this.dgvIssue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvIssue.Location = new System.Drawing.Point(6, 6);
+            this.dgvIssue.Name = "dgvIssue";
+            this.dgvIssue.ReadOnly = true;
+            this.dgvIssue.RowHeadersVisible = false;
+            this.dgvIssue.RowHeadersWidth = 40;
+            this.dgvIssue.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvIssue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvIssue.Size = new System.Drawing.Size(632, 325);
+            this.dgvIssue.TabIndex = 2;
             // 
             // CurrentLoansOverview
             // 
@@ -142,33 +330,49 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(160)))));
             this.ClientSize = new System.Drawing.Size(668, 522);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dgvLowStocks);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(160)))));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MinimumSize = new System.Drawing.Size(684, 561);
             this.Name = "CurrentLoansOverview";
             this.Text = "CurrentLoansOverview";
             this.Load += new System.EventHandler(this.CurrentLoansOverview_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLowStocks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.pnlSearch.ResumeLayout(false);
+            this.pnlSearch.PerformLayout();
+            this.pnlCustomRange.ResumeLayout(false);
+            this.pnlCustomRange.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIssue)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbExit;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlSearch;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbLoanStatus;
+        private System.Windows.Forms.TextBox tbBookTitleID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnFilter;
+        private System.Windows.Forms.TextBox tbMemberNameID;
+        private System.Windows.Forms.Panel pnlCustomRange;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvLowStocks;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cbDateRange;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dgvIssue;
     }
 }

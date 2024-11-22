@@ -89,7 +89,7 @@
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(70)))), ((int)(((byte)(150)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnLogin.Location = new System.Drawing.Point(50, 377);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(200, 45);
@@ -104,7 +104,7 @@
             this.cbShowPassword.FlatAppearance.BorderSize = 0;
             this.cbShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbShowPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbShowPassword.ForeColor = System.Drawing.Color.White;
+            this.cbShowPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.cbShowPassword.Location = new System.Drawing.Point(49, 296);
             this.cbShowPassword.Name = "cbShowPassword";
             this.cbShowPassword.Size = new System.Drawing.Size(135, 25);
@@ -140,7 +140,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Location = new System.Drawing.Point(50, 274);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 1);
@@ -173,7 +173,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Location = new System.Drawing.Point(49, 218);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 1);
@@ -227,7 +227,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label6.Location = new System.Drawing.Point(431, 423);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 50);

@@ -140,12 +140,17 @@ namespace Library_Management_System
                 issueCmd.Parameters.AddWithValue("@memberid", memberid);
                 issueCmd.Parameters.AddWithValue("@issuedate", issuedate);
                 issueCmd.Parameters.AddWithValue("@duedate", duedate);
-                issueCmd.ExecuteNonQuery();
+                int checkissue = issueCmd.ExecuteNonQuery();
 
                 string updateQuery = "UPDATE tbl_book SET copies_available = copies_available - 1 WHERE book_id = @bookid";
                 SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
                 updateCmd.Parameters.AddWithValue("@bookid", bookid);
-                updateCmd.ExecuteNonQuery();
+                int checkupdate = updateCmd.ExecuteNonQuery();
+
+                if (checkissue > 0 && checkupdate > 0)
+                {
+                    MessageBox.Show("Issued book successfully!\nInventory updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {

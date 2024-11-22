@@ -35,7 +35,7 @@ namespace Library_Management_System
             string bookid = tbBookID.Text;
             string memberid = tbMemberID.Text;
             string issueid = tbIssueID.Text;
-            string findQuery = "SELECT tbl_issue.issue_id, tbl_book.title, tbl_member.first_name, tbl_member.last_name, tbl_issue.issue_date, tbl_issue.due_date, tbl_book.book_id, tbl_member.member_id from tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE 1=1";
+            string findQuery = "SELECT tbl_issue.issue_id, tbl_book.title, tbl_member.first_name, tbl_member.last_name, tbl_issue.issue_date, tbl_issue.due_date, tbl_book.book_id, tbl_member.member_id from tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE status = 'Issued'";
 
             try
             {
@@ -71,6 +71,12 @@ namespace Library_Management_System
                 SqlDataAdapter da = new SqlDataAdapter(findCmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
+
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("No record found matching the given id details.", "No record found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
                 lblIssueID.Text = ds.Tables[0].Rows[0][0].ToString();
                 lblBookTitle.Text = ds.Tables[0].Rows[0][1].ToString();
@@ -152,12 +158,17 @@ namespace Library_Management_System
                 SqlCommand returnCmd = new SqlCommand(returnQuery, conn);
                 returnCmd.Parameters.AddWithValue("@returndate", returndate);
                 returnCmd.Parameters.AddWithValue("@issueid", issueid);
-                returnCmd.ExecuteNonQuery();
+                int checkreturn = returnCmd.ExecuteNonQuery();
 
                 string updateQuery = "UPDATE tbl_book SET copies_available = copies_available + 1 WHERE book_id = @bookid";
                 SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
                 updateCmd.Parameters.AddWithValue("@bookid", bookid);
-                updateCmd.ExecuteNonQuery();
+                int checkupdate = updateCmd.ExecuteNonQuery();
+
+                if(checkreturn > 0 && checkupdate > 0)
+                {
+                    MessageBox.Show("Returned book successfully.\nInventory updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
@@ -172,6 +183,11 @@ namespace Library_Management_System
         private void ReturnBook_Load(object sender, EventArgs e)
         {
             clearTexts();
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

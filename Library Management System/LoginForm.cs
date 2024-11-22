@@ -90,7 +90,7 @@ namespace Library_Management_System
             if(tbUsername.Text == "Username")
             {
                 tbUsername.Text = "";
-                tbUsername.ForeColor = Color.Gainsboro;
+                tbUsername.ForeColor = Color.WhiteSmoke;
             }
         }
 
@@ -116,7 +116,7 @@ namespace Library_Management_System
             if (tbPassword.Text == "Password")
             {
                 tbPassword.Text = "";
-                tbPassword.ForeColor = Color.Gainsboro;
+                tbPassword.ForeColor = Color.WhiteSmoke;
             }
         }
 

@@ -77,6 +77,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.Controls.Add(this.dgvBook);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 80);

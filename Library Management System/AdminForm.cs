@@ -204,6 +204,8 @@ namespace Library_Management_System
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.No) return;
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();

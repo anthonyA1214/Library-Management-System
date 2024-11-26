@@ -50,13 +50,15 @@ namespace Library_Management_System
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
 
-            string role = cmd.ExecuteScalar().ToString().Trim().ToLower();
+            object result = cmd.ExecuteScalar();
 
             try
             {            
-                if(role != null)
+                if(result != null)
                 {
-                    if(role == "admin")
+                    string role = result.ToString().Trim().ToLower();
+
+                    if (role == "admin")
                     {
                         AdminForm adminForm = new AdminForm();
                         adminForm.Show();

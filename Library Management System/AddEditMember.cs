@@ -5,11 +5,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Library_Management_System
 {
@@ -189,6 +190,15 @@ namespace Library_Management_System
                         return;
                 }
 
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+                Match match = regex.Match(email);
+                if (!match.Success)
+                {
+                    MessageBox.Show("Not valid email!.");
+                    tbEmail.Focus();
+                    return;
+                }
+
                 conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 switch (select)
@@ -258,7 +268,6 @@ namespace Library_Management_System
             finally
             {
                 conn.Close();
-                clearTexts();
                 loadTable();               
             }
             

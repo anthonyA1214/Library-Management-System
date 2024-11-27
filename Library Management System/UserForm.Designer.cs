@@ -498,7 +498,6 @@
             // pictureBox8
             // 
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.Image = global::Library_Management_System.Properties.Resources.books;
             this.pictureBox8.Location = new System.Drawing.Point(164, 5);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(85, 85);
@@ -843,7 +842,6 @@
             this.btnManageBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageBooks.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageBooks.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnManageBooks.Image = global::Library_Management_System.Properties.Resources.book;
             this.btnManageBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageBooks.Location = new System.Drawing.Point(0, 195);
             this.btnManageBooks.Name = "btnManageBooks";

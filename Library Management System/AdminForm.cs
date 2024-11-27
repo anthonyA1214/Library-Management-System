@@ -14,30 +14,34 @@ namespace Library_Management_System
     public partial class AdminForm : Form
     {
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
-
-        public AdminForm()
+        private string Username;
+        public AdminForm(string username)
         {
-            InitializeComponent();            
+            InitializeComponent();
+            Username = username;
         }
 
         private void hideDashboard()
         {
             pnlTitle.Visible = false;
-            tlpCounts1.Visible = false;
-            tlpCounts2.Visible = false;
+            tlp1.Visible = false;
+            tlp2.Visible = false;
+            tlp3.Visible = false;
+            tlp4.Visible = false;
         }
 
         private void showDashboard(object sender, FormClosedEventArgs e)
         {
             pnlTitle.Visible = true;
-            tlpCounts1.Visible = true;
-            tlpCounts2.Visible = true;
-        }
+            tlp1.Visible = true;
+            tlp2.Visible = true;
+            tlp3.Visible = true;
+            tlp4.Visible = true;
+        } 
 
         private void hideSubMenu()
         {
             pnlManageBooksSubMenu.Visible = false;
-            pnlManageStaffsSubMenu.Visible = false;
             pnlManageMembersSubMenu.Visible = false;
             pnlBorrowReturnSubMenu.Visible = false;
             pnlReportsSubMenu.Visible = false;
@@ -56,7 +60,7 @@ namespace Library_Management_System
             }
         }
 
-        private void loadCount()
+        /* private void loadCount()
         {
             string query1 = "SELECT COUNT(*) from tbl_book";
             string query2 = "SELECT COUNT(*) from tbl_staff";
@@ -89,16 +93,11 @@ namespace Library_Management_System
             lblCountMember.Text = ds.Tables["MemberCount"].Rows[0][0].ToString();
             label4.Text = ds.Tables["IssuedCount"].Rows[0][0].ToString();
             label6.Text = ds.Tables["ReturnedCount"].Rows[0][0].ToString();
-        }
+        } */
 
         private void btnManageBooks_Click(object sender, EventArgs e)
         {
             showSubMenu(pnlManageBooksSubMenu);
-        }
-
-        private void btnManageStaffs_Click(object sender, EventArgs e)
-        {
-            showSubMenu(pnlManageStaffsSubMenu);
         }
 
         private void btnManageMembers_Click(object sender, EventArgs e)
@@ -214,15 +213,16 @@ namespace Library_Management_System
         private void AdminForm_Load(object sender, EventArgs e)
         {
             hideSubMenu();
-            loadCount();            
+            lblName.Text = Username + "!";
+            //loadCount();            
         }
 
         private void autoLoadCount_Tick(object sender, EventArgs e)
         {
-            loadCount();
-            lblDate.Text = DateTime.Now.ToShortDateString();
-            lblTime.Text = DateTime.Now.ToShortTimeString();
-        }
+            //loadCount();
+            lblDateAndTime.Text = DateTime.Now.ToLongDateString() + " | " + DateTime.Now.ToLongTimeString();
+            
+        } 
 
         private void btnBooksMoreInfo_Click(object sender, EventArgs e)
         {

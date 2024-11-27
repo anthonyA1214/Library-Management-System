@@ -143,7 +143,7 @@ namespace Library_Management_System
 
         private void btnAddEditBook_Click(object sender, EventArgs e)
         {
-            openForm(new AddEditBook());
+            openForm(new ManageBooks());
         }
 
         private void btnInventory_Click(object sender, EventArgs e)

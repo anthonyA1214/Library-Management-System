@@ -52,11 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEditBook.cs">
+    <Compile Include="ManageBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEditBook.Designer.cs">
-      <DependentUpon>AddEditBook.cs</DependentUpon>
+    <Compile Include="ManageBooks.Designer.cs">
+      <DependentUpon>ManageBooks.cs</DependentUpon>
     </Compile>
     <Compile Include="AddEditMember.cs">
       <SubType>Form</SubType>
@@ -155,8 +155,8 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddEditBook.resx">
-      <DependentUpon>AddEditBook.cs</DependentUpon>
+    <EmbeddedResource Include="ManageBooks.resx">
+      <DependentUpon>ManageBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddEditMember.resx">
       <DependentUpon>AddEditMember.cs</DependentUpon>
@@ -241,9 +241,6 @@
     <None Include="Resources\layout.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\book.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\team.png" />
   </ItemGroup>
   <ItemGroup>
@@ -257,9 +254,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reject2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\books.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\members.png" />
@@ -292,7 +286,19 @@
     <None Include="Resources\open-book.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\book2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\library.jpg" />

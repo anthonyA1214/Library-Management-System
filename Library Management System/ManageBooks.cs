@@ -11,17 +11,18 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class AddEditBook : Form
+    public partial class ManageBooks : Form
     {
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
         int select, book_id;
 
-        public AddEditBook()
+        public ManageBooks()
         {
             InitializeComponent();
+            pnlSideBar.Visible = false;
         }
 
-        private void clearTexts()
+        /*private void clearTexts()
         {
             tbBookID.Clear();
             tbTitle.Clear();
@@ -269,6 +270,6 @@ namespace Library_Management_System
         {
             pnlSideMenu.Visible = false;
             select = 0;
-        }      
+        }      */
     }
 }

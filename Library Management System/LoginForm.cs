@@ -60,7 +60,7 @@ namespace Library_Management_System
 
                     if (role == "admin")
                     {
-                        AdminForm adminForm = new AdminForm();
+                        AdminForm adminForm = new AdminForm(username);
                         adminForm.Show();
                         this.Hide();
                     }

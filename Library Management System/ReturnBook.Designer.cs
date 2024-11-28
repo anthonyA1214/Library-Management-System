@@ -448,7 +448,6 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.book2;
             this.pictureBox2.Location = new System.Drawing.Point(116, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);

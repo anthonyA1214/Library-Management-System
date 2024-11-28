@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -106,6 +112,12 @@
     <Compile Include="MemberActivityReport.Designer.cs">
       <DependentUpon>MemberActivityReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
     <Compile Include="OverdueItemsReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,9 @@
     <EmbeddedResource Include="MemberActivityReport.resx">
       <DependentUpon>MemberActivityReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OverdueItemsReport.resx">
       <DependentUpon>OverdueItemsReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +208,7 @@
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -277,6 +293,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\book2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome to Library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome to Library Management System.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log in form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book icon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Systemlogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftside.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

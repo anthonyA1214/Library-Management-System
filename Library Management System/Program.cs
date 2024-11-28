@@ -16,7 +16,7 @@ namespace Library_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminForm("hakdog"));
+            Application.Run(new LoginForm());
         }
     }
 }

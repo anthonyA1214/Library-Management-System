@@ -1,3 +1,5 @@
+using Guna.UI2.WinForms;
+using Library_Management_System.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -5,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,27 +17,16 @@ namespace Library_Management_System
     public partial class ManageBooks : Form
     {
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
-        int select, book_id;
+        int select, bookid;
 
         public ManageBooks()
         {
             InitializeComponent();
-            pnlSideBar.Visible = false;
+            pnlSideMenu.Visible = false;
         }
 
-        /*private void clearTexts()
-        {
-            tbBookID.Clear();
-            tbTitle.Clear();
-            tbAuthor.Clear();
-            tbISBN.Clear();
-            tbGenre.Clear();
-            dtpPublicationYear.Text = string.Empty;
-            tbTotalCopies.Clear();
-        }
         private void loadTable()
         {
-            conn.Open();
             string query = "SELECT * from tbl_book";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -42,137 +34,75 @@ namespace Library_Management_System
             da.Fill(dt);
             dgvBook.DataSource = dt;
             dgvBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            conn.Close();
-        }
-
-        private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
+            DataGridViewImageColumn updateImgCol = new DataGridViewImageColumn
             {
-                if (e.RowIndex >= 0 && select == 2 || e.RowIndex >= 0 && select == 3)
-                {
-                    if (dgvBook.Rows[e.RowIndex].Cells[e.ColumnIndex] != null)
-                    {
-                        book_id = int.Parse(dgvBook.Rows[e.RowIndex].Cells[0].Value.ToString());
-                    }
-
-                    string query = "SELECT * from tbl_book WHERE book_id = " + book_id + "";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
-
-                    tbBookID.Text = ds.Tables[0].Rows[0][0].ToString();
-                    tbTitle.Text = ds.Tables[0].Rows[0][1].ToString();
-                    tbAuthor.Text = ds.Tables[0].Rows[0][2].ToString();
-                    tbISBN.Text = ds.Tables[0].Rows[0][3].ToString();
-                    tbGenre.Text = ds.Tables[0].Rows[0][4].ToString();
-                    int publicationYear = int.Parse(ds.Tables[0].Rows[0][5].ToString());
-                    dtpPublicationYear.Value = new DateTime(publicationYear, 1, 1);
-                    tbTotalCopies.Text = ds.Tables[0].Rows[0][7].ToString();
-                }
+                Name = "update",
+                HeaderText = string.Empty,
+                Image = Properties.Resources.edit,
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+            };
+            DataGridViewImageColumn deleteImgCol = new DataGridViewImageColumn
+            {
+                Name = "delete",
+                HeaderText = string.Empty,
+                Image = Properties.Resources.delete,
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+            };
+            if (dgvBook.Columns["update"] == null)
+            {
+                dgvBook.Columns.Add(updateImgCol);
             }
-            catch (Exception ex)
+            if (dgvBook.Columns["delete"] == null)
             {
-                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvBook.Columns.Add(deleteImgCol);
             }
         }
 
-        private void disableEdit()
+        private void clearTexts()
         {
-            tbTitle.ReadOnly = true;
-            tbAuthor.ReadOnly = true;
-            tbISBN.ReadOnly = true;
-            tbGenre.ReadOnly = true;
-            dtpPublicationYear.Enabled = false;
-            tbTotalCopies.ReadOnly = true;
+            tbTitle.Clear();
+            tbAuthor.Clear();
+            tbISBN.Clear();
+            cbGenre.Text = string.Empty;
+            dtpPublicationYear.Text = string.Empty;
+            numQuantity.ResetText();
         }
 
-        private void enableEdit()
-        {
-            tbTitle.ReadOnly = false;
-            tbAuthor.ReadOnly = false;
-            tbISBN.ReadOnly = false;
-            tbGenre.ReadOnly = false;
-            dtpPublicationYear.Enabled = true;
-            tbTotalCopies.ReadOnly = false;
-        }
-
-        private void AddEditBook_Load(object sender, EventArgs e)
+        private void ManageBooks_Load(object sender, EventArgs e)
         {
             pnlSideMenu.Visible = false;
             select = 0;
             loadTable();
+            dgvBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvBook.ColumnHeadersDefaultCellStyle.BackColor;
+            dgvBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvBook.ColumnHeadersDefaultCellStyle.ForeColor;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAddBook_Click(object sender, EventArgs e)
         {
             lblSideMenu.Text = "ADD BOOK";
             select = 1;
-            enableEdit();
             clearTexts();
             pnlSideMenu.Visible = true;
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            lblSideMenu.Text = "UPDATE BOOK";
-            select = 2;
-            enableEdit();
-            clearTexts();
-            tbTotalCopies.ReadOnly = true;
-            pnlSideMenu.Visible = true;
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            lblSideMenu.Text = "DELETE BOOK";
-            select = 3;
-            disableEdit();
-            clearTexts();
-            pnlSideMenu.Visible = true;
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            select = 0; book_id = 0;
-            loadTable();
-            clearTexts();
-            enableEdit();
-            pnlSideMenu.Visible = false;           
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            if (select == 1 && tbTitle.Text == "" && tbAuthor.Text == "" && tbISBN.Text == "" && tbGenre.Text == "" && tbTotalCopies.Text == "")
+            if (select == 1 && tbTitle.Text == "" && tbAuthor.Text == "" && tbISBN.Text == "" && cbGenre.Text == "" && numQuantity.Text == "0")
             {
                 MessageBox.Show("All fields are required.", "Input error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else if (select == 2 && tbBookID.Text == "")
-            {
-                MessageBox.Show("Please select a book to update.", "Selection required.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else if (select == 3 && tbBookID.Text == "")
-            {
-                MessageBox.Show("Please select a book to delete.", "Selection required.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
-            int bookid;
             string title = tbTitle.Text;
             string author = tbAuthor.Text;
             string isbn = tbISBN.Text;
-            string genre = tbGenre.Text;
+            string genre = cbGenre.Text;
             int publicationyear = int.Parse(dtpPublicationYear.Text);
-            int totalcopies = int.Parse(tbTotalCopies.Text);
-            int copiesavailable = totalcopies;
+            int quantity = int.Parse(numQuantity.Text);
             string query;
             int checkrow;
-            if (select == 2 || select == 3) { bookid = int.Parse(tbBookID.Text); }
-            else { bookid = 0; }
-
             try
             {
                 if(select == 2)
@@ -181,18 +111,12 @@ namespace Library_Management_System
                     if (dialogResult == DialogResult.No) 
                         return;
                 }
-                if (select == 3)
-                {
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this book?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (dialogResult == DialogResult.No)
-                        return;
-                }
                 conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 switch (select)
                 {
                     case 1:
-                        query = "INSERT into tbl_book(title,author,isbn,genre,publication_year,copies_available,total_copies) values(@title,@author,@isbn,@genre,@publicationyear,@copiesavailable,@totalcopies)";
+                        query = "INSERT into tbl_book(title,author,isbn,genre,publication_year,quantity) values(@title,@author,@isbn,@genre,@publicationyear,@quantity)";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
                         cmd.Parameters.AddWithValue("@title", title);
@@ -200,8 +124,7 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@isbn", isbn);
                         cmd.Parameters.AddWithValue("@genre", genre);
                         cmd.Parameters.AddWithValue("@publicationyear", publicationyear);
-                        cmd.Parameters.AddWithValue("@copiesavailable", copiesavailable);
-                        cmd.Parameters.AddWithValue("@totalcopies", totalcopies);
+                        cmd.Parameters.AddWithValue("@quantity", quantity);
                         checkrow = cmd.ExecuteNonQuery();
                         if(checkrow > 0)
                         {
@@ -266,10 +189,48 @@ namespace Library_Management_System
             this.Close();
         }
 
+        private void dgvBook_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
+        {
+            if (dgvBook.Columns[e.ColumnIndex].Name == "update")
+            {
+                e.ToolTipText = "Update";
+            }
+            if (dgvBook.Columns[e.ColumnIndex].Name == "delete")
+            {
+                e.ToolTipText = "Delete";
+            }
+        }
+
+        private void dgvBook_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvBook.Columns["update"].Index)
+            {
+                string query = "SELECT * from tbl_book WHERE book_id = @bookid";
+                bookid = int.Parse(dgvBook.Rows[e.RowIndex].Cells["book_id"].Value.ToString());
+                select = 2;
+                clearTexts();
+                lblSideMenu.Text = "UPDATE BOOK";
+                pnlSideMenu.Visible = true;
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@bookid", bookid);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                tbTitle.Text = ds.Tables[0].Rows[0][1].ToString();
+                tbAuthor.Text = ds.Tables[0].Rows[0][2].ToString();
+                tbISBN.Text = ds.Tables[0].Rows[0][3].ToString();
+                cbGenre.Text = ds.Tables[0].Rows[0][4].ToString();
+                int publicationYear = int.Parse(ds.Tables[0].Rows[0][5].ToString());
+                dtpPublicationYear.Value = new DateTime(publicationYear, 1, 1);
+                numQuantity.Value = decimal.Parse(ds.Tables[0].Rows[0][6].ToString());
+            }
+        }
+
         private void pbExit2_Click(object sender, EventArgs e)
         {
             pnlSideMenu.Visible = false;
             select = 0;
-        }      */
+        }     
     }
 }

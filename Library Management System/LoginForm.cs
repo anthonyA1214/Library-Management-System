@@ -13,7 +13,7 @@ namespace Library_Management_System
 {
     public partial class LoginForm : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=\"192.168.22.15, 1433\";Initial Catalog=db_LibraryManagementSystem;Persist Security Info=True;User ID=sa;Password=lightbearers;Trust Server Certificate=True");
+        SqlConnection conn = new SqlConnection("Data Source=\"192.168.100.129, 1433\";Initial Catalog=db_LibraryManagementSystem;Persist Security Info=True;User ID=sa;Password=lightbearers;");
 
         public LoginForm()
         {

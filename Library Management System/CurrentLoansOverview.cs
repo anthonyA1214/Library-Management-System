@@ -36,8 +36,8 @@ namespace Library_Management_System
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dgvCurrentLoans.DataSource = dt;
-            dgvCurrentLoans.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvIssue.DataSource = dt;
+            dgvIssue.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void CurrentLoansOverview_Load(object sender, EventArgs e)
@@ -162,7 +162,7 @@ namespace Library_Management_System
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dgvCurrentLoans.DataSource = dt;
+            dgvIssue.DataSource = dt;
         }
 
         private void pbExit_Click(object sender, EventArgs e)

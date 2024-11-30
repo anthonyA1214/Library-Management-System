@@ -20,7 +20,7 @@ namespace Library_Management_System
             InitializeComponent();
         }
 
-        private void loadTable()
+        /*private void loadTable()
         {
             conn.Open();
             string query = "SELECT * from tbl_member";
@@ -109,6 +109,6 @@ namespace Library_Management_System
         private void guna2TextBox2_TextChanged_1(object sender, EventArgs e)
         {
 
-        }
+        }*/
     }
 }

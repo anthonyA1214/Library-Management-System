@@ -90,5 +90,25 @@ namespace Library_Management_System
             tbSearchContact.Clear();
             cbSearchMembershipType.Text = string.Empty;
         }
+
+        private void dgvBook_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

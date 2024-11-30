@@ -95,7 +95,7 @@ namespace Library_Management_System
             label6.Text = ds.Tables["ReturnedCount"].Rows[0][0].ToString();
         } */
 
-        private void btnManageBooks_Click(object sender, EventArgs e)
+        private void btnBooks_Click(object sender, EventArgs e)
         {
             showSubMenu(pnlManageBooksSubMenu);
         }
@@ -141,7 +141,7 @@ namespace Library_Management_System
             if (activeForm != null) { activeForm.Close(); }
         }
 
-        private void btnAddEditBook_Click(object sender, EventArgs e)
+        private void btnManageBooks_Click(object sender, EventArgs e)
         {
             openForm(new ManageBooks());
         }
@@ -196,11 +196,6 @@ namespace Library_Management_System
             openForm(new MemberActivityReport());
         }
 
-        private void btnOverdueItemsReports_Click(object sender, EventArgs e)
-        {
-            openForm(new OverdueItemsReport());
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -223,20 +218,5 @@ namespace Library_Management_System
             lblDateAndTime.Text = DateTime.Now.ToLongDateString() + " | " + DateTime.Now.ToLongTimeString();
             
         } 
-
-        private void btnBooksMoreInfo_Click(object sender, EventArgs e)
-        {
-            openForm(new Inventory());
-        }
-
-        private void btnStaffsMoreInfo_Click(object sender, EventArgs e)
-        {
-            openForm(new SearchStaff());
-        }
-
-        private void btnMemberMoreInfo_Click(object sender, EventArgs e)
-        {
-            openForm(new SearchMember());
-        }
     }
 }

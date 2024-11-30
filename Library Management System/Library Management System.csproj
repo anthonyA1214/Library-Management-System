@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageBooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +94,6 @@
     <Compile Include="CurrentLoansOverview.Designer.cs">
       <DependentUpon>CurrentLoansOverview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventory.Designer.cs">
-      <DependentUpon>Inventory.cs</DependentUpon>
-    </Compile>
     <Compile Include="IssueBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,12 +123,6 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
-    <Compile Include="OverdueItemsReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OverdueItemsReport.Designer.cs">
-      <DependentUpon>OverdueItemsReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReturnBook.cs">
@@ -155,6 +149,9 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageBooks.resx">
       <DependentUpon>ManageBooks.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,9 +170,6 @@
     <EmbeddedResource Include="CurrentLoansOverview.resx">
       <DependentUpon>CurrentLoansOverview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory.resx">
-      <DependentUpon>Inventory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="IssueBook.resx">
       <DependentUpon>IssueBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,9 +181,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OverdueItemsReport.resx">
-      <DependentUpon>OverdueItemsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

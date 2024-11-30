@@ -17,7 +17,7 @@ namespace Library_Management_System
     public partial class ManageBooks : Form
     {
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
-        int select, bookid;
+        int select, bookid, checkrow;
 
         public ManageBooks()
         {
@@ -27,7 +27,7 @@ namespace Library_Management_System
 
         private void loadTable()
         {
-            string query = "SELECT * from tbl_book";
+            string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity] from tbl_book WHERE IsDeleted = 0";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -67,7 +67,7 @@ namespace Library_Management_System
             tbISBN.Clear();
             cbGenre.Text = string.Empty;
             dtpPublicationYear.Text = string.Empty;
-            numQuantity.ResetText();
+            numQuantity.Value = 0;
         }
 
         private void ManageBooks_Load(object sender, EventArgs e)
@@ -75,6 +75,7 @@ namespace Library_Management_System
             pnlSideMenu.Visible = false;
             select = 0;
             loadTable();
+            cbSearchBy.Text = "Title";
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvBook.ColumnHeadersDefaultCellStyle.BackColor;
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvBook.ColumnHeadersDefaultCellStyle.ForeColor;
         }
@@ -102,7 +103,6 @@ namespace Library_Management_System
             int publicationyear = int.Parse(dtpPublicationYear.Text);
             int quantity = int.Parse(numQuantity.Text);
             string query;
-            int checkrow;
             try
             {
                 if(select == 2)
@@ -155,21 +155,6 @@ namespace Library_Management_System
                             MessageBox.Show("Failed to update the book.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         break;
-                    case 3:
-                        query = "DELETE from tbl_book WHERE book_id = @bookid";
-                        cmd.CommandText = query;
-                        cmd.Connection = conn;
-                        cmd.Parameters.AddWithValue("@bookid", bookid);
-                        checkrow = cmd.ExecuteNonQuery();
-                        if (checkrow > 0)
-                        {
-                            MessageBox.Show("Book deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Failed to delete the book.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        break;
                 }
             }
             catch (Exception ex)
@@ -178,9 +163,7 @@ namespace Library_Management_System
             }
             finally
             {
-                conn.Close();
-                clearTexts();
-                loadTable();
+                conn.Close(); clearTexts(); loadTable(); pnlSideMenu.Visible = false;
             }
         }
 
@@ -206,7 +189,7 @@ namespace Library_Management_System
             if (e.RowIndex >= 0 && e.ColumnIndex == dgvBook.Columns["update"].Index)
             {
                 string query = "SELECT * from tbl_book WHERE book_id = @bookid";
-                bookid = int.Parse(dgvBook.Rows[e.RowIndex].Cells["book_id"].Value.ToString());
+                bookid = int.Parse(dgvBook.Rows[e.RowIndex].Cells["Book ID"].Value.ToString());
                 select = 2;
                 clearTexts();
                 lblSideMenu.Text = "UPDATE BOOK";
@@ -225,6 +208,97 @@ namespace Library_Management_System
                 dtpPublicationYear.Value = new DateTime(publicationYear, 1, 1);
                 numQuantity.Value = decimal.Parse(ds.Tables[0].Rows[0][6].ToString());
             }
+
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvBook.Columns["delete"].Index)
+            {
+                string query = "UPDATE tbl_book SET IsDeleted = 1 WHERE book_id = @bookid";
+                bookid = int.Parse(dgvBook.Rows[e.RowIndex].Cells["Book ID"].Value.ToString());
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@bookid", bookid);
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this book?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.No) return;
+                    checkrow = cmd.ExecuteNonQuery();
+                    if (checkrow > 0)
+                    {
+                        MessageBox.Show("Book deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete the book.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close(); clearTexts(); loadTable();
+                }                
+            }
+        }
+
+        private void tbSearch_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbSearch.Text))
+            {
+                loadTable();
+            }
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity] from tbl_book WHERE IsDeleted = 0";
+            string search = tbSearch.Text;
+            if (cbSearchBy.Text == "Title")
+            {
+                query += " AND title LIKE @title";
+            }
+            else if (cbSearchBy.Text == "Author")
+            {
+                query += " AND author LIKE @author";
+            }
+            else if (cbSearchBy.Text == "ISBN")
+            {
+                query += " AND isbn = @isbn";
+            }
+            else if (cbSearchBy.Text == "Genre")
+            {
+                query += " AND genre = @genre";
+            }
+            else if (cbSearchBy.Text == "Publication Year")
+            {
+                query += " AND publication_year = @publicationyear";
+            }
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+            if (cbSearchBy.Text == "Title")
+            {
+                cmd.Parameters.AddWithValue("@title", "%" + search + "%");
+            }
+            else if (cbSearchBy.Text == "Author")
+            {
+                cmd.Parameters.AddWithValue("@author", "%" + search + "%");
+            }
+            else if (cbSearchBy.Text == "ISBN")
+            {
+                cmd.Parameters.AddWithValue("@isbn", search);
+            }
+            else if (cbSearchBy.Text == "Genre")
+            {
+                cmd.Parameters.AddWithValue("@genre", search);
+            }
+            else if (cbSearchBy.Text == "Publication Year")
+            {
+                cmd.Parameters.AddWithValue("@publicationyear", search);
+            }
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgvBook.DataSource = dt;
         }
 
         private void pbExit2_Click(object sender, EventArgs e)

@@ -14,7 +14,8 @@ namespace Library_Management_System
 {
     public partial class ReturnBook : Form
     {
-       /* SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
+        int issueid, bookid;
 
         public ReturnBook()
         {
@@ -30,159 +31,70 @@ namespace Library_Management_System
             lblDueDate.Text = string.Empty;
         }
 
-        private void btnFindDetails_Click(object sender, EventArgs e)
-        {                   
-            string bookid = tbBookID.Text;
-            string memberid = tbMemberID.Text;
-            string issueid = tbIssueID.Text;
-            string findQuery = "SELECT tbl_issue.issue_id, tbl_book.title, tbl_member.first_name, tbl_member.last_name, tbl_issue.issue_date, tbl_issue.due_date, tbl_book.book_id, tbl_member.member_id from tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE status = 'Issued'";
-
-            try
-            {
-                if (!string.IsNullOrEmpty(tbIssueID.Text))
-                {
-                    findQuery += " AND issue_id = @issueid";
-                }
-
-                else if (!string.IsNullOrEmpty(tbBookID.Text) && !string.IsNullOrEmpty(tbMemberID.Text))
-                {
-                    findQuery += " AND tbl_issue.book_id = @bookid AND tbl_issue.member_id = @memberid";
-                }
-
-                else
-                {
-                    MessageBox.Show("Please provide Issue ID or both Book ID and Member ID.", "Input required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                SqlCommand findCmd = new SqlCommand(findQuery, conn);
-
-                if (!string.IsNullOrEmpty(tbIssueID.Text))
-                {
-                    findCmd.Parameters.AddWithValue("@issueid", issueid);
-                }
-
-                else if (!string.IsNullOrEmpty(tbBookID.Text) && !string.IsNullOrEmpty(tbMemberID.Text))
-                {
-                    findCmd.Parameters.AddWithValue("@bookid", bookid);
-                    findCmd.Parameters.AddWithValue("@memberid", memberid);
-                }
-
-                SqlDataAdapter da = new SqlDataAdapter(findCmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                if (ds.Tables[0].Rows.Count == 0)
-                {
-                    MessageBox.Show("No record found matching the given id details.", "No record found", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                lblIssueID.Text = ds.Tables[0].Rows[0][0].ToString();
-                lblBookTitle.Text = ds.Tables[0].Rows[0][1].ToString();
-                lblMemberName.Text = ds.Tables[0].Rows[0][2].ToString() + " " + ds.Tables[0].Rows[0][3].ToString();
-                DateTime issueDate = Convert.ToDateTime(ds.Tables[0].Rows[0][4].ToString());
-                DateTime dueDate = Convert.ToDateTime(ds.Tables[0].Rows[0][5].ToString());
-                lblIssueDate.Text = issueDate.ToString("MM/dd/yyyy");
-                lblDueDate.Text = dueDate.ToString("MM/dd/yyyy");
-                if (!string.IsNullOrEmpty(tbIssueID.Text))
-                {
-                    tbBookID.Text = ds.Tables[0].Rows[0][6].ToString();
-                    tbMemberID.Text = ds.Tables[0].Rows[0][7].ToString();
-                }
-                else if (!string.IsNullOrEmpty(tbBookID.Text) && !string.IsNullOrEmpty(tbMemberID.Text))
-                {
-                    tbIssueID.Text = ds.Tables[0].Rows[0][0].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void tbIssueID_Leave(object sender, EventArgs e)
+        private void loadTable()
         {
-            if (!string.IsNullOrEmpty(tbIssueID.Text))
-            {
-                tbBookID.Enabled = false;
-                tbMemberID.Enabled = false;            
-            }
-            else
-            {
-                tbBookID.Enabled = true;
-                tbMemberID.Enabled = true;
-                clearTexts();
-                tbBookID.Clear();
-                tbMemberID.Clear();
-            }
-        }
+            string query = "SELECT tbl_issue.issue_id as [Issue ID], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) as [Member Name], tbl_book.title as [Book Title] from tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE status = 'Issued'";
 
-        private void tbBookID_Leave(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(tbBookID.Text))
-            {
-                tbIssueID.Enabled = false;                
-            }
-            else
-            {
-                tbIssueID.Enabled = true;
-                clearTexts();
-                tbIssueID.Clear();
-            }              
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgvIssue.DataSource = dt;
+            dgvIssue.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-
-        private void tbMemberID_Leave(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(tbMemberID.Text))
-            {
-                tbIssueID.Enabled = false;
-            }
-            else
-            {
-                tbIssueID.Enabled = true;
-                clearTexts();
-                tbIssueID.Clear();
-            }
-        }
-
+        
         private void btnReturnBook_Click(object sender, EventArgs e)
         {
-            string issueid = lblIssueID.Text;
-            string returndate = DateTime.Now.ToShortDateString();
-            string bookid = tbBookID.Text;
-            try
+            if (string.IsNullOrEmpty(lblIssueID.Text))
             {
-                conn.Open();
-                string returnQuery = "UPDATE tbl_issue SET return_date = @returndate, status = 'Returned' WHERE issue_id = @issueid";
-                SqlCommand returnCmd = new SqlCommand(returnQuery, conn);
-                returnCmd.Parameters.AddWithValue("@returndate", returndate);
-                returnCmd.Parameters.AddWithValue("@issueid", issueid);
-                int checkreturn = returnCmd.ExecuteNonQuery();
+                MessageBox.Show("Please select a record to return.", "No Record Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }    
+            
+            DialogResult dialogResult = MessageBox.Show($"Are you sure you want to return the book '{lblBookTitle.Text}' issued to '{lblMemberName.Text}'?", "Confirm Return", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                string updateQuery = "UPDATE tbl_book SET copies_available = copies_available + 1 WHERE book_id = @bookid";
-                SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
-                updateCmd.Parameters.AddWithValue("@bookid", bookid);
-                int checkupdate = updateCmd.ExecuteNonQuery();
-
-                if(checkreturn > 0 && checkupdate > 0)
+            if ( dialogResult == DialogResult.Yes)
+            {
+                string returndate = DateTime.Now.ToShortDateString();
+                try
                 {
-                    MessageBox.Show("Returned book successfully.\nInventory updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    conn.Open();
+                    string returnQuery = "UPDATE tbl_issue SET return_date = @returndate, status = 'Returned' WHERE issue_id = @issueid";
+                    SqlCommand returnCmd = new SqlCommand(returnQuery, conn);
+                    returnCmd.Parameters.AddWithValue("@returndate", returndate);
+                    returnCmd.Parameters.AddWithValue("@issueid", issueid);
+                    int checkreturn = returnCmd.ExecuteNonQuery();
+
+                    string updateQuery = "UPDATE tbl_book SET quantity = quantity + 1 WHERE book_id = @bookid";
+                    SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
+                    updateCmd.Parameters.AddWithValue("@bookid", bookid);
+                    int checkupdate = updateCmd.ExecuteNonQuery();
+
+                    if (checkreturn > 0 && checkupdate > 0)
+                    {
+                        MessageBox.Show("Returned book successfully.\nInventory updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
+                    loadTable();
+                }
+            }           
         }
 
         private void ReturnBook_Load(object sender, EventArgs e)
         {
             clearTexts();
+            loadTable();
+            cbSearchBy.Text = "Member Name";
+            dgvIssue.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvIssue.ColumnHeadersDefaultCellStyle.BackColor;
+            dgvIssue.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvIssue.ColumnHeadersDefaultCellStyle.ForeColor;
         }
 
         private void pbExit_Click(object sender, EventArgs e)
@@ -190,24 +102,90 @@ namespace Library_Management_System
             this.Close();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void tbSearch_TextChanged(object sender, EventArgs e)
         {
+            string query = "SELECT tbl_issue.issue_id as [Issue ID], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) as [Member Name], tbl_book.title as [Book Title] from tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE status = 'Issued'";
+            string search = tbSearch.Text;
 
+            if (string.IsNullOrEmpty(tbSearch.Text))
+            {
+                loadTable(); return;
+            }
+
+            if (cbSearchBy.Text == "Member Name")
+            {
+                query += " AND CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) LIKE @search";
+            }
+            else if (cbSearchBy.Text == "Member ID")
+            {
+                if (!int.TryParse(tbSearch.Text, out int id))
+                {
+                    return;
+                }
+                query += " AND tbl_issue.member_id = @search";
+            }
+            else if (cbSearchBy.Text == "Issue ID")
+            {
+                if (!int.TryParse(tbSearch.Text, out int id))
+                {
+                    return;
+                }
+                query += " AND tbl_issue.issue_id = @search";
+            }
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+            if (cbSearchBy.Text == "Member Name")
+            {
+                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+            }
+            else if (cbSearchBy.Text == "Member ID" || cbSearchBy.Text == "Issue ID")
+            {
+                cmd.Parameters.AddWithValue("@search", search);
+            }
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgvIssue.DataSource = dt;
         }
 
-        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        private void dgvIssue_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0 && dgvIssue.Rows[e.RowIndex].Cells[e.ColumnIndex] != null)
+            {
+                try
+                {
+                    issueid = int.Parse(dgvIssue.Rows[e.RowIndex].Cells[0].Value.ToString());
 
+                    string query = "SELECT tbl_issue.issue_id, tbl_issue.book_id, tbl_book.title, tbl_member.first_name, tbl_member.last_name, tbl_issue.issue_date, tbl_issue.due_date FROM tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE tbl_issue.issue_id = @issueid AND tbl_issue.status = 'Issued'";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@issueid", issueid);
+
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        lblIssueID.Text = reader["issue_id"].ToString();
+                        lblBookTitle.Text = reader["title"].ToString();
+                        lblMemberName.Text = $"{reader["first_name"]} {reader["last_name"]}";
+                        lblIssueDate.Text = Convert.ToDateTime(reader["issue_date"]).ToString("MM/dd/yyyy");
+                        lblDueDate.Text = Convert.ToDateTime(reader["due_date"]).ToString("MM/dd/yyyy");
+                        bookid = int.Parse(reader["book_id"].ToString());
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
         }
 
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }*/
     }
 }

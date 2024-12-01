@@ -1,6 +1,6 @@
 ﻿namespace Library_Management_System
 {
-    partial class CurrentLoansOverview
+    partial class ViewRecords
     {
         /// <summary>
         /// Required designer variable.
@@ -64,7 +64,8 @@
             // dtpEndDate
             // 
             this.dtpEndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpEndDate.BorderRadius = 10;
+            this.dtpEndDate.AutoRoundedCorners = true;
+            this.dtpEndDate.BorderRadius = 17;
             this.dtpEndDate.BorderThickness = 1;
             this.dtpEndDate.Checked = true;
             this.dtpEndDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
@@ -104,8 +105,9 @@
             // dtpStartDate
             // 
             this.dtpStartDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpStartDate.AutoRoundedCorners = true;
             this.dtpStartDate.BackColor = System.Drawing.Color.Transparent;
-            this.dtpStartDate.BorderRadius = 10;
+            this.dtpStartDate.BorderRadius = 17;
             this.dtpStartDate.BorderThickness = 1;
             this.dtpStartDate.Checked = true;
             this.dtpStartDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
@@ -393,7 +395,7 @@
             this.dgvIssue.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
             this.dgvIssue.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // CurrentLoansOverview
+            // ViewRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -405,9 +407,9 @@
             this.Controls.Add(this.pnlTopMenu);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MinimumSize = new System.Drawing.Size(684, 561);
-            this.Name = "CurrentLoansOverview";
+            this.Name = "ViewRecords";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Text = "CurrentLoansOverview";
+            this.Text = "ViewRecords";
             this.pnlTopMenu.ResumeLayout(false);
             this.pnlTopMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();

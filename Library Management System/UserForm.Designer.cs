@@ -205,7 +205,6 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::Library_Management_System.Properties.Resources.schedule;
             this.pictureBox7.Location = new System.Drawing.Point(15, 15);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(45, 45);
@@ -258,7 +257,6 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Library_Management_System.Properties.Resources.paper_plane;
             this.pictureBox4.Location = new System.Drawing.Point(15, 15);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(45, 45);
@@ -439,7 +437,6 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::Library_Management_System.Properties.Resources.members;
             this.pictureBox2.Location = new System.Drawing.Point(163, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 85);
@@ -564,7 +561,6 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLogout.Image = global::Library_Management_System.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(0, 795);
             this.btnLogout.Name = "btnLogout";
@@ -642,7 +638,6 @@
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReports.Image = global::Library_Management_System.Properties.Resources.report;
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.Location = new System.Drawing.Point(0, 625);
             this.btnReports.Name = "btnReports";
@@ -720,7 +715,6 @@
             this.btnBorrowReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrowReturn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrowReturn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBorrowReturn.Image = global::Library_Management_System.Properties.Resources.borrow;
             this.btnBorrowReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBorrowReturn.Location = new System.Drawing.Point(0, 455);
             this.btnBorrowReturn.Name = "btnBorrowReturn";
@@ -781,7 +775,6 @@
             this.btnManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageMembers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnManageMembers.Image = global::Library_Management_System.Properties.Resources.profile;
             this.btnManageMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageMembers.Location = new System.Drawing.Point(0, 325);
             this.btnManageMembers.Name = "btnManageMembers";
@@ -882,7 +875,6 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.digital_library;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(233, 150);

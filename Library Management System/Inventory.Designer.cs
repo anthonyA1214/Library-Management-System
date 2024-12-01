@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTopMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbExit = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbSearchBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -46,28 +48,26 @@
             this.pnlSideMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.numQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnEnter = new Guna.UI2.WinForms.Guna2Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tbAuthor = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbTitle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbExit2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblSideMenu = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvBook = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.pbExit2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pbExit = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlTopMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopMenu
@@ -95,6 +95,43 @@
             this.label1.Size = new System.Drawing.Size(70, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Search by:";
+            // 
+            // pbExit
+            // 
+            this.pbExit.Image = global::Library_Management_System.Properties.Resources.reject2;
+            this.pbExit.ImageRotate = 0F;
+            this.pbExit.Location = new System.Drawing.Point(7, 7);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(25, 25);
+            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExit.TabIndex = 1;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbSearch.AutoRoundedCorners = true;
+            this.tbSearch.BorderRadius = 17;
+            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSearch.DefaultText = "";
+            this.tbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbSearch.IconLeft = global::Library_Management_System.Properties.Resources.search;
+            this.tbSearch.Location = new System.Drawing.Point(338, 7);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.PasswordChar = '\0';
+            this.tbSearch.PlaceholderText = "Search books";
+            this.tbSearch.SelectedText = "";
+            this.tbSearch.Size = new System.Drawing.Size(200, 36);
+            this.tbSearch.TabIndex = 1;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
             // 
             // cbSearchBy
             // 
@@ -169,6 +206,7 @@
             this.cbAvailabilityStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbAvailabilityStatus.ItemHeight = 30;
             this.cbAvailabilityStatus.Items.AddRange(new object[] {
+            "All",
             "Available",
             "Not Available"});
             this.cbAvailabilityStatus.Location = new System.Drawing.Point(329, 23);
@@ -202,6 +240,7 @@
             this.cbGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbGenre.ItemHeight = 30;
             this.cbGenre.Items.AddRange(new object[] {
+            "All",
             "Title",
             "Author",
             "ISBN",
@@ -242,6 +281,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(150, 40);
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Refresh Inventory";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnExport
             // 
@@ -260,6 +300,7 @@
             this.btnExport.Size = new System.Drawing.Size(150, 40);
             this.btnExport.TabIndex = 2;
             this.btnExport.Text = "Export Inventory";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // pnlSideMenu
             // 
@@ -313,6 +354,17 @@
             this.btnEnter.TabIndex = 12;
             this.btnEnter.Text = "Enter";
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label7.Location = new System.Drawing.Point(17, 201);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Quantity:";
             // 
             // label8
             // 
@@ -380,6 +432,18 @@
             this.tbTitle.Size = new System.Drawing.Size(200, 36);
             this.tbTitle.TabIndex = 1;
             // 
+            // pbExit2
+            // 
+            this.pbExit2.Image = global::Library_Management_System.Properties.Resources.reject2;
+            this.pbExit2.ImageRotate = 0F;
+            this.pbExit2.Location = new System.Drawing.Point(181, 6);
+            this.pbExit2.Name = "pbExit2";
+            this.pbExit2.Size = new System.Drawing.Size(25, 25);
+            this.pbExit2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExit2.TabIndex = 3;
+            this.pbExit2.TabStop = false;
+            this.pbExit2.Click += new System.EventHandler(this.pbExit2_Click);
+            // 
             // lblSideMenu
             // 
             this.lblSideMenu.AutoSize = true;
@@ -390,17 +454,6 @@
             this.lblSideMenu.Size = new System.Drawing.Size(114, 30);
             this.lblSideMenu.TabIndex = 2;
             this.lblSideMenu.Text = "Add Stock";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label7.Location = new System.Drawing.Point(17, 201);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Quantity:";
             // 
             // guna2Panel5
             // 
@@ -486,55 +539,6 @@
             this.dgvBook.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBook_CellFormatting);
             this.dgvBook.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvBook_CellToolTipTextNeeded);
             // 
-            // pbExit2
-            // 
-            this.pbExit2.Image = global::Library_Management_System.Properties.Resources.reject2;
-            this.pbExit2.ImageRotate = 0F;
-            this.pbExit2.Location = new System.Drawing.Point(181, 6);
-            this.pbExit2.Name = "pbExit2";
-            this.pbExit2.Size = new System.Drawing.Size(25, 25);
-            this.pbExit2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit2.TabIndex = 3;
-            this.pbExit2.TabStop = false;
-            this.pbExit2.Click += new System.EventHandler(this.pbExit2_Click);
-            // 
-            // pbExit
-            // 
-            this.pbExit.Image = global::Library_Management_System.Properties.Resources.reject2;
-            this.pbExit.ImageRotate = 0F;
-            this.pbExit.Location = new System.Drawing.Point(7, 7);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(25, 25);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 1;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbSearch.AutoRoundedCorners = true;
-            this.tbSearch.BorderRadius = 17;
-            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSearch.DefaultText = "";
-            this.tbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
-            this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.IconLeft = global::Library_Management_System.Properties.Resources.search;
-            this.tbSearch.Location = new System.Drawing.Point(338, 7);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.PasswordChar = '\0';
-            this.tbSearch.PlaceholderText = "Search books";
-            this.tbSearch.SelectedText = "";
-            this.tbSearch.Size = new System.Drawing.Size(200, 36);
-            this.tbSearch.TabIndex = 1;
-            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
-            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,17 +558,17 @@
             this.Load += new System.EventHandler(this.Inventory_Load);
             this.pnlTopMenu.ResumeLayout(false);
             this.pnlTopMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.ResumeLayout(false);
 
         }

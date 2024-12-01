@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class SearchMember : Form
+    public partial class MemberProfiles : Form
     {
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
 
-        public SearchMember()
+        public MemberProfiles()
         {
             InitializeComponent();
         }

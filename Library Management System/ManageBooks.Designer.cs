@@ -148,7 +148,6 @@
             this.tbSearch.Size = new System.Drawing.Size(200, 36);
             this.tbSearch.TabIndex = 1;
             this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
-            this.tbSearch.Leave += new System.EventHandler(this.tbSearch_Leave);
             // 
             // cbSearchBy
             // 
@@ -168,8 +167,8 @@
             "Title",
             "Author",
             "ISBN",
-            "Genre",
-            "Publication Year"});
+            "Publication Year",
+            "ID"});
             this.cbSearchBy.Location = new System.Drawing.Point(297, 7);
             this.cbSearchBy.Name = "cbSearchBy";
             this.cbSearchBy.Size = new System.Drawing.Size(140, 36);
@@ -419,7 +418,7 @@
             this.dtpPublicationYear.BorderThickness = 1;
             this.dtpPublicationYear.Checked = true;
             this.dtpPublicationYear.CustomFormat = "yyyy";
-            this.dtpPublicationYear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.dtpPublicationYear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
             this.dtpPublicationYear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpPublicationYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.dtpPublicationYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;

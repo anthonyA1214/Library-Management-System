@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Net;
 using System.Collections;
+using ClosedXML.Excel;
 
 namespace Library_Management_System
 {
@@ -63,8 +64,10 @@ namespace Library_Management_System
             tbTitle.Enabled = false;
             tbAuthor.Enabled = false;
             cbSearchBy.Text = "Title";
+            cbGenre.Text = "All";
+            cbAvailabilityStatus.Text = "All";
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvBook.ColumnHeadersDefaultCellStyle.BackColor;
-            dgvBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvBook.ColumnHeadersDefaultCellStyle.ForeColor;
+            dgvBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvBook.ColumnHeadersDefaultCellStyle.ForeColor;          
         }
 
         private void dgvBook_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -154,6 +157,12 @@ namespace Library_Management_System
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(tbSearch.Text))
+            {
+                loadTable();
+                return;
+            }
+
             string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity] from tbl_book WHERE IsDeleted = 0";
             string search = tbSearch.Text;
             if (cbSearchBy.Text == "Title")
@@ -194,6 +203,72 @@ namespace Library_Management_System
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvBook.DataSource = dt;
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (dgvBook.Rows.Count == 0)
+            {
+                MessageBox.Show("No data to export!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "Excel Workbook | *.xlsx",
+                Title = "Save Excel File",
+                FileName = "Inventory.xlsx"
+            })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (XLWorkbook workbook = new XLWorkbook())
+                        {
+                            var worksheet = workbook.Worksheets.Add("Inventory");
+
+                            int colIndex = 1;
+                            for (int i = 0; i < dgvBook.Columns.Count; i++)
+                            {
+                                if (dgvBook.Columns[i] is DataGridViewImageColumn)
+                                    continue;
+
+                                worksheet.Cell(1, colIndex).Value = dgvBook.Columns[i].HeaderText;
+                                colIndex++;
+                            }
+
+                            for (int i = 0; i < dgvBook.Rows.Count; i++)
+                            {
+                                colIndex = 1;
+                                for (int j = 0; j < dgvBook.Columns.Count; j++)
+                                {
+                                    if (dgvBook.Columns[j] is DataGridViewImageColumn)
+                                        continue;
+
+                                    if (dgvBook.Rows[i].Cells[j].Value != null)
+                                    {
+                                        worksheet.Cell(i + 2, colIndex).Value = dgvBook.Rows[i].Cells[j].Value.ToString();
+                                    }
+                                    colIndex++;
+                                }
+                            }
+
+                            workbook.SaveAs(sfd.FileName);
+                        }
+                        MessageBox.Show("Export successful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadTable();
         }
     }
 }

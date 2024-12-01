@@ -78,6 +78,7 @@ namespace Library_Management_System
             cbSearchBy.Text = "Title";
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvBook.ColumnHeadersDefaultCellStyle.BackColor;
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvBook.ColumnHeadersDefaultCellStyle.ForeColor;
+            dgvBook.ClearSelection();
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
@@ -90,9 +91,40 @@ namespace Library_Management_System
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            if (select == 1 && tbTitle.Text == "" && tbAuthor.Text == "" && tbISBN.Text == "" && cbGenre.Text == "" && numQuantity.Text == "0")
+            if (string.IsNullOrEmpty(tbTitle.Text))
             {
-                MessageBox.Show("All fields are required.", "Input error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("The Title field cannot be empty!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbTitle.Focus();
+                return;
+            }
+            else if (string.IsNullOrEmpty(tbAuthor.Text))
+            {
+                MessageBox.Show("The Author field cannot be empty!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbAuthor.Focus();
+                return;
+            }
+            else if (string.IsNullOrEmpty(tbISBN.Text))
+            {
+                MessageBox.Show("The ISBN field cannot be empty!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbISBN.Focus();
+                return;
+            }
+            else if (string.IsNullOrEmpty(cbGenre.Text))
+            {
+                MessageBox.Show("The Genre field cannot be empty!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cbGenre.Focus();
+                return;
+            }
+            else if (!int.TryParse(dtpPublicationYear.Text, out _))
+            {
+                MessageBox.Show("The Publication Year field must contain a valid year!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpPublicationYear.Focus();
+                return;
+            }
+            else if (numQuantity.Value <= 0)
+            {
+                MessageBox.Show("The Quantity must be greater than 0!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                numQuantity.Focus();
                 return;
             }
 
@@ -245,59 +277,57 @@ namespace Library_Management_System
             }
         }
 
-        private void tbSearch_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(tbSearch.Text))
-            {
-                loadTable();
-            }
-        }
-
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
             string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity] from tbl_book WHERE IsDeleted = 0";
             string search = tbSearch.Text;
+
+            if (string.IsNullOrEmpty(tbSearch.Text))
+            {
+                loadTable(); return;
+            }
+
             if (cbSearchBy.Text == "Title")
             {
-                query += " AND title LIKE @title";
+                query += " AND title LIKE @search";
             }
             else if (cbSearchBy.Text == "Author")
             {
-                query += " AND author LIKE @author";
+                query += " AND author LIKE @search";
             }
             else if (cbSearchBy.Text == "ISBN")
             {
-                query += " AND isbn = @isbn";
-            }
-            else if (cbSearchBy.Text == "Genre")
-            {
-                query += " AND genre = @genre";
+                query += " AND isbn = @search";
             }
             else if (cbSearchBy.Text == "Publication Year")
             {
-                query += " AND publication_year = @publicationyear";
+                query += " AND publication_year = @search";
+            }
+            else if (cbSearchBy.Text == "ID")
+            {
+                query += " AND book_id = @search";
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
             if (cbSearchBy.Text == "Title")
             {
-                cmd.Parameters.AddWithValue("@title", "%" + search + "%");
+                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
             }
             else if (cbSearchBy.Text == "Author")
             {
-                cmd.Parameters.AddWithValue("@author", "%" + search + "%");
+                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
             }
             else if (cbSearchBy.Text == "ISBN")
             {
-                cmd.Parameters.AddWithValue("@isbn", search);
-            }
-            else if (cbSearchBy.Text == "Genre")
-            {
-                cmd.Parameters.AddWithValue("@genre", search);
+                cmd.Parameters.AddWithValue("@search", search);
             }
             else if (cbSearchBy.Text == "Publication Year")
             {
-                cmd.Parameters.AddWithValue("@publicationyear", search);
+                cmd.Parameters.AddWithValue("@search", search);
+            }
+            else if (cbSearchBy.Text == "ID")
+            {
+                cmd.Parameters.AddWithValue("@search", search);
             }
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

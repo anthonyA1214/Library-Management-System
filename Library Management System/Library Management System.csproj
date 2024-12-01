@@ -106,6 +106,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMembers.Designer.cs">
+      <DependentUpon>ManageMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberActivityReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMembers.resx">
+      <DependentUpon>ManageMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberActivityReport.resx">
       <DependentUpon>MemberActivityReport.cs</DependentUpon>
@@ -271,9 +280,6 @@
     <None Include="Resources\down-arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\add.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\open-book.png" />
   </ItemGroup>
   <ItemGroup>
@@ -332,6 +338,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

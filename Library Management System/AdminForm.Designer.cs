@@ -43,12 +43,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlManageBooksSubMenu = new System.Windows.Forms.Panel();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnManageBooks = new System.Windows.Forms.Button();
             this.pnlManageMembersSubMenu = new System.Windows.Forms.Panel();
             this.btnSearchMember = new System.Windows.Forms.Button();
-            this.btnAddEditMember = new System.Windows.Forms.Button();
+            this.btnManageMembers = new System.Windows.Forms.Button();
             this.pnlBorrowReturnSubMenu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnReturnBook = new System.Windows.Forms.Button();
@@ -60,7 +61,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnBorrowReturn = new System.Windows.Forms.Button();
-            this.btnManageMembers = new System.Windows.Forms.Button();
+            this.btnMembers = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.autoLoadDashboard = new System.Windows.Forms.Timer(this.components);
@@ -91,29 +92,29 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlTitle = new Guna.UI2.WinForms.Guna2Panel();
             this.lblDateAndTime = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.autoLoadCount = new System.Windows.Forms.Timer(this.components);
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlManageBooksSubMenu.SuspendLayout();
             this.pnlManageMembersSubMenu.SuspendLayout();
             this.pnlBorrowReturnSubMenu.SuspendLayout();
@@ -134,18 +135,17 @@
             this.tlp1.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
-            this.pnlTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLogo
@@ -156,6 +156,17 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(233, 150);
             this.pnlLogo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.book_icon1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlManageBooksSubMenu
             // 
@@ -206,7 +217,7 @@
             // 
             this.pnlManageMembersSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
             this.pnlManageMembersSubMenu.Controls.Add(this.btnSearchMember);
-            this.pnlManageMembersSubMenu.Controls.Add(this.btnAddEditMember);
+            this.pnlManageMembersSubMenu.Controls.Add(this.btnManageMembers);
             this.pnlManageMembersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlManageMembersSubMenu.Location = new System.Drawing.Point(0, 370);
             this.pnlManageMembersSubMenu.Name = "pnlManageMembersSubMenu";
@@ -230,22 +241,22 @@
             this.btnSearchMember.UseVisualStyleBackColor = true;
             this.btnSearchMember.Click += new System.EventHandler(this.btnSearchMember_Click);
             // 
-            // btnAddEditMember
+            // btnManageMembers
             // 
-            this.btnAddEditMember.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddEditMember.FlatAppearance.BorderSize = 0;
-            this.btnAddEditMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEditMember.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEditMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.btnAddEditMember.Location = new System.Drawing.Point(0, 0);
-            this.btnAddEditMember.Name = "btnAddEditMember";
-            this.btnAddEditMember.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAddEditMember.Size = new System.Drawing.Size(233, 40);
-            this.btnAddEditMember.TabIndex = 3;
-            this.btnAddEditMember.Text = "       Manage Members";
-            this.btnAddEditMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEditMember.UseVisualStyleBackColor = true;
-            this.btnAddEditMember.Click += new System.EventHandler(this.btnAddEditMember_Click);
+            this.btnManageMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageMembers.FlatAppearance.BorderSize = 0;
+            this.btnManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.btnManageMembers.Location = new System.Drawing.Point(0, 0);
+            this.btnManageMembers.Name = "btnManageMembers";
+            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnManageMembers.Size = new System.Drawing.Size(233, 40);
+            this.btnManageMembers.TabIndex = 3;
+            this.btnManageMembers.Text = "       Manage Members";
+            this.btnManageMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageMembers.UseVisualStyleBackColor = true;
+            this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
             // 
             // pnlBorrowReturnSubMenu
             // 
@@ -365,7 +376,7 @@
             this.pnlSideMenu.Controls.Add(this.pnlBorrowReturnSubMenu);
             this.pnlSideMenu.Controls.Add(this.btnBorrowReturn);
             this.pnlSideMenu.Controls.Add(this.pnlManageMembersSubMenu);
-            this.pnlSideMenu.Controls.Add(this.btnManageMembers);
+            this.pnlSideMenu.Controls.Add(this.btnMembers);
             this.pnlSideMenu.Controls.Add(this.pnlManageBooksSubMenu);
             this.pnlSideMenu.Controls.Add(this.btnBooks);
             this.pnlSideMenu.Controls.Add(this.btnDashboard);
@@ -430,23 +441,23 @@
             this.btnBorrowReturn.UseVisualStyleBackColor = true;
             this.btnBorrowReturn.Click += new System.EventHandler(this.btnBorrowReturn_Click);
             // 
-            // btnManageMembers
+            // btnMembers
             // 
-            this.btnManageMembers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageMembers.FlatAppearance.BorderSize = 0;
-            this.btnManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnManageMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageMembers.Location = new System.Drawing.Point(0, 325);
-            this.btnManageMembers.Name = "btnManageMembers";
-            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManageMembers.Size = new System.Drawing.Size(233, 45);
-            this.btnManageMembers.TabIndex = 6;
-            this.btnManageMembers.Text = "       Members";
-            this.btnManageMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageMembers.UseVisualStyleBackColor = true;
-            this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
+            this.btnMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMembers.FlatAppearance.BorderSize = 0;
+            this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMembers.Location = new System.Drawing.Point(0, 325);
+            this.btnMembers.Name = "btnMembers";
+            this.btnMembers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMembers.Size = new System.Drawing.Size(233, 45);
+            this.btnMembers.TabIndex = 6;
+            this.btnMembers.Text = "       Members";
+            this.btnMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMembers.UseVisualStyleBackColor = true;
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
             // btnBooks
             // 
@@ -1026,6 +1037,17 @@
             this.guna2Panel9.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel9.TabIndex = 0;
             // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::Library_Management_System.Properties.Resources.hourglass;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 0;
+            this.guna2PictureBox4.TabStop = false;
+            // 
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
@@ -1074,6 +1096,17 @@
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel7.TabIndex = 0;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 0;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // guna2Panel3
             // 
@@ -1124,6 +1157,17 @@
             this.guna2Panel4.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel4.TabIndex = 0;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Library_Management_System.Properties.Resources.group;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
@@ -1172,6 +1216,17 @@
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel6.TabIndex = 0;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // pnlTitle
             // 
@@ -1222,61 +1277,6 @@
             this.autoLoadCount.Enabled = true;
             this.autoLoadCount.Tick += new System.EventHandler(this.autoLoadCount_Tick);
             // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = global::Library_Management_System.Properties.Resources.hourglass;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 0;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 0;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::Library_Management_System.Properties.Resources.group;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.book_icon1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1291,6 +1291,7 @@
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlManageBooksSubMenu.ResumeLayout(false);
             this.pnlManageMembersSubMenu.ResumeLayout(false);
             this.pnlBorrowReturnSubMenu.ResumeLayout(false);
@@ -1316,22 +1317,21 @@
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
             this.guna2Panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             this.guna2Panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1344,10 +1344,10 @@
         private System.Windows.Forms.Panel pnlManageBooksSubMenu;
         private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Button btnManageBooks;
-        private System.Windows.Forms.Button btnManageMembers;
+        private System.Windows.Forms.Button btnMembers;
         private System.Windows.Forms.Panel pnlManageMembersSubMenu;
         private System.Windows.Forms.Button btnSearchMember;
-        private System.Windows.Forms.Button btnAddEditMember;
+        private System.Windows.Forms.Button btnManageMembers;
         private System.Windows.Forms.Button btnBorrowReturn;
         private System.Windows.Forms.Panel pnlBorrowReturnSubMenu;
         private System.Windows.Forms.Button button1;

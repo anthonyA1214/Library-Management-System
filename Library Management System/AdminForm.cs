@@ -100,7 +100,7 @@ namespace Library_Management_System
             showSubMenu(pnlManageBooksSubMenu);
         }
 
-        private void btnManageMembers_Click(object sender, EventArgs e)
+        private void btnMembers_Click(object sender, EventArgs e)
         {
             showSubMenu(pnlManageMembersSubMenu);
         }
@@ -161,9 +161,9 @@ namespace Library_Management_System
             openForm(new SearchStaff());
         }
 
-        private void btnAddEditMember_Click(object sender, EventArgs e)
+        private void btnManageMembers_Click(object sender, EventArgs e)
         {
-            openForm(new AddEditMember());
+            openForm(new ManageMembers());
         }
 
         private void btnSearchMember_Click(object sender, EventArgs e)

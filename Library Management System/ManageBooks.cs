@@ -103,6 +103,7 @@ namespace Library_Management_System
             int publicationyear = int.Parse(dtpPublicationYear.Text);
             int quantity = int.Parse(numQuantity.Text);
             string query;
+
             try
             {
                 if(select == 2)
@@ -129,6 +130,7 @@ namespace Library_Management_System
                         if(checkrow > 0)
                         {
                             MessageBox.Show("Book added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            pnlSideMenu.Visible = false;
                         }
                         else
                         {
@@ -136,7 +138,7 @@ namespace Library_Management_System
                         }
                         break;
                     case 2:
-                        query = "UPDATE tbl_book SET title = @title, author = @author, isbn = @isbn, genre = @genre, publication_year = @publicationyear WHERE book_id = @bookid";
+                        query = "UPDATE tbl_book SET title = @title, author = @author, isbn = @isbn, genre = @genre, publication_year = @publicationyear, quantity = @quantity WHERE book_id = @bookid";
                         cmd.CommandText = query;
                         cmd.Connection = conn;
                         cmd.Parameters.AddWithValue("@bookid", bookid);
@@ -145,10 +147,12 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@isbn", isbn);
                         cmd.Parameters.AddWithValue("@genre", genre);
                         cmd.Parameters.AddWithValue("@publicationyear", publicationyear);
+                        cmd.Parameters.AddWithValue("@quantity", quantity);
                         checkrow = cmd.ExecuteNonQuery();
                         if (checkrow > 0)
                         {
                             MessageBox.Show("Book updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            pnlSideMenu.Visible = false;
                         }
                         else
                         {
@@ -163,7 +167,7 @@ namespace Library_Management_System
             }
             finally
             {
-                conn.Close(); clearTexts(); loadTable(); pnlSideMenu.Visible = false;
+                conn.Close(); loadTable();
             }
         }
 

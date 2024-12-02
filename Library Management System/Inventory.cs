@@ -50,6 +50,31 @@ namespace Library_Management_System
             }
         }
 
+        private void loadGenre()
+        {
+            cbGenre.Items.Clear();
+            try
+            {
+                string query = "SELECT genre_name FROM tbl_genre";
+                cbGenre.Items.Add("All");
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cbGenre.Items.Add(reader["genre_name"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         private void clearTexts()
         {
             tbTitle.Clear();
@@ -60,6 +85,7 @@ namespace Library_Management_System
         private void Inventory_Load(object sender, EventArgs e)
         {
             loadTable();
+            loadGenre();
             pnlSideMenu.Visible = false;
             tbTitle.Enabled = false;
             tbAuthor.Enabled = false;
@@ -270,5 +296,27 @@ namespace Library_Management_System
         {
             loadTable();
         }
+
+        private void cbGenre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string genre = cbGenre.SelectedItem.ToString();
+            if (genre == "All")
+            {
+                loadTable();
+            }
+            else
+            {
+                string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity] FROM tbl_book WHERE IsDeleted = 0 AND genre = @genre";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@genre", genre);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvBook.DataSource = dt;
+            }
+        }
+
     }
 }

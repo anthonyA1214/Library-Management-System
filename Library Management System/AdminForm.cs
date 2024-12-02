@@ -41,10 +41,11 @@ namespace Library_Management_System
 
         private void hideSubMenu()
         {
-            pnlManageBooksSubMenu.Visible = false;
-            pnlManageMembersSubMenu.Visible = false;
+            pnlBooksSubMenu.Visible = false;
+            pnlMembersSubMenu.Visible = false;
             pnlBorrowReturnSubMenu.Visible = false;
             pnlReportsSubMenu.Visible = false;
+            pnlSettingsSubMenu.Visible = false;
         }
 
         private void showSubMenu(Panel SubMenu)
@@ -116,12 +117,12 @@ namespace Library_Management_System
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
-            showSubMenu(pnlManageBooksSubMenu);
+            showSubMenu(pnlBooksSubMenu);
         }
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
-            showSubMenu(pnlManageMembersSubMenu);
+            showSubMenu(pnlMembersSubMenu);
         }
 
         private void btnBorrowReturn_Click(object sender, EventArgs e)
@@ -132,6 +133,16 @@ namespace Library_Management_System
         private void btnReports_Click(object sender, EventArgs e)
         {
             showSubMenu(pnlReportsSubMenu);
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            openForm(new UserManagement());
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSettingsSubMenu);
         }
 
         private Form activeForm = null;
@@ -185,7 +196,7 @@ namespace Library_Management_System
             openForm(new ManageMembers());
         }
 
-        private void btnSearchMember_Click(object sender, EventArgs e)
+        private void btnMemberProfiles_Click(object sender, EventArgs e)
         {
             openForm(new MemberProfiles());
         }
@@ -265,6 +276,11 @@ namespace Library_Management_System
         private void btnIssueBook2_Click(object sender, EventArgs e)
         {
             openForm(new IssueBook());
+        }
+
+        private void btnManageGenre_Click(object sender, EventArgs e)
+        {
+            openForm(new ManageGenres());
         }
     }
 }

@@ -126,11 +126,17 @@
     <Compile Include="CirculationReport.Designer.cs">
       <DependentUpon>CirculationReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewRecords.cs">
+    <Compile Include="ManageGenre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CurrentLoansOverview.Designer.cs">
-      <DependentUpon>ViewRecords.cs</DependentUpon>
+    <Compile Include="ManageGenre.Designer.cs">
+      <DependentUpon>ManageGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -187,6 +193,12 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRecords.Designer.cs">
+      <DependentUpon>ViewRecords.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,11 +217,11 @@
     <EmbeddedResource Include="CirculationReport.resx">
       <DependentUpon>CirculationReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CurrentLoansOverview.resx">
-      <DependentUpon>ViewRecords.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageGenre.resx">
+      <DependentUpon>ManageGenre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageMembers.resx">
       <DependentUpon>ManageMembers.cs</DependentUpon>
@@ -236,6 +248,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRecords.resx">
+      <DependentUpon>ViewRecords.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -319,6 +337,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\book5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manageaccounts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowreturn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

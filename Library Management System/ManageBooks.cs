@@ -60,6 +60,30 @@ namespace Library_Management_System
             }
         }
 
+        private void loadGenre()
+        {
+            cbGenre.Items.Clear();
+            try
+            {
+                string query = "SELECT genre_name FROM tbl_genre";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cbGenre.Items.Add(reader["genre_name"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }                       
+        }
+
         private void clearTexts()
         {
             tbTitle.Clear();
@@ -75,6 +99,7 @@ namespace Library_Management_System
             pnlSideMenu.Visible = false;
             select = 0;
             loadTable();
+            loadGenre();
             cbSearchBy.Text = "Title";
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvBook.ColumnHeadersDefaultCellStyle.BackColor;
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvBook.ColumnHeadersDefaultCellStyle.ForeColor;

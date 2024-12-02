@@ -250,6 +250,7 @@
             this.cbGenre.Name = "cbGenre";
             this.cbGenre.Size = new System.Drawing.Size(140, 36);
             this.cbGenre.TabIndex = 1;
+            this.cbGenre.SelectedIndexChanged += new System.EventHandler(this.cbGenre_SelectedIndexChanged);
             // 
             // guna2Panel4
             // 

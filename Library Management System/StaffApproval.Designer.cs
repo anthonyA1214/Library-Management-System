@@ -1,6 +1,6 @@
 ﻿namespace Library_Management_System
 {
-    partial class UserManagement
+    partial class StaffApproval
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // UserManagement
+            // StaffApproval
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(243)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(668, 522);
             this.MinimumSize = new System.Drawing.Size(684, 561);
-            this.Name = "UserManagement";
-            this.Text = "UserManagement";
+            this.Name = "StaffApproval";
+            this.Text = "UserApproval";
             this.ResumeLayout(false);
 
         }

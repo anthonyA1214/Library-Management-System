@@ -108,12 +108,6 @@
     <Compile Include="ManageBooks.Designer.cs">
       <DependentUpon>ManageBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEditStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddEditStaff.Designer.cs">
-      <DependentUpon>AddEditStaff.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,11 +126,11 @@
     <Compile Include="ManageGenre.Designer.cs">
       <DependentUpon>ManageGenre.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserManagement.cs">
+    <Compile Include="ManageStaffs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserManagement.Designer.cs">
-      <DependentUpon>UserManagement.cs</DependentUpon>
+    <Compile Include="ManageStaffs.Designer.cs">
+      <DependentUpon>ManageStaffs.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -161,11 +155,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Signup.cs">
+    <Compile Include="RecycleBin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Signup.Designer.cs">
-      <DependentUpon>Signup.cs</DependentUpon>
+    <Compile Include="RecycleBin.Designer.cs">
+      <DependentUpon>RecycleBin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignupForm.Designer.cs">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -181,11 +181,11 @@
     <Compile Include="MemberProfiles.Designer.cs">
       <DependentUpon>MemberProfiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchStaff.cs">
+    <Compile Include="StaffApproval.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchStaff.Designer.cs">
-      <DependentUpon>SearchStaff.cs</DependentUpon>
+    <Compile Include="StaffApproval.Designer.cs">
+      <DependentUpon>StaffApproval.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
@@ -208,9 +208,6 @@
     <EmbeddedResource Include="ManageBooks.resx">
       <DependentUpon>ManageBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEditStaff.resx">
-      <DependentUpon>AddEditStaff.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,8 +226,8 @@
     <EmbeddedResource Include="MemberActivityReport.resx">
       <DependentUpon>MemberActivityReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Signup.resx">
-      <DependentUpon>Signup.cs</DependentUpon>
+    <EmbeddedResource Include="SignupForm.resx">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -243,14 +240,14 @@
     <EmbeddedResource Include="MemberProfiles.resx">
       <DependentUpon>MemberProfiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchStaff.resx">
-      <DependentUpon>SearchStaff.cs</DependentUpon>
+    <EmbeddedResource Include="StaffApproval.resx">
+      <DependentUpon>StaffApproval.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserManagement.resx">
-      <DependentUpon>UserManagement.cs</DependentUpon>
+    <EmbeddedResource Include="ManageStaffs.resx">
+      <DependentUpon>ManageStaffs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewRecords.resx">
       <DependentUpon>ViewRecords.cs</DependentUpon>
@@ -361,6 +358,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

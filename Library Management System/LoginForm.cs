@@ -33,7 +33,7 @@ namespace Library_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(tbUsername.Text == "Username" ||tbPassword.Text == "Password")
+            if(string.IsNullOrEmpty(tbUsername.Text) || string.IsNullOrEmpty(tbPassword.Text))
             {
                 lblIncorrect.Text = "Username and password is required.";
                 lblIncorrect.Visible = true;
@@ -44,19 +44,35 @@ namespace Library_Management_System
             string password = tbPassword.Text;
 
             conn.Open();
-            string query = "SELECT role from tbl_staff WHERE username = @username AND password = @password";
+            string query = "SELECT role, IsDeleted, IsApproved from tbl_staff WHERE username = @username AND password = @password";
             SqlCommand cmd = new SqlCommand(query, conn);
 
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
 
-            object result = cmd.ExecuteScalar();
+            SqlDataReader dr = cmd.ExecuteReader();
 
             try
-            {            
-                if(result != null)
+            {         
+                if(dr.Read())
                 {
-                    string role = result.ToString().Trim().ToLower();
+                    string role = dr["role"].ToString().ToLower().Trim();
+                    bool isDeleted = Convert.ToBoolean(dr["IsDeleted"]);
+                    bool isApproved = Convert.ToBoolean(dr["IsApproved"]);
+
+                    if (!isApproved)
+                    {
+                        lblIncorrect.Text = "Your account is not approved yet.";
+                        lblIncorrect.Visible = true;
+                        return;
+                    }
+
+                    if (isDeleted)
+                    {
+                        lblIncorrect.Text = "Incorrect username or password.";
+                        lblIncorrect.Visible = true;
+                        return;
+                    }
 
                     if (role == "admin")
                     {
@@ -87,24 +103,6 @@ namespace Library_Management_System
             }           
         }
 
-        private void tbUsername_Enter(object sender, EventArgs e)
-        {
-            if(tbUsername.Text == "Username")
-            {
-                tbUsername.Text = "";
-                tbUsername.ForeColor = Color.WhiteSmoke;
-            }
-        }
-
-        private void tbUsername_Leave(object sender, EventArgs e)
-        {
-            if (tbUsername.Text == "")
-            {
-                tbUsername.Text = "Username";
-                tbUsername.ForeColor = Color.Silver;
-            }
-        }
-
         private void tbPassword_Enter(object sender, EventArgs e)
         {
             if (cbShowPassword.Checked)
@@ -115,21 +113,6 @@ namespace Library_Management_System
             {
                 tbPassword.UseSystemPasswordChar = true;
             }
-            if (tbPassword.Text == "Password")
-            {
-                tbPassword.Text = "";
-                tbPassword.ForeColor = Color.WhiteSmoke;
-            }
-        }
-
-        private void tbPassword_Leave(object sender, EventArgs e)
-        {
-            if(tbPassword.Text == "")
-            {
-                tbPassword.UseSystemPasswordChar = false;
-                tbPassword.Text = "Password";
-                tbPassword.ForeColor = Color.Silver;
-;            }
         }
 
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -138,7 +121,7 @@ namespace Library_Management_System
             {
                 tbPassword.UseSystemPasswordChar = false;
             }
-            else if(tbPassword.Text != "Password")
+            else
             {
                 tbPassword.UseSystemPasswordChar = true;
             }
@@ -152,6 +135,20 @@ namespace Library_Management_System
         private void tbPassword_TextChanged(object sender, EventArgs e)
         {
             lblIncorrect.Visible = false;
+        }
+
+        private void lblLinkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tbUsername.Clear();
+            tbPassword.Clear();
+            cbShowPassword.Checked = false;
+            SignupForm signup = new SignupForm();
+            signup.TopLevel = false;
+            signup.Dock = DockStyle.Fill;
+            signup.FormBorderStyle = FormBorderStyle.None;
+            pnlContainer.Controls.Add(signup);
+            signup.BringToFront();
+            signup.Show();
         }
     }
 }

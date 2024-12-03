@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class UserManagement : Form
+    public partial class RecycleBin : Form
     {
-        public UserManagement()
+        public RecycleBin()
         {
             InitializeComponent();
         }

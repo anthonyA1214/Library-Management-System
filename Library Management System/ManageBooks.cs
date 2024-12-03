@@ -15,15 +15,15 @@ using System.Windows.Forms;
 namespace Library_Management_System
 {
     public partial class ManageBooks : Form
-    {
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
-        int select, bookid, checkrow;
-
+    {      
         public ManageBooks()
         {
             InitializeComponent();
             pnlSideMenu.Visible = false;
         }
+
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
+        int select, bookid, checkrow;
 
         private void loadTable()
         {
@@ -58,6 +58,8 @@ namespace Library_Management_System
             {
                 dgvBook.Columns.Add(deleteImgCol);
             }
+            dgvBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvBook.ColumnHeadersDefaultCellStyle.BackColor;
+            dgvBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvBook.ColumnHeadersDefaultCellStyle.ForeColor;
         }
 
         private void loadGenre()
@@ -100,10 +102,7 @@ namespace Library_Management_System
             select = 0;
             loadTable();
             loadGenre();
-            cbSearchBy.Text = "Title";
-            dgvBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvBook.ColumnHeadersDefaultCellStyle.BackColor;
-            dgvBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvBook.ColumnHeadersDefaultCellStyle.ForeColor;
-            dgvBook.ClearSelection();
+            cbSearchBy.Text = "Title";           
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
@@ -111,7 +110,7 @@ namespace Library_Management_System
             lblSideMenu.Text = "ADD BOOK";
             select = 1;
             clearTexts();
-            pnlSideMenu.Visible = true;
+            if (pnlSideMenu.Visible == false) pnlSideMenu.Visible = true; else pnlSideMenu.Visible = false;
         }
 
         private void btnEnter_Click(object sender, EventArgs e)

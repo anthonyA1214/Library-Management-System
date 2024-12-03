@@ -10,26 +10,16 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class Signup : Form
+    public partial class SignupForm : Form
     {
-        public Signup()
+        public SignupForm()
         {
             InitializeComponent();
         }
 
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        private void lblLinkBack2Login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-        }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

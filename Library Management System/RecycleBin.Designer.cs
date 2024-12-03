@@ -1,6 +1,6 @@
 ﻿namespace Library_Management_System
 {
-    partial class CirculationReport
+    partial class RecycleBin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // CirculationReport
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 522);
-            this.MinimumSize = new System.Drawing.Size(684, 561);
-            this.Name = "CirculationReport";
-            this.Text = "CirculationReport";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "RecycleBin";
         }
 
         #endregion

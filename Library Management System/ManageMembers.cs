@@ -161,7 +161,7 @@ namespace Library_Management_System
 
             if (cbSearchBy.Text == "Name")
             {
-                query += " AND CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) LIKE @search";
+                query += " AND CONCAT(first_name, ' ', last_name) LIKE @search";
             }
             else if (cbSearchBy.Text == "ID")
             {
@@ -328,6 +328,6 @@ namespace Library_Management_System
                 loadTable();
             }
         }
-                
+               
     }
 }

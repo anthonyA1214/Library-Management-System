@@ -45,6 +45,7 @@ namespace Library_Management_System
             pnlMembersSubMenu.Visible = false;
             pnlBorrowReturnSubMenu.Visible = false;
             pnlReportsSubMenu.Visible = false;
+            pnlUserManagementSubMenu.Visible = false;
             pnlSettingsSubMenu.Visible = false;
         }
 
@@ -68,29 +69,24 @@ namespace Library_Management_System
             string query1 = "SELECT COUNT(*) from tbl_book";
             string query2 = "SELECT COUNT(*) from tbl_member";
             string query3 = "SELECT COUNT(*) from tbl_issue WHERE status = 'Issued'";
-            //string query4 = "SELECT COUNT(*) from tbl_issue WHERE status = 'Returned'";
 
             SqlCommand cmd1 = new SqlCommand(query1, conn);
             SqlCommand cmd2 = new SqlCommand(query2, conn);
             SqlCommand cmd3 = new SqlCommand(query3, conn);
-            //SqlCommand cmd4 = new SqlCommand(query5, conn);
 
             SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
             SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
-            //SqlDataAdapter da4 = new SqlDataAdapter(cmd5);
 
             DataSet ds = new DataSet();
 
             da1.Fill(ds, "BookCount");
             da2.Fill(ds, "MemberCount");
             da3.Fill(ds, "IssuedCount");
-            //da4.Fill(ds, "ReturnedCount");
 
             lblCountBook.Text = ds.Tables["BookCount"].Rows[0][0].ToString();
             lblCountMember.Text = ds.Tables["MemberCount"].Rows[0][0].ToString();
             lblIssuedBook.Text = ds.Tables["IssuedCount"].Rows[0][0].ToString();
-            //label6.Text = ds.Tables["ReturnedCount"].Rows[0][0].ToString();
         } 
 
         private void loadMemberTable()
@@ -137,7 +133,7 @@ namespace Library_Management_System
 
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
-            openForm(new UserManagement());
+            showSubMenu(pnlUserManagementSubMenu);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -179,16 +175,6 @@ namespace Library_Management_System
         private void btnInventory_Click(object sender, EventArgs e)
         {
             openForm(new Inventory());
-        }
-
-        private void btnAddEditStaff_Click(object sender, EventArgs e)
-        {
-            openForm(new AddEditStaff());
-        }
-
-        private void btnSearchStaff_Click(object sender, EventArgs e)
-        {
-            openForm(new SearchStaff());
         }
 
         private void btnManageMembers_Click(object sender, EventArgs e)
@@ -278,9 +264,24 @@ namespace Library_Management_System
             openForm(new IssueBook());
         }
 
+        private void btnManageUsers_Click(object sender, EventArgs e)
+        {
+            openForm(new ManageStaffs());
+        }
+
+        private void btnUserApproval_Click(object sender, EventArgs e)
+        {
+            openForm(new StaffApproval());
+        }
+
         private void btnManageGenre_Click(object sender, EventArgs e)
         {
             openForm(new ManageGenres());
+        }
+
+        private void btnRecycleBin_Click(object sender, EventArgs e)
+        {
+            openForm(new RecycleBin());
         }
     }
 }

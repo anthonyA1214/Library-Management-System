@@ -34,7 +34,7 @@ namespace Library_Management_System
 
         private void loadTable()
         {
-            string query = "SELECT staff_id AS [Staff ID], CONCAT(first_name, ' ', last_name) AS [Staff Name], username AS [Username], password AS [Password], email AS [Email], contact_number AS [Contact_Number], role AS [Role] from tbl_staff WHERE IsDeleted = 0 AND IsApproved = 1";
+            string query = "SELECT staff_id AS [Staff ID], CONCAT(first_name, ' ', last_name) AS [Staff Name], username AS [Username], password AS [Password], email AS [Email], contact_number AS [Contact Number], role AS [Role] from tbl_staff WHERE IsDeleted = 0 AND IsApproved = 1";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -290,12 +290,11 @@ namespace Library_Management_System
                     loadTable(); 
                 }
             }
-
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            string query = "SELECT staff_id AS [Staff ID], CONCAT(first_name, ' ', last_name) AS [Staff Name], username AS [Username], password AS [Password], email AS [Email], contact_number AS [Contact_Number], role AS [Role] from tbl_staff WHERE IsDeleted = 0 AND IsApproved = 1";
+            string query = "SELECT staff_id AS [Staff ID], CONCAT(first_name, ' ', last_name) AS [Staff Name], username AS [Username], password AS [Password], email AS [Email], contact_number AS [Contact Number], role AS [Role] from tbl_staff WHERE IsDeleted = 0 AND IsApproved = 1";
             string search = tbSearch.Text;
 
             if (string.IsNullOrEmpty(tbSearch.Text))
@@ -307,6 +306,10 @@ namespace Library_Management_System
             {
                 query += " AND CONCAT(first_name, ' ', last_name) LIKE @search";
             }
+            else if (cbSearchBy.Text == "Username")
+            {
+                query += " AND username = @search";
+            }
             else if (cbSearchBy.Text == "ID")
             {
                 query += " AND staff_id = @search";
@@ -317,6 +320,10 @@ namespace Library_Management_System
             {
                 cmd.Parameters.AddWithValue("@search", "%" + search + "%");
             }
+            else if (cbSearchBy.Text == "Username")
+            {
+                cmd.Parameters.AddWithValue("@search", search);
+            }
             else if (cbSearchBy.Text == "ID")
             {
                 cmd.Parameters.AddWithValue("@search", search);
@@ -325,6 +332,16 @@ namespace Library_Management_System
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvStaff.DataSource = dt;
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbExit2_Click(object sender, EventArgs e)
+        {
+            pnlSideMenu.Visible = false;
         }
 
         private void ManageStaffs_Load(object sender, EventArgs e)

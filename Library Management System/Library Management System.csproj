@@ -226,6 +226,9 @@
     <EmbeddedResource Include="MemberActivityReport.resx">
       <DependentUpon>MemberActivityReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecycleBin.resx">
+      <DependentUpon>RecycleBin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>

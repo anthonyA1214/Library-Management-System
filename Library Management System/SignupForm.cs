@@ -97,20 +97,27 @@ namespace Library_Management_System
                 if (checkrow > 0)
                 {
                     MessageBox.Show("Your account has been submitted successfully. Please wait for approval.", "Signup Pending", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("There was an error while submitting your account. Please try again later.", "Signup Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Number == 2627 || ex.Number == 2601)
+                {
+                    MessageBox.Show("The username or email already exists. Please choose a different one.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             finally
             {
                 conn.Close();
-                this.Close();
             }                     
         }
     }         

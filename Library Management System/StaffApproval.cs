@@ -181,12 +181,21 @@ namespace Library_Management_System
             }
             else if (cbSearchBy.Text == "ID")
             {
+                if (!int.TryParse(search, out int id))
+                {
+                    return;
+                }
                 cmd.Parameters.AddWithValue("@search", search);
             }
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvStaff.DataSource = dt;
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

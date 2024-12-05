@@ -32,6 +32,7 @@ namespace Library_Management_System
 
         private void showDashboard(object sender, FormClosedEventArgs e)
         {
+            loadTable();
             pnlTitle.Visible = true;
             tlp1.Visible = true;
             tlp2.Visible = true;
@@ -64,51 +65,60 @@ namespace Library_Management_System
 
          private void loadCount()
         {
-            loadMemberTable();
-            loadBookTable();
             string query1 = "SELECT COUNT(*) from tbl_book";
             string query2 = "SELECT COUNT(*) from tbl_member";
             string query3 = "SELECT COUNT(*) from tbl_issue WHERE status = 'Issued'";
+            string query4 = "SELECT COUNT(*) FROM tbl_issue WHERE return_date IS NULL AND due_date < GETDATE()";
 
             SqlCommand cmd1 = new SqlCommand(query1, conn);
             SqlCommand cmd2 = new SqlCommand(query2, conn);
             SqlCommand cmd3 = new SqlCommand(query3, conn);
+            SqlCommand cmd4 = new SqlCommand(query4, conn);
 
             SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
             SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
+            SqlDataAdapter da4 = new SqlDataAdapter(cmd4);
 
             DataSet ds = new DataSet();
 
             da1.Fill(ds, "BookCount");
             da2.Fill(ds, "MemberCount");
             da3.Fill(ds, "IssuedCount");
+            da4.Fill(ds, "OverdueCount");
 
             lblCountBook.Text = ds.Tables["BookCount"].Rows[0][0].ToString();
             lblCountMember.Text = ds.Tables["MemberCount"].Rows[0][0].ToString();
             lblIssuedBook.Text = ds.Tables["IssuedCount"].Rows[0][0].ToString();
-        } 
-
-        private void loadMemberTable()
-        {
-            string query = "SELECT TOP 5 member_id AS [Member ID], CONCAT(first_name, ' ', last_name) AS [Member Name], age AS [Age], membership_type AS [Membership Type] from tbl_member WHERE IsDeleted = 0";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dgvMember.DataSource = dt;
-            dgvMember.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            lblOverdueBook.Text = ds.Tables["OverdueCount"].Rows[0][0].ToString();
         }
 
-        private void loadBookTable()
+        private void loadTable()
         {
-            string query = "SELECT TOP 5 book_id as [Book ID], title as [Title], author as [Author], genre as [Genre], publication_year as [Publication Year] from tbl_book WHERE IsDeleted = 0";
+            string issueQuery = "SELECT tbl_issue.issue_id AS [Issue ID], tbl_book.title AS [Book Title], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) AS [Member Name], tbl_issue.issue_date AS [Issue Date], tbl_issue.due_date AS [Due Date], tbl_issue.status AS [Loan Status], CASE WHEN tbl_issue.return_date IS NULL AND tbl_issue.due_date < GETDATE() THEN 'Overdue' WHEN tbl_issue.return_date IS NULL THEN 'Not Returned' WHEN tbl_issue.return_date <= tbl_issue.due_date THEN 'On Time' ELSE 'Late Return' END AS [Return Status] FROM tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE tbl_issue.return_date IS NULL OR tbl_issue.return_date <= tbl_issue.due_date";
+            dgvIssuedBook.DataSource = loadData(issueQuery);
+            dgvIssuedBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            string overdueQuery = "SELECT tbl_issue.issue_id AS [Issue ID], tbl_book.title AS [Book Title], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) AS [Member Name], tbl_issue.issue_date AS [Issue Date], tbl_issue.due_date AS [Due Date], tbl_issue.status AS [Loan Status], 'Overdue' AS [Return Status] FROM tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE tbl_issue.return_date IS NULL AND tbl_issue.due_date < GETDATE()";
+            dgvOverdueBook.DataSource = loadData(overdueQuery);
+            dgvOverdueBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            string memberQuery = "SELECT TOP 5 member_id AS [Member ID], CONCAT(first_name, ' ', last_name) AS [Member Name], age AS [Age], membership_type AS [Membership Type] from tbl_member WHERE IsDeleted = 0";
+            dgvMember.DataSource = loadData(memberQuery);
+            dgvMember.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            string bookQuery = "SELECT TOP 5 book_id as [Book ID], title as [Title], author as [Author], genre as [Genre], publication_year as [Publication Year] from tbl_book WHERE IsDeleted = 0";
+            dgvBook.DataSource = loadData(bookQuery);
+            dgvBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private DataTable loadData(string query)
+        {
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dgvBook.DataSource = dt;
-            dgvBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            return dt;
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
@@ -225,11 +235,16 @@ namespace Library_Management_System
         {
             hideSubMenu();
             lblName.Text = Username + "!";
+            loadTable();
             loadCount();
             dgvMember.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvMember.ColumnHeadersDefaultCellStyle.BackColor;
             dgvMember.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvMember.ColumnHeadersDefaultCellStyle.ForeColor;
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvBook.ColumnHeadersDefaultCellStyle.BackColor;
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvBook.ColumnHeadersDefaultCellStyle.ForeColor;
+            dgvOverdueBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvOverdueBook.ColumnHeadersDefaultCellStyle.BackColor;
+            dgvOverdueBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvOverdueBook.ColumnHeadersDefaultCellStyle.ForeColor;
+            dgvIssuedBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvIssuedBook.ColumnHeadersDefaultCellStyle.BackColor;
+            dgvIssuedBook.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvIssuedBook.ColumnHeadersDefaultCellStyle.ForeColor;
         }
 
         private void autoLoadCount_Tick(object sender, EventArgs e)

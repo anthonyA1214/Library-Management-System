@@ -28,968 +28,1499 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlContainer = new System.Windows.Forms.Panel();
-            this.tlpCounts2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
+            this.btnReports = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBooks = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlBooksSubMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnMemberProfiles = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMembers = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBorrowReturn = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlMembersSubMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnViewRecords = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReturnBook = new Guna.UI2.WinForms.Guna2Button();
+            this.btnIssueBook = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlBorrowReturnSubMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
+            this.tlp4 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgvIssuedBook = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnIssueBook2 = new Guna.UI2.WinForms.Guna2Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgvMember = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.lblMemberSeeAll = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tlp3 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgvOverdueBook = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dgvBook = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.lblBookSeeAll = new System.Windows.Forms.Label();
+            this.btnAddNewBook = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
+            this.tlp2 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnMemberActivityReports = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.tlpCounts1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnMemberMoreInfo = new System.Windows.Forms.Button();
             this.lblCountMember = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnBooksMoreInfo = new System.Windows.Forms.Button();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblOverdueBooks = new System.Windows.Forms.Label();
+            this.lblOverdueBook = new System.Windows.Forms.Label();
+            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblIssuedBooks = new System.Windows.Forms.Label();
+            this.lblIssuedBook = new System.Windows.Forms.Label();
+            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.tlp1 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblCountBook = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlTitle = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblDateAndTime = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.autoLoadDashboard = new System.Windows.Forms.Timer(this.components);
+            this.btnCirculationReports = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageGenre = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.pnlReportsSubMenu = new System.Windows.Forms.Panel();
-            this.btnOverdueItemsReports = new System.Windows.Forms.Button();
-            this.btnMemberActivityReports = new System.Windows.Forms.Button();
-            this.btnCirculationReports = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.pnlBorrowReturnSubMenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnReturnBook = new System.Windows.Forms.Button();
-            this.btnIssueBook = new System.Windows.Forms.Button();
-            this.btnBorrowReturn = new System.Windows.Forms.Button();
-            this.pnlManageMembersSubMenu = new System.Windows.Forms.Panel();
-            this.btnSearchMember = new System.Windows.Forms.Button();
-            this.btnAddEditMember = new System.Windows.Forms.Button();
-            this.btnManageMembers = new System.Windows.Forms.Button();
-            this.pnlManageBooksSubMenu = new System.Windows.Forms.Panel();
-            this.btnInventory = new System.Windows.Forms.Button();
-            this.btnAddEditBook = new System.Windows.Forms.Button();
-            this.btnManageBooks = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlSettingsSubMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlReportsSubMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.autoLoadCount = new System.Windows.Forms.Timer(this.components);
+            this.btnManageMembers = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            this.pnlBooksSubMenu.SuspendLayout();
+            this.pnlMembersSubMenu.SuspendLayout();
+            this.pnlBorrowReturnSubMenu.SuspendLayout();
+            this.tlp4.SuspendLayout();
+            this.guna2Panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
+            this.guna2Panel15.SuspendLayout();
+            this.tlp3.SuspendLayout();
+            this.guna2Panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOverdueBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
+            this.guna2Panel11.SuspendLayout();
+            this.tlp2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2Panel8.SuspendLayout();
+            this.guna2Panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            this.guna2Panel7.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
+            this.tlp1.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
+            this.guna2Panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnlContainer.SuspendLayout();
-            this.tlpCounts2.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.tlpCounts1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlTitle.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
+            this.pnlSettingsSubMenu.SuspendLayout();
             this.pnlReportsSubMenu.SuspendLayout();
-            this.pnlBorrowReturnSubMenu.SuspendLayout();
-            this.pnlManageMembersSubMenu.SuspendLayout();
-            this.pnlManageBooksSubMenu.SuspendLayout();
-            this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.AutoScroll = true;
-            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(75)))), ((int)(((byte)(160)))));
-            this.pnlContainer.Controls.Add(this.tlpCounts2);
-            this.pnlContainer.Controls.Add(this.tlpCounts1);
-            this.pnlContainer.Controls.Add(this.pnlTitle);
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(250, 0);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(550, 450);
-            this.pnlContainer.TabIndex = 3;
-            // 
-            // tlpCounts2
-            // 
-            this.tlpCounts2.ColumnCount = 4;
-            this.tlpCounts2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpCounts2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpCounts2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpCounts2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpCounts2.Controls.Add(this.panel10, 3, 0);
-            this.tlpCounts2.Controls.Add(this.panel3, 0, 0);
-            this.tlpCounts2.Controls.Add(this.panel8, 2, 0);
-            this.tlpCounts2.Controls.Add(this.panel6, 1, 0);
-            this.tlpCounts2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpCounts2.Location = new System.Drawing.Point(0, 210);
-            this.tlpCounts2.Name = "tlpCounts2";
-            this.tlpCounts2.RowCount = 1;
-            this.tlpCounts2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCounts2.Size = new System.Drawing.Size(550, 90);
-            this.tlpCounts2.TabIndex = 22;
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Controls.Add(this.lblTime);
-            this.panel10.Controls.Add(this.lblDate);
-            this.panel10.Controls.Add(this.label11);
-            this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(414, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(133, 75);
-            this.panel10.TabIndex = 16;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(81, 51);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(35, 15);
-            this.lblTime.TabIndex = 9;
-            this.lblTime.Text = "Time";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(81, 27);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(37, 17);
-            this.lblDate.TabIndex = 7;
-            this.lblDate.Text = "Date";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(78, 6);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 13);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Date and Time";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(140)))), ((int)(((byte)(231)))));
-            this.panel11.Controls.Add(this.pictureBox7);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(75, 75);
-            this.panel11.TabIndex = 6;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 8;
-            this.pictureBox7.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(131, 75);
-            this.panel3.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(81, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 45);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Issued";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(75, 75);
-            this.panel5.TabIndex = 6;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel8.Controls.Add(this.label8);
-            this.panel8.Controls.Add(this.label9);
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(277, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(131, 75);
-            this.panel8.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(81, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 45);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "0";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(78, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Overdue";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(0)))), ((int)(((byte)(31)))));
-            this.panel9.Controls.Add(this.pictureBox6);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(75, 75);
-            this.panel9.TabIndex = 6;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Library_Management_System.Properties.Resources.dislike;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(140, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(131, 75);
-            this.panel6.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(81, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 45);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(78, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Returned";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(159)))), ((int)(((byte)(61)))));
-            this.panel7.Controls.Add(this.pictureBox5);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(75, 75);
-            this.panel7.TabIndex = 6;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Library_Management_System.Properties.Resources.like;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // tlpCounts1
-            // 
-            this.tlpCounts1.ColumnCount = 2;
-            this.tlpCounts1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpCounts1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpCounts1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCounts1.Controls.Add(this.panel4, 1, 0);
-            this.tlpCounts1.Controls.Add(this.panel1, 0, 0);
-            this.tlpCounts1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpCounts1.Location = new System.Drawing.Point(0, 60);
-            this.tlpCounts1.Name = "tlpCounts1";
-            this.tlpCounts1.RowCount = 1;
-            this.tlpCounts1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCounts1.Size = new System.Drawing.Size(550, 150);
-            this.tlpCounts1.TabIndex = 21;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.btnMemberMoreInfo);
-            this.panel4.Controls.Add(this.lblCountMember);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(278, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(269, 130);
-            this.panel4.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Member/s";
-            // 
-            // btnMemberMoreInfo
-            // 
-            this.btnMemberMoreInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(213)))), ((int)(((byte)(229)))));
-            this.btnMemberMoreInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnMemberMoreInfo.FlatAppearance.BorderSize = 0;
-            this.btnMemberMoreInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMemberMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMemberMoreInfo.Location = new System.Drawing.Point(0, 100);
-            this.btnMemberMoreInfo.Name = "btnMemberMoreInfo";
-            this.btnMemberMoreInfo.Size = new System.Drawing.Size(269, 30);
-            this.btnMemberMoreInfo.TabIndex = 2;
-            this.btnMemberMoreInfo.Text = "More Info";
-            this.btnMemberMoreInfo.UseVisualStyleBackColor = false;
-            // 
-            // lblCountMember
-            // 
-            this.lblCountMember.AutoSize = true;
-            this.lblCountMember.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountMember.Location = new System.Drawing.Point(10, 10);
-            this.lblCountMember.Name = "lblCountMember";
-            this.lblCountMember.Size = new System.Drawing.Size(56, 65);
-            this.lblCountMember.TabIndex = 1;
-            this.lblCountMember.Text = "0";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(163, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(187)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnBooksMoreInfo);
-            this.panel1.Controls.Add(this.lblCountBook);
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 130);
-            this.panel1.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Book/s";
-            // 
-            // btnBooksMoreInfo
-            // 
-            this.btnBooksMoreInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(208)))), ((int)(((byte)(169)))));
-            this.btnBooksMoreInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnBooksMoreInfo.FlatAppearance.BorderSize = 0;
-            this.btnBooksMoreInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBooksMoreInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBooksMoreInfo.Location = new System.Drawing.Point(0, 100);
-            this.btnBooksMoreInfo.Name = "btnBooksMoreInfo";
-            this.btnBooksMoreInfo.Size = new System.Drawing.Size(269, 30);
-            this.btnBooksMoreInfo.TabIndex = 2;
-            this.btnBooksMoreInfo.Text = "More Info";
-            this.btnBooksMoreInfo.UseVisualStyleBackColor = false;
-            // 
-            // lblCountBook
-            // 
-            this.lblCountBook.AutoSize = true;
-            this.lblCountBook.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountBook.Location = new System.Drawing.Point(10, 10);
-            this.lblCountBook.Name = "lblCountBook";
-            this.lblCountBook.Size = new System.Drawing.Size(56, 65);
-            this.lblCountBook.TabIndex = 1;
-            this.lblCountBook.Text = "0";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.Location = new System.Drawing.Point(164, 5);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.Controls.Add(this.panel12);
-            this.pnlTitle.Controls.Add(this.label12);
-            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(550, 60);
-            this.pnlTitle.TabIndex = 20;
-            // 
-            // panel12
-            // 
-            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(175, 52);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 1);
-            this.panel12.TabIndex = 18;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(183, 8);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(184, 45);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Dashboard";
-            // 
-            // pnlSideMenu
-            // 
-            this.pnlSideMenu.AutoScroll = true;
-            this.pnlSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(120)))));
-            this.pnlSideMenu.Controls.Add(this.btnLogout);
-            this.pnlSideMenu.Controls.Add(this.pnlReportsSubMenu);
-            this.pnlSideMenu.Controls.Add(this.btnReports);
-            this.pnlSideMenu.Controls.Add(this.pnlBorrowReturnSubMenu);
-            this.pnlSideMenu.Controls.Add(this.btnBorrowReturn);
-            this.pnlSideMenu.Controls.Add(this.pnlManageMembersSubMenu);
-            this.pnlSideMenu.Controls.Add(this.btnManageMembers);
-            this.pnlSideMenu.Controls.Add(this.pnlManageBooksSubMenu);
-            this.pnlSideMenu.Controls.Add(this.btnManageBooks);
-            this.pnlSideMenu.Controls.Add(this.btnDashboard);
-            this.pnlSideMenu.Controls.Add(this.pnlLogo);
-            this.pnlSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnlSideMenu.Name = "pnlSideMenu";
-            this.pnlSideMenu.Size = new System.Drawing.Size(250, 450);
-            this.pnlSideMenu.TabIndex = 2;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 795);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(233, 45);
-            this.btnLogout.TabIndex = 12;
-            this.btnLogout.Text = "       Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.UseVisualStyleBackColor = true;
-            // 
-            // pnlReportsSubMenu
-            // 
-            this.pnlReportsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
-            this.pnlReportsSubMenu.Controls.Add(this.btnOverdueItemsReports);
-            this.pnlReportsSubMenu.Controls.Add(this.btnMemberActivityReports);
-            this.pnlReportsSubMenu.Controls.Add(this.btnCirculationReports);
-            this.pnlReportsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlReportsSubMenu.Location = new System.Drawing.Point(0, 670);
-            this.pnlReportsSubMenu.Name = "pnlReportsSubMenu";
-            this.pnlReportsSubMenu.Size = new System.Drawing.Size(233, 125);
-            this.pnlReportsSubMenu.TabIndex = 11;
-            // 
-            // btnOverdueItemsReports
-            // 
-            this.btnOverdueItemsReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOverdueItemsReports.FlatAppearance.BorderSize = 0;
-            this.btnOverdueItemsReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOverdueItemsReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOverdueItemsReports.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnOverdueItemsReports.Location = new System.Drawing.Point(0, 80);
-            this.btnOverdueItemsReports.Name = "btnOverdueItemsReports";
-            this.btnOverdueItemsReports.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnOverdueItemsReports.Size = new System.Drawing.Size(233, 40);
-            this.btnOverdueItemsReports.TabIndex = 5;
-            this.btnOverdueItemsReports.Text = "       Overdue Items Reports";
-            this.btnOverdueItemsReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOverdueItemsReports.UseVisualStyleBackColor = true;
-            // 
-            // btnMemberActivityReports
-            // 
-            this.btnMemberActivityReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMemberActivityReports.FlatAppearance.BorderSize = 0;
-            this.btnMemberActivityReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMemberActivityReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMemberActivityReports.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMemberActivityReports.Location = new System.Drawing.Point(0, 40);
-            this.btnMemberActivityReports.Name = "btnMemberActivityReports";
-            this.btnMemberActivityReports.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnMemberActivityReports.Size = new System.Drawing.Size(233, 40);
-            this.btnMemberActivityReports.TabIndex = 4;
-            this.btnMemberActivityReports.Text = "       Member Activity Reports";
-            this.btnMemberActivityReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMemberActivityReports.UseVisualStyleBackColor = true;
-            // 
-            // btnCirculationReports
-            // 
-            this.btnCirculationReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCirculationReports.FlatAppearance.BorderSize = 0;
-            this.btnCirculationReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCirculationReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCirculationReports.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCirculationReports.Location = new System.Drawing.Point(0, 0);
-            this.btnCirculationReports.Name = "btnCirculationReports";
-            this.btnCirculationReports.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCirculationReports.Size = new System.Drawing.Size(233, 40);
-            this.btnCirculationReports.TabIndex = 3;
-            this.btnCirculationReports.Text = "       Circulation Reports";
-            this.btnCirculationReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCirculationReports.UseVisualStyleBackColor = true;
             // 
             // btnReports
             // 
+            this.btnReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
             this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(0, 625);
+            this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnReports.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnReports.Image = global::Library_Management_System.Properties.Resources.reports;
+            this.btnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReports.Location = new System.Drawing.Point(0, 585);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReports.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnReports.Size = new System.Drawing.Size(233, 45);
             this.btnReports.TabIndex = 10;
-            this.btnReports.Text = "       Reports";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnBooks
+            // 
+            this.btnBooks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBooks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBooks.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBooks.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBooks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBooks.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnBooks.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnBooks.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnBooks.Image = global::Library_Management_System.Properties.Resources.books;
+            this.btnBooks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBooks.Location = new System.Drawing.Point(0, 195);
+            this.btnBooks.Name = "btnBooks";
+            this.btnBooks.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnBooks.Size = new System.Drawing.Size(233, 45);
+            this.btnBooks.TabIndex = 4;
+            this.btnBooks.Text = "Books";
+            this.btnBooks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnDashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnDashboard.Image = global::Library_Management_System.Properties.Resources.dashboard;
+            this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 150);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(233, 45);
+            this.btnDashboard.TabIndex = 3;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox5);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(233, 150);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox5.Image = global::Library_Management_System.Properties.Resources.book_icon;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(233, 150);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 0;
+            this.guna2PictureBox5.TabStop = false;
+            // 
+            // btnInventory
+            // 
+            this.btnInventory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInventory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInventory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInventory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnInventory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnInventory.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnInventory.Location = new System.Drawing.Point(0, 0);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnInventory.Size = new System.Drawing.Size(233, 40);
+            this.btnInventory.TabIndex = 6;
+            this.btnInventory.Text = "Inventory";
+            this.btnInventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pnlBooksSubMenu
+            // 
+            this.pnlBooksSubMenu.Controls.Add(this.btnInventory);
+            this.pnlBooksSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBooksSubMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.pnlBooksSubMenu.Location = new System.Drawing.Point(0, 240);
+            this.pnlBooksSubMenu.Name = "pnlBooksSubMenu";
+            this.pnlBooksSubMenu.Size = new System.Drawing.Size(233, 45);
+            this.pnlBooksSubMenu.TabIndex = 5;
+            // 
+            // btnMemberProfiles
+            // 
+            this.btnMemberProfiles.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMemberProfiles.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMemberProfiles.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMemberProfiles.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMemberProfiles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMemberProfiles.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnMemberProfiles.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMemberProfiles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnMemberProfiles.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnMemberProfiles.Location = new System.Drawing.Point(0, 40);
+            this.btnMemberProfiles.Name = "btnMemberProfiles";
+            this.btnMemberProfiles.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnMemberProfiles.Size = new System.Drawing.Size(233, 40);
+            this.btnMemberProfiles.TabIndex = 6;
+            this.btnMemberProfiles.Text = "Member Profiles";
+            this.btnMemberProfiles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnMembers
+            // 
+            this.btnMembers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMembers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMembers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMembers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMembers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnMembers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnMembers.Image = global::Library_Management_System.Properties.Resources.group1;
+            this.btnMembers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMembers.Location = new System.Drawing.Point(0, 285);
+            this.btnMembers.Name = "btnMembers";
+            this.btnMembers.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMembers.Size = new System.Drawing.Size(233, 45);
+            this.btnMembers.TabIndex = 6;
+            this.btnMembers.Text = "Members";
+            this.btnMembers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnBorrowReturn
+            // 
+            this.btnBorrowReturn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBorrowReturn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBorrowReturn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBorrowReturn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBorrowReturn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBorrowReturn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnBorrowReturn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrowReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnBorrowReturn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnBorrowReturn.Image = global::Library_Management_System.Properties.Resources.borrowreturn;
+            this.btnBorrowReturn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBorrowReturn.Location = new System.Drawing.Point(0, 415);
+            this.btnBorrowReturn.Name = "btnBorrowReturn";
+            this.btnBorrowReturn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnBorrowReturn.Size = new System.Drawing.Size(233, 45);
+            this.btnBorrowReturn.TabIndex = 8;
+            this.btnBorrowReturn.Text = "Borrowing/Returning";
+            this.btnBorrowReturn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pnlMembersSubMenu
+            // 
+            this.pnlMembersSubMenu.Controls.Add(this.btnMemberProfiles);
+            this.pnlMembersSubMenu.Controls.Add(this.btnManageMembers);
+            this.pnlMembersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMembersSubMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.pnlMembersSubMenu.Location = new System.Drawing.Point(0, 330);
+            this.pnlMembersSubMenu.Name = "pnlMembersSubMenu";
+            this.pnlMembersSubMenu.Size = new System.Drawing.Size(233, 85);
+            this.pnlMembersSubMenu.TabIndex = 7;
+            // 
+            // btnViewRecords
+            // 
+            this.btnViewRecords.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewRecords.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewRecords.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewRecords.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewRecords.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewRecords.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnViewRecords.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewRecords.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnViewRecords.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnViewRecords.Location = new System.Drawing.Point(0, 80);
+            this.btnViewRecords.Name = "btnViewRecords";
+            this.btnViewRecords.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnViewRecords.Size = new System.Drawing.Size(233, 40);
+            this.btnViewRecords.TabIndex = 7;
+            this.btnViewRecords.Text = "View Records";
+            this.btnViewRecords.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnReturnBook
+            // 
+            this.btnReturnBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReturnBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReturnBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReturnBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReturnBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReturnBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnReturnBook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturnBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnReturnBook.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnReturnBook.Location = new System.Drawing.Point(0, 40);
+            this.btnReturnBook.Name = "btnReturnBook";
+            this.btnReturnBook.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnReturnBook.Size = new System.Drawing.Size(233, 40);
+            this.btnReturnBook.TabIndex = 6;
+            this.btnReturnBook.Text = "Return Book";
+            this.btnReturnBook.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnIssueBook
+            // 
+            this.btnIssueBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIssueBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIssueBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIssueBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIssueBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIssueBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnIssueBook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIssueBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnIssueBook.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnIssueBook.Location = new System.Drawing.Point(0, 0);
+            this.btnIssueBook.Name = "btnIssueBook";
+            this.btnIssueBook.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnIssueBook.Size = new System.Drawing.Size(233, 40);
+            this.btnIssueBook.TabIndex = 5;
+            this.btnIssueBook.Text = "Issue Book";
+            this.btnIssueBook.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // pnlBorrowReturnSubMenu
             // 
-            this.pnlBorrowReturnSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
-            this.pnlBorrowReturnSubMenu.Controls.Add(this.button1);
+            this.pnlBorrowReturnSubMenu.Controls.Add(this.btnViewRecords);
             this.pnlBorrowReturnSubMenu.Controls.Add(this.btnReturnBook);
             this.pnlBorrowReturnSubMenu.Controls.Add(this.btnIssueBook);
             this.pnlBorrowReturnSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBorrowReturnSubMenu.Location = new System.Drawing.Point(0, 500);
+            this.pnlBorrowReturnSubMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.pnlBorrowReturnSubMenu.Location = new System.Drawing.Point(0, 460);
             this.pnlBorrowReturnSubMenu.Name = "pnlBorrowReturnSubMenu";
             this.pnlBorrowReturnSubMenu.Size = new System.Drawing.Size(233, 125);
             this.pnlBorrowReturnSubMenu.TabIndex = 9;
             // 
-            // button1
+            // btnAddNewMember
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(0, 80);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(233, 40);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "       Current Loans Overview";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddNewMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNewMember.AutoRoundedCorners = true;
+            this.btnAddNewMember.BorderRadius = 11;
+            this.btnAddNewMember.BorderThickness = 1;
+            this.btnAddNewMember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewMember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewMember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewMember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewMember.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNewMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAddNewMember.Location = new System.Drawing.Point(191, 9);
+            this.btnAddNewMember.Name = "btnAddNewMember";
+            this.btnAddNewMember.Size = new System.Drawing.Size(130, 25);
+            this.btnAddNewMember.TabIndex = 2;
+            this.btnAddNewMember.Text = "Add New Member";
             // 
-            // btnReturnBook
+            // tlp4
             // 
-            this.btnReturnBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReturnBook.FlatAppearance.BorderSize = 0;
-            this.btnReturnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturnBook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturnBook.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReturnBook.Location = new System.Drawing.Point(0, 40);
-            this.btnReturnBook.Name = "btnReturnBook";
-            this.btnReturnBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnReturnBook.Size = new System.Drawing.Size(233, 40);
-            this.btnReturnBook.TabIndex = 4;
-            this.btnReturnBook.Text = "       Return Book";
-            this.btnReturnBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReturnBook.UseVisualStyleBackColor = true;
+            this.tlp4.ColumnCount = 2;
+            this.tlp4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp4.Controls.Add(this.guna2Panel13, 0, 0);
+            this.tlp4.Controls.Add(this.guna2Panel14, 1, 0);
+            this.tlp4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlp4.Location = new System.Drawing.Point(0, 725);
+            this.tlp4.Name = "tlp4";
+            this.tlp4.RowCount = 1;
+            this.tlp4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp4.Size = new System.Drawing.Size(667, 250);
+            this.tlp4.TabIndex = 7;
             // 
-            // btnIssueBook
+            // guna2Panel13
             // 
-            this.btnIssueBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnIssueBook.FlatAppearance.BorderSize = 0;
-            this.btnIssueBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIssueBook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIssueBook.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnIssueBook.Location = new System.Drawing.Point(0, 0);
-            this.btnIssueBook.Name = "btnIssueBook";
-            this.btnIssueBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnIssueBook.Size = new System.Drawing.Size(233, 40);
-            this.btnIssueBook.TabIndex = 3;
-            this.btnIssueBook.Text = "       Issue Book";
-            this.btnIssueBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIssueBook.UseVisualStyleBackColor = true;
+            this.guna2Panel13.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel13.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel13.BorderRadius = 20;
+            this.guna2Panel13.BorderThickness = 1;
+            this.guna2Panel13.Controls.Add(this.dgvIssuedBook);
+            this.guna2Panel13.Controls.Add(this.btnIssueBook2);
+            this.guna2Panel13.Controls.Add(this.label15);
+            this.guna2Panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.guna2Panel13.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel13.Name = "guna2Panel13";
+            this.guna2Panel13.Size = new System.Drawing.Size(327, 244);
+            this.guna2Panel13.TabIndex = 4;
             // 
-            // btnBorrowReturn
+            // dgvIssuedBook
             // 
-            this.btnBorrowReturn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBorrowReturn.FlatAppearance.BorderSize = 0;
-            this.btnBorrowReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrowReturn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrowReturn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBorrowReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorrowReturn.Location = new System.Drawing.Point(0, 455);
-            this.btnBorrowReturn.Name = "btnBorrowReturn";
-            this.btnBorrowReturn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnBorrowReturn.Size = new System.Drawing.Size(233, 45);
-            this.btnBorrowReturn.TabIndex = 8;
-            this.btnBorrowReturn.Text = "       Borrow/Return";
-            this.btnBorrowReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorrowReturn.UseVisualStyleBackColor = true;
+            this.dgvIssuedBook.AllowUserToAddRows = false;
+            this.dgvIssuedBook.AllowUserToDeleteRows = false;
+            this.dgvIssuedBook.AllowUserToResizeColumns = false;
+            this.dgvIssuedBook.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dgvIssuedBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvIssuedBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvIssuedBook.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIssuedBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvIssuedBook.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIssuedBook.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvIssuedBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
+            this.dgvIssuedBook.Location = new System.Drawing.Point(5, 40);
+            this.dgvIssuedBook.Name = "dgvIssuedBook";
+            this.dgvIssuedBook.ReadOnly = true;
+            this.dgvIssuedBook.RowHeadersVisible = false;
+            this.dgvIssuedBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvIssuedBook.Size = new System.Drawing.Size(316, 201);
+            this.dgvIssuedBook.TabIndex = 6;
+            this.dgvIssuedBook.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGreen;
+            this.dgvIssuedBook.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dgvIssuedBook.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvIssuedBook.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvIssuedBook.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvIssuedBook.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvIssuedBook.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.dgvIssuedBook.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
+            this.dgvIssuedBook.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            this.dgvIssuedBook.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvIssuedBook.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvIssuedBook.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvIssuedBook.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvIssuedBook.ThemeStyle.HeaderStyle.Height = 50;
+            this.dgvIssuedBook.ThemeStyle.ReadOnly = true;
+            this.dgvIssuedBook.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            this.dgvIssuedBook.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvIssuedBook.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvIssuedBook.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvIssuedBook.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvIssuedBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            this.dgvIssuedBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // pnlManageMembersSubMenu
+            // btnIssueBook2
             // 
-            this.pnlManageMembersSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
-            this.pnlManageMembersSubMenu.Controls.Add(this.btnSearchMember);
-            this.pnlManageMembersSubMenu.Controls.Add(this.btnAddEditMember);
-            this.pnlManageMembersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlManageMembersSubMenu.Location = new System.Drawing.Point(0, 370);
-            this.pnlManageMembersSubMenu.Name = "pnlManageMembersSubMenu";
-            this.pnlManageMembersSubMenu.Size = new System.Drawing.Size(233, 85);
-            this.pnlManageMembersSubMenu.TabIndex = 7;
+            this.btnIssueBook2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIssueBook2.AutoRoundedCorners = true;
+            this.btnIssueBook2.BorderRadius = 11;
+            this.btnIssueBook2.BorderThickness = 1;
+            this.btnIssueBook2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIssueBook2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIssueBook2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIssueBook2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIssueBook2.FillColor = System.Drawing.Color.Transparent;
+            this.btnIssueBook2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnIssueBook2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnIssueBook2.Location = new System.Drawing.Point(191, 9);
+            this.btnIssueBook2.Name = "btnIssueBook2";
+            this.btnIssueBook2.Size = new System.Drawing.Size(130, 25);
+            this.btnIssueBook2.TabIndex = 2;
+            this.btnIssueBook2.Text = "Issue Book";
             // 
-            // btnSearchMember
+            // label15
             // 
-            this.btnSearchMember.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSearchMember.FlatAppearance.BorderSize = 0;
-            this.btnSearchMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchMember.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchMember.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSearchMember.Location = new System.Drawing.Point(0, 40);
-            this.btnSearchMember.Name = "btnSearchMember";
-            this.btnSearchMember.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnSearchMember.Size = new System.Drawing.Size(233, 40);
-            this.btnSearchMember.TabIndex = 4;
-            this.btnSearchMember.Text = "       Search Member";
-            this.btnSearchMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchMember.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label15.Location = new System.Drawing.Point(7, 7);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(141, 30);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Books Issued";
             // 
-            // btnAddEditMember
+            // guna2Panel14
             // 
-            this.btnAddEditMember.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddEditMember.FlatAppearance.BorderSize = 0;
-            this.btnAddEditMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEditMember.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEditMember.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAddEditMember.Location = new System.Drawing.Point(0, 0);
-            this.btnAddEditMember.Name = "btnAddEditMember";
-            this.btnAddEditMember.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAddEditMember.Size = new System.Drawing.Size(233, 40);
-            this.btnAddEditMember.TabIndex = 3;
-            this.btnAddEditMember.Text = "       Add/Edit Member";
-            this.btnAddEditMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEditMember.UseVisualStyleBackColor = true;
+            this.guna2Panel14.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel14.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel14.BorderRadius = 20;
+            this.guna2Panel14.BorderThickness = 1;
+            this.guna2Panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.guna2Panel14.Location = new System.Drawing.Point(336, 3);
+            this.guna2Panel14.Name = "guna2Panel14";
+            this.guna2Panel14.Size = new System.Drawing.Size(328, 244);
+            this.guna2Panel14.TabIndex = 3;
+            // 
+            // dgvMember
+            // 
+            this.dgvMember.AllowUserToAddRows = false;
+            this.dgvMember.AllowUserToDeleteRows = false;
+            this.dgvMember.AllowUserToResizeColumns = false;
+            this.dgvMember.AllowUserToResizeRows = false;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dgvMember.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvMember.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMember.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dgvMember.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMember.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvMember.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
+            this.dgvMember.Location = new System.Drawing.Point(5, 40);
+            this.dgvMember.Name = "dgvMember";
+            this.dgvMember.ReadOnly = true;
+            this.dgvMember.RowHeadersVisible = false;
+            this.dgvMember.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvMember.Size = new System.Drawing.Size(316, 170);
+            this.dgvMember.TabIndex = 4;
+            this.dgvMember.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGreen;
+            this.dgvMember.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dgvMember.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvMember.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvMember.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvMember.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvMember.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.dgvMember.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
+            this.dgvMember.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            this.dgvMember.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvMember.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMember.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvMember.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvMember.ThemeStyle.HeaderStyle.Height = 50;
+            this.dgvMember.ThemeStyle.ReadOnly = true;
+            this.dgvMember.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            this.dgvMember.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvMember.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMember.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvMember.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvMember.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            this.dgvMember.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // lblMemberSeeAll
+            // 
+            this.lblMemberSeeAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMemberSeeAll.AutoSize = true;
+            this.lblMemberSeeAll.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemberSeeAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
+            this.lblMemberSeeAll.Location = new System.Drawing.Point(275, 222);
+            this.lblMemberSeeAll.Name = "lblMemberSeeAll";
+            this.lblMemberSeeAll.Size = new System.Drawing.Size(45, 15);
+            this.lblMemberSeeAll.TabIndex = 3;
+            this.lblMemberSeeAll.Text = "See All";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label10.Location = new System.Drawing.Point(7, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(144, 30);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Members List";
+            // 
+            // guna2Panel15
+            // 
+            this.guna2Panel15.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel15.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel15.BorderRadius = 20;
+            this.guna2Panel15.BorderThickness = 1;
+            this.guna2Panel15.Controls.Add(this.dgvMember);
+            this.guna2Panel15.Controls.Add(this.lblMemberSeeAll);
+            this.guna2Panel15.Controls.Add(this.btnAddNewMember);
+            this.guna2Panel15.Controls.Add(this.label10);
+            this.guna2Panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.guna2Panel15.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel15.Name = "guna2Panel15";
+            this.guna2Panel15.Size = new System.Drawing.Size(327, 244);
+            this.guna2Panel15.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label13.Location = new System.Drawing.Point(7, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(113, 30);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Books List";
+            // 
+            // tlp3
+            // 
+            this.tlp3.ColumnCount = 1;
+            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp3.Controls.Add(this.guna2Panel12, 0, 0);
+            this.tlp3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlp3.Location = new System.Drawing.Point(0, 475);
+            this.tlp3.Name = "tlp3";
+            this.tlp3.RowCount = 1;
+            this.tlp3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp3.Size = new System.Drawing.Size(667, 250);
+            this.tlp3.TabIndex = 6;
+            // 
+            // guna2Panel12
+            // 
+            this.guna2Panel12.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel12.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel12.BorderRadius = 20;
+            this.guna2Panel12.BorderThickness = 1;
+            this.guna2Panel12.Controls.Add(this.dgvOverdueBook);
+            this.guna2Panel12.Controls.Add(this.label17);
+            this.guna2Panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.guna2Panel12.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel12.Name = "guna2Panel12";
+            this.guna2Panel12.Size = new System.Drawing.Size(661, 244);
+            this.guna2Panel12.TabIndex = 2;
+            // 
+            // dgvOverdueBook
+            // 
+            this.dgvOverdueBook.AllowUserToAddRows = false;
+            this.dgvOverdueBook.AllowUserToDeleteRows = false;
+            this.dgvOverdueBook.AllowUserToResizeColumns = false;
+            this.dgvOverdueBook.AllowUserToResizeRows = false;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dgvOverdueBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this.dgvOverdueBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvOverdueBook.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOverdueBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dgvOverdueBook.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOverdueBook.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvOverdueBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
+            this.dgvOverdueBook.Location = new System.Drawing.Point(5, 40);
+            this.dgvOverdueBook.Name = "dgvOverdueBook";
+            this.dgvOverdueBook.ReadOnly = true;
+            this.dgvOverdueBook.RowHeadersVisible = false;
+            this.dgvOverdueBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvOverdueBook.Size = new System.Drawing.Size(650, 200);
+            this.dgvOverdueBook.TabIndex = 6;
+            this.dgvOverdueBook.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGreen;
+            this.dgvOverdueBook.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dgvOverdueBook.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvOverdueBook.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvOverdueBook.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvOverdueBook.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvOverdueBook.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.dgvOverdueBook.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
+            this.dgvOverdueBook.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            this.dgvOverdueBook.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvOverdueBook.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvOverdueBook.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvOverdueBook.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvOverdueBook.ThemeStyle.HeaderStyle.Height = 50;
+            this.dgvOverdueBook.ThemeStyle.ReadOnly = true;
+            this.dgvOverdueBook.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            this.dgvOverdueBook.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvOverdueBook.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvOverdueBook.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvOverdueBook.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvOverdueBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            this.dgvOverdueBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label17.Location = new System.Drawing.Point(7, 7);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(193, 30);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Overdue Book List";
+            // 
+            // dgvBook
+            // 
+            this.dgvBook.AllowUserToAddRows = false;
+            this.dgvBook.AllowUserToDeleteRows = false;
+            this.dgvBook.AllowUserToResizeColumns = false;
+            this.dgvBook.AllowUserToResizeRows = false;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            this.dgvBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvBook.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.dgvBook.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBook.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dgvBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
+            this.dgvBook.Location = new System.Drawing.Point(5, 40);
+            this.dgvBook.Name = "dgvBook";
+            this.dgvBook.ReadOnly = true;
+            this.dgvBook.RowHeadersVisible = false;
+            this.dgvBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvBook.Size = new System.Drawing.Size(316, 170);
+            this.dgvBook.TabIndex = 5;
+            this.dgvBook.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGreen;
+            this.dgvBook.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dgvBook.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvBook.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvBook.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvBook.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvBook.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.dgvBook.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
+            this.dgvBook.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            this.dgvBook.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBook.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvBook.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvBook.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvBook.ThemeStyle.HeaderStyle.Height = 50;
+            this.dgvBook.ThemeStyle.ReadOnly = true;
+            this.dgvBook.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            this.dgvBook.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvBook.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvBook.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvBook.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            this.dgvBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // lblBookSeeAll
+            // 
+            this.lblBookSeeAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBookSeeAll.AutoSize = true;
+            this.lblBookSeeAll.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookSeeAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
+            this.lblBookSeeAll.Location = new System.Drawing.Point(275, 222);
+            this.lblBookSeeAll.Name = "lblBookSeeAll";
+            this.lblBookSeeAll.Size = new System.Drawing.Size(45, 15);
+            this.lblBookSeeAll.TabIndex = 3;
+            this.lblBookSeeAll.Text = "See All";
+            // 
+            // btnAddNewBook
+            // 
+            this.btnAddNewBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNewBook.AutoRoundedCorners = true;
+            this.btnAddNewBook.BorderRadius = 11;
+            this.btnAddNewBook.BorderThickness = 1;
+            this.btnAddNewBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewBook.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewBook.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNewBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAddNewBook.Location = new System.Drawing.Point(192, 9);
+            this.btnAddNewBook.Name = "btnAddNewBook";
+            this.btnAddNewBook.Size = new System.Drawing.Size(130, 25);
+            this.btnAddNewBook.TabIndex = 2;
+            this.btnAddNewBook.Text = "Add New Book";
+            // 
+            // guna2Panel11
+            // 
+            this.guna2Panel11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel11.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel11.BorderRadius = 20;
+            this.guna2Panel11.BorderThickness = 1;
+            this.guna2Panel11.Controls.Add(this.dgvBook);
+            this.guna2Panel11.Controls.Add(this.lblBookSeeAll);
+            this.guna2Panel11.Controls.Add(this.btnAddNewBook);
+            this.guna2Panel11.Controls.Add(this.label13);
+            this.guna2Panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.guna2Panel11.Location = new System.Drawing.Point(336, 3);
+            this.guna2Panel11.Name = "guna2Panel11";
+            this.guna2Panel11.Size = new System.Drawing.Size(328, 244);
+            this.guna2Panel11.TabIndex = 2;
+            // 
+            // tlp2
+            // 
+            this.tlp2.ColumnCount = 2;
+            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp2.Controls.Add(this.guna2Panel11, 1, 0);
+            this.tlp2.Controls.Add(this.guna2Panel15, 0, 0);
+            this.tlp2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlp2.Location = new System.Drawing.Point(0, 225);
+            this.tlp2.Name = "tlp2";
+            this.tlp2.RowCount = 1;
+            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp2.Size = new System.Drawing.Size(667, 250);
+            this.tlp2.TabIndex = 5;
+            // 
+            // guna2Panel10
+            // 
+            this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel10.Location = new System.Drawing.Point(0, 975);
+            this.guna2Panel10.Name = "guna2Panel10";
+            this.guna2Panel10.Size = new System.Drawing.Size(667, 5);
+            this.guna2Panel10.TabIndex = 2;
+            // 
+            // btnMemberActivityReports
+            // 
+            this.btnMemberActivityReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMemberActivityReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMemberActivityReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMemberActivityReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMemberActivityReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMemberActivityReports.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnMemberActivityReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMemberActivityReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnMemberActivityReports.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnMemberActivityReports.Location = new System.Drawing.Point(0, 40);
+            this.btnMemberActivityReports.Name = "btnMemberActivityReports";
+            this.btnMemberActivityReports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnMemberActivityReports.Size = new System.Drawing.Size(233, 40);
+            this.btnMemberActivityReports.TabIndex = 6;
+            this.btnMemberActivityReports.Text = "Member Activity Reports";
+            this.btnMemberActivityReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Library_Management_System.Properties.Resources.group;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label4.Location = new System.Drawing.Point(12, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 21);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Members";
+            // 
+            // lblCountMember
+            // 
+            this.lblCountMember.AutoSize = true;
+            this.lblCountMember.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblCountMember.Location = new System.Drawing.Point(8, 10);
+            this.lblCountMember.Name = "lblCountMember";
+            this.lblCountMember.Size = new System.Drawing.Size(38, 45);
+            this.lblCountMember.TabIndex = 3;
+            this.lblCountMember.Text = "0";
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 0;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2Panel8
+            // 
+            this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel8.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel8.BorderRadius = 20;
+            this.guna2Panel8.BorderThickness = 1;
+            this.guna2Panel8.Controls.Add(this.lblOverdueBooks);
+            this.guna2Panel8.Controls.Add(this.lblOverdueBook);
+            this.guna2Panel8.Controls.Add(this.guna2Panel9);
+            this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.guna2Panel8.Location = new System.Drawing.Point(501, 3);
+            this.guna2Panel8.Name = "guna2Panel8";
+            this.guna2Panel8.Size = new System.Drawing.Size(163, 119);
+            this.guna2Panel8.TabIndex = 3;
+            // 
+            // lblOverdueBooks
+            // 
+            this.lblOverdueBooks.AutoSize = true;
+            this.lblOverdueBooks.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOverdueBooks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblOverdueBooks.Location = new System.Drawing.Point(12, 58);
+            this.lblOverdueBooks.Name = "lblOverdueBooks";
+            this.lblOverdueBooks.Size = new System.Drawing.Size(122, 21);
+            this.lblOverdueBooks.TabIndex = 3;
+            this.lblOverdueBooks.Text = "Overdue Books";
+            // 
+            // lblOverdueBook
+            // 
+            this.lblOverdueBook.AutoSize = true;
+            this.lblOverdueBook.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOverdueBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblOverdueBook.Location = new System.Drawing.Point(8, 10);
+            this.lblOverdueBook.Name = "lblOverdueBook";
+            this.lblOverdueBook.Size = new System.Drawing.Size(38, 45);
+            this.lblOverdueBook.TabIndex = 3;
+            this.lblOverdueBook.Text = "0";
+            // 
+            // guna2Panel9
+            // 
+            this.guna2Panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel9.BorderRadius = 25;
+            this.guna2Panel9.Controls.Add(this.guna2PictureBox4);
+            this.guna2Panel9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
+            this.guna2Panel9.Location = new System.Drawing.Point(103, 7);
+            this.guna2Panel9.Name = "guna2Panel9";
+            this.guna2Panel9.Size = new System.Drawing.Size(50, 50);
+            this.guna2Panel9.TabIndex = 0;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::Library_Management_System.Properties.Resources.hourglass;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 0;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // lblIssuedBooks
+            // 
+            this.lblIssuedBooks.AutoSize = true;
+            this.lblIssuedBooks.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIssuedBooks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblIssuedBooks.Location = new System.Drawing.Point(12, 58);
+            this.lblIssuedBooks.Name = "lblIssuedBooks";
+            this.lblIssuedBooks.Size = new System.Drawing.Size(106, 21);
+            this.lblIssuedBooks.TabIndex = 3;
+            this.lblIssuedBooks.Text = "Issued Books";
+            // 
+            // lblIssuedBook
+            // 
+            this.lblIssuedBook.AutoSize = true;
+            this.lblIssuedBook.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIssuedBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblIssuedBook.Location = new System.Drawing.Point(8, 10);
+            this.lblIssuedBook.Name = "lblIssuedBook";
+            this.lblIssuedBook.Size = new System.Drawing.Size(38, 45);
+            this.lblIssuedBook.TabIndex = 3;
+            this.lblIssuedBook.Text = "0";
+            // 
+            // guna2Panel7
+            // 
+            this.guna2Panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel7.BorderRadius = 25;
+            this.guna2Panel7.Controls.Add(this.guna2PictureBox3);
+            this.guna2Panel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
+            this.guna2Panel7.Location = new System.Drawing.Point(103, 7);
+            this.guna2Panel7.Name = "guna2Panel7";
+            this.guna2Panel7.Size = new System.Drawing.Size(50, 50);
+            this.guna2Panel7.TabIndex = 0;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel4.BorderRadius = 25;
+            this.guna2Panel4.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
+            this.guna2Panel4.Location = new System.Drawing.Point(103, 7);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(50, 50);
+            this.guna2Panel4.TabIndex = 0;
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel5.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel5.BorderRadius = 20;
+            this.guna2Panel5.BorderThickness = 1;
+            this.guna2Panel5.Controls.Add(this.lblIssuedBooks);
+            this.guna2Panel5.Controls.Add(this.lblIssuedBook);
+            this.guna2Panel5.Controls.Add(this.guna2Panel7);
+            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(335, 3);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(160, 119);
+            this.guna2Panel5.TabIndex = 2;
+            // 
+            // tlp1
+            // 
+            this.tlp1.ColumnCount = 4;
+            this.tlp1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp1.Controls.Add(this.guna2Panel8, 3, 0);
+            this.tlp1.Controls.Add(this.guna2Panel5, 2, 0);
+            this.tlp1.Controls.Add(this.guna2Panel3, 1, 0);
+            this.tlp1.Controls.Add(this.guna2Panel2, 0, 0);
+            this.tlp1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlp1.Location = new System.Drawing.Point(0, 100);
+            this.tlp1.Name = "tlp1";
+            this.tlp1.RowCount = 1;
+            this.tlp1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp1.Size = new System.Drawing.Size(667, 125);
+            this.tlp1.TabIndex = 1;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel3.BorderRadius = 20;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.label4);
+            this.guna2Panel3.Controls.Add(this.lblCountMember);
+            this.guna2Panel3.Controls.Add(this.guna2Panel4);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(169, 3);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(160, 119);
+            this.guna2Panel3.TabIndex = 1;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel2.BorderRadius = 20;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.label3);
+            this.guna2Panel2.Controls.Add(this.lblCountBook);
+            this.guna2Panel2.Controls.Add(this.guna2Panel6);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(160, 119);
+            this.guna2Panel2.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label3.Location = new System.Drawing.Point(12, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Books";
+            // 
+            // lblCountBook
+            // 
+            this.lblCountBook.AutoSize = true;
+            this.lblCountBook.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblCountBook.Location = new System.Drawing.Point(8, 10);
+            this.lblCountBook.Name = "lblCountBook";
+            this.lblCountBook.Size = new System.Drawing.Size(38, 45);
+            this.lblCountBook.TabIndex = 3;
+            this.lblCountBook.Text = "0";
+            // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel6.BorderRadius = 25;
+            this.guna2Panel6.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
+            this.guna2Panel6.Location = new System.Drawing.Point(103, 7);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(50, 50);
+            this.guna2Panel6.TabIndex = 0;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // pnlContainer
+            // 
+            this.pnlContainer.AutoScroll = true;
+            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(243)))), ((int)(((byte)(233)))));
+            this.pnlContainer.BorderRadius = 5;
+            this.pnlContainer.Controls.Add(this.tlp4);
+            this.pnlContainer.Controls.Add(this.tlp3);
+            this.pnlContainer.Controls.Add(this.tlp2);
+            this.pnlContainer.Controls.Add(this.guna2Panel10);
+            this.pnlContainer.Controls.Add(this.tlp1);
+            this.pnlContainer.Controls.Add(this.pnlTitle);
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(250, 0);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(684, 561);
+            this.pnlContainer.TabIndex = 3;
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.Controls.Add(this.lblDateAndTime);
+            this.pnlTitle.Controls.Add(this.lblName);
+            this.pnlTitle.Controls.Add(this.label1);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(667, 100);
+            this.pnlTitle.TabIndex = 0;
+            // 
+            // lblDateAndTime
+            // 
+            this.lblDateAndTime.AutoSize = true;
+            this.lblDateAndTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateAndTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblDateAndTime.Location = new System.Drawing.Point(9, 54);
+            this.lblDateAndTime.Name = "lblDateAndTime";
+            this.lblDateAndTime.Size = new System.Drawing.Size(115, 21);
+            this.lblDateAndTime.TabIndex = 2;
+            this.lblDateAndTime.Text = "Date and Time";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
+            this.lblName.Location = new System.Drawing.Point(101, 9);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(124, 45);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "admin!";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label1.Location = new System.Drawing.Point(6, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 45);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hello,";
+            // 
+            // autoLoadDashboard
+            // 
+            this.autoLoadDashboard.Enabled = true;
+            // 
+            // btnCirculationReports
+            // 
+            this.btnCirculationReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCirculationReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCirculationReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCirculationReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCirculationReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCirculationReports.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnCirculationReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCirculationReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnCirculationReports.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnCirculationReports.Location = new System.Drawing.Point(0, 0);
+            this.btnCirculationReports.Name = "btnCirculationReports";
+            this.btnCirculationReports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnCirculationReports.Size = new System.Drawing.Size(233, 40);
+            this.btnCirculationReports.TabIndex = 5;
+            this.btnCirculationReports.Text = "Circulation Reports";
+            this.btnCirculationReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnManageGenre
+            // 
+            this.btnManageGenre.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageGenre.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageGenre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageGenre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageGenre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageGenre.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnManageGenre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnManageGenre.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnManageGenre.Location = new System.Drawing.Point(0, 0);
+            this.btnManageGenre.Name = "btnManageGenre";
+            this.btnManageGenre.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnManageGenre.Size = new System.Drawing.Size(233, 40);
+            this.btnManageGenre.TabIndex = 5;
+            this.btnManageGenre.Text = "Manage Genre";
+            this.btnManageGenre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pnlSideMenu
+            // 
+            this.pnlSideMenu.AutoScroll = true;
+            this.pnlSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.pnlSideMenu.Controls.Add(this.btnLogout);
+            this.pnlSideMenu.Controls.Add(this.pnlSettingsSubMenu);
+            this.pnlSideMenu.Controls.Add(this.btnSettings);
+            this.pnlSideMenu.Controls.Add(this.pnlReportsSubMenu);
+            this.pnlSideMenu.Controls.Add(this.btnReports);
+            this.pnlSideMenu.Controls.Add(this.pnlBorrowReturnSubMenu);
+            this.pnlSideMenu.Controls.Add(this.btnBorrowReturn);
+            this.pnlSideMenu.Controls.Add(this.pnlMembersSubMenu);
+            this.pnlSideMenu.Controls.Add(this.btnMembers);
+            this.pnlSideMenu.Controls.Add(this.pnlBooksSubMenu);
+            this.pnlSideMenu.Controls.Add(this.btnBooks);
+            this.pnlSideMenu.Controls.Add(this.btnDashboard);
+            this.pnlSideMenu.Controls.Add(this.guna2Panel1);
+            this.pnlSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlSideMenu.Name = "pnlSideMenu";
+            this.pnlSideMenu.Size = new System.Drawing.Size(250, 561);
+            this.pnlSideMenu.TabIndex = 2;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnLogout.Image = global::Library_Management_System.Properties.Resources.logout;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Location = new System.Drawing.Point(0, 805);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(233, 45);
+            this.btnLogout.TabIndex = 21;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pnlSettingsSubMenu
+            // 
+            this.pnlSettingsSubMenu.Controls.Add(this.btnManageGenre);
+            this.pnlSettingsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSettingsSubMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.pnlSettingsSubMenu.Location = new System.Drawing.Point(0, 760);
+            this.pnlSettingsSubMenu.Name = "pnlSettingsSubMenu";
+            this.pnlSettingsSubMenu.Size = new System.Drawing.Size(233, 45);
+            this.pnlSettingsSubMenu.TabIndex = 20;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnSettings.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnSettings.Image = global::Library_Management_System.Properties.Resources.settings;
+            this.btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSettings.Location = new System.Drawing.Point(0, 715);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnSettings.Size = new System.Drawing.Size(233, 45);
+            this.btnSettings.TabIndex = 19;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pnlReportsSubMenu
+            // 
+            this.pnlReportsSubMenu.Controls.Add(this.btnMemberActivityReports);
+            this.pnlReportsSubMenu.Controls.Add(this.btnCirculationReports);
+            this.pnlReportsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlReportsSubMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.pnlReportsSubMenu.Location = new System.Drawing.Point(0, 630);
+            this.pnlReportsSubMenu.Name = "pnlReportsSubMenu";
+            this.pnlReportsSubMenu.Size = new System.Drawing.Size(233, 85);
+            this.pnlReportsSubMenu.TabIndex = 11;
+            // 
+            // autoLoadCount
+            // 
+            this.autoLoadCount.Enabled = true;
             // 
             // btnManageMembers
             // 
+            this.btnManageMembers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageMembers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageMembers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageMembers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnManageMembers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageMembers.FlatAppearance.BorderSize = 0;
-            this.btnManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageMembers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
             this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageMembers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnManageMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageMembers.Location = new System.Drawing.Point(0, 325);
+            this.btnManageMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnManageMembers.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnManageMembers.Location = new System.Drawing.Point(0, 0);
             this.btnManageMembers.Name = "btnManageMembers";
-            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManageMembers.Size = new System.Drawing.Size(233, 45);
-            this.btnManageMembers.TabIndex = 6;
-            this.btnManageMembers.Text = "       Manage Members";
-            this.btnManageMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageMembers.UseVisualStyleBackColor = true;
-            // 
-            // pnlManageBooksSubMenu
-            // 
-            this.pnlManageBooksSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(45)))), ((int)(((byte)(100)))));
-            this.pnlManageBooksSubMenu.Controls.Add(this.btnInventory);
-            this.pnlManageBooksSubMenu.Controls.Add(this.btnAddEditBook);
-            this.pnlManageBooksSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlManageBooksSubMenu.Location = new System.Drawing.Point(0, 240);
-            this.pnlManageBooksSubMenu.Name = "pnlManageBooksSubMenu";
-            this.pnlManageBooksSubMenu.Size = new System.Drawing.Size(233, 85);
-            this.pnlManageBooksSubMenu.TabIndex = 3;
-            // 
-            // btnInventory
-            // 
-            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInventory.FlatAppearance.BorderSize = 0;
-            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnInventory.Location = new System.Drawing.Point(0, 40);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnInventory.Size = new System.Drawing.Size(233, 40);
-            this.btnInventory.TabIndex = 5;
-            this.btnInventory.Text = "       Inventory";
-            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.UseVisualStyleBackColor = true;
-            // 
-            // btnAddEditBook
-            // 
-            this.btnAddEditBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddEditBook.FlatAppearance.BorderSize = 0;
-            this.btnAddEditBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEditBook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEditBook.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAddEditBook.Location = new System.Drawing.Point(0, 0);
-            this.btnAddEditBook.Name = "btnAddEditBook";
-            this.btnAddEditBook.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAddEditBook.Size = new System.Drawing.Size(233, 40);
-            this.btnAddEditBook.TabIndex = 3;
-            this.btnAddEditBook.Text = "       Add/Edit Book";
-            this.btnAddEditBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEditBook.UseVisualStyleBackColor = true;
-            // 
-            // btnManageBooks
-            // 
-            this.btnManageBooks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageBooks.FlatAppearance.BorderSize = 0;
-            this.btnManageBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageBooks.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageBooks.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnManageBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageBooks.Location = new System.Drawing.Point(0, 195);
-            this.btnManageBooks.Name = "btnManageBooks";
-            this.btnManageBooks.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManageBooks.Size = new System.Drawing.Size(233, 45);
-            this.btnManageBooks.TabIndex = 2;
-            this.btnManageBooks.Text = "       Manage Books";
-            this.btnManageBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageBooks.UseVisualStyleBackColor = true;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDashboard.Image = global::Library_Management_System.Properties.Resources.layout;
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 150);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(233, 45);
-            this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "       Dashboard";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.pictureBox1);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(233, 150);
-            this.pnlLogo.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnManageMembers.Size = new System.Drawing.Size(233, 40);
+            this.btnManageMembers.TabIndex = 5;
+            this.btnManageMembers.Text = "Manage Members";
+            this.btnManageMembers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 561);
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlSideMenu);
             this.Name = "UserForm";
             this.Text = "UserForm";
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            this.pnlBooksSubMenu.ResumeLayout(false);
+            this.pnlMembersSubMenu.ResumeLayout(false);
+            this.pnlBorrowReturnSubMenu.ResumeLayout(false);
+            this.tlp4.ResumeLayout(false);
+            this.guna2Panel13.ResumeLayout(false);
+            this.guna2Panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
+            this.guna2Panel15.ResumeLayout(false);
+            this.guna2Panel15.PerformLayout();
+            this.tlp3.ResumeLayout(false);
+            this.guna2Panel12.ResumeLayout(false);
+            this.guna2Panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOverdueBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
+            this.guna2Panel11.ResumeLayout(false);
+            this.guna2Panel11.PerformLayout();
+            this.tlp2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.guna2Panel8.ResumeLayout(false);
+            this.guna2Panel8.PerformLayout();
+            this.guna2Panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            this.guna2Panel7.ResumeLayout(false);
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
+            this.tlp1.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            this.guna2Panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlContainer.ResumeLayout(false);
-            this.tlpCounts2.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.tlpCounts1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlSideMenu.ResumeLayout(false);
+            this.pnlSettingsSubMenu.ResumeLayout(false);
             this.pnlReportsSubMenu.ResumeLayout(false);
-            this.pnlBorrowReturnSubMenu.ResumeLayout(false);
-            this.pnlManageMembersSubMenu.ResumeLayout(false);
-            this.pnlManageBooksSubMenu.ResumeLayout(false);
-            this.pnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlContainer;
-        private System.Windows.Forms.TableLayoutPanel tlpCounts2;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2Button btnReports;
+        private Guna.UI2.WinForms.Guna2Button btnBooks;
+        private Guna.UI2.WinForms.Guna2Button btnDashboard;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        private Guna.UI2.WinForms.Guna2Button btnInventory;
+        private Guna.UI2.WinForms.Guna2Panel pnlBooksSubMenu;
+        private Guna.UI2.WinForms.Guna2Button btnMemberProfiles;
+        private Guna.UI2.WinForms.Guna2Button btnMembers;
+        private Guna.UI2.WinForms.Guna2Button btnBorrowReturn;
+        private Guna.UI2.WinForms.Guna2Panel pnlMembersSubMenu;
+        private Guna.UI2.WinForms.Guna2Button btnViewRecords;
+        private Guna.UI2.WinForms.Guna2Button btnReturnBook;
+        private Guna.UI2.WinForms.Guna2Button btnIssueBook;
+        private Guna.UI2.WinForms.Guna2Panel pnlBorrowReturnSubMenu;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
+        private System.Windows.Forms.TableLayoutPanel tlp4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvIssuedBook;
+        private Guna.UI2.WinForms.Guna2Button btnIssueBook2;
+        private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvMember;
+        private System.Windows.Forms.Label lblMemberSeeAll;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TableLayoutPanel tlp3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvOverdueBook;
+        private System.Windows.Forms.Label label17;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvBook;
+        private System.Windows.Forms.Label lblBookSeeAll;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewBook;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
+        private System.Windows.Forms.TableLayoutPanel tlp2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
+        private Guna.UI2.WinForms.Guna2Button btnMemberActivityReports;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TableLayoutPanel tlpCounts1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnMemberMoreInfo;
         private System.Windows.Forms.Label lblCountMember;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnBooksMoreInfo;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
+        private System.Windows.Forms.Label lblOverdueBooks;
+        private System.Windows.Forms.Label lblOverdueBook;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private System.Windows.Forms.Label lblIssuedBooks;
+        private System.Windows.Forms.Label lblIssuedBook;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private System.Windows.Forms.TableLayoutPanel tlp1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblCountBook;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Panel pnlTitle;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel pnlContainer;
+        private Guna.UI2.WinForms.Guna2Panel pnlTitle;
+        private System.Windows.Forms.Label lblDateAndTime;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer autoLoadDashboard;
+        private Guna.UI2.WinForms.Guna2Button btnCirculationReports;
+        private Guna.UI2.WinForms.Guna2Button btnManageGenre;
         private System.Windows.Forms.Panel pnlSideMenu;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Panel pnlReportsSubMenu;
-        private System.Windows.Forms.Button btnOverdueItemsReports;
-        private System.Windows.Forms.Button btnMemberActivityReports;
-        private System.Windows.Forms.Button btnCirculationReports;
-        private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Panel pnlBorrowReturnSubMenu;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnReturnBook;
-        private System.Windows.Forms.Button btnIssueBook;
-        private System.Windows.Forms.Button btnBorrowReturn;
-        private System.Windows.Forms.Panel pnlManageMembersSubMenu;
-        private System.Windows.Forms.Button btnSearchMember;
-        private System.Windows.Forms.Button btnAddEditMember;
-        private System.Windows.Forms.Button btnManageMembers;
-        private System.Windows.Forms.Panel pnlManageBooksSubMenu;
-        private System.Windows.Forms.Button btnInventory;
-        private System.Windows.Forms.Button btnAddEditBook;
-        private System.Windows.Forms.Button btnManageBooks;
-        private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Panel pnlSettingsSubMenu;
+        private Guna.UI2.WinForms.Guna2Button btnSettings;
+        private Guna.UI2.WinForms.Guna2Panel pnlReportsSubMenu;
+        private System.Windows.Forms.Timer autoLoadCount;
+        private Guna.UI2.WinForms.Guna2Button btnManageMembers;
     }
 }

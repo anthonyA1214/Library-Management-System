@@ -23,7 +23,7 @@ namespace Library_Management_System
 
         private void loadTable()
         {
-            string query = "SELECT genre_name AS [Genre Name] from tbl_genre WHERE IsDeleted = 0";
+            string query = "SELECT genre_id AS [Genre ID], genre_name AS [Genre Name] from tbl_genre WHERE IsDeleted = 0";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -42,13 +42,6 @@ namespace Library_Management_System
             {
                 dgvGenre.Columns.Add(deleteImgCol);
             }
-
-            foreach (DataGridViewColumn column in dgvGenre.Columns)
-            {
-                column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
-
         }
 
         private void clearTexts()
@@ -139,7 +132,8 @@ namespace Library_Management_System
                 }
                 finally
                 {
-                    conn.Close();                
+                    conn.Close();
+                    loadTable();
                 }
             }
 
@@ -161,6 +155,16 @@ namespace Library_Management_System
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvGenre.DataSource = dt;
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbExit2_Click(object sender, EventArgs e)
+        {
+            pnlAddGenre.Visible = false;
         }
     }
 }

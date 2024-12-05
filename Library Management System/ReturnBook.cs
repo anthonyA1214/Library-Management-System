@@ -118,7 +118,7 @@ namespace Library_Management_System
             }
             else if (cbSearchBy.Text == "Member ID")
             {
-                if (!int.TryParse(tbSearch.Text, out int id))
+                if (!int.TryParse(search, out int id))
                 {
                     return;
                 }
@@ -126,7 +126,7 @@ namespace Library_Management_System
             }
             else if (cbSearchBy.Text == "Issue ID")
             {
-                if (!int.TryParse(tbSearch.Text, out int id))
+                if (!int.TryParse(search, out int id))
                 {
                     return;
                 }

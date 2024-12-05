@@ -49,7 +49,8 @@
       <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
@@ -77,6 +78,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -120,11 +122,11 @@
     <Compile Include="CirculationReport.Designer.cs">
       <DependentUpon>CirculationReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageGenre.cs">
+    <Compile Include="ManageGenres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageGenre.Designer.cs">
-      <DependentUpon>ManageGenre.cs</DependentUpon>
+    <Compile Include="ManageGenres.Designer.cs">
+      <DependentUpon>ManageGenres.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageStaffs.cs">
       <SubType>Form</SubType>
@@ -217,8 +219,8 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageGenre.resx">
-      <DependentUpon>ManageGenre.cs</DependentUpon>
+    <EmbeddedResource Include="ManageGenres.resx">
+      <DependentUpon>ManageGenres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageMembers.resx">
       <DependentUpon>ManageMembers.cs</DependentUpon>
@@ -367,6 +369,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restorefromtrash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteforever.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browseactivity.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

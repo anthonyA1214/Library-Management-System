@@ -66,15 +66,15 @@ namespace Library_Management_System
             {
                 dgvMember.Columns.Add(deleteImgCol);
             }
+            dgvMember.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvMember.ColumnHeadersDefaultCellStyle.BackColor;
+            dgvMember.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvMember.ColumnHeadersDefaultCellStyle.ForeColor;
         }
 
         private void ManageMembers_Load(object sender, EventArgs e)
         {
             loadTable();
             pnlSideMenu.Visible = false;
-            cbSearchBy.Text = "Name";
-            dgvMember.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvMember.ColumnHeadersDefaultCellStyle.BackColor;
-            dgvMember.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvMember.ColumnHeadersDefaultCellStyle.ForeColor;
+            cbSearchBy.Text = "Name";           
         }
 
         private void btnAddMember_Click(object sender, EventArgs e)
@@ -165,6 +165,10 @@ namespace Library_Management_System
             }
             else if (cbSearchBy.Text == "ID")
             {
+                if (!int.TryParse(search, out int id))
+                {
+                    return;
+                }
                 query += " AND member_id = @search";
             }
 

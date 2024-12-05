@@ -27,7 +27,7 @@ namespace Library_Management_System
 
         private void loadTable()
         {
-            string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity] from tbl_book WHERE IsDeleted = 0";
+            string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity], CASE WHEN quantity > 0 THEN 'Available' ELSE 'Unavailable' END AS [Availability Status] from tbl_book WHERE IsDeleted = 0";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -137,8 +137,7 @@ namespace Library_Management_System
                 da.Fill(ds);
 
                 tbTitle.Text = ds.Tables[0].Rows[0][1].ToString();
-                tbAuthor.Text = ds.Tables[0].Rows[0][2].ToString();
-                
+                tbAuthor.Text = ds.Tables[0].Rows[0][2].ToString();              
             }
         }
 
@@ -181,54 +180,100 @@ namespace Library_Management_System
             }
         }
 
-        private void tbSearch_TextChanged(object sender, EventArgs e)
+        private void searchFilter()
         {
-            if (string.IsNullOrEmpty(tbSearch.Text))
+            string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity], " +
+                           "CASE WHEN quantity > 0 THEN 'Available' ELSE 'Unavailable' END AS [Availability Status] FROM tbl_book WHERE IsDeleted = 0";
+
+            if (!string.IsNullOrEmpty(tbSearch.Text))
             {
-                loadTable();
-                return;
+                string search = tbSearch.Text;
+                if (cbSearchBy.Text == "Title")
+                {
+                    query += " AND title LIKE @title";
+                }
+                else if (cbSearchBy.Text == "Author")
+                {
+                    query += " AND author LIKE @author";
+                }
+                else if (cbSearchBy.Text == "ISBN")
+                {
+                    query += " AND isbn = @isbn";
+                }
+                else if (cbSearchBy.Text == "Publication Year")
+                {
+                    query += " AND publication_year = @publicationyear";
+                }
+                else if (cbSearchBy.Text == "ID")
+                {
+                    if (!int.TryParse(search, out int id))
+                    {
+                        return;
+                    }
+                    query += " AND book_id = @search";
+                }
             }
 
-            string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity] from tbl_book WHERE IsDeleted = 0";
-            string search = tbSearch.Text;
-            if (cbSearchBy.Text == "Title")
+            if (cbGenre.SelectedItem.ToString() != "All")
             {
-                query += " AND title LIKE @title";
+                string genre = cbGenre.SelectedItem.ToString();
+                query += " AND genre = @genre";
             }
-            else if (cbSearchBy.Text == "Author")
+
+            if (cbAvailabilityStatus.Text != "All")
             {
-                query += " AND author LIKE @author";
-            }
-            else if (cbSearchBy.Text == "ISBN")
-            {
-                query += " AND isbn = @isbn";
-            }
-            else if (cbSearchBy.Text == "Publication Year")
-            {
-                query += " AND publication_year = @publicationyear";
+                if (cbAvailabilityStatus.Text == "Available")
+                {
+                    query += " AND quantity > 0";
+                }
+                else if (cbAvailabilityStatus.Text == "Unavailable")
+                {
+                    query += " AND quantity = 0";
+                }
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
-            if (cbSearchBy.Text == "Title")
+
+            if (!string.IsNullOrEmpty(tbSearch.Text))
             {
-                cmd.Parameters.AddWithValue("@title", "%" + search + "%");
+                string search = tbSearch.Text;
+                if (cbSearchBy.Text == "Title")
+                {
+                    cmd.Parameters.AddWithValue("@title", "%" + search + "%");
+                }
+                else if (cbSearchBy.Text == "Author")
+                {
+                    cmd.Parameters.AddWithValue("@author", "%" + search + "%");
+                }
+                else if (cbSearchBy.Text == "ISBN")
+                {
+                    cmd.Parameters.AddWithValue("@isbn", search);
+                }
+                else if (cbSearchBy.Text == "Publication Year")
+                {
+                    cmd.Parameters.AddWithValue("@publicationyear", search);
+                }
+                else if (cbSearchBy.Text == "ID")
+                {
+                    cmd.Parameters.AddWithValue("@search", search);
+                }
             }
-            else if (cbSearchBy.Text == "Author")
+
+            if (cbGenre.SelectedItem.ToString() != "All")
             {
-                cmd.Parameters.AddWithValue("@author", "%" + search + "%");
+                string genre = cbGenre.SelectedItem.ToString();
+                cmd.Parameters.AddWithValue("@genre", genre);
             }
-            else if (cbSearchBy.Text == "ISBN")
-            {
-                cmd.Parameters.AddWithValue("@isbn", search);
-            }
-            else if (cbSearchBy.Text == "Publication Year")
-            {
-                cmd.Parameters.AddWithValue("@publicationyear", search);
-            }
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvBook.DataSource = dt;
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            searchFilter();
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -299,24 +344,12 @@ namespace Library_Management_System
 
         private void cbGenre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string genre = cbGenre.SelectedItem.ToString();
-            if (genre == "All")
-            {
-                loadTable();
-            }
-            else
-            {
-                string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity] FROM tbl_book WHERE IsDeleted = 0 AND genre = @genre";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@genre", genre);
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgvBook.DataSource = dt;
-            }
+            searchFilter();
         }
 
+        private void cbAvailabilityStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            searchFilter();
+        }
     }
 }

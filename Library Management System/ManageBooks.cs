@@ -145,7 +145,7 @@ namespace Library_Management_System
                 dtpPublicationYear.Focus();
                 return;
             }
-            else if (numQuantity.Value <= 0)
+            else if (numQuantity.Value <= 0 && select != 2)
             {
                 MessageBox.Show("The Quantity must be greater than 0!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 numQuantity.Focus();
@@ -329,6 +329,10 @@ namespace Library_Management_System
             }
             else if (cbSearchBy.Text == "ID")
             {
+                if (!int.TryParse(search, out int id))
+                {
+                    return;
+                }
                 query += " AND book_id = @search";
             }
 

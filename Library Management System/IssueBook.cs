@@ -182,8 +182,8 @@ namespace Library_Management_System
             }
             else if (cbSearchBy1.Text == "ID")
             {
-                if (!int.TryParse(tbSearch1.Text, out int id))
-                {               
+                if (!int.TryParse(search, out int id))
+                {
                     return;
                 }
                 query += " AND member_id = @search";
@@ -229,6 +229,10 @@ namespace Library_Management_System
             }
             else if (cbSearchBy2.Text == "ID")
             {
+                if (!int.TryParse(search, out int id))
+                {
+                    return;
+                }
                 query += " AND book_id = @search";
             }
 

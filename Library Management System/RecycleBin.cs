@@ -336,6 +336,10 @@ namespace Library_Management_System
                     }
                     else if (cbSearchBy.Text == "ID")
                     {
+                        if (!int.TryParse(search, out int id))
+                        {
+                            return;
+                        }
                         query += " AND book_id = @search";
                     }
                     break;
@@ -348,6 +352,10 @@ namespace Library_Management_System
                     }
                     else if (cbSearchBy.Text == "ID")
                     {
+                        if (!int.TryParse(search, out int id))
+                        {
+                            return;
+                        }
                         query += " AND member_id = @search";
                     }
                     break;
@@ -364,6 +372,10 @@ namespace Library_Management_System
                     }
                     else if (cbSearchBy.Text == "ID")
                     {
+                        if (!int.TryParse(search, out int id))
+                        {
+                            return;
+                        }
                         query += " AND staff_id = @search";
                     }
                     break;
@@ -376,6 +388,10 @@ namespace Library_Management_System
                     }
                     else if (cbSearchBy.Text == "ID")
                     {
+                        if (!int.TryParse(search, out int id))
+                        {
+                            return;
+                        }
                         query += " AND genre_id = @search";
                     }
                     break;

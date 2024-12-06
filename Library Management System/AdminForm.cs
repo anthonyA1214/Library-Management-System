@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Library_Management_System
 {
@@ -65,9 +67,9 @@ namespace Library_Management_System
 
          private void loadCount()
         {
-            string query1 = "SELECT COUNT(*) from tbl_book";
-            string query2 = "SELECT COUNT(*) from tbl_member";
-            string query3 = "SELECT COUNT(*) from tbl_issue WHERE status = 'Issued'";
+            string query1 = "SELECT COUNT(*) FROM tbl_book";
+            string query2 = "SELECT COUNT(*) FROM tbl_member";
+            string query3 = "SELECT COUNT(*) FROM tbl_issue WHERE status = 'Issued'";
             string query4 = "SELECT COUNT(*) FROM tbl_issue WHERE return_date IS NULL AND due_date < GETDATE()";
 
             SqlCommand cmd1 = new SqlCommand(query1, conn);
@@ -95,7 +97,7 @@ namespace Library_Management_System
 
         private void loadTable()
         {
-            string issueQuery = "SELECT tbl_issue.issue_id AS [Issue ID], tbl_book.title AS [Book Title], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) AS [Member Name], tbl_issue.issue_date AS [Issue Date], tbl_issue.due_date AS [Due Date], tbl_issue.status AS [Loan Status], CASE WHEN tbl_issue.return_date IS NULL AND tbl_issue.due_date < GETDATE() THEN 'Overdue' WHEN tbl_issue.return_date IS NULL THEN 'Not Returned' WHEN tbl_issue.return_date <= tbl_issue.due_date THEN 'On Time' ELSE 'Late Return' END AS [Return Status] FROM tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE tbl_issue.return_date IS NULL OR tbl_issue.return_date <= tbl_issue.due_date";
+            string issueQuery = "SELECT tbl_issue.issue_id AS [Issue ID], tbl_book.title AS [Book Title], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) AS [Member Name], tbl_issue.issue_date AS [Issue Date], tbl_issue.due_date AS [Due Date], tbl_issue.status AS [Loan Status], CASE WHEN tbl_issue.return_date IS NULL AND tbl_issue.due_date < GETDATE() THEN 'Overdue' WHEN tbl_issue.return_date IS NULL THEN 'Not Returned' WHEN tbl_issue.return_date <= tbl_issue.due_date THEN 'On Time' ELSE 'Late Return' END AS [Return Status] FROM tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE tbl_issue.status = 'Issued'";
             dgvIssuedBook.DataSource = loadData(issueQuery);
             dgvIssuedBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -175,6 +177,7 @@ namespace Library_Management_System
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             if (activeForm != null) { activeForm.Close(); }
+            hideSubMenu();
         }
 
         private void btnManageBooks_Click(object sender, EventArgs e)
@@ -297,6 +300,44 @@ namespace Library_Management_System
         private void btnRecycleBin_Click(object sender, EventArgs e)
         {
             openForm(new RecycleBin());
+        }
+
+        private void autoLoadDashboard_Tick(object sender, EventArgs e)
+        {
+            loadCount();
+            loadBorrowerStatistics();
+            lblDateAndTime.Text = DateTime.Now.ToLongDateString() + " | " + DateTime.Now.ToLongTimeString();
+        }
+
+        private void loadBorrowerStatistics()
+        {
+            string query = "SELECT tbl_member.membership_type, COUNT(tbl_issue.issue_id) AS total_borrowed FROM tbl_member JOIN tbl_issue ON tbl_member.member_id = tbl_issue.member_id GROUP BY tbl_member.membership_type";
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            borrowerstatistics.Series.Clear();
+            borrowerstatistics.Titles.Clear();
+            borrowerstatistics.Titles.Add("Books Borrowed by Membership Type");
+
+            var series = new System.Windows.Forms.DataVisualization.Charting.Series("Total Borrowed")
+            {
+                ChartType = SeriesChartType.Column
+            };
+
+            while (dr.Read())
+            {
+                string membershipType = dr["membership_type"].ToString();
+                int totalBorrowed = Convert.ToInt32(dr["total_borrowed"]);
+
+                series.Points.AddXY(membershipType, totalBorrowed);
+            }
+
+            dr.Close();
+            conn.Close();
+
+            borrowerstatistics.Series.Add(series);
         }
     }
 }

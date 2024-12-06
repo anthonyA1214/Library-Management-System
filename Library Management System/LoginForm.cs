@@ -82,7 +82,7 @@ namespace Library_Management_System
                     }
                     else
                     {
-                        UserForm userForm = new UserForm();
+                        UserForm userForm = new UserForm(username);
                         userForm.Show();
                         this.Hide();
                     }

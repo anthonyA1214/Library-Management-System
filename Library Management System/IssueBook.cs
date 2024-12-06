@@ -130,6 +130,26 @@ namespace Library_Management_System
                     return;
                 }
 
+                string borrowingLimitQuery = "SELECT tbl_membership_type.borrowing_limit FROM tbl_member JOIN tbl_membership_type ON tbl_member.membership_type = tbl_membership_type.membership_type WHERE tbl_member.member_id = @memberid";
+
+                SqlCommand borrowingLimitCmd = new SqlCommand(borrowingLimitQuery, conn);
+                borrowingLimitCmd.Parameters.AddWithValue("@memberid", memberid);
+                int borrowingLimit = Convert.ToInt32(borrowingLimitCmd.ExecuteScalar());
+
+                string borrowedCountQuery = "SELECT COUNT(*) FROM tbl_issue WHERE member_id = @memberid AND status = 'Issued'";
+                SqlCommand borrowedCountCmd = new SqlCommand(borrowedCountQuery, conn);
+                borrowedCountCmd.Parameters.AddWithValue("@memberid", memberid);
+                int borrowedCount = Convert.ToInt32(borrowedCountCmd.ExecuteScalar());
+
+                if (borrowedCount >= borrowingLimit)
+                {
+                    MessageBox.Show($"This member has reached their borrowing limit of {borrowingLimit} books.",
+                                    "Borrowing Limit Reached",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
                 DialogResult dialogResult = MessageBox.Show("Are you sure you want to issue this book?", "Confirm Issuance", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dialogResult == DialogResult.Yes)

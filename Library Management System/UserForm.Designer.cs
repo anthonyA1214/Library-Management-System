@@ -42,6 +42,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnReports = new Guna.UI2.WinForms.Guna2Button();
             this.btnBooks = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
@@ -53,11 +56,11 @@
             this.btnMembers = new Guna.UI2.WinForms.Guna2Button();
             this.btnBorrowReturn = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMembersSubMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnManageMembers = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewRecords = new Guna.UI2.WinForms.Guna2Button();
             this.btnReturnBook = new Guna.UI2.WinForms.Guna2Button();
             this.btnIssueBook = new Guna.UI2.WinForms.Guna2Button();
             this.pnlBorrowReturnSubMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
             this.tlp4 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvIssuedBook = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -68,6 +71,7 @@
             this.lblMemberSeeAll = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddNewMember = new Guna.UI2.WinForms.Guna2Button();
             this.label13 = new System.Windows.Forms.Label();
             this.tlp3 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
@@ -75,7 +79,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.dgvBook = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblBookSeeAll = new System.Windows.Forms.Label();
-            this.btnAddNewBook = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             this.tlp2 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
@@ -115,7 +118,7 @@
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.pnlReportsSubMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.autoLoadCount = new System.Windows.Forms.Timer(this.components);
-            this.btnManageMembers = new Guna.UI2.WinForms.Guna2Button();
+            this.borrowerstatistics = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.pnlBooksSubMenu.SuspendLayout();
@@ -124,6 +127,7 @@
             this.tlp4.SuspendLayout();
             this.guna2Panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBook)).BeginInit();
+            this.guna2Panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.guna2Panel15.SuspendLayout();
             this.tlp3.SuspendLayout();
@@ -150,6 +154,7 @@
             this.pnlSideMenu.SuspendLayout();
             this.pnlSettingsSubMenu.SuspendLayout();
             this.pnlReportsSubMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.borrowerstatistics)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReports
@@ -172,6 +177,7 @@
             this.btnReports.TabIndex = 10;
             this.btnReports.Text = "Reports";
             this.btnReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnBooks
             // 
@@ -193,6 +199,7 @@
             this.btnBooks.TabIndex = 4;
             this.btnBooks.Text = "Books";
             this.btnBooks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // btnDashboard
             // 
@@ -214,6 +221,7 @@
             this.btnDashboard.TabIndex = 3;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // guna2Panel1
             // 
@@ -254,6 +262,7 @@
             this.btnInventory.TabIndex = 6;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // pnlBooksSubMenu
             // 
@@ -283,6 +292,7 @@
             this.btnMemberProfiles.TabIndex = 6;
             this.btnMemberProfiles.Text = "Member Profiles";
             this.btnMemberProfiles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMemberProfiles.Click += new System.EventHandler(this.btnMemberProfiles_Click);
             // 
             // btnMembers
             // 
@@ -304,6 +314,7 @@
             this.btnMembers.TabIndex = 6;
             this.btnMembers.Text = "Members";
             this.btnMembers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
             // btnBorrowReturn
             // 
@@ -325,6 +336,7 @@
             this.btnBorrowReturn.TabIndex = 8;
             this.btnBorrowReturn.Text = "Borrowing/Returning";
             this.btnBorrowReturn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBorrowReturn.Click += new System.EventHandler(this.btnBorrowReturn_Click);
             // 
             // pnlMembersSubMenu
             // 
@@ -336,6 +348,26 @@
             this.pnlMembersSubMenu.Name = "pnlMembersSubMenu";
             this.pnlMembersSubMenu.Size = new System.Drawing.Size(233, 85);
             this.pnlMembersSubMenu.TabIndex = 7;
+            // 
+            // btnManageMembers
+            // 
+            this.btnManageMembers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageMembers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageMembers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageMembers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageMembers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnManageMembers.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnManageMembers.Location = new System.Drawing.Point(0, 0);
+            this.btnManageMembers.Name = "btnManageMembers";
+            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnManageMembers.Size = new System.Drawing.Size(233, 40);
+            this.btnManageMembers.TabIndex = 5;
+            this.btnManageMembers.Text = "Manage Members";
+            this.btnManageMembers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
             // 
             // btnViewRecords
             // 
@@ -355,6 +387,7 @@
             this.btnViewRecords.TabIndex = 7;
             this.btnViewRecords.Text = "View Records";
             this.btnViewRecords.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnViewRecords.Click += new System.EventHandler(this.btnViewRecords_Click);
             // 
             // btnReturnBook
             // 
@@ -374,6 +407,7 @@
             this.btnReturnBook.TabIndex = 6;
             this.btnReturnBook.Text = "Return Book";
             this.btnReturnBook.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReturnBook.Click += new System.EventHandler(this.btnReturnBook_Click);
             // 
             // btnIssueBook
             // 
@@ -393,6 +427,7 @@
             this.btnIssueBook.TabIndex = 5;
             this.btnIssueBook.Text = "Issue Book";
             this.btnIssueBook.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnIssueBook.Click += new System.EventHandler(this.btnIssueBook_Click);
             // 
             // pnlBorrowReturnSubMenu
             // 
@@ -405,25 +440,6 @@
             this.pnlBorrowReturnSubMenu.Name = "pnlBorrowReturnSubMenu";
             this.pnlBorrowReturnSubMenu.Size = new System.Drawing.Size(233, 125);
             this.pnlBorrowReturnSubMenu.TabIndex = 9;
-            // 
-            // btnAddNewMember
-            // 
-            this.btnAddNewMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNewMember.AutoRoundedCorners = true;
-            this.btnAddNewMember.BorderRadius = 11;
-            this.btnAddNewMember.BorderThickness = 1;
-            this.btnAddNewMember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewMember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewMember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewMember.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddNewMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnAddNewMember.Location = new System.Drawing.Point(191, 9);
-            this.btnAddNewMember.Name = "btnAddNewMember";
-            this.btnAddNewMember.Size = new System.Drawing.Size(130, 25);
-            this.btnAddNewMember.TabIndex = 2;
-            this.btnAddNewMember.Text = "Add New Member";
             // 
             // tlp4
             // 
@@ -534,6 +550,7 @@
             this.btnIssueBook2.Size = new System.Drawing.Size(130, 25);
             this.btnIssueBook2.TabIndex = 2;
             this.btnIssueBook2.Text = "Issue Book";
+            this.btnIssueBook2.Click += new System.EventHandler(this.btnIssueBook2_Click);
             // 
             // label15
             // 
@@ -552,6 +569,7 @@
             this.guna2Panel14.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel14.BorderRadius = 20;
             this.guna2Panel14.BorderThickness = 1;
+            this.guna2Panel14.Controls.Add(this.borrowerstatistics);
             this.guna2Panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
             this.guna2Panel14.Location = new System.Drawing.Point(336, 3);
@@ -629,6 +647,7 @@
             this.lblMemberSeeAll.Size = new System.Drawing.Size(45, 15);
             this.lblMemberSeeAll.TabIndex = 3;
             this.lblMemberSeeAll.Text = "See All";
+            this.lblMemberSeeAll.Click += new System.EventHandler(this.lblMemberSeeAll_Click);
             // 
             // label10
             // 
@@ -657,6 +676,26 @@
             this.guna2Panel15.Name = "guna2Panel15";
             this.guna2Panel15.Size = new System.Drawing.Size(327, 244);
             this.guna2Panel15.TabIndex = 1;
+            // 
+            // btnAddNewMember
+            // 
+            this.btnAddNewMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNewMember.AutoRoundedCorners = true;
+            this.btnAddNewMember.BorderRadius = 11;
+            this.btnAddNewMember.BorderThickness = 1;
+            this.btnAddNewMember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewMember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewMember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewMember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewMember.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewMember.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNewMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAddNewMember.Location = new System.Drawing.Point(191, 9);
+            this.btnAddNewMember.Name = "btnAddNewMember";
+            this.btnAddNewMember.Size = new System.Drawing.Size(130, 25);
+            this.btnAddNewMember.TabIndex = 2;
+            this.btnAddNewMember.Text = "Add New Member";
+            this.btnAddNewMember.Click += new System.EventHandler(this.btnAddNewMember_Click);
             // 
             // label13
             // 
@@ -839,25 +878,7 @@
             this.lblBookSeeAll.Size = new System.Drawing.Size(45, 15);
             this.lblBookSeeAll.TabIndex = 3;
             this.lblBookSeeAll.Text = "See All";
-            // 
-            // btnAddNewBook
-            // 
-            this.btnAddNewBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNewBook.AutoRoundedCorners = true;
-            this.btnAddNewBook.BorderRadius = 11;
-            this.btnAddNewBook.BorderThickness = 1;
-            this.btnAddNewBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewBook.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewBook.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddNewBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnAddNewBook.Location = new System.Drawing.Point(192, 9);
-            this.btnAddNewBook.Name = "btnAddNewBook";
-            this.btnAddNewBook.Size = new System.Drawing.Size(130, 25);
-            this.btnAddNewBook.TabIndex = 2;
-            this.btnAddNewBook.Text = "Add New Book";
+            this.lblBookSeeAll.Click += new System.EventHandler(this.lblBookSeeAll_Click);
             // 
             // guna2Panel11
             // 
@@ -867,7 +888,6 @@
             this.guna2Panel11.BorderThickness = 1;
             this.guna2Panel11.Controls.Add(this.dgvBook);
             this.guna2Panel11.Controls.Add(this.lblBookSeeAll);
-            this.guna2Panel11.Controls.Add(this.btnAddNewBook);
             this.guna2Panel11.Controls.Add(this.label13);
             this.guna2Panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
@@ -918,6 +938,7 @@
             this.btnMemberActivityReports.TabIndex = 6;
             this.btnMemberActivityReports.Text = "Member Activity Reports";
             this.btnMemberActivityReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMemberActivityReports.Click += new System.EventHandler(this.btnMemberActivityReports_Click);
             // 
             // guna2PictureBox2
             // 
@@ -1224,9 +1245,9 @@
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(186)))));
             this.lblName.Location = new System.Drawing.Point(101, 9);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(124, 45);
+            this.lblName.Size = new System.Drawing.Size(93, 45);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "admin!";
+            this.lblName.Text = "user!";
             // 
             // label1
             // 
@@ -1242,6 +1263,7 @@
             // autoLoadDashboard
             // 
             this.autoLoadDashboard.Enabled = true;
+            this.autoLoadDashboard.Tick += new System.EventHandler(this.autoLoadDashboard_Tick);
             // 
             // btnCirculationReports
             // 
@@ -1261,6 +1283,7 @@
             this.btnCirculationReports.TabIndex = 5;
             this.btnCirculationReports.Text = "Circulation Reports";
             this.btnCirculationReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCirculationReports.Click += new System.EventHandler(this.btnCirculationReports_Click);
             // 
             // btnManageGenre
             // 
@@ -1280,6 +1303,7 @@
             this.btnManageGenre.TabIndex = 5;
             this.btnManageGenre.Text = "Manage Genre";
             this.btnManageGenre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageGenre.Click += new System.EventHandler(this.btnManageGenre_Click);
             // 
             // pnlSideMenu
             // 
@@ -1324,6 +1348,7 @@
             this.btnLogout.TabIndex = 21;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pnlSettingsSubMenu
             // 
@@ -1355,6 +1380,7 @@
             this.btnSettings.TabIndex = 19;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // pnlReportsSubMenu
             // 
@@ -1371,24 +1397,30 @@
             // 
             this.autoLoadCount.Enabled = true;
             // 
-            // btnManageMembers
+            // borrowerstatistics
             // 
-            this.btnManageMembers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnManageMembers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnManageMembers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnManageMembers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnManageMembers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageMembers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
-            this.btnManageMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
-            this.btnManageMembers.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
-            this.btnManageMembers.Location = new System.Drawing.Point(0, 0);
-            this.btnManageMembers.Name = "btnManageMembers";
-            this.btnManageMembers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnManageMembers.Size = new System.Drawing.Size(233, 40);
-            this.btnManageMembers.TabIndex = 5;
-            this.btnManageMembers.Text = "Manage Members";
-            this.btnManageMembers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.borrowerstatistics.BackColor = System.Drawing.Color.Transparent;
+            this.borrowerstatistics.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.borrowerstatistics.ChartAreas.Add(chartArea1);
+            this.borrowerstatistics.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            legend1.InterlacedRowsColor = System.Drawing.Color.Transparent;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleBackColor = System.Drawing.Color.Transparent;
+            this.borrowerstatistics.Legends.Add(legend1);
+            this.borrowerstatistics.Location = new System.Drawing.Point(0, 0);
+            this.borrowerstatistics.Name = "borrowerstatistics";
+            this.borrowerstatistics.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.borrowerstatistics.Series.Add(series1);
+            this.borrowerstatistics.Size = new System.Drawing.Size(328, 244);
+            this.borrowerstatistics.TabIndex = 5;
             // 
             // UserForm
             // 
@@ -1398,7 +1430,9 @@
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlSideMenu);
             this.Name = "UserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserForm";
+            this.Load += new System.EventHandler(this.UserForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             this.pnlBooksSubMenu.ResumeLayout(false);
@@ -1408,6 +1442,7 @@
             this.guna2Panel13.ResumeLayout(false);
             this.guna2Panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBook)).EndInit();
+            this.guna2Panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
             this.guna2Panel15.ResumeLayout(false);
             this.guna2Panel15.PerformLayout();
@@ -1442,6 +1477,7 @@
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSettingsSubMenu.ResumeLayout(false);
             this.pnlReportsSubMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.borrowerstatistics)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1463,7 +1499,6 @@
         private Guna.UI2.WinForms.Guna2Button btnReturnBook;
         private Guna.UI2.WinForms.Guna2Button btnIssueBook;
         private Guna.UI2.WinForms.Guna2Panel pnlBorrowReturnSubMenu;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
         private System.Windows.Forms.TableLayoutPanel tlp4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
         private Guna.UI2.WinForms.Guna2DataGridView dgvIssuedBook;
@@ -1481,7 +1516,6 @@
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2DataGridView dgvBook;
         private System.Windows.Forms.Label lblBookSeeAll;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewBook;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private System.Windows.Forms.TableLayoutPanel tlp2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
@@ -1522,5 +1556,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnlReportsSubMenu;
         private System.Windows.Forms.Timer autoLoadCount;
         private Guna.UI2.WinForms.Guna2Button btnManageMembers;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewMember;
+        private System.Windows.Forms.DataVisualization.Charting.Chart borrowerstatistics;
     }
 }

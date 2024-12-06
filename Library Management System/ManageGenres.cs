@@ -141,7 +141,7 @@ namespace Library_Management_System
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            string query = "SELECT genre_name AS [Genre Name] from tbl_genre WHERE IsDeleted = 0 AND genre_name LIKE @search";
+            string query = "SELECT genre_id AS [Genre ID], genre_name AS [Genre Name] from tbl_genre WHERE IsDeleted = 0 AND genre_name LIKE @search";
             string search = tbSearch.Text;
 
             if (string.IsNullOrEmpty(tbSearch.Text))
@@ -165,6 +165,14 @@ namespace Library_Management_System
         private void pbExit2_Click(object sender, EventArgs e)
         {
             pnlAddGenre.Visible = false;
+        }
+
+        private void dgvGenre_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
+        {
+            if (dgvGenre.Columns[e.ColumnIndex].Name == "delete")
+            {
+                e.ToolTipText = "Delete";
+            }
         }
     }
 }

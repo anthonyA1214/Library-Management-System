@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -80,6 +81,24 @@ namespace Library_Management_System
             string query;
             try
             {
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+                Match match = regex.Match(email);
+                if (!match.Success)
+                {
+                    MessageBox.Show("Invalid email format. Please ensure the email includes an '@' symbol and a valid domain (e.g., 'example@domain.com').", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tbEmail.Focus();
+                    return;
+                }
+
+                Regex regex2 = new Regex(@"^09[\d]{9}$", RegexOptions.IgnoreCase);
+                Match match2 = regex2.Match(contactnumber);
+                if (!match2.Success)
+                {
+                    MessageBox.Show("Invalid contact number format. Please ensure the number starts with '09' and is 11 digits long (e.g., '09123456789').", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tbContactNumber.Focus();
+                    return;
+                }          
+
                 conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 query = "INSERT INTO tbl_staff (first_name, last_name, username, password, email, contact_number) VALUES(@firstname, @lastname, @username, @password, @email, @contactnumber)";

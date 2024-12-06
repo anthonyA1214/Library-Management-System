@@ -17,11 +17,6 @@ namespace Library_Management_System
             InitializeComponent();
         }
 
-        private void dgvGenre_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
         {
 

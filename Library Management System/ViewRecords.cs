@@ -23,7 +23,7 @@ namespace Library_Management_System
 
         private void loadTable()
         {
-            string query = "SELECT tbl_issue.issue_id AS [Issue ID], tbl_book.title AS [Book Title], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) AS [Member Name], tbl_issue.issue_date AS [Issue Date], tbl_issue.due_date AS [Due Date], tbl_issue.status AS [Loan Status], CASE WHEN tbl_issue.return_date IS NULL AND tbl_issue.due_date < GETDATE() THEN 'Overdue' WHEN tbl_issue.return_date IS NULL THEN 'Not Returned' WHEN tbl_issue.return_date <= tbl_issue.due_date THEN 'On Time' ELSE 'Late Return' END AS [Return Status] FROM tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE tbl_issue.return_date IS NULL OR tbl_issue.return_date <= tbl_issue.due_date";
+            string query = "SELECT tbl_issue.issue_id AS [Issue ID], tbl_book.title AS [Book Title], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) AS [Member Name], tbl_issue.issue_date AS [Issue Date], tbl_issue.due_date AS [Due Date], tbl_issue.return_date AS [Return Date], tbl_issue.status AS [Loan Status], CASE WHEN tbl_issue.return_date IS NULL AND tbl_issue.due_date < GETDATE() THEN 'Overdue' WHEN tbl_issue.return_date IS NULL THEN 'Not Returned' WHEN tbl_issue.return_date <= tbl_issue.due_date THEN 'On Time' ELSE 'Late Return' END AS [Return Status] FROM tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE tbl_issue.return_date IS NULL OR tbl_issue.return_date <= tbl_issue.due_date";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -45,67 +45,42 @@ namespace Library_Management_System
 
         private void searchFilter()
         {
-            string searchQuery = "SELECT tbl_issue.issue_id AS [Issue ID], tbl_book.title AS [Book Title], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) AS [Member Name], tbl_issue.issue_date AS [Issue Date], tbl_issue.due_date AS [Due Date], tbl_issue.status AS [Loan Status], CASE WHEN tbl_issue.return_date IS NULL AND tbl_issue.due_date < GETDATE() THEN 'Overdue' WHEN tbl_issue.return_date IS NULL THEN 'Not Returned' WHEN tbl_issue.return_date <= tbl_issue.due_date THEN 'On Time' ELSE 'Late Return' END AS [Return Status] FROM tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE tbl_issue.return_date IS NULL OR tbl_issue.return_date <= tbl_issue.due_date";
+            string searchQuery = "SELECT tbl_issue.issue_id AS [Issue ID], tbl_book.title AS [Book Title], CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) AS [Member Name], tbl_issue.issue_date AS [Issue Date], tbl_issue.due_date AS [Due Date], tbl_issue.return_date AS [Return Date], tbl_issue.status AS [Loan Status], CASE WHEN tbl_issue.return_date IS NULL AND tbl_issue.due_date < GETDATE() THEN 'Overdue' WHEN tbl_issue.return_date IS NULL THEN 'Not Returned' WHEN tbl_issue.return_date <= tbl_issue.due_date THEN 'On Time' ELSE 'Late Return' END AS [Return Status] FROM tbl_issue INNER JOIN tbl_book ON tbl_issue.book_id = tbl_book.book_id INNER JOIN tbl_member ON tbl_issue.member_id = tbl_member.member_id WHERE 1 = 1";  // CHANGED: WHERE 1 = 1 makes it easier to append conditions
 
             string search = tbSearch.Text;
             string status = cbLoanStatus.Text;
             string startDate = dtpStartDate.Value.ToString("MM/dd/yyyy");
             string endDate = dtpEndDate.Value.ToString("MM/dd/yyyy");
 
-            if (string.IsNullOrEmpty(search))
+            if (!string.IsNullOrEmpty(search))
             {
-                if (cbLoanStatus.Text != "All")
+                if (cbSearchBy.Text == "Member Name")
                 {
-                    searchQuery += " AND tbl_issue.status = @status";
+                    searchQuery += " AND CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) LIKE @search";
                 }
-
-                if (cbDateRange.Text != "All")
+                else if (cbSearchBy.Text == "Member ID")
                 {
-                    if (cbDateRange.Text == "Last 7 Days")
+                    if (!int.TryParse(search, out int id))
                     {
-                        searchQuery += " AND tbl_issue.issue_date >= DATEADD(day, -7, GETDATE())";
+                        return;
                     }
-                    else if (cbDateRange.Text == "This Month")
-                    {
-                        searchQuery += " AND YEAR(tbl_issue.issue_date) = YEAR(GETDATE()) AND MONTH(tbl_issue.due_date) = MONTH(GETDATE())";
-                    }
-                    else if (cbDateRange.Text == "This Year")
-                    {
-                        searchQuery += " AND YEAR(tbl_issue.issue_date) = YEAR(GETDATE())";
-                    }
-                    else if (cbDateRange.Text == "Custom Range")
-                    {
-                        searchQuery += " AND tbl_issue.issue_date BETWEEN @startDate AND @endDate";
-                    }
+                    searchQuery += " AND tbl_issue.member_id = @search";
                 }
-            }
-
-            if (cbSearchBy.Text == "Member Name")
-            {
-                searchQuery += " AND CONCAT(tbl_member.first_name, ' ', tbl_member.last_name) LIKE @search";
-            }
-            else if (cbSearchBy.Text == "Member ID")
-            {
-                if (!int.TryParse(search, out int id))
+                else if (cbSearchBy.Text == "Book Title")
                 {
-                    return;
+                    searchQuery += " AND tbl_book.title LIKE @search";
                 }
-                searchQuery += " AND tbl_issue.member_id = @search";
-            }
-            else if (cbSearchBy.Text == "Book Title")
-            {
-                searchQuery += " AND tbl_book.title LIKE @search";
-            }
-            else if (cbSearchBy.Text == "Book ID")
-            {
-                if (!int.TryParse(search, out int bookId))
+                else if (cbSearchBy.Text == "Book ID")
                 {
-                    return;
+                    if (!int.TryParse(search, out int id))
+                    {
+                        return;
+                    }
+                    searchQuery += " AND tbl_issue.book_id = @search";
                 }
-                searchQuery += " AND tbl_issue.book_id = @search";
             }
 
-            if (cbLoanStatus.Text != "All")
+            if (cbLoanStatus.Text != "All") 
             {
                 searchQuery += " AND tbl_issue.status = @status";
             }
@@ -126,48 +101,33 @@ namespace Library_Management_System
                 }
                 else if (cbDateRange.Text == "Custom Range")
                 {
-                    searchQuery += " AND tbl_issue.issue_date BETWEEN @startDate AND @endDate";
+                    searchQuery += " AND tbl_issue.issue_date BETWEEN @startdate AND @enddate";
                 }
             }
 
             SqlCommand cmd = new SqlCommand(searchQuery, conn);
-            if (cbSearchBy.Text == "Member Name")
+
+            if (!string.IsNullOrEmpty(search))
             {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy.Text == "Member ID")
-            {
-                if (!int.TryParse(search, out int id))
+                if (cbSearchBy.Text == "Member Name" || cbSearchBy.Text == "Book Title")
                 {
-                    return;
+                    cmd.Parameters.AddWithValue("@search", "%" + search + "%");
                 }
-                cmd.Parameters.AddWithValue("@search", search);
-            }
-            else if (cbSearchBy.Text == "Book Title")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy.Text == "Book ID")
-            {
-                if (!int.TryParse(search, out int bookId))
+                else if (cbSearchBy.Text == "Member ID" || cbSearchBy.Text == "Book ID")
                 {
-                    return;
+                    cmd.Parameters.AddWithValue("@search", search); 
                 }
-                cmd.Parameters.AddWithValue("@search", search);
             }
-            
+
             if (cbLoanStatus.Text != "All")
             {
                 cmd.Parameters.AddWithValue("@status", status);
             }
-          
-            if (cbDateRange.Text != "All")
+
+            if (cbDateRange.Text == "Custom Range") 
             {
-                if (cbDateRange.Text == "Custom Range")
-                {
-                    cmd.Parameters.AddWithValue("@startDate", startDate);
-                    cmd.Parameters.AddWithValue("@endDate", endDate);
-                }
+                cmd.Parameters.AddWithValue("@startdate", startDate);
+                cmd.Parameters.AddWithValue("@enddate", endDate);
             }
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -178,12 +138,6 @@ namespace Library_Management_System
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(tbSearch.Text))
-            {
-                loadTable();
-                return;
-            }
-
             searchFilter();
         }
 

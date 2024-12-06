@@ -16,5 +16,10 @@ namespace Library_Management_System
         {
             InitializeComponent();
         }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

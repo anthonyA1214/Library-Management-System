@@ -130,6 +130,12 @@ namespace Library_Management_System
                     return;
                 }
 
+                if (duedate <= issuedate)
+                {
+                    MessageBox.Show("Due date must be later than the issue date.", "Invalid Due Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 string borrowingLimitQuery = "SELECT tbl_membership_type.borrowing_limit FROM tbl_member JOIN tbl_membership_type ON tbl_member.membership_type = tbl_membership_type.membership_type WHERE tbl_member.member_id = @memberid";
 
                 SqlCommand borrowingLimitCmd = new SqlCommand(borrowingLimitQuery, conn);

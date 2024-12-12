@@ -192,7 +192,7 @@ namespace Library_Management_System
 
         private void btnManageMembers_Click(object sender, EventArgs e)
         {
-            openForm(new ManageMembers());
+            openForm(new ManageMembers("Admin"));
         }
 
         private void btnMemberProfiles_Click(object sender, EventArgs e)
@@ -259,7 +259,7 @@ namespace Library_Management_System
 
         private void btnAddNewMember_Click(object sender, EventArgs e)
         {
-            openForm(new ManageMembers());
+            openForm(new ManageMembers("Admin"));
         }
 
         private void btnAddNewBook_Click(object sender, EventArgs e)
@@ -294,7 +294,7 @@ namespace Library_Management_System
 
         private void btnManageGenre_Click(object sender, EventArgs e)
         {
-            openForm(new ManageGenres());
+            openForm(new ManageGenres("Admin"));
         }
 
         private void btnRecycleBin_Click(object sender, EventArgs e)

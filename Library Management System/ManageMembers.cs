@@ -18,9 +18,25 @@ namespace Library_Management_System
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
         int select, memberid, checkrow;
 
-        public ManageMembers()
+        private string userRole;
+
+        public ManageMembers(string userrole)
         {
             InitializeComponent();
+            userRole = userrole;
+        }
+
+
+        private void HandleLogin(string userRole)
+        {
+            if (userRole == "Staff")
+            {
+                dgvMember.Columns["delete"].Visible = false;
+            }
+            else if (userRole == "Admin")
+            {
+                dgvMember.Columns["delete"].Visible = true;
+            }
         }
 
         private void clearTexts()
@@ -68,6 +84,7 @@ namespace Library_Management_System
             }
             dgvMember.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvMember.ColumnHeadersDefaultCellStyle.BackColor;
             dgvMember.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvMember.ColumnHeadersDefaultCellStyle.ForeColor;
+            HandleLogin(userRole);
         }
 
         private void ManageMembers_Load(object sender, EventArgs e)

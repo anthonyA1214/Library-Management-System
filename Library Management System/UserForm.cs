@@ -181,7 +181,7 @@ namespace Library_Management_System
 
         private void btnManageMembers_Click(object sender, EventArgs e)
         {
-            openForm(new ManageMembers());
+            openForm(new ManageMembers("Staff"));
         }
 
         private void btnMemberProfiles_Click(object sender, EventArgs e)
@@ -241,7 +241,7 @@ namespace Library_Management_System
 
         private void btnAddNewMember_Click(object sender, EventArgs e)
         {
-            openForm(new ManageMembers());
+            openForm(new ManageMembers("Staff"));
         }
 
         private void lblMemberSeeAll_Click(object sender, EventArgs e)
@@ -261,7 +261,7 @@ namespace Library_Management_System
 
         private void btnManageGenre_Click(object sender, EventArgs e)
         {
-            openForm(new ManageGenres());
+            openForm(new ManageGenres("Staff"));
         }
 
         private void autoLoadDashboard_Tick(object sender, EventArgs e)

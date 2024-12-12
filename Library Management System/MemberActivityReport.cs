@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -81,6 +82,67 @@ namespace Library_Management_System
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvMember.DataSource = dt;
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (dgvMember.Rows.Count == 0)
+            {
+                MessageBox.Show("No data to export!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "Excel Workbook | *.xlsx",
+                Title = "Save Excel File",
+                FileName = "MemberActivityReport.xlsx"
+            })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (XLWorkbook workbook = new XLWorkbook())
+                        {
+                            var worksheet = workbook.Worksheets.Add("MemberActivityReport");
+
+                            int colIndex = 1;
+                            for (int i = 0; i < dgvMember.Columns.Count; i++)
+                            {
+                                if (dgvMember.Columns[i] is DataGridViewImageColumn)
+                                    continue;
+
+                                worksheet.Cell(1, colIndex).Value = dgvMember.Columns[i].HeaderText;
+                                colIndex++;
+                            }
+
+                            for (int i = 0; i < dgvMember.Rows.Count; i++)
+                            {
+                                colIndex = 1;
+                                for (int j = 0; j < dgvMember.Columns.Count; j++)
+                                {
+                                    if (dgvMember.Columns[j] is DataGridViewImageColumn)
+                                        continue;
+
+                                    if (dgvMember.Rows[i].Cells[j].Value != null)
+                                    {
+                                        worksheet.Cell(i + 2, colIndex).Value = dgvMember.Rows[i].Cells[j].Value.ToString();
+                                    }
+                                    colIndex++;
+                                }
+                            }
+
+                            workbook.SaveAs(sfd.FileName);
+                        }
+                        MessageBox.Show("Export successful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }

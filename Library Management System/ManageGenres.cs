@@ -13,9 +13,24 @@ namespace Library_Management_System
 {
     public partial class ManageGenres : Form
     {
-        public ManageGenres()
+        private string userRole;
+
+        public ManageGenres(string userrole)
         {
             InitializeComponent();
+            userRole = userrole;
+        }
+
+        private void HandleLogin(string userRole)
+        {
+            if (userRole == "Staff")
+            {
+                dgvGenre.Columns["delete"].Visible = false;
+            }
+            else if (userRole == "Admin")
+            {
+                dgvGenre.Columns["delete"].Visible = true;
+            }
         }
 
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
@@ -42,6 +57,7 @@ namespace Library_Management_System
             {
                 dgvGenre.Columns.Add(deleteImgCol);
             }
+            HandleLogin(userRole);
         }
 
         private void clearTexts()

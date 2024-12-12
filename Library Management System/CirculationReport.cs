@@ -1,4 +1,5 @@
-﻿using DocumentFormat.OpenXml.Office2016.Drawing.Charts;
+﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Office2016.Drawing.Charts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,7 +49,7 @@ namespace Library_Management_System
             dgvIssue.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvIssue.ColumnHeadersDefaultCellStyle.ForeColor;
         }
 
-       
+
 
         private void CirculationReport_Load(object sender, EventArgs e)
         {
@@ -80,7 +81,7 @@ namespace Library_Management_System
                     query += " AND tbl_book.book_id = @search";
                 }
             }
-    
+
             SqlCommand cmd = new SqlCommand(query, conn);
 
             if (!string.IsNullOrEmpty(search))
@@ -94,7 +95,7 @@ namespace Library_Management_System
                     cmd.Parameters.AddWithValue("@search", search);
                 }
             }
-            
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -104,6 +105,67 @@ namespace Library_Management_System
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
             searchFilter();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (dgvIssue.Rows.Count == 0)
+            {
+                MessageBox.Show("No data to export!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "Excel Workbook | *.xlsx",
+                Title = "Save Excel File",
+                FileName = "CirculationReport.xlsx"
+            })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (XLWorkbook workbook = new XLWorkbook())
+                        {
+                            var worksheet = workbook.Worksheets.Add("CirculationReport");
+
+                            int colIndex = 1;
+                            for (int i = 0; i < dgvIssue.Columns.Count; i++)
+                            {
+                                if (dgvIssue.Columns[i] is DataGridViewImageColumn)
+                                    continue;
+
+                                worksheet.Cell(1, colIndex).Value = dgvIssue.Columns[i].HeaderText;
+                                colIndex++;
+                            }
+
+                            for (int i = 0; i < dgvIssue.Rows.Count; i++)
+                            {
+                                colIndex = 1;
+                                for (int j = 0; j < dgvIssue.Columns.Count; j++)
+                                {
+                                    if (dgvIssue.Columns[j] is DataGridViewImageColumn)
+                                        continue;
+
+                                    if (dgvIssue.Rows[i].Cells[j].Value != null)
+                                    {
+                                        worksheet.Cell(i + 2, colIndex).Value = dgvIssue.Rows[i].Cells[j].Value.ToString();
+                                    }
+                                    colIndex++;
+                                }
+                            }
+
+                            workbook.SaveAs(sfd.FileName);
+                        }
+                        MessageBox.Show("Export successful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }

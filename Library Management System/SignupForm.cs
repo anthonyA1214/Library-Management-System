@@ -139,5 +139,20 @@ namespace Library_Management_System
                 conn.Close();
             }                     
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }         
 }

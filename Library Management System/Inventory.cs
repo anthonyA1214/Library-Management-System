@@ -102,13 +102,17 @@ namespace Library_Management_System
             {
                 if (int.TryParse(e.Value.ToString(), out int quantity))
                 {
-                    if (quantity < 5)
+                    if (quantity == 0)
                     {
-                        dgvBook.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
+                        dgvBook.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightCoral; 
+                    }
+                    else if (quantity < 5)
+                    {
+                        dgvBook.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 153); 
                     }
                     else
                     {
-                        dgvBook.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(255, 248, 225);
+                        dgvBook.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(255, 248, 225); 
                     }
                 }
             }

@@ -299,7 +299,7 @@ namespace Library_Management_System
 
         private void btnRecycleBin_Click(object sender, EventArgs e)
         {
-            openForm(new RecycleBin());
+            openForm(new Archive());
         }
 
         private void autoLoadDashboard_Tick(object sender, EventArgs e)

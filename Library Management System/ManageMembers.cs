@@ -272,6 +272,24 @@ namespace Library_Management_System
 
             try
             {
+                Regex nameRegex = new Regex(@"^[a-zA-Z\s]+$", RegexOptions.IgnoreCase);
+
+                Match matchFirstName = nameRegex.Match(firstname);
+                if (!matchFirstName.Success)
+                {
+                    MessageBox.Show("First name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tbFirstName.Focus();
+                    return;
+                }
+
+                Match matchLastName = nameRegex.Match(lastname);
+                if (!matchLastName.Success)
+                {
+                    MessageBox.Show("Last name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tbLastName.Focus();
+                    return;
+                }
+
                 Regex regex = new Regex(@"^09[\d]{9}$", RegexOptions.IgnoreCase);
                 Match match = regex.Match(contactnumber);
                 if (!match.Success)

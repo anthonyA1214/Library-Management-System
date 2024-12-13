@@ -32,6 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,9 +45,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.autoLoadDashboard = new System.Windows.Forms.Timer(this.components);
             this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.tlp4 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,6 +53,7 @@
             this.btnIssueBook2 = new Guna.UI2.WinForms.Guna2Button();
             this.label15 = new System.Windows.Forms.Label();
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
+            this.borrowerstatistics = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tlp3 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvOverdueBook = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -98,13 +99,13 @@
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSettingsSubMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnRecycleBin = new Guna.UI2.WinForms.Guna2Button();
+            this.btnArchive = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageGenre = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.pnlUserManagementSubMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnStaffApproval = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageStaffs = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUserManagement = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStaffManagement = new Guna.UI2.WinForms.Guna2Button();
             this.pnlReportsSubMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnMemberActivityReports = new Guna.UI2.WinForms.Guna2Button();
             this.btnCirculationReports = new Guna.UI2.WinForms.Guna2Button();
@@ -125,12 +126,12 @@
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.borrowerstatistics = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlContainer.SuspendLayout();
             this.tlp4.SuspendLayout();
             this.guna2Panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBook)).BeginInit();
             this.guna2Panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.borrowerstatistics)).BeginInit();
             this.tlp3.SuspendLayout();
             this.guna2Panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOverdueBook)).BeginInit();
@@ -162,7 +163,6 @@
             this.pnlBooksSubMenu.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.borrowerstatistics)).BeginInit();
             this.SuspendLayout();
             // 
             // autoLoadDashboard
@@ -322,6 +322,31 @@
             this.guna2Panel14.Name = "guna2Panel14";
             this.guna2Panel14.Size = new System.Drawing.Size(328, 244);
             this.guna2Panel14.TabIndex = 3;
+            // 
+            // borrowerstatistics
+            // 
+            this.borrowerstatistics.BackColor = System.Drawing.Color.Transparent;
+            this.borrowerstatistics.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.borrowerstatistics.ChartAreas.Add(chartArea1);
+            this.borrowerstatistics.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            legend1.InterlacedRowsColor = System.Drawing.Color.Transparent;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleBackColor = System.Drawing.Color.Transparent;
+            this.borrowerstatistics.Legends.Add(legend1);
+            this.borrowerstatistics.Location = new System.Drawing.Point(0, 0);
+            this.borrowerstatistics.Name = "borrowerstatistics";
+            this.borrowerstatistics.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.borrowerstatistics.Series.Add(series1);
+            this.borrowerstatistics.Size = new System.Drawing.Size(328, 244);
+            this.borrowerstatistics.TabIndex = 4;
             // 
             // tlp3
             // 
@@ -1003,7 +1028,7 @@
             this.pnlSideMenu.Controls.Add(this.pnlSettingsSubMenu);
             this.pnlSideMenu.Controls.Add(this.btnSettings);
             this.pnlSideMenu.Controls.Add(this.pnlUserManagementSubMenu);
-            this.pnlSideMenu.Controls.Add(this.btnUserManagement);
+            this.pnlSideMenu.Controls.Add(this.btnStaffManagement);
             this.pnlSideMenu.Controls.Add(this.pnlReportsSubMenu);
             this.pnlSideMenu.Controls.Add(this.btnReports);
             this.pnlSideMenu.Controls.Add(this.pnlBorrowReturnSubMenu);
@@ -1044,7 +1069,7 @@
             // 
             // pnlSettingsSubMenu
             // 
-            this.pnlSettingsSubMenu.Controls.Add(this.btnRecycleBin);
+            this.pnlSettingsSubMenu.Controls.Add(this.btnArchive);
             this.pnlSettingsSubMenu.Controls.Add(this.btnManageGenre);
             this.pnlSettingsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSettingsSubMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
@@ -1053,25 +1078,25 @@
             this.pnlSettingsSubMenu.Size = new System.Drawing.Size(233, 85);
             this.pnlSettingsSubMenu.TabIndex = 20;
             // 
-            // btnRecycleBin
+            // btnArchive
             // 
-            this.btnRecycleBin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRecycleBin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRecycleBin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRecycleBin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRecycleBin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRecycleBin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
-            this.btnRecycleBin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecycleBin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
-            this.btnRecycleBin.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
-            this.btnRecycleBin.Location = new System.Drawing.Point(0, 40);
-            this.btnRecycleBin.Name = "btnRecycleBin";
-            this.btnRecycleBin.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnRecycleBin.Size = new System.Drawing.Size(233, 40);
-            this.btnRecycleBin.TabIndex = 6;
-            this.btnRecycleBin.Text = "Recycle Bin";
-            this.btnRecycleBin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRecycleBin.Click += new System.EventHandler(this.btnRecycleBin_Click);
+            this.btnArchive.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnArchive.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnArchive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnArchive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnArchive.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnArchive.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(154)))), ((int)(((byte)(91)))));
+            this.btnArchive.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArchive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.btnArchive.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(132)))), ((int)(((byte)(77)))));
+            this.btnArchive.Location = new System.Drawing.Point(0, 40);
+            this.btnArchive.Name = "btnArchive";
+            this.btnArchive.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnArchive.Size = new System.Drawing.Size(233, 40);
+            this.btnArchive.TabIndex = 6;
+            this.btnArchive.Text = "Archive";
+            this.btnArchive.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnArchive.Click += new System.EventHandler(this.btnRecycleBin_Click);
             // 
             // btnManageGenre
             // 
@@ -1166,27 +1191,27 @@
             this.btnManageStaffs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageStaffs.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
-            // btnUserManagement
+            // btnStaffManagement
             // 
-            this.btnUserManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUserManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUserManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUserManagement.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
-            this.btnUserManagement.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
-            this.btnUserManagement.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
-            this.btnUserManagement.Image = global::Library_Management_System.Properties.Resources.manageaccounts;
-            this.btnUserManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUserManagement.Location = new System.Drawing.Point(0, 755);
-            this.btnUserManagement.Name = "btnUserManagement";
-            this.btnUserManagement.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnUserManagement.Size = new System.Drawing.Size(233, 45);
-            this.btnUserManagement.TabIndex = 12;
-            this.btnUserManagement.Text = "User Management";
-            this.btnUserManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
+            this.btnStaffManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStaffManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStaffManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStaffManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStaffManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStaffManagement.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnStaffManagement.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnStaffManagement.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnStaffManagement.Image = global::Library_Management_System.Properties.Resources.manageaccounts;
+            this.btnStaffManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStaffManagement.Location = new System.Drawing.Point(0, 755);
+            this.btnStaffManagement.Name = "btnStaffManagement";
+            this.btnStaffManagement.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnStaffManagement.Size = new System.Drawing.Size(233, 45);
+            this.btnStaffManagement.TabIndex = 12;
+            this.btnStaffManagement.Text = "Staff Management";
+            this.btnStaffManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStaffManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
             // pnlReportsSubMenu
             // 
@@ -1544,31 +1569,6 @@
             this.guna2PictureBox5.TabIndex = 0;
             this.guna2PictureBox5.TabStop = false;
             // 
-            // borrowerstatistics
-            // 
-            this.borrowerstatistics.BackColor = System.Drawing.Color.Transparent;
-            this.borrowerstatistics.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.borrowerstatistics.ChartAreas.Add(chartArea1);
-            this.borrowerstatistics.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            legend1.InterlacedRowsColor = System.Drawing.Color.Transparent;
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleBackColor = System.Drawing.Color.Transparent;
-            this.borrowerstatistics.Legends.Add(legend1);
-            this.borrowerstatistics.Location = new System.Drawing.Point(0, 0);
-            this.borrowerstatistics.Name = "borrowerstatistics";
-            this.borrowerstatistics.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.borrowerstatistics.Series.Add(series1);
-            this.borrowerstatistics.Size = new System.Drawing.Size(328, 244);
-            this.borrowerstatistics.TabIndex = 4;
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1588,6 +1588,7 @@
             this.guna2Panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIssuedBook)).EndInit();
             this.guna2Panel14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.borrowerstatistics)).EndInit();
             this.tlp3.ResumeLayout(false);
             this.guna2Panel12.ResumeLayout(false);
             this.guna2Panel12.PerformLayout();
@@ -1627,7 +1628,6 @@
             this.pnlBooksSubMenu.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.borrowerstatistics)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1682,7 +1682,7 @@
         private Guna.UI2.WinForms.Guna2Button btnMemberProfiles;
         private Guna.UI2.WinForms.Guna2Button btnManageMembers;
         private Guna.UI2.WinForms.Guna2Button btnMembers;
-        private Guna.UI2.WinForms.Guna2Button btnUserManagement;
+        private Guna.UI2.WinForms.Guna2Button btnStaffManagement;
         private Guna.UI2.WinForms.Guna2Panel pnlUserManagementSubMenu;
         private Guna.UI2.WinForms.Guna2Button btnStaffApproval;
         private Guna.UI2.WinForms.Guna2Button btnManageStaffs;
@@ -1690,7 +1690,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnlSettingsSubMenu;
         private Guna.UI2.WinForms.Guna2Button btnManageGenre;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
-        private Guna.UI2.WinForms.Guna2Button btnRecycleBin;
+        private Guna.UI2.WinForms.Guna2Button btnArchive;
         private System.Windows.Forms.TableLayoutPanel tlp4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
         private Guna.UI2.WinForms.Guna2DataGridView dgvIssuedBook;

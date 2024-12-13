@@ -1,6 +1,6 @@
 ﻿namespace Library_Management_System
 {
-    partial class RecycleBin
+    partial class Archive
     {
         /// <summary>
         /// Required designer variable.

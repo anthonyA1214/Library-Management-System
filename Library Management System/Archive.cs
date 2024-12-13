@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Library_Management_System
 {
-    public partial class RecycleBin : Form
+    public partial class Archive : Form
     {
-        public RecycleBin()
+        public Archive()
         {
             InitializeComponent();
         }
@@ -294,11 +294,11 @@ namespace Library_Management_System
         {
             if (dgvRecycleBin.Columns[e.ColumnIndex].Name == "restore")
             {
-                e.ToolTipText = "Restore from trash";
+                e.ToolTipText = "Restore";
             }
             if (dgvRecycleBin.Columns[e.ColumnIndex].Name == "delete")
             {
-                e.ToolTipText = "Delete Forever";
+                e.ToolTipText = "Delete Permanently";
             }
         }
 

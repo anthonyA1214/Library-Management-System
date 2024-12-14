@@ -29,13 +29,19 @@
         private void InitializeComponent()
        {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.visibility2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.visibility1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pbExit = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblLinkBack2Login = new System.Windows.Forms.LinkLabel();
-            this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tbContactNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tbEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -44,24 +50,26 @@
             this.tbLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.visibility2)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.visibility1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2Panel1.Controls.Add(this.tbConfirmPassword);
+            this.guna2Panel1.Controls.Add(this.guna2Panel3);
+            this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel8);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel1.Controls.Add(this.pbExit);
             this.guna2Panel1.Controls.Add(this.linkLabel1);
             this.guna2Panel1.Controls.Add(this.lblLinkBack2Login);
-            this.guna2Panel1.Controls.Add(this.tbPassword);
             this.guna2Panel1.Controls.Add(this.btnSubmit);
             this.guna2Panel1.Controls.Add(this.tbContactNumber);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel4);
@@ -79,7 +87,72 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(320, 561);
             this.guna2Panel1.TabIndex = 2;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel3.BorderRadius = 17;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.visibility2);
+            this.guna2Panel3.Controls.Add(this.tbConfirmPassword);
+            this.guna2Panel3.FillColor = System.Drawing.Color.White;
+            this.guna2Panel3.Location = new System.Drawing.Point(20, 302);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(280, 36);
+            this.guna2Panel3.TabIndex = 39;
+            // 
+            // visibility2
+            // 
+            this.visibility2.BackColor = System.Drawing.Color.Transparent;
+            this.visibility2.Image = global::Library_Management_System.Properties.Resources.visibilityon;
+            this.visibility2.ImageRotate = 0F;
+            this.visibility2.Location = new System.Drawing.Point(251, 6);
+            this.visibility2.Name = "visibility2";
+            this.visibility2.Size = new System.Drawing.Size(25, 25);
+            this.visibility2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.visibility2.TabIndex = 39;
+            this.visibility2.TabStop = false;
+            this.visibility2.UseTransparentBackground = true;
+            this.visibility2.Click += new System.EventHandler(this.visibility2_Click);
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel2.BorderRadius = 17;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.tbPassword);
+            this.guna2Panel2.Controls.Add(this.visibility1);
+            this.guna2Panel2.FillColor = System.Drawing.Color.White;
+            this.guna2Panel2.Location = new System.Drawing.Point(20, 237);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(280, 36);
+            this.guna2Panel2.TabIndex = 38;
+            // 
+            // visibility1
+            // 
+            this.visibility1.BackColor = System.Drawing.Color.Transparent;
+            this.visibility1.Image = global::Library_Management_System.Properties.Resources.visibilityon;
+            this.visibility1.ImageRotate = 0F;
+            this.visibility1.Location = new System.Drawing.Point(251, 6);
+            this.visibility1.Name = "visibility1";
+            this.visibility1.Size = new System.Drawing.Size(25, 25);
+            this.visibility1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.visibility1.TabIndex = 39;
+            this.visibility1.TabStop = false;
+            this.visibility1.UseTransparentBackground = true;
+            this.visibility1.Click += new System.EventHandler(this.visibility1_Click);
+            // 
+            // guna2HtmlLabel8
+            // 
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(23, 278);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(119, 19);
+            this.guna2HtmlLabel8.TabIndex = 37;
+            this.guna2HtmlLabel8.Text = "Confirm Password:";
             // 
             // guna2HtmlLabel2
             // 
@@ -104,6 +177,18 @@
             this.pbExit.TabStop = false;
             this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F);
+            this.linkLabel1.Location = new System.Drawing.Point(65, 524);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(191, 14);
+            this.linkLabel1.TabIndex = 33;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Already have an account?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkBack2Login_LinkClicked);
+            // 
             // lblLinkBack2Login
             // 
             this.lblLinkBack2Login.AutoSize = true;
@@ -115,29 +200,6 @@
             this.lblLinkBack2Login.TabStop = true;
             this.lblLinkBack2Login.Text = "Already have an account?";
             this.lblLinkBack2Login.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkBack2Login_LinkClicked);
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.AutoRoundedCorners = true;
-            this.tbPassword.BackColor = System.Drawing.Color.Transparent;
-            this.tbPassword.BorderColor = System.Drawing.Color.Black;
-            this.tbPassword.BorderRadius = 17;
-            this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPassword.DefaultText = "";
-            this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Location = new System.Drawing.Point(20, 237);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '\0';
-            this.tbPassword.PlaceholderText = "";
-            this.tbPassword.SelectedText = "";
-            this.tbPassword.Size = new System.Drawing.Size(280, 36);
-            this.tbPassword.TabIndex = 4;
             // 
             // btnSubmit
             // 
@@ -157,7 +219,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(82, 478);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(156, 37);
-            this.btnSubmit.TabIndex = 7;
+            this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
@@ -182,7 +244,7 @@
             this.tbContactNumber.PlaceholderText = "0000 000 0000";
             this.tbContactNumber.SelectedText = "";
             this.tbContactNumber.Size = new System.Drawing.Size(280, 36);
-            this.tbContactNumber.TabIndex = 6;
+            this.tbContactNumber.TabIndex = 7;
             // 
             // guna2HtmlLabel4
             // 
@@ -193,6 +255,16 @@
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(108, 19);
             this.guna2HtmlLabel4.TabIndex = 29;
             this.guna2HtmlLabel4.Text = "Contact Number:";
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(23, 340);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(41, 19);
+            this.guna2HtmlLabel5.TabIndex = 27;
+            this.guna2HtmlLabel5.Text = "Email:";
             // 
             // tbEmail
             // 
@@ -215,7 +287,7 @@
             this.tbEmail.PlaceholderText = "example@example.com";
             this.tbEmail.SelectedText = "";
             this.tbEmail.Size = new System.Drawing.Size(280, 36);
-            this.tbEmail.TabIndex = 5;
+            this.tbEmail.TabIndex = 6;
             // 
             // guna2HtmlLabel3
             // 
@@ -236,7 +308,6 @@
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(65, 19);
             this.guna2HtmlLabel7.TabIndex = 26;
             this.guna2HtmlLabel7.Text = "Password:";
-            this.guna2HtmlLabel7.Click += new System.EventHandler(this.guna2HtmlLabel7_Click);
             // 
             // tbUsername
             // 
@@ -327,35 +398,34 @@
             this.guna2HtmlLabel1.TabIndex = 20;
             this.guna2HtmlLabel1.Text = "Name:";
             // 
-            // guna2HtmlLabel5
+            // tbPassword
             // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(23, 340);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(41, 19);
-            this.guna2HtmlLabel5.TabIndex = 27;
-            this.guna2HtmlLabel5.Text = "Email:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F);
-            this.linkLabel1.Location = new System.Drawing.Point(65, 524);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(191, 14);
-            this.linkLabel1.TabIndex = 33;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Already have an account?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkBack2Login_LinkClicked);
+            this.tbPassword.BorderColor = System.Drawing.Color.Transparent;
+            this.tbPassword.BorderRadius = 17;
+            this.tbPassword.BorderThickness = 0;
+            this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPassword.DefaultText = "";
+            this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPassword.Location = new System.Drawing.Point(1, 2);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '\0';
+            this.tbPassword.PlaceholderText = "";
+            this.tbPassword.SelectedText = "";
+            this.tbPassword.Size = new System.Drawing.Size(244, 33);
+            this.tbPassword.TabIndex = 4;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // tbConfirmPassword
             // 
-            this.tbConfirmPassword.AcceptsTab = true;
-            this.tbConfirmPassword.AutoRoundedCorners = true;
-            this.tbConfirmPassword.BackColor = System.Drawing.Color.Transparent;
-            this.tbConfirmPassword.BorderColor = System.Drawing.Color.Black;
+            this.tbConfirmPassword.BorderColor = System.Drawing.Color.Transparent;
             this.tbConfirmPassword.BorderRadius = 17;
+            this.tbConfirmPassword.BorderThickness = 0;
             this.tbConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbConfirmPassword.DefaultText = "";
             this.tbConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -365,24 +435,14 @@
             this.tbConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbConfirmPassword.Location = new System.Drawing.Point(20, 302);
+            this.tbConfirmPassword.Location = new System.Drawing.Point(1, 2);
             this.tbConfirmPassword.Name = "tbConfirmPassword";
             this.tbConfirmPassword.PasswordChar = '\0';
             this.tbConfirmPassword.PlaceholderText = "";
             this.tbConfirmPassword.SelectedText = "";
-            this.tbConfirmPassword.Size = new System.Drawing.Size(280, 36);
-            this.tbConfirmPassword.TabIndex = 36;
+            this.tbConfirmPassword.Size = new System.Drawing.Size(244, 33);
+            this.tbConfirmPassword.TabIndex = 5;
             this.tbConfirmPassword.TextChanged += new System.EventHandler(this.tbConfirmPassword_TextChanged);
-            // 
-            // guna2HtmlLabel8
-            // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(23, 278);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(119, 19);
-            this.guna2HtmlLabel8.TabIndex = 37;
-            this.guna2HtmlLabel8.Text = "Confirm Password:";
             // 
             // SignupForm
             // 
@@ -394,8 +454,13 @@
             this.MinimumSize = new System.Drawing.Size(320, 561);
             this.Name = "SignupForm";
             this.Text = "Signup";
+            this.Load += new System.EventHandler(this.SignupForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.visibility2)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.visibility1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.ResumeLayout(false);
 
@@ -403,7 +468,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TextBox tbPassword;
         private Guna.UI2.WinForms.Guna2GradientButton btnSubmit;
         private Guna.UI2.WinForms.Guna2TextBox tbContactNumber;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
@@ -420,7 +484,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2TextBox tbConfirmPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2PictureBox visibility1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2PictureBox visibility2;
+        private Guna.UI2.WinForms.Guna2TextBox tbPassword;
+        private Guna.UI2.WinForms.Guna2TextBox tbConfirmPassword;
     }
 }

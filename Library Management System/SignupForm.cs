@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Office2010.CustomUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,12 @@ namespace Library_Management_System
                 tbPassword.Focus();
                 return;
             }
+            else if (string.IsNullOrEmpty(tbConfirmPassword.Text))
+            {
+                MessageBox.Show("The Confirm Password field cannot be empty!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbConfirmPassword.Focus();
+                return;
+            }
             else if (string.IsNullOrEmpty(tbEmail.Text))
             {
                 MessageBox.Show("The Email field cannot be empty!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -71,16 +78,52 @@ namespace Library_Management_System
                 tbContactNumber.Focus();
                 return;
             }
+            else if (tbUsername.Text.Length < 3 || tbUsername.Text.Length > 20)
+            {
+                MessageBox.Show("The Username must be between 3 and 20 characters long!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbUsername.Focus();
+                return;
+            }
+            else if (tbPassword.Text.Length < 8)
+            {
+                MessageBox.Show("The Password must be at least 8 characters long!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbPassword.Focus();
+                return;
+            }
+            else if (tbPassword.Text != tbConfirmPassword.Text)
+            {
+                MessageBox.Show("Passwords do not match. Please re-enter the password fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbPassword.Focus();
+                return;
+            }
 
             string firstname = tbFirstName.Text;
             string lastname = tbLastName.Text;
             string username = tbUsername.Text;
             string password = tbPassword.Text;
+            string confirmpassword = tbConfirmPassword.Text;
             string email = tbEmail.Text;
             string contactnumber = tbContactNumber.Text;
             string query;
             try
             {
+                Regex nameRegex = new Regex(@"^[a-zA-Z\s]+$", RegexOptions.IgnoreCase);
+                Match matchFirstName = nameRegex.Match(firstname);
+                if (!matchFirstName.Success)
+                {
+                    MessageBox.Show("First name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tbFirstName.Focus();
+                    return;
+                }
+
+                Match matchLastName = nameRegex.Match(lastname);
+                if (!matchLastName.Success)
+                {
+                    MessageBox.Show("Last name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tbLastName.Focus();
+                    return;
+                }
+
                 Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
                 Match match = regex.Match(email);
                 if (!match.Success)
@@ -140,19 +183,58 @@ namespace Library_Management_System
             }                     
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        private void SignupForm_Load(object sender, EventArgs e)
         {
-
+            visibility1.Visible = false;
+            visibility2.Visible = false;
+            tbPassword.UseSystemPasswordChar = true; 
+            tbConfirmPassword.UseSystemPasswordChar = true;
         }
 
-        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
+        private void tbPassword_TextChanged(object sender, EventArgs e)
         {
-
+            visibility1.Visible = true;
+            if (string.IsNullOrEmpty(tbPassword.Text))
+            {
+                visibility1.Visible = false;
+            }
         }
 
         private void tbConfirmPassword_TextChanged(object sender, EventArgs e)
         {
+            visibility2.Visible = true;
+            if (string.IsNullOrEmpty(tbConfirmPassword.Text))
+            {
+                visibility2.Visible = false;
+            }
+        }
 
+        private void visibility1_Click(object sender, EventArgs e)
+        {
+            if(tbPassword.UseSystemPasswordChar == true)
+            {
+                visibility1.Image = Properties.Resources.visibilityoff;
+                tbPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                visibility1.Image = Properties.Resources.visibilityon;
+                tbPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void visibility2_Click(object sender, EventArgs e)
+        {
+            if (tbConfirmPassword.UseSystemPasswordChar == true)
+            {
+                visibility2.Image = Properties.Resources.visibilityoff;
+                tbConfirmPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                visibility2.Image = Properties.Resources.visibilityon;
+                tbConfirmPassword.UseSystemPasswordChar = true;
+            }
         }
     }         
 }

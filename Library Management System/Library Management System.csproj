@@ -379,5 +379,11 @@
   <ItemGroup>
     <None Include="Resources\browseactivity.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visibilityoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visibilityon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

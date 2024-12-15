@@ -186,18 +186,13 @@ namespace Library_Management_System
                 {
                     return;
                 }
-                query += " AND member_id = @search";
+                query += " AND member_id LIKE @search";
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
-            if (cbSearchBy.Text == "Name")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy.Text == "ID")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
+
+            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

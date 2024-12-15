@@ -100,6 +100,8 @@ namespace Library_Management_System
             lblMemberName.AutoEllipsis = true;
             lblBookTitle.AutoEllipsis = true;
             lblBookAuthor.AutoEllipsis = true;
+            dtpIssueDate.Value = DateTime.Now.Date;
+            dtpDueDate.Value = DateTime.Now.Date;
             dgvMember.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvMember.ColumnHeadersDefaultCellStyle.BackColor;
             dgvMember.ColumnHeadersDefaultCellStyle.SelectionForeColor = dgvMember.ColumnHeadersDefaultCellStyle.ForeColor;
             dgvBook.ColumnHeadersDefaultCellStyle.SelectionBackColor = dgvBook.ColumnHeadersDefaultCellStyle.BackColor;
@@ -110,19 +112,26 @@ namespace Library_Management_System
         {
             DateTime issuedate = dtpIssueDate.Value;
             DateTime duedate = dtpDueDate.Value;
-
+            DateTime currentdate = DateTime.Now.Date;
             if (memberid == 0 || bookid == 0)
             {
                 MessageBox.Show("Please select Borrower or Book.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
-            {
+            {              
                 conn.Open();
                 string checkQuery = "SELECT quantity from tbl_book WHERE book_id = @bookid";
                 SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
                 checkCmd.Parameters.AddWithValue("@bookid", bookid);
                 int copiesAvailable = Convert.ToInt32(checkCmd.ExecuteScalar());
+             
+                if (issuedate < currentdate)
+                {
+                    MessageBox.Show("Issue date connot be earlier than the current date.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    dtpIssueDate.Value = currentdate;
+                    return;
+                }
 
                 if (copiesAvailable <= 0)
                 {
@@ -130,9 +139,9 @@ namespace Library_Management_System
                     return;
                 }
 
-                if (duedate <= issuedate)
+                if (duedate < issuedate)
                 {
-                    MessageBox.Show("Due date must be later than the issue date.", "Invalid Due Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Due date must not be earlier than the issue date.", "Invalid Due Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -212,18 +221,13 @@ namespace Library_Management_System
                 {
                     return;
                 }
-                query += " AND member_id = @search";
+                query += " AND member_id LIKE @search";
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
-            if (cbSearchBy1.Text == "Name")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy1.Text == "ID")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
+
+            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -251,7 +255,7 @@ namespace Library_Management_System
             }
             else if (cbSearchBy2.Text == "ISBN")
             {
-                query += " AND isbn = @search";
+                query += " AND isbn LIKE @search";
             }
             else if (cbSearchBy2.Text == "ID")
             {
@@ -259,26 +263,13 @@ namespace Library_Management_System
                 {
                     return;
                 }
-                query += " AND book_id = @search";
+                query += " AND book_id LIKE @search";
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
-            if (cbSearchBy2.Text == "Title")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy2.Text == "Author")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy2.Text == "ISBN")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
-            else if (cbSearchBy2.Text == "ID")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
+
+            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

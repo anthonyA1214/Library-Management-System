@@ -54,7 +54,7 @@ namespace Library_Management_System
         private void CirculationReport_Load(object sender, EventArgs e)
         {
             loadData();
-            cbSearchBy.Text = "Book Title";
+            cbSearchBy.Text = "Issue ID";
         }
 
         private void searchFilter()
@@ -64,21 +64,21 @@ namespace Library_Management_System
 
             if (!string.IsNullOrEmpty(search))
             {
-                if (cbSearchBy.Text == "Book Title")
-                {
-                    query += " AND tbl_book.title LIKE @search";
-                }
-                else if (cbSearchBy.Text == "ISBN")
-                {
-                    query += " AND tbl_book.isbn = @search";
-                }
-                else if (cbSearchBy.Text == "Book ID")
+                if (cbSearchBy.Text == "Issue ID")
                 {
                     if (!int.TryParse(search, out int id))
                     {
                         return;
                     }
-                    query += " AND tbl_book.book_id = @search";
+                    query += " AND tbl_issue.issue_id LIKE @search";
+                }
+                else if (cbSearchBy.Text == "Book Title")
+                {
+                    query += " AND tbl_book.title LIKE @search";
+                }
+                else if (cbSearchBy.Text == "Member Name")
+                {
+                    query += " AND CONCAT(first_name, ' ', last_name) LIKE @search";
                 }
             }
 
@@ -86,14 +86,7 @@ namespace Library_Management_System
 
             if (!string.IsNullOrEmpty(search))
             {
-                if (cbSearchBy.Text == "Book Title")
-                {
-                    cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-                }
-                else if (cbSearchBy.Text == "ISBN" || cbSearchBy.Text == "Book ID")
-                {
-                    cmd.Parameters.AddWithValue("@search", search);
-                }
+                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
             }
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);

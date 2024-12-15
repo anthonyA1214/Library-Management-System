@@ -64,20 +64,15 @@ namespace Library_Management_System
                 {
                     return;
                 }
-                query += " AND tbl_member.member_id = @search";
+                query += " AND tbl_member.member_id LIKE @search";
             }
 
             query += " GROUP BY tbl_member.member_id, tbl_member.first_name, tbl_member.last_name ORDER BY [Total Borrowed Books] DESC";
 
             SqlCommand cmd = new SqlCommand(query, conn);
-            if (cbSearchBy.Text == "Name")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy.Text == "ID")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
+
+            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

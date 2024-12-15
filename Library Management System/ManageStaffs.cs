@@ -96,6 +96,12 @@ namespace Library_Management_System
                 tbPassword.Focus();
                 return;
             }
+            else if (string.IsNullOrEmpty(tbConfirmPassword.Text))
+            {
+                MessageBox.Show("The Confirm Password field cannot be empty!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbConfirmPassword.Focus();
+                return;
+            }
             else if (string.IsNullOrEmpty(tbEmail.Text))
             {
                 MessageBox.Show("The Email field cannot be empty!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -108,6 +114,24 @@ namespace Library_Management_System
                 tbContactNumber.Focus();
                 return;
             }
+            else if (tbUsername.Text.Length < 3 || tbUsername.Text.Length > 20)
+            {
+                MessageBox.Show("The Username must be between 3 and 20 characters long!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbUsername.Focus();
+                return;
+            }
+            else if (tbPassword.Text.Length < 8)
+            {
+                MessageBox.Show("The Password must be at least 8 characters long!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbPassword.Focus();
+                return;
+            }
+            else if (tbPassword.Text != tbConfirmPassword.Text)
+            {
+                MessageBox.Show("Passwords do not match. Please re-enter the password fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbPassword.Focus();
+                return;
+            }
 
             string firstname = tbFirstName.Text;
             string lastname = tbLastName.Text;
@@ -116,12 +140,30 @@ namespace Library_Management_System
             string email = tbEmail.Text;
             string contactnumber = tbContactNumber.Text;
             string role = cbRole.Text;
-            bool isApproved = true;  
+            bool isApproved = true;
+            bool isDeleted = false;
 
             string query;
 
             try
             {
+                Regex nameRegex = new Regex(@"^[a-zA-Z\s]+$", RegexOptions.IgnoreCase);
+                Match matchFirstName = nameRegex.Match(firstname);
+                if (!matchFirstName.Success)
+                {
+                    MessageBox.Show("First name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tbFirstName.Focus();
+                    return;
+                }
+
+                Match matchLastName = nameRegex.Match(lastname);
+                if (!matchLastName.Success)
+                {
+                    MessageBox.Show("Last name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tbLastName.Focus();
+                    return;
+                }
+
                 Regex regex = new Regex(@"^09[\d]{9}$", RegexOptions.IgnoreCase);
                 Match match = regex.Match(contactnumber);
                 if (!match.Success)
@@ -162,7 +204,8 @@ namespace Library_Management_System
                         cmd.Parameters.AddWithValue("@email", email);
                         cmd.Parameters.AddWithValue("@contactnumber", contactnumber);
                         cmd.Parameters.AddWithValue("@role", role);
-                        cmd.Parameters.AddWithValue("@isApproved", isApproved);    
+                        cmd.Parameters.AddWithValue("@isApproved", isApproved);
+                        cmd.Parameters.AddWithValue("@isDeleted", isDeleted);
                         checkrow = cmd.ExecuteNonQuery();
                         if (checkrow > 0)
                         {
@@ -327,26 +370,17 @@ namespace Library_Management_System
             }
             else if (cbSearchBy.Text == "Username")
             {
-                query += " AND username = @search";
+                query += " AND username LIKE @search";
             }
             else if (cbSearchBy.Text == "ID")
             {
-                query += " AND staff_id = @search";
+                query += " AND staff_id LIKE @search";
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
-            if (cbSearchBy.Text == "Name")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy.Text == "Username")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
-            else if (cbSearchBy.Text == "ID")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
+
+            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -363,12 +397,60 @@ namespace Library_Management_System
             pnlSideMenu.Visible = false;
         }
 
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+            visibility1.Visible = true;
+            if (string.IsNullOrEmpty(tbPassword.Text))
+            {
+                visibility1.Visible = false;
+            }
+        }
+
+        private void tbConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
+            visibility2.Visible = true;
+            if (string.IsNullOrEmpty(tbConfirmPassword.Text))
+            {
+                visibility2.Visible = false;
+            }
+        }
+
+        private void visibility1_Click(object sender, EventArgs e)
+        {
+            if (tbPassword.UseSystemPasswordChar == true)
+            {
+                visibility1.Image = Properties.Resources.visibilityoff;
+                tbPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                visibility1.Image = Properties.Resources.visibilityon;
+                tbPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void visibility2_Click(object sender, EventArgs e)
+        {
+            if (tbConfirmPassword.UseSystemPasswordChar == true)
+            {
+                visibility2.Image = Properties.Resources.visibilityoff;
+                tbConfirmPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                visibility2.Image = Properties.Resources.visibilityon;
+                tbConfirmPassword.UseSystemPasswordChar = true;
+            }
+        }
+
         private void ManageStaffs_Load(object sender, EventArgs e)
         {
             loadTable();
             select = 0;
             pnlSideMenu.Visible = false;
             cbSearchBy.Text = "Name";
+            tbPassword.UseSystemPasswordChar = true;
+            tbConfirmPassword.UseSystemPasswordChar = true;
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)

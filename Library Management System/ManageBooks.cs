@@ -328,11 +328,11 @@ namespace Library_Management_System
             }
             else if (cbSearchBy.Text == "ISBN")
             {
-                query += " AND isbn = @search";
+                query += " AND isbn LIKE @search";
             }
             else if (cbSearchBy.Text == "Publication Year")
             {
-                query += " AND publication_year = @search";
+                query += " AND publication_year LIKE @search";
             }
             else if (cbSearchBy.Text == "ID")
             {
@@ -340,30 +340,11 @@ namespace Library_Management_System
                 {
                     return;
                 }
-                query += " AND book_id = @search";
+                query += " AND book_id LIKE @search";
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
-            if (cbSearchBy.Text == "Title")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy.Text == "Author")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy.Text == "ISBN")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
-            else if (cbSearchBy.Text == "Publication Year")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
-            else if (cbSearchBy.Text == "ID")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
+            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

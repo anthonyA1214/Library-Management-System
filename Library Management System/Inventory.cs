@@ -12,6 +12,8 @@ using System.Data.SqlClient;
 using System.Net;
 using System.Collections;
 using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Math;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Library_Management_System
 {
@@ -186,27 +188,26 @@ namespace Library_Management_System
 
         private void searchFilter()
         {
-            string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity], " +
-                           "CASE WHEN quantity > 0 THEN 'Available' ELSE 'Unavailable' END AS [Availability Status] FROM tbl_book WHERE IsDeleted = 0";
+            string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity], CASE WHEN quantity > 0 THEN 'Available' ELSE 'Unavailable' END AS[Availability Status] FROM tbl_book WHERE IsDeleted = 0";
 
             if (!string.IsNullOrEmpty(tbSearch.Text))
             {
                 string search = tbSearch.Text;
                 if (cbSearchBy.Text == "Title")
                 {
-                    query += " AND title LIKE @title";
+                    query += " AND title LIKE @search";
                 }
                 else if (cbSearchBy.Text == "Author")
                 {
-                    query += " AND author LIKE @author";
+                    query += " AND author LIKE @search";
                 }
                 else if (cbSearchBy.Text == "ISBN")
                 {
-                    query += " AND isbn = @isbn";
+                    query += " AND isbn LIKE @search";
                 }
                 else if (cbSearchBy.Text == "Publication Year")
                 {
-                    query += " AND publication_year = @publicationyear";
+                    query += " AND publication_year LIKE @search";
                 }
                 else if (cbSearchBy.Text == "ID")
                 {
@@ -214,14 +215,14 @@ namespace Library_Management_System
                     {
                         return;
                     }
-                    query += " AND book_id = @search";
+                    query += " AND book_id LIKE @search";
                 }
             }
 
             if (cbGenre.SelectedItem.ToString() != "All")
             {
                 string genre = cbGenre.SelectedItem.ToString();
-                query += " AND genre = @genre";
+                query += " AND genre LIKE @genre";
             }
 
             if (cbAvailabilityStatus.Text != "All")
@@ -241,26 +242,7 @@ namespace Library_Management_System
             if (!string.IsNullOrEmpty(tbSearch.Text))
             {
                 string search = tbSearch.Text;
-                if (cbSearchBy.Text == "Title")
-                {
-                    cmd.Parameters.AddWithValue("@title", "%" + search + "%");
-                }
-                else if (cbSearchBy.Text == "Author")
-                {
-                    cmd.Parameters.AddWithValue("@author", "%" + search + "%");
-                }
-                else if (cbSearchBy.Text == "ISBN")
-                {
-                    cmd.Parameters.AddWithValue("@isbn", search);
-                }
-                else if (cbSearchBy.Text == "Publication Year")
-                {
-                    cmd.Parameters.AddWithValue("@publicationyear", search);
-                }
-                else if (cbSearchBy.Text == "ID")
-                {
-                    cmd.Parameters.AddWithValue("@search", search);
-                }
+                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
             }
 
             if (cbGenre.SelectedItem.ToString() != "All")

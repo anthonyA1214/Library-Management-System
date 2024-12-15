@@ -328,11 +328,11 @@ namespace Library_Management_System
                     }
                     else if (cbSearchBy.Text == "ISBN")
                     {
-                        query += " AND isbn = @search";
+                        query += " AND isbn LIKE @search";
                     }
                     else if (cbSearchBy.Text == "Publication Year")
                     {
-                        query += " AND publication_year = @search";
+                        query += " AND publication_year LIKE @search";
                     }
                     else if (cbSearchBy.Text == "ID")
                     {
@@ -340,7 +340,7 @@ namespace Library_Management_System
                         {
                             return;
                         }
-                        query += " AND book_id = @search";
+                        query += " AND book_id LIKE @search";
                     }
                     break;
 
@@ -356,7 +356,7 @@ namespace Library_Management_System
                         {
                             return;
                         }
-                        query += " AND member_id = @search";
+                        query += " AND member_id LIKE @search";
                     }
                     break;
 
@@ -368,7 +368,7 @@ namespace Library_Management_System
                     }
                     else if (cbSearchBy.Text == "Username")
                     {
-                        query += " AND username = @search";
+                        query += " AND username LIKE @search";
                     }
                     else if (cbSearchBy.Text == "ID")
                     {
@@ -376,7 +376,7 @@ namespace Library_Management_System
                         {
                             return;
                         }
-                        query += " AND staff_id = @search";
+                        query += " AND staff_id LIKE @search";
                     }
                     break;
 
@@ -392,22 +392,13 @@ namespace Library_Management_System
                         {
                             return;
                         }
-                        query += " AND genre_id = @search";
+                        query += " AND genre_id LIKE @search";
                     }
                     break;
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
-
-            if (cbSearchBy.Text == "Title" || cbSearchBy.Text == "Author" || cbSearchBy.Text == "Name")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else
-            {
-                cmd.Parameters.AddWithValue("@search", search); 
-            }
-
+            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

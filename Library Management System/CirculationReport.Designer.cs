@@ -44,11 +44,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlAddGenre = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnExport = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cbSearchBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pbExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnExport = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3.SuspendLayout();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIssue)).BeginInit();
@@ -258,6 +258,25 @@
             this.pnlAddGenre.Size = new System.Drawing.Size(648, 50);
             this.pnlAddGenre.TabIndex = 55;
             // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnExport.AutoRoundedCorners = true;
+            this.btnExport.BorderRadius = 19;
+            this.btnExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(185)))), ((int)(((byte)(163)))));
+            this.btnExport.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(62, 5);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(150, 40);
+            this.btnExport.TabIndex = 6;
+            this.btnExport.Text = "Export Report";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -284,9 +303,9 @@
             this.cbSearchBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSearchBy.ItemHeight = 30;
             this.cbSearchBy.Items.AddRange(new object[] {
+            "Issue ID",
             "Book Title",
-            "ISBN",
-            "Book ID"});
+            "Member Name"});
             this.cbSearchBy.Location = new System.Drawing.Point(297, 7);
             this.cbSearchBy.Name = "cbSearchBy";
             this.cbSearchBy.Size = new System.Drawing.Size(140, 36);
@@ -327,25 +346,6 @@
             this.tbSearch.Size = new System.Drawing.Size(200, 36);
             this.tbSearch.TabIndex = 1;
             this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnExport.AutoRoundedCorners = true;
-            this.btnExport.BorderRadius = 19;
-            this.btnExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(185)))), ((int)(((byte)(163)))));
-            this.btnExport.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(62, 5);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(150, 40);
-            this.btnExport.TabIndex = 6;
-            this.btnExport.Text = "Export Report";
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // CirculationReport
             // 

@@ -64,7 +64,7 @@ namespace Library_Management_System
                     {
                         return;
                     }
-                    searchQuery += " AND tbl_issue.member_id = @search";
+                    searchQuery += " AND tbl_issue.member_id LIKE @search";
                 }
                 else if (cbSearchBy.Text == "Book Title")
                 {
@@ -76,7 +76,7 @@ namespace Library_Management_System
                     {
                         return;
                     }
-                    searchQuery += " AND tbl_issue.book_id = @search";
+                    searchQuery += " AND tbl_issue.book_id LIKE @search";
                 }
             }
 
@@ -109,14 +109,7 @@ namespace Library_Management_System
 
             if (!string.IsNullOrEmpty(search))
             {
-                if (cbSearchBy.Text == "Member Name" || cbSearchBy.Text == "Book Title")
-                {
-                    cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-                }
-                else if (cbSearchBy.Text == "Member ID" || cbSearchBy.Text == "Book ID")
-                {
-                    cmd.Parameters.AddWithValue("@search", search); 
-                }
+                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
             }
 
             if (cbLoanStatus.Text != "All")

@@ -31,7 +31,9 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.visibility2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.tbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.visibility1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -50,8 +52,6 @@
             this.tbLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.visibility2)).BeginInit();
@@ -116,6 +116,29 @@
             this.visibility2.UseTransparentBackground = true;
             this.visibility2.Click += new System.EventHandler(this.visibility2_Click);
             // 
+            // tbConfirmPassword
+            // 
+            this.tbConfirmPassword.BorderColor = System.Drawing.Color.Transparent;
+            this.tbConfirmPassword.BorderRadius = 17;
+            this.tbConfirmPassword.BorderThickness = 0;
+            this.tbConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbConfirmPassword.DefaultText = "";
+            this.tbConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbConfirmPassword.Location = new System.Drawing.Point(1, 2);
+            this.tbConfirmPassword.Name = "tbConfirmPassword";
+            this.tbConfirmPassword.PasswordChar = '\0';
+            this.tbConfirmPassword.PlaceholderText = "";
+            this.tbConfirmPassword.SelectedText = "";
+            this.tbConfirmPassword.Size = new System.Drawing.Size(244, 33);
+            this.tbConfirmPassword.TabIndex = 5;
+            this.tbConfirmPassword.TextChanged += new System.EventHandler(this.tbConfirmPassword_TextChanged);
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
@@ -130,8 +153,32 @@
             this.guna2Panel2.Size = new System.Drawing.Size(280, 36);
             this.guna2Panel2.TabIndex = 38;
             // 
+            // tbPassword
+            // 
+            this.tbPassword.BorderColor = System.Drawing.Color.Transparent;
+            this.tbPassword.BorderRadius = 17;
+            this.tbPassword.BorderThickness = 0;
+            this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPassword.DefaultText = "";
+            this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPassword.Location = new System.Drawing.Point(1, 2);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '\0';
+            this.tbPassword.PlaceholderText = "";
+            this.tbPassword.SelectedText = "";
+            this.tbPassword.Size = new System.Drawing.Size(244, 33);
+            this.tbPassword.TabIndex = 4;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
+            // 
             // visibility1
             // 
+            this.visibility1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.visibility1.BackColor = System.Drawing.Color.Transparent;
             this.visibility1.Image = global::Library_Management_System.Properties.Resources.visibilityon;
             this.visibility1.ImageRotate = 0F;
@@ -397,52 +444,6 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(43, 19);
             this.guna2HtmlLabel1.TabIndex = 20;
             this.guna2HtmlLabel1.Text = "Name:";
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.BorderColor = System.Drawing.Color.Transparent;
-            this.tbPassword.BorderRadius = 17;
-            this.tbPassword.BorderThickness = 0;
-            this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPassword.DefaultText = "";
-            this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Location = new System.Drawing.Point(1, 2);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '\0';
-            this.tbPassword.PlaceholderText = "";
-            this.tbPassword.SelectedText = "";
-            this.tbPassword.Size = new System.Drawing.Size(244, 33);
-            this.tbPassword.TabIndex = 4;
-            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
-            // 
-            // tbConfirmPassword
-            // 
-            this.tbConfirmPassword.BorderColor = System.Drawing.Color.Transparent;
-            this.tbConfirmPassword.BorderRadius = 17;
-            this.tbConfirmPassword.BorderThickness = 0;
-            this.tbConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbConfirmPassword.DefaultText = "";
-            this.tbConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbConfirmPassword.Location = new System.Drawing.Point(1, 2);
-            this.tbConfirmPassword.Name = "tbConfirmPassword";
-            this.tbConfirmPassword.PasswordChar = '\0';
-            this.tbConfirmPassword.PlaceholderText = "";
-            this.tbConfirmPassword.SelectedText = "";
-            this.tbConfirmPassword.Size = new System.Drawing.Size(244, 33);
-            this.tbConfirmPassword.TabIndex = 5;
-            this.tbConfirmPassword.TextChanged += new System.EventHandler(this.tbConfirmPassword_TextChanged);
             // 
             // SignupForm
             // 

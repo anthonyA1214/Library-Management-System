@@ -122,7 +122,7 @@ namespace Library_Management_System
                 {
                     return;
                 }
-                query += " AND tbl_issue.member_id = @search";
+                query += " AND tbl_issue.member_id LIKE @search";
             }
             else if (cbSearchBy.Text == "Issue ID")
             {
@@ -130,18 +130,13 @@ namespace Library_Management_System
                 {
                     return;
                 }
-                query += " AND tbl_issue.issue_id = @search";
+                query += " AND tbl_issue.issue_id LIKE @search";
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
-            if (cbSearchBy.Text == "Member Name")
-            {
-                cmd.Parameters.AddWithValue("@search", "%" + search + "%");
-            }
-            else if (cbSearchBy.Text == "Member ID" || cbSearchBy.Text == "Issue ID")
-            {
-                cmd.Parameters.AddWithValue("@search", search);
-            }
+
+            cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

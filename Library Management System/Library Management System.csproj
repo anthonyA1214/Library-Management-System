@@ -92,64 +92,65 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inventory.cs">
+    <Compile Include="dbConnection.cs" />
+    <Compile Include="Forms\Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory.Designer.cs">
+    <Compile Include="Forms\Inventory.Designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="IssueBook.cs">
+    <Compile Include="Forms\IssueBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IssueBook.Designer.cs">
+    <Compile Include="Forms\IssueBook.Designer.cs">
       <DependentUpon>IssueBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageBooks.cs">
+    <Compile Include="Forms\ManageBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageBooks.Designer.cs">
+    <Compile Include="Forms\ManageBooks.Designer.cs">
       <DependentUpon>ManageBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
+    <Compile Include="Forms\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CirculationReport.cs">
+    <Compile Include="Forms\CirculationReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CirculationReport.Designer.cs">
+    <Compile Include="Forms\CirculationReport.Designer.cs">
       <DependentUpon>CirculationReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageGenres.cs">
+    <Compile Include="Forms\ManageGenres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageGenres.Designer.cs">
+    <Compile Include="Forms\ManageGenres.Designer.cs">
       <DependentUpon>ManageGenres.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageStaffs.cs">
+    <Compile Include="Forms\ManageStaffs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageStaffs.Designer.cs">
+    <Compile Include="Forms\ManageStaffs.Designer.cs">
       <DependentUpon>ManageStaffs.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageMembers.cs">
+    <Compile Include="Forms\ManageMembers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageMembers.Designer.cs">
+    <Compile Include="Forms\ManageMembers.Designer.cs">
       <DependentUpon>ManageMembers.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberActivityReport.cs">
+    <Compile Include="Forms\MemberActivityReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberActivityReport.Designer.cs">
+    <Compile Include="Forms\MemberActivityReport.Designer.cs">
       <DependentUpon>MemberActivityReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -157,81 +158,81 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Archive.cs">
+    <Compile Include="Forms\Archive.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Archive.Designer.cs">
+    <Compile Include="Forms\Archive.Designer.cs">
       <DependentUpon>Archive.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignupForm.cs">
+    <Compile Include="Forms\SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignupForm.Designer.cs">
+    <Compile Include="Forms\SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReturnBook.cs">
+    <Compile Include="Forms\ReturnBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReturnBook.Designer.cs">
+    <Compile Include="Forms\ReturnBook.Designer.cs">
       <DependentUpon>ReturnBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberProfiles.cs">
+    <Compile Include="Forms\MemberProfiles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberProfiles.Designer.cs">
+    <Compile Include="Forms\MemberProfiles.Designer.cs">
       <DependentUpon>MemberProfiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffApproval.cs">
+    <Compile Include="Forms\StaffApproval.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaffApproval.Designer.cs">
+    <Compile Include="Forms\StaffApproval.Designer.cs">
       <DependentUpon>StaffApproval.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm.cs">
+    <Compile Include="Forms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm.Designer.cs">
+    <Compile Include="Forms\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewRecords.cs">
+    <Compile Include="Forms\ViewRecords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewRecords.Designer.cs">
+    <Compile Include="Forms\ViewRecords.Designer.cs">
       <DependentUpon>ViewRecords.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Inventory.resx">
+    <EmbeddedResource Include="Forms\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IssueBook.resx">
+    <EmbeddedResource Include="Forms\IssueBook.resx">
       <DependentUpon>IssueBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageBooks.resx">
+    <EmbeddedResource Include="Forms\ManageBooks.resx">
       <DependentUpon>ManageBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm.resx">
+    <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CirculationReport.resx">
+    <EmbeddedResource Include="Forms\CirculationReport.resx">
       <DependentUpon>CirculationReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageGenres.resx">
+    <EmbeddedResource Include="Forms\ManageGenres.resx">
       <DependentUpon>ManageGenres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageMembers.resx">
+    <EmbeddedResource Include="Forms\ManageMembers.resx">
       <DependentUpon>ManageMembers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberActivityReport.resx">
+    <EmbeddedResource Include="Forms\MemberActivityReport.resx">
       <DependentUpon>MemberActivityReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Archive.resx">
+    <EmbeddedResource Include="Forms\Archive.resx">
       <DependentUpon>Archive.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignupForm.resx">
+    <EmbeddedResource Include="Forms\SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -239,22 +240,22 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReturnBook.resx">
+    <EmbeddedResource Include="Forms\ReturnBook.resx">
       <DependentUpon>ReturnBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberProfiles.resx">
+    <EmbeddedResource Include="Forms\MemberProfiles.resx">
       <DependentUpon>MemberProfiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffApproval.resx">
+    <EmbeddedResource Include="Forms\StaffApproval.resx">
       <DependentUpon>StaffApproval.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm.resx">
+    <EmbeddedResource Include="Forms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageStaffs.resx">
+    <EmbeddedResource Include="Forms\ManageStaffs.resx">
       <DependentUpon>ManageStaffs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewRecords.resx">
+    <EmbeddedResource Include="Forms\ViewRecords.resx">
       <DependentUpon>ViewRecords.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -385,5 +386,6 @@
   <ItemGroup>
     <None Include="Resources\visibilityon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

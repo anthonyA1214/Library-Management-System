@@ -13,7 +13,7 @@ namespace Library_Management_System
 {
     public partial class LoginForm : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
+        SqlConnection conn = dbConnection.GetConnection();
 
         public LoginForm()
         {

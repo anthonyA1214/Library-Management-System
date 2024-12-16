@@ -22,7 +22,7 @@ namespace Library_Management_System
             pnlSideMenu.Visible = false;
         }
 
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;");
+        SqlConnection conn = dbConnection.GetConnection();
         int select, bookid, checkrow;
 
         private void loadTable()

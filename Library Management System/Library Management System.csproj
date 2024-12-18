@@ -92,7 +92,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dbConnection.cs" />
+    <Compile Include="Classes\dbConnection.cs" />
     <Compile Include="Forms\Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +202,7 @@
     <Compile Include="Forms\ViewRecords.Designer.cs">
       <DependentUpon>ViewRecords.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\AuthenticateUser.cs" />
     <EmbeddedResource Include="Forms\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>

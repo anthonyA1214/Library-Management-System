@@ -22,9 +22,24 @@ namespace Library_Management_System
         SqlConnection conn = dbConnection.GetConnection();
         int bookid;
 
-        public Inventory()
+        private string userRole;
+
+        public Inventory(string userrole)
         {
             InitializeComponent();
+            userRole = userrole;
+        }
+
+        private void HandleLogin(string userRole)
+        {
+            if (userRole == "Staff")
+            {
+                dgvBook.Columns["add"].Visible = false;
+            }
+            else if (userRole == "Admin")
+            {
+                dgvBook.Columns["add"].Visible = true;
+            }
         }
 
         private void loadTable()
@@ -50,6 +65,7 @@ namespace Library_Management_System
             {
                 dgvBook.Columns.Add(addImgCol);
             }
+            HandleLogin(userRole);
         }
 
         private void loadGenre()

@@ -187,7 +187,7 @@ namespace Library_Management_System
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            openForm(new Inventory());
+            openForm(new Inventory("Admin"));
         }
 
         private void btnManageMembers_Click(object sender, EventArgs e)
@@ -274,7 +274,7 @@ namespace Library_Management_System
 
         private void lblBookSeeAll_Click(object sender, EventArgs e)
         {
-            openForm(new Inventory());
+            openForm(new Inventory("Admin"));
         }
 
         private void btnIssueBook2_Click(object sender, EventArgs e)

@@ -339,5 +339,10 @@ namespace Library_Management_System
 
             borrowerstatistics.Series.Add(series);
         }
+
+        private void guna2PictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

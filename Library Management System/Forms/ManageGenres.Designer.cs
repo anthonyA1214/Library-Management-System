@@ -164,7 +164,7 @@
             this.btnSaveGenre.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(185)))), ((int)(((byte)(163)))));
             this.btnSaveGenre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveGenre.ForeColor = System.Drawing.Color.White;
-            this.btnSaveGenre.Location = new System.Drawing.Point(352, 12);
+            this.btnSaveGenre.Location = new System.Drawing.Point(146, 19);
             this.btnSaveGenre.Name = "btnSaveGenre";
             this.btnSaveGenre.Size = new System.Drawing.Size(150, 40);
             this.btnSaveGenre.TabIndex = 3;
@@ -177,7 +177,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label2.Location = new System.Drawing.Point(151, 6);
+            this.label2.Location = new System.Drawing.Point(307, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 17);
             this.label2.TabIndex = 2;
@@ -198,7 +198,7 @@
             this.tbGenreName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbGenreName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.tbGenreName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbGenreName.Location = new System.Drawing.Point(146, 26);
+            this.tbGenreName.Location = new System.Drawing.Point(302, 26);
             this.tbGenreName.Name = "tbGenreName";
             this.tbGenreName.PasswordChar = '\0';
             this.tbGenreName.PlaceholderText = "";

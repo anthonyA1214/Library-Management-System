@@ -1,4 +1,5 @@
 using Guna.UI2.WinForms;
+using Library_Management_System.Classes;
 using Library_Management_System.Properties;
 using System;
 using System.Collections.Generic;
@@ -15,16 +16,16 @@ using System.Windows.Forms;
 namespace Library_Management_System
 {
     public partial class ManageBooks : Form
-    {      
+    {
+        SqlConnection conn = dbConnection.GetConnection();
+        private int select, bookid, checkrow;
+
         public ManageBooks()
         {
             InitializeComponent();
-            pnlSideMenu.Visible = false;
+            pnlSideMenu.Visible = false;            
         }
-
-        SqlConnection conn = dbConnection.GetConnection();
-        int select, bookid, checkrow;
-
+      
         private void loadTable()
         {
             string query = "SELECT book_id as [Book ID], title as [Title], author as [Author], isbn as [ISBN], genre as [Genre], publication_year as [Publication Year], quantity as [Quantity] from tbl_book WHERE IsDeleted = 0";
@@ -152,13 +153,8 @@ namespace Library_Management_System
                 return;
             }
 
-            string title = tbTitle.Text;
-            string author = tbAuthor.Text;
-            string isbn = tbISBN.Text;
-            string genre = cbGenre.Text;
-            int publicationyear = int.Parse(dtpPublicationYear.Text);
-            int quantity = int.Parse(numQuantity.Text);
-            string query;
+            Book book = new Book(bookid, tbTitle.Text, tbAuthor.Text, tbISBN.Text, cbGenre.Text, int.Parse(dtpPublicationYear.Text), int.Parse(numQuantity.Text));
+            manageBooks bookManager = new manageBooks();
 
             try
             {
@@ -168,22 +164,13 @@ namespace Library_Management_System
                     if (dialogResult == DialogResult.No) 
                         return;
                 }
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
+
+                bool result;
                 switch (select)
                 {
                     case 1:
-                        query = "INSERT into tbl_book(title,author,isbn,genre,publication_year,quantity) values(@title,@author,@isbn,@genre,@publicationyear,@quantity)";
-                        cmd.CommandText = query;
-                        cmd.Connection = conn;
-                        cmd.Parameters.AddWithValue("@title", title);
-                        cmd.Parameters.AddWithValue("@author", author);
-                        cmd.Parameters.AddWithValue("@isbn", isbn);
-                        cmd.Parameters.AddWithValue("@genre", genre);
-                        cmd.Parameters.AddWithValue("@publicationyear", publicationyear);
-                        cmd.Parameters.AddWithValue("@quantity", quantity);
-                        checkrow = cmd.ExecuteNonQuery();
-                        if(checkrow > 0)
+                        result = bookManager.AddBook(book);
+                        if (result)
                         {
                             MessageBox.Show("Book added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             pnlSideMenu.Visible = false;
@@ -194,18 +181,8 @@ namespace Library_Management_System
                         }
                         break;
                     case 2:
-                        query = "UPDATE tbl_book SET title = @title, author = @author, isbn = @isbn, genre = @genre, publication_year = @publicationyear, quantity = @quantity WHERE book_id = @bookid";
-                        cmd.CommandText = query;
-                        cmd.Connection = conn;
-                        cmd.Parameters.AddWithValue("@bookid", bookid);
-                        cmd.Parameters.AddWithValue("@title", title);
-                        cmd.Parameters.AddWithValue("@author", author);
-                        cmd.Parameters.AddWithValue("@isbn", isbn);
-                        cmd.Parameters.AddWithValue("@genre", genre);
-                        cmd.Parameters.AddWithValue("@publicationyear", publicationyear);
-                        cmd.Parameters.AddWithValue("@quantity", quantity);
-                        checkrow = cmd.ExecuteNonQuery();
-                        if (checkrow > 0)
+                        result = bookManager.UpdateBook(book);
+                        if (result)
                         {
                             MessageBox.Show("Book updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             pnlSideMenu.Visible = false;

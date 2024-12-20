@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_Management_System.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -255,20 +256,14 @@ namespace Library_Management_System
                 tbEmail.Focus();
                 return;
             }
-
-            string firstname = tbFirstName.Text;
-            string lastname = tbLastName.Text;
-            int age = int.Parse(numAge.Text);
-            string address = tbAddress.Text;
-            string contactnumber = tbContactNumber.Text;
-            string email = tbEmail.Text;
-            string membershiptype = cbMembershipType.Text;
-            string query;
+           
+            Member member = new Member(memberid, tbFirstName.Text, tbLastName.Text, int.Parse(numAge.Text), tbAddress.Text, tbContactNumber.Text, tbEmail.Text, cbMembershipType.Text);
+            manageMembers memberManager = new manageMembers();
 
             try
             {
                 Regex nameRegex = new Regex(@"^[a-zA-Z\s]+$", RegexOptions.IgnoreCase);
-                Match matchFirstName = nameRegex.Match(firstname);
+                Match matchFirstName = nameRegex.Match(tbFirstName.Text);
                 if (!matchFirstName.Success)
                 {
                     MessageBox.Show("First name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -276,7 +271,7 @@ namespace Library_Management_System
                     return;
                 }
 
-                Match matchLastName = nameRegex.Match(lastname);
+                Match matchLastName = nameRegex.Match(tbLastName.Text);
                 if (!matchLastName.Success)
                 {
                     MessageBox.Show("Last name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -285,7 +280,7 @@ namespace Library_Management_System
                 }
 
                 Regex regex = new Regex(@"^09[\d]{9}$", RegexOptions.IgnoreCase);
-                Match match = regex.Match(contactnumber);
+                Match match = regex.Match(tbContactNumber.Text);
                 if (!match.Success)
                 {
                     MessageBox.Show("Invalid contact number format. Please ensure the number starts with '09' and is 11 digits long (e.g., '09123456789').", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -294,7 +289,7 @@ namespace Library_Management_System
                 }
 
                 Regex regex2 = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
-                Match match2 = regex2.Match(email);
+                Match match2 = regex2.Match(tbEmail.Text);
                 if (!match2.Success)
                 {
                     MessageBox.Show("Invalid email format. Please ensure the email includes an '@' symbol and a valid domain (e.g., 'example@domain.com').", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -310,22 +305,12 @@ namespace Library_Management_System
                 }
 
                 conn.Open();
-                SqlCommand cmd = new SqlCommand();
+                bool result;
                 switch (select)
                 {
                     case 1:
-                        query = "INSERT into tbl_member(first_name,last_name,age,address,contact_number,email,membership_type) values(@firstname,@lastname,@age,@address,@contactnumber,@email,@membershiptype)";
-                        cmd.CommandText = query;
-                        cmd.Connection = conn;
-                        cmd.Parameters.AddWithValue("@firstname", firstname);
-                        cmd.Parameters.AddWithValue("@lastname", lastname);
-                        cmd.Parameters.AddWithValue("@age", age);
-                        cmd.Parameters.AddWithValue("@address", address);
-                        cmd.Parameters.AddWithValue("@contactnumber", contactnumber);
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@membershiptype", membershiptype);
-                        checkrow = cmd.ExecuteNonQuery();
-                        if (checkrow > 0)
+                        result = memberManager.AddMember(member);
+                        if (result)
                         {
                             MessageBox.Show("Member added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             pnlSideMenu.Visible = false;
@@ -336,19 +321,8 @@ namespace Library_Management_System
                         }
                         break;
                     case 2:
-                        query = "UPDATE tbl_member SET first_name = @firstname, last_name = @lastname, age = @age, address = @address, contact_number = @contactnumber, email = @email, membership_type = @membershiptype WHERE member_id = @memberid";
-                        cmd.CommandText = query;
-                        cmd.Connection = conn;
-                        cmd.Parameters.AddWithValue("@memberid", memberid);
-                        cmd.Parameters.AddWithValue("@firstname", firstname);
-                        cmd.Parameters.AddWithValue("@lastname", lastname);
-                        cmd.Parameters.AddWithValue("@age", age);
-                        cmd.Parameters.AddWithValue("@address", address);
-                        cmd.Parameters.AddWithValue("@contactnumber", contactnumber);
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@membershiptype", membershiptype);
-                        checkrow = cmd.ExecuteNonQuery();
-                        if (checkrow > 0)
+                        result = memberManager.UpdateMember(member);
+                        if (result)
                         {
                             MessageBox.Show("Member updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             pnlSideMenu.Visible = false;

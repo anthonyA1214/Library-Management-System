@@ -92,7 +92,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Book.cs" />
     <Compile Include="Classes\dbConnection.cs" />
+    <Compile Include="Classes\Member.cs" />
+    <Compile Include="Classes\Staff.cs" />
     <Compile Include="Forms\Inventory.cs">
       <SubType>Form</SubType>
     </Compile>

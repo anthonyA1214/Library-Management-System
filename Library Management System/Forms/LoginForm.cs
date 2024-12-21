@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Library_Management_System.Resources;
 
 namespace Library_Management_System
 {
@@ -43,64 +44,29 @@ namespace Library_Management_System
             string username = tbUsername.Text;
             string password = tbPassword.Text;
 
-            conn.Open();
-            string query = "SELECT role, IsDeleted, IsApproved from tbl_staff WHERE username = @username AND password = @password";
-            SqlCommand cmd = new SqlCommand(query, conn);
-
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
-
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            try
-            {         
-                if(dr.Read())
+            AuthenticateUser auth = new AuthenticateUser();
+            AuthenticateUserResult authResult = auth.authenticateUser(username, password);           
+                 
+            if (authResult.isSuccessful)
+            {
+                if (authResult.role == "admin")
                 {
-                    string role = dr["role"].ToString().ToLower().Trim();
-                    bool isDeleted = Convert.ToBoolean(dr["IsDeleted"]);
-                    bool isApproved = Convert.ToBoolean(dr["IsApproved"]);
-
-                    if (!isApproved)
-                    {
-                        lblIncorrect.Text = "Your account is not approved yet.";
-                        lblIncorrect.Visible = true;
-                        return;
-                    }
-
-                    if (isDeleted)
-                    {
-                        lblIncorrect.Text = "Incorrect username or password.";
-                        lblIncorrect.Visible = true;
-                        return;
-                    }
-
-                    if (role == "admin")
-                    {
-                        AdminForm adminForm = new AdminForm(username);
-                        adminForm.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        UserForm userForm = new UserForm(username);
-                        userForm.Show();
-                        this.Hide();
-                    }
+                    AdminForm adminForm = new AdminForm(username);
+                    adminForm.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    lblIncorrect.Text = "Incorrect username or password.";
-                    lblIncorrect.Visible = true;
+                    UserForm userForm = new UserForm(username);
+                    userForm.Show();
+                    this.Hide();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"An error occurred. {ex.Message}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblIncorrect.Text = authResult.message;
+                lblIncorrect.Visible = true;
             }
-            finally
-            {
-                conn.Close();
-            }           
         }
 
         private void tbPassword_Enter(object sender, EventArgs e)

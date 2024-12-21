@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_Management_System.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -133,22 +134,16 @@ namespace Library_Management_System
                 return;
             }
 
-            string firstname = tbFirstName.Text;
-            string lastname = tbLastName.Text;
-            string username = tbUsername.Text;
-            string password = tbPassword.Text;
-            string email = tbEmail.Text;
-            string contactnumber = tbContactNumber.Text;
-            string role = cbRole.Text;
             bool isApproved = true;
             bool isDeleted = false;
 
-            string query;
+            Staff staff = new Staff(staffid, tbFirstName.Text, tbLastName.Text, tbUsername.Text, tbPassword.Text, tbEmail.Text, tbContactNumber.Text, cbRole.Text, isApproved, isDeleted);
+            manageStaffs staffManager = new manageStaffs();
 
             try
             {
                 Regex nameRegex = new Regex(@"^[a-zA-Z\s]+$", RegexOptions.IgnoreCase);
-                Match matchFirstName = nameRegex.Match(firstname);
+                Match matchFirstName = nameRegex.Match(tbFirstName.Text);
                 if (!matchFirstName.Success)
                 {
                     MessageBox.Show("First name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -156,7 +151,7 @@ namespace Library_Management_System
                     return;
                 }
 
-                Match matchLastName = nameRegex.Match(lastname);
+                Match matchLastName = nameRegex.Match(tbLastName.Text);
                 if (!matchLastName.Success)
                 {
                     MessageBox.Show("Last name should not contain numbers or special characters.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -165,7 +160,7 @@ namespace Library_Management_System
                 }
 
                 Regex regex = new Regex(@"^09[\d]{9}$", RegexOptions.IgnoreCase);
-                Match match = regex.Match(contactnumber);
+                Match match = regex.Match(tbContactNumber.Text);
                 if (!match.Success)
                 {
                     MessageBox.Show("Invalid contact number format. Please ensure the number starts with '09' and is 11 digits long (e.g., '09123456789').", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -174,7 +169,7 @@ namespace Library_Management_System
                 }
 
                 Regex regex2 = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
-                Match match2 = regex2.Match(email);
+                Match match2 = regex2.Match(tbEmail.Text);
                 if (!match2.Success)
                 {
                     MessageBox.Show("Invalid email format. Please ensure the email includes an '@' symbol and a valid domain (e.g., 'example@domain.com').", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -188,26 +183,12 @@ namespace Library_Management_System
                     if (dialogResult == DialogResult.No) return;
                 }
 
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
-
+                bool result;
                 switch (select)
                 {
                     case 1:
-                        query = "INSERT INTO tbl_staff (first_name, last_name, username, password, email, contact_number, role, IsApproved, IsDeleted) VALUES(@firstname, @lastname, @username, @password, @email, @contactnumber, @role, @isApproved, @isDeleted)";
-                        cmd.CommandText = query;
-                        cmd.Connection = conn;
-                        cmd.Parameters.AddWithValue("@firstname", firstname);
-                        cmd.Parameters.AddWithValue("@lastname", lastname);
-                        cmd.Parameters.AddWithValue("@username", username);
-                        cmd.Parameters.AddWithValue("@password", password);
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@contactnumber", contactnumber);
-                        cmd.Parameters.AddWithValue("@role", role);
-                        cmd.Parameters.AddWithValue("@isApproved", isApproved);
-                        cmd.Parameters.AddWithValue("@isDeleted", isDeleted);
-                        checkrow = cmd.ExecuteNonQuery();
-                        if (checkrow > 0)
+                        result = staffManager.AddStaff(staff);
+                        if (result)
                         {
                             MessageBox.Show("Staff added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             pnlSideMenu.Visible = false;
@@ -219,38 +200,8 @@ namespace Library_Management_System
                         break;
 
                     case 2:
-                        query = "UPDATE tbl_staff SET first_name = @firstname, last_name = @lastname, password = @password, contact_number = @contactnumber, role = @role";
-
-                        if(tbUsername.Text != dgvStaff.CurrentRow.Cells["Username"].Value.ToString())
-                        {
-                            query += ", username = @username";
-                        }
-                        if(tbEmail.Text != dgvStaff.CurrentRow.Cells["Email"].Value.ToString())
-                        {
-                            query += ", email = @email";
-                        }
-
-                        query += " WHERE staff_id = @staffid";
-                        cmd.CommandText = query;
-                        cmd.Connection = conn;
-
-                        if (tbUsername.Text != dgvStaff.CurrentRow.Cells["Username"].Value.ToString())
-                        {
-                            cmd.Parameters.AddWithValue("@username", username);
-                        }
-                        if (tbEmail.Text != dgvStaff.CurrentRow.Cells["Email"].Value.ToString())
-                        {
-                            cmd.Parameters.AddWithValue("@email", email);
-                        }
-
-                        cmd.Parameters.AddWithValue("@staffid", staffid);
-                        cmd.Parameters.AddWithValue("@firstname", firstname);
-                        cmd.Parameters.AddWithValue("@lastname", lastname);
-                        cmd.Parameters.AddWithValue("@password", password);
-                        cmd.Parameters.AddWithValue("@contactnumber", contactnumber);
-                        cmd.Parameters.AddWithValue("@role", role);   
-                        checkrow = cmd.ExecuteNonQuery();
-                        if (checkrow > 0)
+                        result = staffManager.UpdateStaff(staff);
+                        if (result)
                         {
                             MessageBox.Show("Staff updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             pnlSideMenu.Visible = false;

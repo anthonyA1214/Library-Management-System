@@ -46,8 +46,6 @@ namespace Library_Management_System.Classes
                 conn.Open();
                 using(SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.CommandText = query;
-                    cmd.Connection = conn;
                     cmd.Parameters.AddWithValue("@firstname", member.FirstName);
                     cmd.Parameters.AddWithValue("@lastname", member.LastName);
                     cmd.Parameters.AddWithValue("@age", member.Age);

@@ -43,8 +43,6 @@ namespace Library_Management_System.Classes
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.CommandText = query;
-                    cmd.Connection = conn;
                     cmd.Parameters.AddWithValue("@title", book.Title);
                     cmd.Parameters.AddWithValue("@author", book.Author);
                     cmd.Parameters.AddWithValue("@isbn", book.ISBN);

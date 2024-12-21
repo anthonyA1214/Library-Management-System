@@ -75,56 +75,56 @@
             this.lblOverdueBooks = new System.Windows.Forms.Label();
             this.lblOverdueBook = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblIssuedBooks = new System.Windows.Forms.Label();
             this.lblIssuedBook = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.lblCountMember = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCountBook = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlTitle = new Guna.UI2.WinForms.Guna2Panel();
             this.lblDateAndTime = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.autoLoadCount = new System.Windows.Forms.Timer(this.components);
             this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSettingsSubMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnArchive = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageGenre = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.pnlUserManagementSubMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnStaffApproval = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageStaffs = new Guna.UI2.WinForms.Guna2Button();
-            this.btnStaffManagement = new Guna.UI2.WinForms.Guna2Button();
             this.pnlReportsSubMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnMemberActivityReports = new Guna.UI2.WinForms.Guna2Button();
             this.btnCirculationReports = new Guna.UI2.WinForms.Guna2Button();
-            this.btnReports = new Guna.UI2.WinForms.Guna2Button();
             this.pnlBorrowReturnSubMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnViewRecords = new Guna.UI2.WinForms.Guna2Button();
             this.btnReturnBook = new Guna.UI2.WinForms.Guna2Button();
             this.btnIssueBook = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBorrowReturn = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMembersSubMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnMemberProfiles = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageMembers = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMembers = new Guna.UI2.WinForms.Guna2Button();
             this.pnlBooksSubMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageBooks = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStaffManagement = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReports = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBorrowReturn = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMembers = new Guna.UI2.WinForms.Guna2Button();
             this.btnBooks = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlContainer.SuspendLayout();
             this.tlp4.SuspendLayout();
@@ -143,16 +143,12 @@
             this.tlp1.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnlTitle.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
             this.pnlSettingsSubMenu.SuspendLayout();
@@ -162,6 +158,10 @@
             this.pnlMembersSubMenu.SuspendLayout();
             this.pnlBooksSubMenu.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -780,17 +780,6 @@
             this.guna2Panel9.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel9.TabIndex = 0;
             // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = global::Library_Management_System.Properties.Resources.hourglass;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 0;
-            this.guna2PictureBox4.TabStop = false;
-            // 
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
@@ -839,17 +828,6 @@
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel7.TabIndex = 0;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 0;
-            this.guna2PictureBox3.TabStop = false;
             // 
             // guna2Panel3
             // 
@@ -900,17 +878,6 @@
             this.guna2Panel4.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel4.TabIndex = 0;
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::Library_Management_System.Properties.Resources.group;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
@@ -959,17 +926,6 @@
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel6.TabIndex = 0;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 13);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // pnlTitle
             // 
@@ -1045,28 +1001,6 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(250, 561);
             this.pnlSideMenu.TabIndex = 0;
             // 
-            // btnLogout
-            // 
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
-            this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
-            this.btnLogout.Image = global::Library_Management_System.Properties.Resources.logout;
-            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.Location = new System.Drawing.Point(0, 1015);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(233, 45);
-            this.btnLogout.TabIndex = 21;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // pnlSettingsSubMenu
             // 
             this.pnlSettingsSubMenu.Controls.Add(this.btnArchive);
@@ -1117,28 +1051,6 @@
             this.btnManageGenre.Text = "Manage Genre";
             this.btnManageGenre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageGenre.Click += new System.EventHandler(this.btnManageGenre_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
-            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
-            this.btnSettings.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
-            this.btnSettings.Image = global::Library_Management_System.Properties.Resources.settings;
-            this.btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.Location = new System.Drawing.Point(0, 885);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnSettings.Size = new System.Drawing.Size(233, 45);
-            this.btnSettings.TabIndex = 19;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // pnlUserManagementSubMenu
             // 
@@ -1191,28 +1103,6 @@
             this.btnManageStaffs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageStaffs.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
-            // btnStaffManagement
-            // 
-            this.btnStaffManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnStaffManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnStaffManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnStaffManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnStaffManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStaffManagement.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
-            this.btnStaffManagement.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaffManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
-            this.btnStaffManagement.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
-            this.btnStaffManagement.Image = global::Library_Management_System.Properties.Resources.manageaccounts;
-            this.btnStaffManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStaffManagement.Location = new System.Drawing.Point(0, 755);
-            this.btnStaffManagement.Name = "btnStaffManagement";
-            this.btnStaffManagement.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnStaffManagement.Size = new System.Drawing.Size(233, 45);
-            this.btnStaffManagement.TabIndex = 12;
-            this.btnStaffManagement.Text = "Staff Management";
-            this.btnStaffManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStaffManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
-            // 
             // pnlReportsSubMenu
             // 
             this.pnlReportsSubMenu.Controls.Add(this.btnMemberActivityReports);
@@ -1263,28 +1153,6 @@
             this.btnCirculationReports.Text = "Circulation Reports";
             this.btnCirculationReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCirculationReports.Click += new System.EventHandler(this.btnCirculationReports_Click);
-            // 
-            // btnReports
-            // 
-            this.btnReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
-            this.btnReports.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
-            this.btnReports.Image = global::Library_Management_System.Properties.Resources.reports;
-            this.btnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReports.Location = new System.Drawing.Point(0, 625);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnReports.Size = new System.Drawing.Size(233, 45);
-            this.btnReports.TabIndex = 10;
-            this.btnReports.Text = "Reports";
-            this.btnReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // pnlBorrowReturnSubMenu
             // 
@@ -1358,28 +1226,6 @@
             this.btnIssueBook.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnIssueBook.Click += new System.EventHandler(this.btnIssueBook_Click);
             // 
-            // btnBorrowReturn
-            // 
-            this.btnBorrowReturn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBorrowReturn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBorrowReturn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBorrowReturn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBorrowReturn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBorrowReturn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
-            this.btnBorrowReturn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrowReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
-            this.btnBorrowReturn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
-            this.btnBorrowReturn.Image = global::Library_Management_System.Properties.Resources.borrowreturn;
-            this.btnBorrowReturn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBorrowReturn.Location = new System.Drawing.Point(0, 455);
-            this.btnBorrowReturn.Name = "btnBorrowReturn";
-            this.btnBorrowReturn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnBorrowReturn.Size = new System.Drawing.Size(233, 45);
-            this.btnBorrowReturn.TabIndex = 8;
-            this.btnBorrowReturn.Text = "Borrowing/Returning";
-            this.btnBorrowReturn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBorrowReturn.Click += new System.EventHandler(this.btnBorrowReturn_Click);
-            // 
             // pnlMembersSubMenu
             // 
             this.pnlMembersSubMenu.Controls.Add(this.btnMemberProfiles);
@@ -1430,28 +1276,6 @@
             this.btnManageMembers.Text = "Manage Members";
             this.btnManageMembers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
-            // 
-            // btnMembers
-            // 
-            this.btnMembers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMembers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMembers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMembers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMembers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMembers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
-            this.btnMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
-            this.btnMembers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
-            this.btnMembers.Image = global::Library_Management_System.Properties.Resources.group1;
-            this.btnMembers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMembers.Location = new System.Drawing.Point(0, 325);
-            this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMembers.Size = new System.Drawing.Size(233, 45);
-            this.btnMembers.TabIndex = 6;
-            this.btnMembers.Text = "Members";
-            this.btnMembers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
             // pnlBooksSubMenu
             // 
@@ -1504,6 +1328,191 @@
             this.btnManageBooks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageBooks.Click += new System.EventHandler(this.btnManageBooks_Click);
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox5);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(233, 150);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::Library_Management_System.Properties.Resources.hourglass;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 0;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 0;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Library_Management_System.Properties.Resources.group;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnLogout.Image = global::Library_Management_System.Properties.Resources.logout;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Location = new System.Drawing.Point(0, 1015);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(233, 45);
+            this.btnLogout.TabIndex = 21;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnSettings.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnSettings.Image = global::Library_Management_System.Properties.Resources.settings;
+            this.btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSettings.Location = new System.Drawing.Point(0, 885);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnSettings.Size = new System.Drawing.Size(233, 45);
+            this.btnSettings.TabIndex = 19;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnStaffManagement
+            // 
+            this.btnStaffManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStaffManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStaffManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStaffManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStaffManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStaffManagement.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnStaffManagement.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnStaffManagement.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnStaffManagement.Image = global::Library_Management_System.Properties.Resources.manageaccounts;
+            this.btnStaffManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStaffManagement.Location = new System.Drawing.Point(0, 755);
+            this.btnStaffManagement.Name = "btnStaffManagement";
+            this.btnStaffManagement.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnStaffManagement.Size = new System.Drawing.Size(233, 45);
+            this.btnStaffManagement.TabIndex = 12;
+            this.btnStaffManagement.Text = "Staff Management";
+            this.btnStaffManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStaffManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
+            // 
+            // btnReports
+            // 
+            this.btnReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnReports.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnReports.Image = global::Library_Management_System.Properties.Resources.reports;
+            this.btnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReports.Location = new System.Drawing.Point(0, 625);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnReports.Size = new System.Drawing.Size(233, 45);
+            this.btnReports.TabIndex = 10;
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            // 
+            // btnBorrowReturn
+            // 
+            this.btnBorrowReturn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBorrowReturn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBorrowReturn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBorrowReturn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBorrowReturn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBorrowReturn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnBorrowReturn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrowReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnBorrowReturn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnBorrowReturn.Image = global::Library_Management_System.Properties.Resources.borrowreturn;
+            this.btnBorrowReturn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBorrowReturn.Location = new System.Drawing.Point(0, 455);
+            this.btnBorrowReturn.Name = "btnBorrowReturn";
+            this.btnBorrowReturn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnBorrowReturn.Size = new System.Drawing.Size(233, 45);
+            this.btnBorrowReturn.TabIndex = 8;
+            this.btnBorrowReturn.Text = "Borrowing/Returning";
+            this.btnBorrowReturn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBorrowReturn.Click += new System.EventHandler(this.btnBorrowReturn_Click);
+            // 
+            // btnMembers
+            // 
+            this.btnMembers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMembers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMembers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMembers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMembers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(199)))));
+            this.btnMembers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(48)))), ((int)(((byte)(47)))));
+            this.btnMembers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(218)))), ((int)(((byte)(186)))));
+            this.btnMembers.Image = global::Library_Management_System.Properties.Resources.group1;
+            this.btnMembers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMembers.Location = new System.Drawing.Point(0, 325);
+            this.btnMembers.Name = "btnMembers";
+            this.btnMembers.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMembers.Size = new System.Drawing.Size(233, 45);
+            this.btnMembers.TabIndex = 6;
+            this.btnMembers.Text = "Members";
+            this.btnMembers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
+            // 
             // btnBooks
             // 
             this.btnBooks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -1548,19 +1557,10 @@
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox5);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(233, 150);
-            this.guna2Panel1.TabIndex = 2;
-            // 
             // guna2PictureBox5
             // 
             this.guna2PictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox5.Image = global::Library_Management_System.Properties.Resources.book_icon;
+            this.guna2PictureBox5.Image = global::Library_Management_System.Properties.Resources.logo_removebg_preview;
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
@@ -1568,6 +1568,7 @@
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox5.TabIndex = 0;
             this.guna2PictureBox5.TabStop = false;
+            this.guna2PictureBox5.Click += new System.EventHandler(this.guna2PictureBox5_Click);
             // 
             // AdminForm
             // 
@@ -1604,19 +1605,15 @@
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
             this.guna2Panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             this.guna2Panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlSideMenu.ResumeLayout(false);
@@ -1627,6 +1624,10 @@
             this.pnlMembersSubMenu.ResumeLayout(false);
             this.pnlBooksSubMenu.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             this.ResumeLayout(false);
 

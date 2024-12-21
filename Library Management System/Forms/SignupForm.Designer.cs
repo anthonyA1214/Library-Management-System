@@ -30,14 +30,11 @@
        {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.visibility2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.visibility1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pbExit = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblLinkBack2Login = new System.Windows.Forms.LinkLabel();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -52,17 +49,20 @@
             this.tbLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.visibility2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.visibility1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbExit = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.visibility2)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.visibility2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visibility1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(244)))), ((int)(((byte)(114)))));
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel8);
@@ -101,20 +101,6 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(280, 36);
             this.guna2Panel3.TabIndex = 39;
-            // 
-            // visibility2
-            // 
-            this.visibility2.BackColor = System.Drawing.Color.Transparent;
-            this.visibility2.Image = global::Library_Management_System.Properties.Resources.visibilityon;
-            this.visibility2.ImageRotate = 0F;
-            this.visibility2.Location = new System.Drawing.Point(251, 6);
-            this.visibility2.Name = "visibility2";
-            this.visibility2.Size = new System.Drawing.Size(25, 25);
-            this.visibility2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.visibility2.TabIndex = 39;
-            this.visibility2.TabStop = false;
-            this.visibility2.UseTransparentBackground = true;
-            this.visibility2.Click += new System.EventHandler(this.visibility2_Click);
             // 
             // tbConfirmPassword
             // 
@@ -176,21 +162,6 @@
             this.tbPassword.TabIndex = 4;
             this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
-            // visibility1
-            // 
-            this.visibility1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.visibility1.BackColor = System.Drawing.Color.Transparent;
-            this.visibility1.Image = global::Library_Management_System.Properties.Resources.visibilityon;
-            this.visibility1.ImageRotate = 0F;
-            this.visibility1.Location = new System.Drawing.Point(251, 6);
-            this.visibility1.Name = "visibility1";
-            this.visibility1.Size = new System.Drawing.Size(25, 25);
-            this.visibility1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.visibility1.TabIndex = 39;
-            this.visibility1.TabStop = false;
-            this.visibility1.UseTransparentBackground = true;
-            this.visibility1.Click += new System.EventHandler(this.visibility1_Click);
-            // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
@@ -203,26 +174,14 @@
             // 
             // guna2HtmlLabel2
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(244)))), ((int)(((byte)(114)))));
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Cooper Black", 21.75F, System.Drawing.FontStyle.Italic);
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(23, 43);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(275, 36);
             this.guna2HtmlLabel2.TabIndex = 35;
             this.guna2HtmlLabel2.Text = "LMS Sign Up Form";
-            // 
-            // pbExit
-            // 
-            this.pbExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pbExit.Image = global::Library_Management_System.Properties.Resources.reject;
-            this.pbExit.Location = new System.Drawing.Point(280, 15);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(25, 25);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 34;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // linkLabel1
             // 
@@ -259,8 +218,8 @@
             this.btnSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSubmit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSubmit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSubmit.FillColor2 = System.Drawing.Color.Teal;
+            this.btnSubmit.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnSubmit.FillColor2 = System.Drawing.Color.LimeGreen;
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
             this.btnSubmit.Location = new System.Drawing.Point(82, 478);
@@ -445,6 +404,47 @@
             this.guna2HtmlLabel1.TabIndex = 20;
             this.guna2HtmlLabel1.Text = "Name:";
             // 
+            // visibility2
+            // 
+            this.visibility2.BackColor = System.Drawing.Color.Transparent;
+            this.visibility2.Image = global::Library_Management_System.Properties.Resources.visibilityon;
+            this.visibility2.ImageRotate = 0F;
+            this.visibility2.Location = new System.Drawing.Point(251, 6);
+            this.visibility2.Name = "visibility2";
+            this.visibility2.Size = new System.Drawing.Size(25, 25);
+            this.visibility2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.visibility2.TabIndex = 39;
+            this.visibility2.TabStop = false;
+            this.visibility2.UseTransparentBackground = true;
+            this.visibility2.Click += new System.EventHandler(this.visibility2_Click);
+            // 
+            // visibility1
+            // 
+            this.visibility1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.visibility1.BackColor = System.Drawing.Color.Transparent;
+            this.visibility1.Image = global::Library_Management_System.Properties.Resources.visibilityon;
+            this.visibility1.ImageRotate = 0F;
+            this.visibility1.Location = new System.Drawing.Point(251, 6);
+            this.visibility1.Name = "visibility1";
+            this.visibility1.Size = new System.Drawing.Size(25, 25);
+            this.visibility1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.visibility1.TabIndex = 39;
+            this.visibility1.TabStop = false;
+            this.visibility1.UseTransparentBackground = true;
+            this.visibility1.Click += new System.EventHandler(this.visibility1_Click);
+            // 
+            // pbExit
+            // 
+            this.pbExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(244)))), ((int)(((byte)(114)))));
+            this.pbExit.Image = global::Library_Management_System.Properties.Resources.reject;
+            this.pbExit.Location = new System.Drawing.Point(280, 15);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(25, 25);
+            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExit.TabIndex = 34;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,8 +459,8 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.visibility2)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.visibility2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visibility1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.ResumeLayout(false);

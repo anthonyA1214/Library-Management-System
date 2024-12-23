@@ -67,6 +67,7 @@
             this.pnlTopMenu.Padding = new System.Windows.Forms.Padding(10);
             this.pnlTopMenu.Size = new System.Drawing.Size(648, 50);
             this.pnlTopMenu.TabIndex = 3;
+            this.pnlTopMenu.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // btnAddGenre
             // 

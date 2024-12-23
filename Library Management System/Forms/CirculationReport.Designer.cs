@@ -321,6 +321,7 @@
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 3;
             this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // tbSearch
             // 

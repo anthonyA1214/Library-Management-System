@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTopMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbExit = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbSearchBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnExport = new Guna.UI2.WinForms.Guna2Button();
             this.cbAvailabilityStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbGenre = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
-            this.btnExport = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSideMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.numQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnEnter = new Guna.UI2.WinForms.Guna2Button();
@@ -51,24 +53,21 @@
             this.tbAuthor = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbTitle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbExit2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblSideMenu = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvBook = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.pbExit2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbExit = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlTopMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopMenu
@@ -96,6 +95,43 @@
             this.label1.Size = new System.Drawing.Size(70, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Search by:";
+            // 
+            // pbExit
+            // 
+            this.pbExit.Image = global::Library_Management_System.Properties.Resources.reject2;
+            this.pbExit.ImageRotate = 0F;
+            this.pbExit.Location = new System.Drawing.Point(7, 7);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(25, 25);
+            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExit.TabIndex = 1;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbSearch.AutoRoundedCorners = true;
+            this.tbSearch.BorderRadius = 17;
+            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSearch.DefaultText = "";
+            this.tbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
+            this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbSearch.IconLeft = global::Library_Management_System.Properties.Resources.search;
+            this.tbSearch.Location = new System.Drawing.Point(338, 7);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.PasswordChar = '\0';
+            this.tbSearch.PlaceholderText = "Search books";
+            this.tbSearch.SelectedText = "";
+            this.tbSearch.Size = new System.Drawing.Size(200, 36);
+            this.tbSearch.TabIndex = 1;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
             // 
             // cbSearchBy
             // 
@@ -148,6 +184,37 @@
             this.guna2Panel2.Size = new System.Drawing.Size(648, 108);
             this.guna2Panel2.TabIndex = 14;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.Legends;
+            this.pictureBox1.Location = new System.Drawing.Point(493, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRefresh.AutoRoundedCorners = true;
+            this.btnRefresh.BorderRadius = 19;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(185)))), ((int)(((byte)(163)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(19, 58);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(150, 40);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refresh Inventory";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -158,6 +225,25 @@
             this.label3.Size = new System.Drawing.Size(118, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Availability Status:";
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnExport.AutoRoundedCorners = true;
+            this.btnExport.BorderRadius = 19;
+            this.btnExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(185)))), ((int)(((byte)(163)))));
+            this.btnExport.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(19, 12);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(150, 40);
+            this.btnExport.TabIndex = 2;
+            this.btnExport.Text = "Export Inventory";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // cbAvailabilityStatus
             // 
@@ -181,6 +267,7 @@
             this.cbAvailabilityStatus.Name = "cbAvailabilityStatus";
             this.cbAvailabilityStatus.Size = new System.Drawing.Size(140, 36);
             this.cbAvailabilityStatus.TabIndex = 4;
+            this.cbAvailabilityStatus.SelectedIndexChanged += new System.EventHandler(this.cbAvailabilityStatus_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -218,54 +305,7 @@
             this.cbGenre.Name = "cbGenre";
             this.cbGenre.Size = new System.Drawing.Size(140, 36);
             this.cbGenre.TabIndex = 1;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel4.BorderRadius = 20;
-            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(10, 462);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(648, 50);
-            this.guna2Panel4.TabIndex = 15;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnRefresh.AutoRoundedCorners = true;
-            this.btnRefresh.BorderRadius = 19;
-            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(185)))), ((int)(((byte)(163)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(19, 58);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(150, 40);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refresh Inventory";
-            // 
-            // btnExport
-            // 
-            this.btnExport.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnExport.AutoRoundedCorners = true;
-            this.btnExport.BorderRadius = 19;
-            this.btnExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(185)))), ((int)(((byte)(163)))));
-            this.btnExport.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(19, 12);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(150, 40);
-            this.btnExport.TabIndex = 2;
-            this.btnExport.Text = "Export Inventory";
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.cbGenre.SelectedIndexChanged += new System.EventHandler(this.cbGenre_SelectedIndexChanged);
             // 
             // pnlSideMenu
             // 
@@ -285,7 +325,7 @@
             this.pnlSideMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
             this.pnlSideMenu.Location = new System.Drawing.Point(10, 173);
             this.pnlSideMenu.Name = "pnlSideMenu";
-            this.pnlSideMenu.Size = new System.Drawing.Size(225, 289);
+            this.pnlSideMenu.Size = new System.Drawing.Size(225, 339);
             this.pnlSideMenu.TabIndex = 17;
             // 
             // numQuantity
@@ -397,6 +437,18 @@
             this.tbTitle.Size = new System.Drawing.Size(200, 36);
             this.tbTitle.TabIndex = 1;
             // 
+            // pbExit2
+            // 
+            this.pbExit2.Image = global::Library_Management_System.Properties.Resources.reject2;
+            this.pbExit2.ImageRotate = 0F;
+            this.pbExit2.Location = new System.Drawing.Point(181, 6);
+            this.pbExit2.Name = "pbExit2";
+            this.pbExit2.Size = new System.Drawing.Size(25, 25);
+            this.pbExit2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExit2.TabIndex = 3;
+            this.pbExit2.TabStop = false;
+            this.pbExit2.Click += new System.EventHandler(this.pbExit2_Click);
+            // 
             // lblSideMenu
             // 
             this.lblSideMenu.AutoSize = true;
@@ -415,7 +467,7 @@
             this.guna2Panel5.Location = new System.Drawing.Point(235, 173);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel5.Size = new System.Drawing.Size(423, 289);
+            this.guna2Panel5.Size = new System.Drawing.Size(423, 339);
             this.guna2Panel5.TabIndex = 18;
             // 
             // pnlGrid
@@ -428,7 +480,7 @@
             this.pnlGrid.Location = new System.Drawing.Point(10, 10);
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlGrid.Size = new System.Drawing.Size(403, 269);
+            this.pnlGrid.Size = new System.Drawing.Size(403, 319);
             this.pnlGrid.TabIndex = 0;
             // 
             // dgvBook
@@ -437,26 +489,26 @@
             this.dgvBook.AllowUserToDeleteRows = false;
             this.dgvBook.AllowUserToResizeColumns = false;
             this.dgvBook.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
-            this.dgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBook.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBook.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBook.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBook.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
             this.dgvBook.Location = new System.Drawing.Point(10, 10);
@@ -464,7 +516,7 @@
             this.dgvBook.ReadOnly = true;
             this.dgvBook.RowHeadersVisible = false;
             this.dgvBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvBook.Size = new System.Drawing.Size(383, 249);
+            this.dgvBook.Size = new System.Drawing.Size(383, 299);
             this.dgvBook.TabIndex = 0;
             this.dgvBook.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGreen;
             this.dgvBook.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
@@ -490,64 +542,6 @@
             this.dgvBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvBook.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellContentClick);
             // 
-            // pbExit2
-            // 
-            this.pbExit2.Image = global::Library_Management_System.Properties.Resources.reject2;
-            this.pbExit2.ImageRotate = 0F;
-            this.pbExit2.Location = new System.Drawing.Point(181, 6);
-            this.pbExit2.Name = "pbExit2";
-            this.pbExit2.Size = new System.Drawing.Size(25, 25);
-            this.pbExit2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit2.TabIndex = 3;
-            this.pbExit2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::Library_Management_System.Properties.Resources.Legends;
-            this.pictureBox1.Location = new System.Drawing.Point(493, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbExit
-            // 
-            this.pbExit.Image = global::Library_Management_System.Properties.Resources.reject2;
-            this.pbExit.ImageRotate = 0F;
-            this.pbExit.Location = new System.Drawing.Point(7, 7);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(25, 25);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExit.TabIndex = 1;
-            this.pbExit.TabStop = false;
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbSearch.AutoRoundedCorners = true;
-            this.tbSearch.BorderRadius = 17;
-            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSearch.DefaultText = "";
-            this.tbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(225)))));
-            this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.IconLeft = global::Library_Management_System.Properties.Resources.search;
-            this.tbSearch.Location = new System.Drawing.Point(338, 7);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.PasswordChar = '\0';
-            this.tbSearch.PlaceholderText = "Search books";
-            this.tbSearch.SelectedText = "";
-            this.tbSearch.Size = new System.Drawing.Size(200, 36);
-            this.tbSearch.TabIndex = 1;
-            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
-            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,7 +550,6 @@
             this.ClientSize = new System.Drawing.Size(668, 522);
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.pnlSideMenu);
-            this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlTopMenu);
@@ -567,17 +560,17 @@
             this.Load += new System.EventHandler(this.Inventory_Load);
             this.pnlTopMenu.ResumeLayout(false);
             this.pnlTopMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -594,7 +587,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbAvailabilityStatus;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cbGenre;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private Guna.UI2.WinForms.Guna2Button btnExport;
         private Guna.UI2.WinForms.Guna2Panel pnlSideMenu;

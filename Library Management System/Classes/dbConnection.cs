@@ -10,7 +10,7 @@ namespace Library_Management_System
     {
         public static SqlConnection GetConnection()
         {
-            string connectionString = "Data Source=NHETTEFELICES04\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True";
+            string connectionString = "Data Source=DESKTOP-ECM8IVK\\SQLEXPRESS;Initial Catalog=db_LibraryManagementSystem;Integrated Security=True;";
             SqlConnection conn = new SqlConnection(connectionString);
             return conn;
         }

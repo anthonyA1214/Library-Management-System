@@ -66,9 +66,11 @@ namespace Library_Management_System.Classes
 
         public bool UpdateStaff(Staff staff)
         {
+            string query = "UPDATE tbl_staff SET first_name = @firstname, last_name = @lastname, password = @password, contact_number = @contactnumber, role = @role WHERE staff_id = @staffid";
+
             using (SqlConnection conn = dbConnection.GetConnection())
             {
-                string query = "UPDATE tbl_staff SET first_name = @firstname, last_name = @lastname, password = @password, contact_number = @contactnumber, role = @role";
+                conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@staffid", staff.StaffId);

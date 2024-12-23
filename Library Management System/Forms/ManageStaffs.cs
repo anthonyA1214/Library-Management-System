@@ -263,6 +263,7 @@ namespace Library_Management_System
                 tbLastName.Text = ds.Tables[0].Rows[0][2].ToString();
                 tbUsername.Text = ds.Tables[0].Rows[0][3].ToString();
                 tbPassword.Text = ds.Tables[0].Rows[0][4].ToString();
+                tbConfirmPassword.Text = ds.Tables[0].Rows[0][4].ToString();
                 tbEmail.Text = ds.Tables[0].Rows[0][5].ToString();
                 tbContactNumber.Text = ds.Tables[0].Rows[0][6].ToString();
                 cbRole.Text = ds.Tables[0].Rows[0][7].ToString();

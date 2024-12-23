@@ -144,7 +144,7 @@ namespace Library_Management_System
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@memberid", memberid);
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to update this member?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this member?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.No) return;
                     checkrow = cmd.ExecuteNonQuery();
                     if (checkrow > 0)
